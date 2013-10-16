@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+
+{% load i18n %}
+
+{% block title %}{% trans "Email validation" %}{% endblock %}
+
+{% block content %}
+<div class="container">
+    <div class="jumbotron">
+        <h1>Email validation</h1>
+        <p>A email validation was sent to {{ email }}.</p>
+    </div>
+</div>
+{% endblock %}

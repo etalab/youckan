@@ -1,0 +1,17 @@
+{% extends "site.html" %}
+
+{% block title %}{{title}}{% endblock %}
+
+{% block content %}
+
+<div class="container">
+    <div class="row">
+        <h2>{{title}}</h2>
+        <p>{{explanation}}</p>
+        {% if comment %}<p>{{comment}}</p>{% endif %}
+        {% if message %}<p>{{message}}</p>{% endif %}
+        {% if dump %}<pre class="pre-scrollable">{{dump}}</pre>{% endif %}
+    </div>
+</div>
+
+{% endblock %}

@@ -1,0 +1,106 @@
+{% load gravatar i18n weckan_helpers %}
+<nav class="navbar navbar-default navbar-static-top" role="navigation">
+    <header class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse"
+                data-target=".navbar-collapse, .subnav-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="{{ etalab.HOME_URL }}">Etalab2.fr</a>
+    </header>
+
+    <div class="collapse navbar-collapse">
+        <p class="navbar-text">{% trans "Open platform for french public data" %}</p>
+        <ul class="nav navbar-nav navbar-right">
+            {% if user.is_authenticated %}
+                <li class="dropdown">
+                    <button class="btn btn-dark navbar-btn dropdown-toggle" data-toggle="dropdown">
+                        {% gravatar user.email 20 %} {{ user.full_name }}
+                        <b class="caret"></b>
+                    </button>
+                    <ul class="dropdown-menu">
+                        <li>
+                            <a href="{% url 'profile' pk=user.pk %}", title="{% trans "Profile" %}">
+                                <span class="glyphicon glyphicon-user"></span>
+                                {% trans "Profile" %}
+                            </a>
+                        </li>
+                        <li class="divider"></li>
+                        <li>
+                            <a href="{% url 'logout' %}" title="{% trans "Log out" %}">
+                                <span class="glyphicon glyphicon-log-out"></span>
+                                {% trans "Log out" %}
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+            {% else %}
+                <li>
+                    <a href="{% url 'login' %}?next={{ request.path }}" class="btn btn-dark navbar-btn"
+                        title="{% trans "Sign In / Sign Up" %}">
+                        <span class="glyphicon glyphicon-log-in"></span>
+                        {% trans "Sign In / Sign Up" %}
+                    </a>
+                </li>
+            {% endif %}
+            {#%- set has_ckan = has_ckan|default(True) -%#}
+            {% if user and has_ckan %}
+            <li>
+                <a id="advanced-button" class="btn btn-dark navbar-btn" title="{% trans "Advanced mode" %}"
+                    href="{{ CKAN_URL|safe }}{{ current_location|safe }}">
+                    <span class="icon icon-shop"></span>
+                </a>
+            </li>
+            {% endif %}
+            <li class="dropdown">
+                <button class="btn btn-dark navbar-btn dropdown-toggle" data-toggle="dropdown">
+                    <img src="{{LANGUAGE_CODE|flag_url}}" alt="Current locale flag" />
+                </button>
+                <ul class="dropdown-menu">
+                    {% for code, name in LANGUAGES %}
+                    <li>
+                        <a href="">
+                            <img src="{{code|flag_url}}" alt="{{name}} flag" />
+                            {{name}}
+                        </a>
+                    </li>
+                    {% endfor %}
+                </ul>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+<nav class="navbar navbar-static-top navbar-subnav" role="navigation">
+    <div class="navbar-left col-sm-4 col-md-3 col-xs-12 collapse subnav-collapse">
+        <a class="btn btn-primary navbar-btn btn-block"
+                title="{% trans "Publish a dataset !" %}"
+                href="{#{ url(lang, 'dataset/new') }#}">
+            <span class="glyphicon glyphicon-plus-sign"></span>
+            {% trans "Publish a dataset !" %}
+        </a>
+    </div>
+    <div class="col-sm-8 col-md-9 col-xs-12 navbar-left">
+        <form class="navbar-form form-inline" role="search" action="{#{ url(lang, 'search') }#}">
+            <div class="input-group col-sm-8 col-xs-12">
+                <div class="input-group-btn">
+                    <button class="btn" type="submit"><i class="glyphicon glyphicon-search"></i></button>
+                </div>
+                <input id="search-input" name="q" type="search" class="form-control" autocomplete="off"
+                        placeholder="{% trans "Search" %}" value="{{search_query}}">
+            </div>
+            <div class="collapse subnav-collapse col-sm-4 col-xs-12">
+                <div id="where-group" class="input-group">
+                    <span class="input-group-addon">
+                        <span class="glyphicon glyphicon-globe"></span>
+                    </span>
+                    <input id="where-input" type="search" class="form-control" autocomplete="off"
+                            placeholder="{% trans "Where" %}">
+                    <input id="ext_territory" name="ext_territory" type="hidden" />
+                </div>
+            </div>
+        </form>
+    </div>
+</nav>

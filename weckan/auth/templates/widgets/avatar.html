@@ -1,0 +1,61 @@
+{% load i18n %}
+{% trans "Change your avatar" as change_title %}
+<div class="avatar-container">
+
+    <a class="thumbnail"
+        {% if editable %}
+        href="#change-avatar-modal" title="{{ change_title }}" data-toggle="modal"
+        {% endif %}
+        >
+        <img src="{% if avatar %}{{ avatar.url }}{% endif %}" alt="{% trans "Avatar" %}" width="{{size}}px" height="{{size}}px">
+    </a>
+
+    {% if editable %}
+        {% if button %}
+        <a href="#change-avatar-modal" class="btn btn-default btn-xs"
+            title="{{ change_title }}" data-toggle="modal" >{{ change_title }}</a>
+        {% endif %}
+
+    {# Change avatar modal #}
+    <div class="modal fade" id="change-avatar-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                    <h4 class="modal-title">{{ change_title }}</h4>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-sm-3">
+                            <div class="preview-container" data-size="{{size}}">
+                                <img id="preview" src="http://placehold.it/128x128&text=Preview" alt=""  width="{{size}}px" height="{{size}}px">
+                                <h5>{% trans "Preview" %}</h5>
+                            </div>
+                        </div>
+
+                        <div class="col-sm-9">
+                            <div class="thumbnail crop-container">
+                                <img id="original" src="http://placehold.it/300x150&text=Original" alt="">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <input type="file" name="avatar" accept="image/jpeg,image/png,image/gif"/>
+                    </div>
+                </div>
+
+                <div class="modal-footer">
+                    <div class="progress progress-striped active hide">
+                        <div class="bar" style="width: 0%;"></div>
+                    </div>
+                    <button type="button" class="btn btn-warning" data-dismiss="modal">{% trans "Cancel" %}</button>
+                    <button type="button" class="btn btn-primary">{% trans "Save" %}</button>
+                </div>
+
+            </div><!-- /.modal-content -->
+        </div><!-- /.modal-dialog -->
+    </div><!-- /.modal -->
+    {% endif %}
+
+</div>

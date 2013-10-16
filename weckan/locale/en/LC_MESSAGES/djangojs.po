@@ -1,0 +1,82 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2013-10-11 18:04+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: static/js/common.js:10
+msgid "This field is required."
+msgstr ""
+
+#: static/js/common.js:11
+msgid "Please fix this field."
+msgstr ""
+
+#: static/js/common.js:12
+msgid "Please enter a valid email address."
+msgstr ""
+
+#: static/js/common.js:13
+msgid "Please enter a valid URL."
+msgstr ""
+
+#: static/js/common.js:14
+msgid "Please enter a valid date."
+msgstr ""
+
+#: static/js/common.js:15
+msgid "Please enter a valid date (ISO)."
+msgstr ""
+
+#: static/js/common.js:16
+msgid "Please enter a valid number."
+msgstr ""
+
+#: static/js/common.js:17
+msgid "Please enter only digits."
+msgstr ""
+
+#: static/js/common.js:18
+msgid "Please enter a valid credit card number."
+msgstr ""
+
+#: static/js/common.js:19
+msgid "Please enter the same value again."
+msgstr ""
+
+#: static/js/common.js:20
+msgid "Please enter no more than {0} characters."
+msgstr ""
+
+#: static/js/common.js:21
+msgid "Please enter at least {0} characters."
+msgstr ""
+
+#: static/js/common.js:22
+msgid "Please enter a value between {0} and {1} characters long."
+msgstr ""
+
+#: static/js/common.js:23
+msgid "Please enter a value between {0} and {1}."
+msgstr ""
+
+#: static/js/common.js:24
+msgid "Please enter a value less than or equal to {0}."
+msgstr ""
+
+#: static/js/common.js:25
+msgid "Please enter a value greater than or equal to {0}."
+msgstr ""

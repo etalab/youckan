@@ -1,0 +1,39 @@
+{% macro paginator(page=1, total_pages=5, url_pattern='', nb=3) %}
+{% set page = page|default:1 %}
+{% set total_page = total_page|default:5 %}
+{% set url_pattern = url_pattern|default:'' %}
+{% set nb = nb|default:3 %}
+{% if total_pages > 1 %}
+{% set start = 1 if page <= nb else page - nb %}
+{% set end = total_pages if page + nb > total_pages else page + nb %}
+<div class="text-center">
+    <ul class="pagination">
+        <li {% if page == 1 %}class="disabled"{% endif %}>
+            <a href="{{ url_pattern.format(page=1) }}" title="{% trans %}First page{% endtrans %}">
+                &laquo;
+            </a>
+        </li>
+        <li {% if page == 1 %}class="disabled"{% endif %}>
+            <a href="{{ url_pattern.format(page=page - 1) }}" title="{% trans %}Previous page{% endtrans %}">
+                &lsaquo;
+            </a>
+        </li>
+        {% for num_page in range(start, end + 1) %}
+        <li {% if num_page == page %}class="active"{% endif %}>
+            <a href="{{ url_pattern.format(page=num_page) }}">{{ num_page }}</a>
+        </li>
+        {% endfor %}
+        <li {% if page == total_pages %}class="disabled"{% endif %}>
+            <a href="{{ url_pattern.format(page=page + 1) }}" title="{% trans %}Next page{% endtrans %}">
+                &rsaquo;
+            </a>
+        </li>
+        <li {% if page == total_pages %}class="disabled"{% endif %}>
+            <a href="{{ url_pattern.format(page=total_pages) }}" title="{% trans %}Last page{% endtrans %}">
+                &raquo;
+            </a>
+        </li>
+    </ul>
+</div>
+{% endif %}
+{% endmacro %}

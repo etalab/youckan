@@ -1,0 +1,20 @@
+<div class="form-group{% if field.errors %} has-error{% endif %}">
+    <div class="checkbox {% if sizes %}{{ sizes.offset }} {{ sizes.control }}{% endif %}">
+        <label>
+            <input id="{{ field.id_for_label }}" type="checkbox"
+                name="{{ field.html_name }}"
+                {% if checked %}checked="checked"{% endif %}
+                {% for key, value in field.field.widget.attrs.items %}
+                {{ key }}="{{ value }}"
+                {% endfor %}
+                {% if field.required %}required {% endif %}
+                {% if disabled %}disabled{% endif %}
+            />
+            {{ label }}
+            {% if field.help_text %}<span class="form-help" data-content="{{ field.help_text }}"></span>{% endif %}
+        </label>
+        {% for error in field.errors %}
+        <label for="{{ field.id_for_label }}" class="help-block">{{ error|escape }}</label>
+        {% endfor %}
+    </div>
+</div>

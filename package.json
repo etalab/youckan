@@ -1,0 +1,11 @@
+{
+  "name": "weckan",
+  "version": "0.1.0",
+  "description": "Custom frontend to CKAN",
+  "main": "index.js",
+  "scripts": {
+    "test": "fab test"
+  },
+  "author": "Axel Haustant <noirbizarre@gmail.com>",
+  "license": "BSD-2-Clause"
+}

@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+{% load i18n avatar js %}
+
+{% block title %}{% blocktrans with name=user_profile.full_name %}{{ name }} profile{% endblocktrans %}{% endblock %}
+
+{% block content %}
+<div class="container">
+    <div class="page-header">
+        <h1>{{user_profile.full_name}}</h1>
+    </div>
+    <div class="row">
+        {% avatar user_profile 128 editable=True %}
+    </div>
+</div>
+{% endblock %}
+
+{% block javascript %}
+{% css "bower/jcrop/css/jquery.Jcrop.css" %}
+{% js "bower/jcrop/js/jquery.Jcrop.js" %}
+{% js "js/avatar.js" %}
+{% endblock %}

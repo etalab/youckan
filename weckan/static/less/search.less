@@ -1,0 +1,55 @@
+@import "site.less";
+
+ul.search-results {
+    padding-left: 0;
+    list-style: none;
+
+    .search-result {
+        margin-bottom: 15px;
+        background: white;
+        border: 1px solid @gray-lighter;
+        padding: 5px;
+        overflow: hidden;
+        zoom: 1;
+
+        .result-logo {
+            display: block;
+            width: 80px;
+            border: 1px solid @gray-lighter;
+            margin-right: 10px;
+        }
+
+        .result-body {
+            padding-left: 90px;
+
+            .result-infos {
+                margin-top: 5px;
+            }
+        }
+
+        h4 {
+            margin: 0 0 5px;
+        }
+
+        &.topic-result, &.question-result {
+            .glyphicon {
+                font-size: 2em;
+                top: -2px;
+                margin-right: 7px;
+            }
+
+            h4 {
+                vertical-align: top;
+                margin: 4px 0 0 5px;
+            }
+
+            .result-body {
+                padding-left: 0;
+                display: inline;
+
+            }
+        }
+
+    }
+
+}

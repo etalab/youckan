@@ -1,0 +1,309 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2013-10-11 18:04+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+
+#: auth/admin.py:70
+msgid "Personal info"
+msgstr "Informations personnelles"
+
+#: auth/admin.py:71
+msgid "Permissions"
+msgstr "Permissions"
+
+#: auth/forms.py:22
+msgid "Password"
+msgstr "Mot de passe"
+
+#: auth/forms.py:24
+msgid "Confirm password"
+msgstr "Confirmation du mot de passe"
+
+#: auth/forms.py:35
+msgid "Passwords don't match"
+msgstr "Les mots de passe ne correspondent pas"
+
+#: auth/models.py:39
+msgid "email"
+msgstr "email"
+
+#: auth/models.py:40
+msgid "first name"
+msgstr "prénom"
+
+#: auth/models.py:41
+msgid "last name"
+msgstr "nom"
+
+#: auth/models.py:42
+msgid "staff status"
+msgstr "status staff"
+
+#: auth/models.py:43
+msgid "Designates whether the user can log into this admin site."
+msgstr ""
+
+#: auth/models.py:44
+msgid "active"
+msgstr ""
+
+#: auth/models.py:45
+msgid ""
+"Designates whether this user should be treated as active. Unselect this "
+"instead of deleting accounts."
+msgstr ""
+
+#: auth/models.py:47
+msgid "date joined"
+msgstr ""
+
+#: auth/models.py:56
+msgid "user"
+msgstr ""
+
+#: auth/models.py:57
+msgid "users"
+msgstr ""
+
+#: auth/templates/login.html:5 auth/templates/login.html.py:23
+#: auth/templates/register-done.html:5
+msgid "Sign In"
+msgstr "Connexion"
+
+#: auth/templates/login.html:38
+msgid "Remember me"
+msgstr "Se souvenir de moi"
+
+#: auth/templates/login.html:46
+msgid "Sign in"
+msgstr "Se connecter"
+
+#: auth/templates/login.html:57 auth/templates/register.html:38
+msgid "Sign up"
+msgstr "S'inscrire"
+
+#: auth/templates/login.html:61
+msgid "Sign up a with social account"
+msgstr "S'inscrire par un réseau social"
+
+#: auth/templates/login.html:66 auth/templates/login.html.py:68
+#: auth/templates/login.html:72 auth/templates/login.html.py:74
+#: auth/templates/login.html:78 auth/templates/login.html.py:80
+#, python-format
+msgid "Sign up with %(name)s"
+msgstr "S'inscrire par %(name)s"
+
+#: auth/templates/login.html:87
+msgid "-- or --"
+msgstr "-- ou --"
+
+#: auth/templates/login.html:94
+msgid "Create an account"
+msgstr "Créer un compte"
+
+#: auth/templates/logout.html:4 auth/templates/logout.html.py:10
+msgid "Sign Out"
+msgstr "Déconnexion"
+
+#: auth/templates/logout.html:11
+msgid "You have been signed out. Come back soon !"
+msgstr "Vous avez été déconnecté. Revenez vite !"
+
+#: auth/templates/logout.html:13 data/templates/home.html:4
+msgid "Home"
+msgstr "Accueil"
+
+#: auth/templates/register.html:5 auth/templates/register.html.py:15
+msgid "Sign Up"
+msgstr "Inscription"
+
+#: auth/templates/register.html:31
+msgid "required fields"
+msgstr "champs requis"
+
+#: data/models/activity.py:30
+msgid "Activity"
+msgstr ""
+
+#: data/models/activity.py:31
+msgid "Activities"
+msgstr ""
+
+#: data/models/dataset.py:49
+msgid "Dataset"
+msgstr "Série de données"
+
+#: data/models/dataset.py:50
+msgid "Datasets"
+msgstr "Séries de données"
+
+#: data/models/related.py:30
+msgid "Related"
+msgstr ""
+
+#: data/models/related.py:31
+msgid "Relateds"
+msgstr ""
+
+#: data/templates/dataset.html:21
+msgid "Published by"
+msgstr "Publié par"
+
+#: data/templates/dataset.html:33
+msgid "Provided by"
+msgstr "Fourni par"
+
+#: data/templates/dataset.html:55
+msgid "Nameless resource"
+msgstr "Resource sans nom"
+
+#: data/templates/dataset.html:68
+msgid "Community resources"
+msgstr "Resource de la communauté"
+
+#: data/templates/dataset.html:73
+msgid "Reuse"
+msgstr "Réutilisation"
+
+#: data/templates/dataset.html:104
+msgid "Publish a reuse case !"
+msgstr "Publiez une réutilisation"
+
+#: data/templates/dataset.html:120
+msgid "Certified public service"
+msgstr "Service public certifié"
+
+#: data/templates/dataset.html:121
+msgid "This organization and its datasets are certified by data.gouv.fr"
+msgstr "Cette organisation et ses séries de données sont certifiés par data.gouv.fr"
+
+#: data/templates/dataset.html:135
+msgid "more"
+msgstr "plus"
+
+#: data/templates/dataset.html:146
+msgid "Informations"
+msgstr "Informations"
+
+#: data/templates/dataset.html:155
+msgid "License"
+msgstr "License"
+
+#: data/templates/dataset.html:166
+msgid "Temporal coverage"
+msgstr "Couverture temporelle"
+
+#: data/templates/dataset.html:169
+#, python-format
+msgid ""
+"\n"
+"                            %(from)s to %(to)s\n"
+"                            "
+msgstr ""
+
+#: data/templates/dataset.html:179
+msgid "Periodicity"
+msgstr "Périodicité"
+
+#: data/templates/dataset.html:190
+msgid "Territorial coverage"
+msgstr "Couverture territoriale"
+
+#: data/templates/dataset.html:202
+msgid "Territorial coverage granularity"
+msgstr "Granularité de la couverture territoriale"
+
+#: data/templates/home.html:10
+msgid "Let's debate facts to make them undebatable"
+msgstr ""
+
+#: data/templates/home.html:56
+msgid "Last"
+msgstr "Récents"
+
+#: data/templates/home.html:62
+msgid "Popular"
+msgstr "Populaires"
+
+#: data/templates/home.html:111
+msgid "Citizens"
+msgstr "Citoyens"
+
+#: data/templates/home.html:129
+msgid "Public services"
+msgstr "Services publics"
+
+#: data/templates/home.html:147
+msgid "Businesses"
+msgstr "Entreprises"
+
+#: templates/base.html:48
+msgid "Back to top"
+msgstr "Haut de page"
+
+#: templates/base.html:51
+msgid "Privacy"
+msgstr "Vie privée"
+
+#: templates/base.html:52
+msgid "Terms"
+msgstr "Conditions légales"
+
+#: templates/navbar.html:15
+msgid "Open platform for french public data"
+msgstr "Plate-forme ouverte des données publiques françaises"
+
+#: templates/navbar.html:25 templates/navbar.html.py:27
+msgid "Profile"
+msgstr "Profil"
+
+#: templates/navbar.html:32 templates/navbar.html.py:34
+msgid "Log out"
+msgstr "Se déconnecter"
+
+#: templates/navbar.html:42 templates/navbar.html.py:44
+msgid "Sign In / Sign Up"
+msgstr "Connexion / Inscription"
+
+#: templates/navbar.html:51
+msgid "Advanced mode"
+msgstr "Mode avancé"
+
+#: templates/navbar.html:79 templates/navbar.html.py:82
+msgid "Publish a dataset !"
+msgstr "Publiez une série de données"
+
+#: templates/navbar.html:92
+msgid "Search"
+msgstr "Recherche"
+
+#: templates/navbar.html:100
+msgid "Where"
+msgstr "Où"
+
+#: templates/sidebar.html:6
+msgid "Public data"
+msgstr "Données publiques"
+
+#: templates/sidebar.html:11
+msgid "How it works ?"
+msgstr "Comment ça marche ?"
+
+#: templates/sidebar.html:15
+msgid "Open license"
+msgstr "License ouverte"

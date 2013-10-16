@@ -1,0 +1,32 @@
+{
+  "name": "weckan",
+  "version": "0.1.0",
+  "authors": [
+    "Axel Haustant <noirbizarre@gmail.com>"
+  ],
+  "description": "Custom frontend to CKAN",
+  "keywords": [
+    "opendata",
+    "ckan"
+  ],
+  "license": "MIT",
+  "homepage": "http://github.com/etalab/weckan",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "resolutions": {
+    "jquery": "~2.0.3"
+  },
+  "dependencies": {
+    "etalab-assets": "*",
+    "django.js": "~0.8.0",
+    "moment": "~2.2.1",
+    "jquery.validation": "~1.11.1",
+    "jcrop": "~0.9.12"
+  }
+}

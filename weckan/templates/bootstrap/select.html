@@ -1,0 +1,98 @@
+{%- macro input(field, label=None, disabled=False, type="text", horizontal=(3, 9)) -%}
+<div class="form-group{% if field.errors %} has-error{% endif %}">
+    <label for="{{ field.id_for_label }}"
+        class="control-label{% if horizontal %} col-sm-{{ horizontal[0] }}{% endif %}">
+        {{ label or field.label }}
+        {% if field.help_text %}<span class="form-help" data-content="{{ field.help_text }}"></span>{% endif %}
+    </label>
+    <div {% if horizontal %}class="col-sm-{{ horizontal[1] }}"{% endif %}>
+        <input id="{{ field.id_for_label }}" class="form-control" autocomplete="off"
+            type="{{ type }}"
+            name="{{ field.html_name }}"
+            value="{{ field.value() or field.initial }}"
+            placeholder="{{ field.label }}"
+            {% if field.required %}required {% endif %}
+            {% if disabled %}disabled{% endif %}
+            />
+        <span class="help-block">{{ field.errors }}</span>
+    </div>
+</div>
+{%- endmacro -%}
+
+{%- macro checkbox(field, label=None, inline=False, disabled=False, horizontal=(3, 9)) -%}
+<div class="form-group{% if field.errors %} has-error{% endif %}">
+    {% if inline %}
+    <div class="checkbox">
+      <label>
+        <input id="{{ field.id_for_label }}" type="checkbox"
+            name="{{ field.html_name }}"
+            {% if field.value() or field.initial %}checked="checked"{% endif %}
+            {% if field.required %}required {% endif %}
+            {% if disabled %}disabled{% endif %}
+        />
+        {{ label or field.label }}
+        {% if field.help_text %}<span class="form-help" data-content="{{ field.help_text }}"></span>{% endif %}
+      </label>
+    </div>
+    {% else %}
+    <label for="{{ field.id_for_label }}"
+        class="control-label{% if horizontal %} col-sm-{{ horizontal[0] }}{% endif %}">
+        {{ label or field.label }}
+        {% if field.help_text %}<span class="form-help" data-content="{{ field.help_text }}"></span>{% endif %}
+    </label>
+    <div {% if horizontal %}class="col-sm-{{ horizontal[1] }}"{% endif %}>
+        <input id="{{ field.id_for_label }}" type="checkbox" class="form-control"
+            name="{{ field.html_name }}"
+            {% if field.value() or field.initial %}checked="checked"{% endif %}
+            {% if field.required %}required {% endif %}
+            {% if disabled %}disabled{% endif %}
+        />
+        <span class="help-block">{{ field.errors }}</span>
+    </div>
+    {% endif %}
+</div>
+{%- endmacro -%}
+
+{%- macro select(field, label=None, search=False, disabled=False, horizontal=(3, 9)) -%}
+<div class="form-group{% if field.errors %} has-error{% endif %}">
+    <label for="{{ field.id_for_label }}"
+        class="control-label{% if horizontal %} col-sm-{{ horizontal[0] }}{% endif %}">
+        {{ label or field.label }}
+        {% if field.help_text %}<span class="form-help" data-content="{{ field.help_text }}"></span>{% endif %}
+    </label>
+    <div {% if horizontal %}class="col-sm-{{ horizontal[1] }}"{% endif %}>
+        <select id="{{ field.id_for_label }}" class="form-control show-tick" autocomplete="off"
+            name="{{ field.html_name }}"
+            value="{{ field.value() or field.initial }}"
+            placeholder="{{ field.label }}"
+            {% if field.required %}required {% endif %}
+            {% if disabled %}disabled{% endif %}
+            {% if search %}data-live-search="true"{% endif %}
+            >
+            {% for value, display in field.field.choices %}
+            <option value="{{value}}" {% if field.value() == value %}selected="selected"{% endif %}>{{display}}</option>
+            {% endfor %}
+        </select>
+        <span class="help-block">{{ field.errors }}</span>
+    </div>
+</div>
+{%- endmacro -%}
+
+{%- macro textarea(field, rows=3, label=None, disabled=False, horizontal=(3, 9)) -%}
+<div class="form-group{% if field.errors %} has-error{% endif %}">
+    <label for="{{ field.id_for_label }}"
+        class="control-label{% if horizontal %} col-sm-{{ horizontal[0] }}{% endif %}">
+        {{ label or field.label }}
+        {% if field.help_text %}<span class="form-help" data-content="{{ field.help_text }}"></span>{% endif %}
+    </label>
+    <div {% if horizontal %}class="col-sm-{{ horizontal[1] }}"{% endif %}>
+        <textarea id="{{ field.id_for_label }}" class="form-control" rows="{{ rows }}"
+            name="{{ field.html_name }}"
+            placeholder="{{ field.label }}"
+            {% if field.required %}required {% endif %}
+            {% if disabled %}disabled{% endif %}
+        >{{ field.value() or field.initial }}</textarea>
+        <span class="help-block">{{ field.errors }}</span>
+    </div>
+</div>
+{%- endmacro -%}

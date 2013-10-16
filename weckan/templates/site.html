@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="{{lang}}"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8" lang="{{lang}}"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9" lang="{{lang}}"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="{{lang}}"> <!--<![endif]-->
+<head>
+    <meta charset="utf-8">
+
+    <meta name="robots" content="noindex, nofollow">
+    <meta name="description" content="Données ouvertes françaises">
+    <meta name="author" content="ETALAB">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+    <title>{% block title %}{% endblock %} - Etalab2.fr</title>
+    <link rel="shortcut icon" href="{{ static('/images/favicon.png') }}">
+
+    {# Reference to other Etalab sites #}
+    <meta name="domain" content="{{ DOMAIN }}" />
+    <link rel="home" href="{{ HOME_URL }}" />
+    <link rel="wiki" href="{{ WIKI_URL }}" />
+    <link rel="wiki-api" href="{{ WIKI_API_URL }}" />
+    <link rel="questions" href="{{ QUESTIONS_URL }}" />
+
+    {# Default style to site, overridden by child templates #}
+    {% set style = style|default('site') -%}
+    {% assets '{0}-css'.format(style) %}
+    <link rel="stylesheet" media="screen" href="{{ ASSET_URL }}">
+    {% endassets %}
+
+    {% assets "modernizr" %}
+    <script src="{{ ASSET_URL}}"></script>
+    {% endassets %}
+
+</head>
+<body>
+
+    {% include "navbar.html" %}
+
+    <div class="full-container">
+        <div class="row">
+            <div class="col-sm-3 col-md-3">
+                {% include "sidebar.html" %}
+            </div>
+
+            <div class="col-sm-9 col-md-9">
+            {% block content %}{% endblock %}
+            </div>
+        </div>
+
+        <hr/>
+        <footer>
+            <p class="pull-right"><a href="#">{% trans %}Back to top{% endtrans %}</a></p>
+            <p>
+                &copy; 2013 ETALAB, Inc. &middot;
+                <a href="#">{% trans %}Privacy{% endtrans %}</a> &middot;
+                <a href="#">{% trans %}Terms{% endtrans %}</a>
+            </p>
+        </footer>
+
+    </div>
+
+
+    {# Load scripts after for faster page loading #}
+    <!--[if lt IE 9]>
+        {% assets "site-legacy-js" %}
+        <script src="{{ ASSET_URL}}"></script>
+        {% endassets %}
+    <![endif]-->
+    <!--[if gte IE 9]><!-->
+        {% assets "site-js" %}
+        <script src="{{ ASSET_URL}}"></script>
+        {% endassets %}
+    <!--<![endif]-->
+
+    {% block javascript %}{% endblock %}
+
+    <!-- Piwik -->
+    <script type="text/javascript">
+      var _paq = _paq || [];
+      _paq.push(["trackPageView"]);
+      _paq.push(["enableLinkTracking"]);
+
+      (function() {
+        var u=(("https:" == document.location.protocol) ? "https" : "http")
+    + "://webstats.easter-eggs.com/";
+        _paq.push(["setTrackerUrl", u+"piwik.php"]);
+        _paq.push(["setSiteId", "30"]);
+        var d=document, g=d.createElement("script"),
+    s=d.getElementsByTagName("script")[0]; g.type="text/javascript";
+        g.defer=true; g.async=true; g.src=u+"piwik.js";
+    s.parentNode.insertBefore(g,s);
+      })();
+    </script>
+    <!-- End Piwik Code -->
+</body>
+</html>

@@ -1,0 +1,44 @@
+{% extends "base.html" %}
+
+{% load i18n staticfiles bootstrap avatar %}
+
+{% block title %}{% trans "Sign Up" %}{% endblock %}
+
+{% block content %}
+<div class="container auth-container">
+    <form class="form-horizontal validate col-md-offset-2 col-md-8" role="form"
+        method="post" action="{% url 'register' %}">
+        {% csrf_token %}
+
+        <fieldset>
+
+            <legend>{% trans "Sign Up" %}</legend>
+
+            {% for error in form.non_field_errors %}
+            <div class="alert alert-danger">
+            {{ error }}
+            </div>
+            {% endfor %}
+
+            {% for field in form %}
+            {% form_field field  %}
+            {% endfor %}
+
+            <div class="form-group">
+                <div class="col-md-12 col-md-offset-4">
+                    <p class="form-control-static">
+                        <span class="red">*</span>
+                        <i>{% trans "required fields" %}</i>
+                    </p>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <div class="col-md-12">
+                    <button type="submit" class="btn btn-primary btn-block">{% trans "Sign up" %}</button>
+                </div>
+            </div>
+        </fieldset>
+    </form>
+</div>
+{% endblock %}

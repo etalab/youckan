@@ -1,0 +1,7 @@
+{% if widget == 'checkbox' %}
+{% include 'bootstrap/checkbox.html' %}
+{% elif widget == 'textarea' %}
+{% include 'bootstrap/textarea.html' %}
+{% else %}
+{% include 'bootstrap/input.html' %}
+{% endif %}

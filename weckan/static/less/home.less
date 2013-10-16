@@ -1,0 +1,101 @@
+#claim {
+    font-family: @title-font;
+    font-size: 1.55em;
+}
+
+.marketing .panel {
+    .img-responsive {
+        width: 100%;
+    }
+
+    .panel-title {
+        font-size: 1.55em;
+        font-family: @title-font;
+        &:hover {
+            color: @highlight;
+        }
+    }
+
+    .panel-body {
+        color: black;
+    }
+
+    &:hover {
+        border: 1px solid @highlight;
+
+        .panel-body {
+            color: @highlight;
+        }
+
+        .panel-title {
+            color: @highlight;
+        }
+    }
+}
+
+.tab-datasets {
+    tr {
+        cursor: pointer;
+
+        a {
+            text-decoration: none;
+            color: black;
+        }
+    }
+}
+
+// Feeds fixes
+.feeds {
+    background-color: @gray-lighter;
+
+    .nav-tabs a {
+        border: none;
+    }
+
+    .table {
+        margin: 0;
+        table-layout: fixed;
+    }
+}
+
+// Fix carsoussel
+#home-carousel {
+
+    @media (min-width: @screen-sm) {
+        height: 340px;
+        overflow: hidden;
+    }
+
+    .carousel-inner > .item {
+
+        img {
+            margin: 0 auto;
+        }
+
+        @media (min-width: @screen-sm) {
+            height: 340px;
+
+            img {
+                min-height: 340px;
+                position: absolute;
+                top: 0;
+                left: 0;
+                min-width: 100%;
+            }
+        }
+    }
+
+    .carousel-caption {
+        z-index: 10;
+        color: white;
+        background-color: fadeout(@bg-light, 20%);
+        border-radius: 5px;
+        padding: 5px;
+        margin: 20px 0 30px;
+
+        &:hover {
+            color: white;
+            background-color: fadeout(@bg-light, 10%);
+        }
+    }
+}
