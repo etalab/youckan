@@ -1,7 +1,13 @@
+{% load i18n %}
 <html>
 <body>
-<p>Hello <strong>{{user.full_name}}</strong>.</p>
+<p>
+{% blocktrans with fullname=user.full_name %}Hello <strong>{{fullname}}</strong>.{% endblocktrans %}
+</p>
 
-<p>Please validate your account <a href="{{url}}">here</a>.</p>
+<p>
+{% blocktrans %}Please validate your account <a href="{{url}}">here</a>.{% endblocktrans %}
+</p>
+
 </body>
 </html>

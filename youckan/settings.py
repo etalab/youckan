@@ -276,7 +276,7 @@ INSTALLED_APPS = (
     'djangojs',
     'rest_framework',
     'django_gravatar',
-    'user_avatar',
+    'awesome_avatar',
     # 'avatar',
     'social.apps.django_app.default',
     'oauth2_provider',

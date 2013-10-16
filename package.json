@@ -1,11 +1,11 @@
 {
   "name": "youckan",
   "version": "0.1.0",
-  "description": "Custom frontend to CKAN",
+  "description": "Social frontend to CKAN",
   "main": "index.js",
   "scripts": {
     "test": "fab test"
   },
-  "author": "Axel Haustant <noirbizarre@gmail.com>",
+  "author": "Axel Haustant <axel.haustant@etalab2.fr>",
   "license": "BSD-2-Clause"
 }

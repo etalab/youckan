@@ -1,18 +1,20 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
-#, fuzzy
+# Translators:
+# noirbizarre <noirbizarre@gmail.com>, 2013
+# noirbizarre <noirbizarre@gmail.com>, 2013
 msgid ""
 msgstr ""
-"Project-Id-Version: PACKAGE VERSION\n"
+"Project-Id-Version: youckan\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-10-11 18:04+0200\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
-"Language: \n"
+"POT-Creation-Date: 2013-10-16 19:29+0200\n"
+"PO-Revision-Date: 2013-10-16 17:23+0000\n"
+"Last-Translator: noirbizarre <noirbizarre@gmail.com>\n"
+"Language-Team: French (http://www.transifex.com/projects/p/youckan/language/"
+"fr/)\n"
+"Language: fr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -34,115 +36,230 @@ msgstr "Mot de passe"
 msgid "Confirm password"
 msgstr "Confirmation du mot de passe"
 
-#: auth/forms.py:35
+#: auth/forms.py:38
 msgid "Passwords don't match"
 msgstr "Les mots de passe ne correspondent pas"
 
-#: auth/models.py:39
+#: auth/mail.py:24
+msgid "Validate your account"
+msgstr "Validez votre compte"
+
+#: auth/mail.py:25
+#, python-brace-format
+msgid "Validate your account {0}"
+msgstr "Validez votre compte {0}"
+
+#: auth/mail.py:36
+msgid "Account creation confirmation"
+msgstr "Confirmation de création de compte"
+
+#: auth/mail.py:37
+msgid "Your account has been created"
+msgstr "Votre compte a été créé"
+
+#: auth/models.py:43
 msgid "email"
 msgstr "email"
 
-#: auth/models.py:40
+#: auth/models.py:44
 msgid "first name"
 msgstr "prénom"
 
-#: auth/models.py:41
+#: auth/models.py:45
 msgid "last name"
 msgstr "nom"
 
-#: auth/models.py:42
+#: auth/models.py:46 auth/templates/widgets/avatar.html:10
+msgid "Avatar"
+msgstr "Avatar"
+
+#: auth/models.py:47
 msgid "staff status"
 msgstr "status staff"
 
-#: auth/models.py:43
+#: auth/models.py:48
 msgid "Designates whether the user can log into this admin site."
 msgstr ""
 
-#: auth/models.py:44
+#: auth/models.py:49
 msgid "active"
 msgstr ""
 
-#: auth/models.py:45
+#: auth/models.py:50
 msgid ""
 "Designates whether this user should be treated as active. Unselect this "
 "instead of deleting accounts."
 msgstr ""
 
-#: auth/models.py:47
+#: auth/models.py:52
 msgid "date joined"
-msgstr ""
+msgstr "date d'inscription"
 
-#: auth/models.py:56
+#: auth/models.py:61
 msgid "user"
-msgstr ""
+msgstr "utilisateur"
 
-#: auth/models.py:57
+#: auth/models.py:62
 msgid "users"
-msgstr ""
+msgstr "utilisateurs"
 
-#: auth/templates/login.html:5 auth/templates/login.html.py:23
+#: auth/pipeline.py:45
+#, python-brace-format
+msgid "This {0} account is already in use. Please login with your password"
+msgstr "Ce compte {0} est déjà utilisé. Connectez-vous avec votre mot de passe"
+
+#: auth/templates/login.html:5 auth/templates/login.html.py:44
 #: auth/templates/register-done.html:5
 msgid "Sign In"
 msgstr "Connexion"
 
-#: auth/templates/login.html:38
+#: auth/templates/login.html:15 auth/templates/logout.html:4
+#: auth/templates/logout.html.py:10
+msgid "Sign Out"
+msgstr "Déconnexion"
+
+#: auth/templates/login.html:18
+#, python-format
+msgid "You are already logged in as %(name)s."
+msgstr "Vous êtes déjà connecté en tant que %(name)s."
+
+#: auth/templates/login.html:20
+msgid "Please logout if you want to sign in as a different user."
+msgstr "Déconnectez-vous et connectez-vous avec un autre utilisateur."
+
+#: auth/templates/login.html:24 auth/templates/login.html.py:26
+msgid "Sign out"
+msgstr "Se déconnecter"
+
+#: auth/templates/login.html:58
 msgid "Remember me"
 msgstr "Se souvenir de moi"
 
-#: auth/templates/login.html:46
+#: auth/templates/login.html:66
 msgid "Sign in"
 msgstr "Se connecter"
 
-#: auth/templates/login.html:57 auth/templates/register.html:38
-msgid "Sign up"
-msgstr "S'inscrire"
+#: auth/templates/login.html:77 auth/templates/register.html:5
+#: auth/templates/register.html.py:15
+msgid "Sign Up"
+msgstr "Inscription"
 
-#: auth/templates/login.html:61
+#: auth/templates/login.html:81
 msgid "Sign up a with social account"
 msgstr "S'inscrire par un réseau social"
 
-#: auth/templates/login.html:66 auth/templates/login.html.py:68
-#: auth/templates/login.html:72 auth/templates/login.html.py:74
-#: auth/templates/login.html:78 auth/templates/login.html.py:80
+#: auth/templates/login.html:86 auth/templates/login.html.py:88
+#: auth/templates/login.html:92 auth/templates/login.html.py:94
+#: auth/templates/login.html:98 auth/templates/login.html.py:100
 #, python-format
 msgid "Sign up with %(name)s"
 msgstr "S'inscrire par %(name)s"
 
-#: auth/templates/login.html:87
+#: auth/templates/login.html:107
 msgid "-- or --"
 msgstr "-- ou --"
 
-#: auth/templates/login.html:94
+#: auth/templates/login.html:114
 msgid "Create an account"
 msgstr "Créer un compte"
-
-#: auth/templates/logout.html:4 auth/templates/logout.html.py:10
-msgid "Sign Out"
-msgstr "Déconnexion"
 
 #: auth/templates/logout.html:11
 msgid "You have been signed out. Come back soon !"
 msgstr "Vous avez été déconnecté. Revenez vite !"
 
-#: auth/templates/logout.html:13 data/templates/home.html:4
+#: auth/templates/logout.html:13 auth/templates/register-done.html:19
+#: data/templates/home.html:4
 msgid "Home"
 msgstr "Accueil"
 
-#: auth/templates/register.html:5 auth/templates/register.html.py:15
-msgid "Sign Up"
-msgstr "Inscription"
+#: auth/templates/profile.html:4
+#, python-format
+msgid "%(name)s profile"
+msgstr "Profil de %(name)s"
+
+#: auth/templates/register-done.html:10
+msgid "Registeration complete"
+msgstr "Inscription complète"
+
+#: auth/templates/register-done.html:12
+msgid ""
+"\n"
+"        Your registeration is complete:\n"
+"        Your account has been activated and you can now use all user "
+"features.\n"
+"        "
+msgstr ""
+"\n"
+"Votre inscription est complète:\n"
+"Votre compte a été activé et vous pouvez maintenant utiliser toutes les "
+"fonctionnalités utilisateur."
+
+#: auth/templates/register-done.html:23
+msgid "Continue your browsing"
+msgstr "Reprendre votre navigation"
+
+#: auth/templates/register-mail.html:5 auth/templates/register-mail.html:10
+msgid "Email validation"
+msgstr "Validation de l'email"
+
+#: auth/templates/register-mail.html:11
+#, python-format
+msgid "A email validation was sent to %(email)s."
+msgstr ""
 
 #: auth/templates/register.html:31
 msgid "required fields"
 msgstr "champs requis"
 
+#: auth/templates/register.html:38
+msgid "Sign up"
+msgstr "S'inscrire"
+
+#: auth/templates/mails/confirmation.html:5
+#: auth/templates/mails/validation.html:5
+#, python-format
+msgid "Hello <strong>%(fullname)s</strong>."
+msgstr "Bonjour <strong>%(fullname)s</strong>."
+
+#: auth/templates/mails/confirmation.html:9
+#, python-format
+msgid ""
+"\n"
+"You account has been successfully created.\n"
+"You can visit your profil <a href=\"%(url)s\">here</a>.\n"
+msgstr ""
+"\n"
+"Votre compte a été créé avec succès.\n"
+"Vous pouvez maintenant visiter votre profile <a href=\"%(url)s\">ici</a>.\n"
+
+#: auth/templates/mails/validation.html:9
+#, python-format
+msgid "Please validate your account <a href=\"%(url)s\">here</a>."
+msgstr "Validez votre compte <a href=\"%(url)s\">ici</a>."
+
+#: auth/templates/widgets/avatar.html:2
+msgid "Change your avatar"
+msgstr "Changer votre avatar"
+
+#: auth/templates/widgets/avatar.html:32
+msgid "Preview"
+msgstr "Aperçu"
+
+#: auth/templates/widgets/avatar.html:52
+msgid "Cancel"
+msgstr "Annuler"
+
+#: auth/templates/widgets/avatar.html:53
+msgid "Save"
+msgstr "Enregistrer"
+
 #: data/models/activity.py:30
 msgid "Activity"
-msgstr ""
+msgstr "Activité"
 
 #: data/models/activity.py:31
 msgid "Activities"
-msgstr ""
+msgstr "Activités"
 
 #: data/models/dataset.py:49
 msgid "Dataset"
@@ -190,7 +307,8 @@ msgstr "Service public certifié"
 
 #: data/templates/dataset.html:121
 msgid "This organization and its datasets are certified by data.gouv.fr"
-msgstr "Cette organisation et ses séries de données sont certifiés par data.gouv.fr"
+msgstr ""
+"Cette organisation et ses séries de données sont certifiés par data.gouv.fr"
 
 #: data/templates/dataset.html:135
 msgid "more"
@@ -215,6 +333,8 @@ msgid ""
 "                            %(from)s to %(to)s\n"
 "                            "
 msgstr ""
+"\n"
+"%(from)s à %(to)s"
 
 #: data/templates/dataset.html:179
 msgid "Periodicity"
@@ -230,7 +350,7 @@ msgstr "Granularité de la couverture territoriale"
 
 #: data/templates/home.html:10
 msgid "Let's debate facts to make them undebatable"
-msgstr ""
+msgstr "Discutons les faits pour qu'ils deviennent indiscutables"
 
 #: data/templates/home.html:56
 msgid "Last"
@@ -252,15 +372,15 @@ msgstr "Services publics"
 msgid "Businesses"
 msgstr "Entreprises"
 
-#: templates/base.html:48
+#: templates/base.html:56
 msgid "Back to top"
 msgstr "Haut de page"
 
-#: templates/base.html:51
+#: templates/base.html:59
 msgid "Privacy"
 msgstr "Vie privée"
 
-#: templates/base.html:52
+#: templates/base.html:60
 msgid "Terms"
 msgstr "Conditions légales"
 

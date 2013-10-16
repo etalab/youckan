@@ -2,9 +2,9 @@
   "name": "youckan",
   "version": "0.1.0",
   "authors": [
-    "Axel Haustant <noirbizarre@gmail.com>"
+    "Axel Haustant <axel.haustant@etalab2.fr>"
   ],
-  "description": "Custom frontend to CKAN",
+  "description": "Social frontend to CKAN",
   "keywords": [
     "opendata",
     "ckan"

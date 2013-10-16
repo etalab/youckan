@@ -7,14 +7,21 @@
 {% block content %}
 <div class="container">
     <div class="jumbotron">
-        <h1>Registeration done</h1>
+        <h1>{% trans "Registeration complete" %}</h1>
         <p>
-        Your account has been activated
+        {% blocktrans %}
+        Your registeration is complete:
+        Your account has been activated and you can now use all user features.
+        {% endblocktrans %}
         </p>
         <p>
-            <a class="btn btn-primary btn-lg" href="{{ etalab.HOME_URL }}">Home</a>
+            <a class="btn btn-primary btn-lg" href="{{ etalab.HOME_URL }}">
+            {% trans "Home" %}
+            </a>
             {% if next %}
-            <a class="btn btn-primary btn-lg" href="{{next}}">Continue browsing</a>
+            <a class="btn btn-primary btn-lg" href="{{next}}">
+            {% trans "Continue your browsing" %}
+            </a>
             {% endif %}
         </p>
     </div>

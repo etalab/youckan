@@ -42,10 +42,10 @@ def flag_url(language_code):
 @stringfilter
 def markdown(source):
     '''Render Markdown to HTML'''
-    import markdown2
+    import markdown
     if (source is None) or (source.strip() == ''):
         return ''
-    return mark_safe(markdown2.markdown(force_unicode(source), safe_mode=True, enable_attributes=False))
+    return mark_safe(markdown.markdown(force_unicode(source), safe_mode=True, enable_attributes=False))
 
 
 @register.filter(is_safe=True)

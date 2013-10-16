@@ -7,10 +7,12 @@ from django.utils import timezone
 from django.utils.translation import ugettext_lazy as _
 from django.core.urlresolvers import reverse_lazy
 
-from user_avatar.fields import AvatarField
+from awesome_avatar.fields import AvatarField
+
 
 def avatar_file_name(user, filename):
     return '/'.join(['avatars', user.id, filename])
+
 
 class UserManager(BaseUserManager):
 

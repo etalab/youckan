@@ -54,13 +54,6 @@ class RegisterView(CreateView):
         backend = self.request.session['partial_pipeline']['backend']
         return reverse('social:complete', kwargs={'backend': backend})
 
-    # def get_form_kwargs(self, **kwargs):
-    #     kwargs = super(RegisterView, self).get_form_kwargs(**kwargs)
-    #     # kwargs['user'] = self.request.user
-    #     # kwargs['board'] = ...
-    #     # kwargs['post'] = ...
-    #     return kwargs
-
 
 class RegisterDoneView(TemplateView):
     template_name = 'register-done.html'

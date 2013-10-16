@@ -7,8 +7,8 @@
 {% block content %}
 <div class="container">
     <div class="jumbotron">
-        <h1>Email validation</h1>
-        <p>A email validation was sent to {{ email }}.</p>
+        <h1>{% trans "Email validation" %}</h1>
+        <p>{% blocktrans %}A email validation was sent to {{ email }}.{% endblocktrans %}</p>
     </div>
 </div>
 {% endblock %}

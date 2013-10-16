@@ -1,9 +1,10 @@
 # -*- coding: utf-8 -*-
 from __future__ import unicode_literals
 
-from django.template import loader, Context
 from django.core.mail import EmailMultiAlternatives
 from django.core.urlresolvers import reverse
+from django.template import loader, Context
+from django.utils.translation import ugettext_lazy as _
 
 
 def send_validation(strategy, code):
@@ -20,8 +21,8 @@ def send_validation(strategy, code):
         'user': user,
     })
 
-    email = EmailMultiAlternatives('Validate your account',
-        'Validate your account {0}'.format(url),
+    email = EmailMultiAlternatives(_('Validate your account'),
+        _('Validate your account {0}').format(url),
         to=[code.email]
     )
     email.attach_alternative(template.render(context), 'text/html')
@@ -32,8 +33,8 @@ def send_confirmation(user):
     template = loader.get_template('mails/confirmation.html')
     context = Context({'user': user})
 
-    email = EmailMultiAlternatives('Account creation confirmation',
-        'Your account has been created',
+    email = EmailMultiAlternatives(_('Account creation confirmation'),
+        _('Your account has been created'),
         to=[user.email]
     )
     email.attach_alternative(template.render(context), 'text/html')
