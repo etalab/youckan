@@ -1,5 +1,5 @@
 [bumpr]
-file = weckan/__init__.py
+file = youckan/__init__.py
 vcs = git
 commit = true
 tag = true
@@ -24,4 +24,4 @@ bump = {version} ({date:%Y-%m-%d})
 prepare = Current
 
 [readthedoc]
-id = weckan
+id = youckan

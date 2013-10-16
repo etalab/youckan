@@ -55,12 +55,12 @@ if sys.version_info[0:2] < (2, 7):
     install_requires += ['argparse']
 
 setup(
-    name='weckan',
-    version=__import__('weckan').__version__,
-    description=__import__('weckan').__description__,
+    name='youckan',
+    version=__import__('youckan').__version__,
+    description=__import__('youckan').__description__,
     long_description=long_description,
-    url='https://github.com/axelhaustant/weckan',
-    download_url='http://pypi.python.org/pypi/weckan',
+    url='https://github.com/axelhaustant/youckan',
+    download_url='http://pypi.python.org/pypi/youckan',
     author='axelhaustant',
     author_email='axelhaustant@gmail.com',
     packages=find_packages(),
@@ -72,7 +72,7 @@ setup(
     },
     entry_points = {
         'console_scripts': [
-            'weckan = weckan:main',
+            'youckan = youckan:main',
         ]
     },
     license='LGPL',

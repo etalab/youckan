@@ -1,10 +1,10 @@
 BASEDIR=$(CURDIR)
 DOCDIR=$(BASEDIR)/doc
 DISTDIR=$(BASEDIR)/dist
-PACKAGE='weckan'
+PACKAGE='youckan'
 
 help:
-	@echo 'Makefile for weckan'
+	@echo 'Makefile for youckan'
 	@echo '                                                                     '
 	@echo 'Usage:                                                               '
 	@echo '   make test             Run the test suite                          '

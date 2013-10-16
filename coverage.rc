@@ -1,8 +1,8 @@
 [run]
-source = weckan
+source = youckan
 branch = True
 omit =
-    weckan/tests/*
+    youckan/tests/*
 
 [report]
 # Regexes for lines to exclude from consideration

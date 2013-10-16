@@ -6,7 +6,7 @@ from fabric.api import local, task, env, settings, hide, lcd
 from fabric.colors import green, red
 from fabric.utils import abort
 
-env.project = 'weckan'
+env.project = 'youckan'
 
 ROOT = abspath(join(dirname(__file__)))
 
@@ -64,7 +64,7 @@ def serve(port=8000):
 def get_apps(app=None, canonical=False):
     import sys
     sys.path.insert(0, os.path.dirname(__file__))
-    from weckan.settings import PROJECT_APPS
+    from youckan.settings import PROJECT_APPS
 
     apps = [app] if app else PROJECT_APPS
     return apps if canonical else [a.split('.')[-1] for a in apps]
@@ -106,7 +106,7 @@ def pep8(app=None):
 @task
 def pylint(app=None):
     '''Run the pylint report'''
-    local('pylint --rcfile=pylint.rc weckan')
+    local('pylint --rcfile=pylint.rc youckan')
 
 
 @task
@@ -164,9 +164,9 @@ def make_messages(lang=None):
     Generate translation files (.mo)
     '''
     lang = '-l %s' % lang if lang else '-a'
-    with lcd(join(ROOT, 'weckan')):
+    with lcd(join(ROOT, 'youckan')):
         local('django-admin.py makemessages %s' % lang)
-    local('python manage.py js localize weckan %s --ignore=static/bower/*' % lang)
+    local('python manage.py js localize youckan %s --ignore=static/bower/*' % lang)
 
 
 @task
@@ -174,7 +174,7 @@ def compile_messages():
     '''
     Compile translation files (.po)
     '''
-    with lcd(join(ROOT, 'weckan')):
+    with lcd(join(ROOT, 'youckan')):
         local('django-admin.py compilemessages')
 
 

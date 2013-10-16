@@ -1,5 +1,5 @@
 {
-  "name": "weckan",
+  "name": "youckan",
   "version": "0.1.0",
   "authors": [
     "Axel Haustant <noirbizarre@gmail.com>"
@@ -10,7 +10,7 @@
     "ckan"
   ],
   "license": "MIT",
-  "homepage": "http://github.com/etalab/weckan",
+  "homepage": "http://github.com/etalab/youckan",
   "private": true,
   "ignore": [
     "**/.*",

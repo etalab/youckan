@@ -1,41 +1,41 @@
 =========
-weckan
+youckan
 =========
 
-.. image:: https://secure.travis-ci.org/user/weckan.png
-    :target: http://travis-ci.org/user/weckan
-.. image:: https://coveralls.io/repos/user/weckan/badge.png?branch=master
-    :target: https://coveralls.io/r/user/weckan
-.. image:: https://pypip.in/v/weckan/badge.png
-    :target: https://crate.io/packages/weckan
-.. image:: https://pypip.in/d/weckan/badge.png
-    :target: https://crate.io/packages/weckan
+.. image:: https://secure.travis-ci.org/etalab/youckan.png
+    :target: http://travis-ci.org/etalab/youckan
+.. image:: https://coveralls.io/repos/etalab/youckan/badge.png?branch=master
+    :target: https://coveralls.io/r/etalab/youckan
+.. image:: https://pypip.in/v/youckan/badge.png
+    :target: https://crate.io/packages/youckan
+.. image:: https://pypip.in/d/youckan/badge.png
+    :target: https://crate.io/packages/youckan
 
-weckan description
+youckan description
 
 Compatibility
 =============
 
-weckan requires Python 2.6+ and Django 1.4.2+.
+youckan requires Python 2.6+ and Django 1.4.2+.
 
 
 Installation
 ============
 
-You can install Django.js with pip:
+You can install youckan with pip:
 
 .. code-block:: console
 
-    $ pip install weckan
+    $ pip install youckan
 
 or with easy_install:
 
 .. code-block:: console
 
-    $ easy_install weckan
+    $ easy_install youckan
 
 
 Documentation
 =============
 
-The documentation is hosted `on Read the Docs <http://weckan.readthedocs.org/en/latest/>`_
+The documentation is hosted `on Read the Docs <http://youckan.readthedocs.org/en/latest/>`_
