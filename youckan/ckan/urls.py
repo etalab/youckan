@@ -4,7 +4,7 @@ from django.conf.urls import patterns, include, url
 from django.contrib import admin
 admin.autodiscover()
 
-from youckan.data.views import HomeView, DatasetView
+from youckan.ckan.views import HomeView, DatasetView
 
 urlpatterns = patterns('',
     url(r'^$', HomeView.as_view(), name='home'),

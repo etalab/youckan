@@ -3,7 +3,7 @@ from __future__ import unicode_literals
 
 from django.views.generic import DetailView
 
-from youckan.data.models import Dataset
+from youckan.ckan.models import Dataset
 
 
 class DatasetView(DetailView):

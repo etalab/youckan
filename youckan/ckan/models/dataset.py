@@ -4,8 +4,8 @@ from __future__ import unicode_literals
 from django.db import models
 from django.utils.translation import ugettext as _
 
-from youckan.data.models.activity import Activity
-from youckan.data.models.related import Related
+from youckan.ckan.models.activity import Activity
+from youckan.ckan.models.related import Related
 
 
 class DatasetManager(models.Manager):

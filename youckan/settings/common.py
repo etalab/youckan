@@ -157,6 +157,11 @@ TEMPLATE_DIRS = (
     # Don't forget to use absolute paths, not relative paths.
 )
 
+import djcelery
+djcelery.setup_loader()
+BROKER_URL = conf['celery']['broker']
+CELERY_RESULT_BACKEND = conf['celery']['backend']
+
 PROJECT_APPS = (
     'youckan',
     'youckan.auth'
@@ -173,6 +178,7 @@ THIRD_PARTY_APPS = (
     'social.apps.django_app.default',
     'oauth2_provider',
     'corsheaders',
+    'djcelery',
 )
 
 DJANGO_APPS = (

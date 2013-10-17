@@ -4,7 +4,7 @@ from __future__ import unicode_literals
 from django.db.models import Max, Count
 from django.views.generic import TemplateView
 
-from youckan.data.models.dataset import Dataset
+from youckan.ckan.models.dataset import Dataset
 
 
 class HomeView(TemplateView):
