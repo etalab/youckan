@@ -1,1 +1,32 @@
 include LICENSE MANIFEST.in README.rst CHANGELOG.rst
+include README.rst CHANGELOG.rst MANIFEST.in
+
+recursive-include youckan *
+recursive-include requirements *
+
+exclude youckan/settings/local.py
+
+recursive-exclude youckan/static/less *.css
+recursive-exclude youckan/static/js *.min.js
+
+prune youckan/static/bower
+
+include youckan/static/bower/bootstrap/less/*.less
+include youckan/static/bower/bootstrap/fonts/*
+include youckan/static/bower/bootstrap/dist/js/*.js
+include youckan/static/bower/etalab-assets/data/*.json
+include youckan/static/bower/etalab-assets/fonts/*
+include youckan/static/bower/etalab-assets/img/*
+include youckan/static/bower/etalab-assets/js/*.js
+include youckan/static/bower/etalab-assets/less/*.less
+include youckan/static/bower/jquery/jquery.js
+include youckan/static/bower/jquery-legacy/index.js
+include youckan/static/bower/jquery.cookie/jquery.cookie.js
+include youckan/static/bower/jquery.validation/jquery.validate.js
+include youckan/static/bower/modernizr/modernizr.js
+include youckan/static/bower/moment/min/moment+lang.js
+include youckan/static/bower/respond/respond.src.js
+include youckan/static/bower/swig/swig.js
+include youckan/static/bower/typeahead.js/dist/typeahead.js
+
+global-exclude *~ *.egg *.pyc

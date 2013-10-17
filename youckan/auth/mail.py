@@ -4,7 +4,7 @@ from __future__ import unicode_literals
 from django.core.mail import EmailMultiAlternatives
 from django.core.urlresolvers import reverse
 from django.template import loader, Context
-from django.utils.translation import ugettext_lazy as _
+from django.utils.translation import ugettext as _
 
 
 def send_validation(strategy, code):

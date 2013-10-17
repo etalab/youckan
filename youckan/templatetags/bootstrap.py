@@ -3,6 +3,8 @@ from __future__ import unicode_literals
 
 from django import template, forms
 
+from awesome_avatar.widgets import AvatarWidget
+
 register = template.Library()
 
 
@@ -68,9 +70,9 @@ def form_field(field, *args, **kwargs):
     elif isinstance(field.field.widget, forms.Textarea):
         data['widget'] = 'textarea'
         data.update(textarea(field, *args, **kwargs))
-    elif isinstance(field.field.widget, forms.Textarea):
-        data['widget'] = 'avatar'
-        data.update(textarea(field, *args, **kwargs))
-    else:
+    elif isinstance(field.field.widget, forms.TextInput):
+        data['widget'] = 'input'
         data.update(input(field, *args, **kwargs))
+    else:
+        data['field'] = field
     return data

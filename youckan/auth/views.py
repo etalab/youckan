@@ -5,7 +5,7 @@ from django.contrib.auth.views import login as default_login
 from django.core.urlresolvers import reverse_lazy, reverse
 from django.views.generic import TemplateView, DetailView, UpdateView, CreateView
 
-from youckan.auth.forms import LoginForm, RegisterForm
+from youckan.auth.forms import LoginForm, RegisterForm, ProfileForm
 from youckan.auth.models import YouckanUser
 
 
@@ -23,8 +23,9 @@ class ProfileView(DetailView):
 
 
 class ProfileEditView(UpdateView):
-    template_name = 'profile_edit.html'
+    template_name = 'profile-edit.html'
     model = YouckanUser
+    form_class = ProfileForm
     context_object_name = 'user_profile'
 
 
@@ -35,11 +36,9 @@ class RegisterView(CreateView):
 
     def get_initial(self):
         initial = {}
-        if 'email' in self.request.session:
-            initial['email'] = self.request.session['email']
         if 'userfields' in self.request.session:
             fields = self.request.session['userfields']
-            for field_name in 'first_name', 'last_name':
+            for field_name in 'email', 'first_name', 'last_name':
                 if field_name in fields:
                     initial[field_name] = fields[field_name]
 

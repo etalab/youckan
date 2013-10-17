@@ -2,6 +2,8 @@
 {% include 'bootstrap/checkbox.html' %}
 {% elif widget == 'textarea' %}
 {% include 'bootstrap/textarea.html' %}
-{% else %}
+{% elif widget == 'input' %}
 {% include 'bootstrap/input.html' %}
+{% else %}
+{{ field }}
 {% endif %}

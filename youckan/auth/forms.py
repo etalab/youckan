@@ -46,3 +46,9 @@ class RegisterForm(forms.ModelForm):
         if commit:
             user.save()
         return user
+
+
+class ProfileForm(forms.ModelForm):
+    class Meta:
+        model = YouckanUser
+        fields = ('first_name', 'last_name', 'avatar')

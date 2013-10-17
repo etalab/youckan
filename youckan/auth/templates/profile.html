@@ -6,10 +6,22 @@
 {% block content %}
 <div class="container">
     <div class="page-header">
+        {% if user == user_profile %}
+        <a href="{% url "profile-edit" pk=user.pk %}" class="btn btn-primary btn-sm pull-right">
+        <span class="glyphicon glyphicon-edit"></span>
+        {% trans "Edit" %}
+        </a>
+        {% endif %}
         <h1>{{user_profile.full_name}}</h1>
     </div>
     <div class="row">
-        {% avatar user_profile 128 editable=True %}
+        <div class="col-md-3">
+            {{ user_profile.avatar }}
+        </div>
+        <div class="col-md-9">
+            {{ user_profile.first_name }}
+            {{ user_profile.last_name }}
+        </div>
     </div>
 </div>
 {% endblock %}

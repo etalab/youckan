@@ -1,12 +1,29 @@
 {% extends "base.html" %}
+{% load i18n bootstrap %}
+
+{% block title %}{% trans "Your profile" %}{% endblock %}
 
 {% block content %}
 <div class="container">
     <div class="page-header">
-        <h1>{{user_profile.full_name}}</h1>
+        <h1>{% trans "Your profile" %}</h1>
     </div>
-    <div class="row">
 
-    </div>
+    <form class="form-horizontal validate col-md-offset-2 col-md-8" role="form"
+        method="post" action="{% url 'profile-edit' pk=user.pk %}">
+        {% csrf_token %}
+
+        {% for field in form %}
+        {% form_field field %}
+        {% endfor %}
+
+        <div class="form-group">
+            <div class="col-md-12 text-center">
+                <button type="submit" class="btn btn-primary">{% trans "Save" %}</button>
+                <a href="{% url 'profile' pk=user.pk %}" class="btn btn-warning">{% trans "Cancel" %}</a>
+            </div>
+        </div>
+    </form>
 </div>
 {% endblock %}
+

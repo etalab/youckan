@@ -3,6 +3,8 @@
 import re
 import sys
 
+from os.path import join
+
 from setuptools import setup, find_packages
 
 RE_REQUIREMENT = re.compile(r'^\s*-r\s*(?P<filename>.*)$')
@@ -67,12 +69,13 @@ setup(
     include_package_data=True,
     install_requires=install_requires,
     tests_require=tests_require,
-    extras_require = {
-        'test':  tests_require,
+    extras_require={
+        'test': tests_require,
     },
-    entry_points = {
+    entry_points={
         'console_scripts': [
-            'youckan = youckan:main',
+            'youckan = youckan.commands:manage',
+            'youckan-auth = youckan.commands:manage_auth',
         ]
     },
     license='LGPL',

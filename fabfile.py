@@ -60,6 +60,14 @@ def serve(port=8000):
     with lcd(ROOT):
         local('python manage.py runserver %s' % port)
 
+@task
+def debug(port=8000):
+    '''
+    Run Development server.
+    '''
+    with lcd(ROOT):
+        local('ipython --pdb manage.py runserver %s' % port)
+
 
 def get_apps(app=None, canonical=False):
     import sys
@@ -179,10 +187,12 @@ def compile_messages():
 
 
 @task
-def sdist(buildno=None):
+def dist(buildno=None):
     '''
     Build a source distribution
     '''
+    update_js()
+    compile_messages()
     with lcd(ROOT):
         local('python setup.py clean')
         local('rm -rf *egg-info build dist')
