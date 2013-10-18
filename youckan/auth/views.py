@@ -47,7 +47,7 @@ class RegisterView(CreateView):
     def form_valid(self, form):
         response = super(RegisterView, self).form_valid(form)
         self.request.session['new_user'] = self.object
-        self.request.session['use_avatar'] = 'use_avatar' in self.request.session
+        self.request.session['use_avatar'] = 'use_avatar' in self.request.POST
         return response
 
     def get_success_url(self):
