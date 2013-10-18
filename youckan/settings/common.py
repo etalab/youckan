@@ -11,7 +11,7 @@ import os
 
 import dj_database_url
 
-from ConfigParser import SafeConfigParser
+from ConfigParser import RawConfigParser as ConfigParser
 
 from os.path import join, dirname, exists, abspath
 from django.conf import global_settings
@@ -22,7 +22,7 @@ PACKAGE_ROOT = abspath(join(dirname(__file__), '..'))
 
 def _merge_config(into, filename):
     '''Read and merge a config file into a given dictionnary'''
-    config = SafeConfigParser()
+    config = ConfigParser()
     with codecs.open(filename, encoding='utf8') as fp:
         config.readfp(fp)
     for section in config.sections():
@@ -64,7 +64,7 @@ SERVER_EMAIL = conf['email']['admin']
 if conf['email'].get('host'):
     EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
     EMAIL_HOST = conf['email']['host']
-    EMAIL_PORT = int(conf['email'].get('port', global_settings.EMAIL_PORT))
+    EMAIL_PORT = int(conf['email'].get('port', 0)) or global_settings.EMAIL_PORT
     EMAIL_HOST_USER = conf['email'].get('user', global_settings.EMAIL_HOST_USER)
     EMAIL_HOST_PASSWORD = conf['email'].get('password', global_settings.EMAIL_HOST_PASSWORD)
     EMAIL_USE_TLS = conf['email'].get('tls') == 'true' if 'tls' in conf['email'] else global_settings.EMAIL_USE_TLS

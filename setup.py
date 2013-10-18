@@ -36,6 +36,9 @@ def pip(filename):
     '''Parse pip requirement file and transform it to setuptools requirements'''
     requirements = []
     for line in open(join('requirements', filename)).readlines():
+        line = line.split('#')[0].strip()  # Remove comments
+        if not line:
+            continue
         match = RE_REQUIREMENT.match(line)
         if match:
             requirements.extend(pip(match.group('filename')))

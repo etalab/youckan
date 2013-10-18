@@ -1,22 +1,13 @@
-=========
+=======
 youckan
-=========
+=======
 
-.. image:: https://secure.travis-ci.org/etalab/youckan.png
-    :target: http://travis-ci.org/etalab/youckan
-.. image:: https://coveralls.io/repos/etalab/youckan/badge.png?branch=master
-    :target: https://coveralls.io/r/etalab/youckan
-.. image:: https://pypip.in/v/youckan/badge.png
-    :target: https://crate.io/packages/youckan
-.. image:: https://pypip.in/d/youckan/badge.png
-    :target: https://crate.io/packages/youckan
-
-youckan description
+A social frontend to CKAN
 
 Compatibility
 =============
 
-youckan requires Python 2.6+ and Django 1.4.2+.
+youckan requires Python 2.7
 
 
 Installation

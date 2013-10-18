@@ -2,10 +2,11 @@
 from __future__ import unicode_literals
 
 from django.contrib.auth.models import AbstractBaseUser, BaseUserManager, PermissionsMixin
+from django.core.urlresolvers import reverse_lazy
 from django.db import models
+from django.db.models.signals import post_save
 from django.utils import timezone
 from django.utils.translation import ugettext_lazy as _
-from django.core.urlresolvers import reverse_lazy
 
 from awesome_avatar.fields import AvatarField
 
@@ -75,3 +76,11 @@ class YouckanUser(AbstractBaseUser, PermissionsMixin):
 
     def get_absolute_url(self):
         return reverse_lazy('profile', kwargs={'pk': self.pk})
+
+
+def on_user_saved(sender, instance, created, **kwargs):
+    from youckan.auth.tasks import sync_users
+    sync_users.delay(instance.email)
+
+
+post_save.connect(on_user_saved, sender=YouckanUser, dispatch_uid="youckan.auth.sync_users")

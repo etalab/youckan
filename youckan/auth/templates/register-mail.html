@@ -8,7 +8,11 @@
 <div class="container">
     <div class="jumbotron">
         <h1>{% trans "Email validation" %}</h1>
-        <p>{% blocktrans %}A email validation was sent to {{ email }}.{% endblocktrans %}</p>
+        <p>
+            {% blocktrans %}A validation mail has been sent to {{ email }}.{% endblocktrans %}
+            <br/>
+            {% trans "Please check your mails to activate your account" %}
+        </p>
     </div>
 </div>
 {% endblock %}

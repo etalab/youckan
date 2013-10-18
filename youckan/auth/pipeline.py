@@ -18,23 +18,26 @@ USER_FIELDS = ['username', 'email', 'first_name', 'last_name']
 
 
 @partial
-def register_form(strategy, username, details, user, *args, **kwargs):
+def register_form(strategy, backend, details, user, avatar_url, *args, **kwargs):
     '''Display the registeration form'''
     if user:
         return
 
     if strategy.session_get('new_user'):
         user = strategy.session_pop('new_user')
+        avatar_url = avatar_url if strategy.session_pop('use_avatar') else None
         return {
             'user': user,
             'is_new': True,
+            'avatar_url': avatar_url,
         }
     else:
-        fields = dict((name, kwargs.get(name) or details.get(name))
-                            for name in strategy.setting('USER_FIELDS',
-                                                          USER_FIELDS))
+        fields = dict(
+            (name, kwargs.get(name) or details.get(name))
+            for name in strategy.setting('USER_FIELDS', USER_FIELDS)
+        )
         strategy.session_set('userfields', fields)
-        # strategy.session_set('email', username)
+        strategy.session_set('backend', backend.name)
 
         return redirect('register')
 
@@ -69,7 +72,6 @@ def get_avatar_url(request, backend, response, *args, **kwargs):
 
 def fetch_avatar(request, backend, user, avatar_url=None, *args, **kwargs):
     '''Fetch and store the avatar picture'''
-    print 'avatar'
     if not avatar_url:
         return
 

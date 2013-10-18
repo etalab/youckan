@@ -1,7 +1,7 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
-#
+# 
 # Translators:
 # noirbizarre <noirbizarre@gmail.com>, 2013
 # noirbizarre <noirbizarre@gmail.com>, 2013
@@ -9,15 +9,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: youckan\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-10-16 19:29+0200\n"
-"PO-Revision-Date: 2013-10-16 17:23+0000\n"
+"POT-Creation-Date: 2013-10-18 16:54+0200\n"
+"PO-Revision-Date: 2013-10-18 14:55+0000\n"
 "Last-Translator: noirbizarre <noirbizarre@gmail.com>\n"
-"Language-Team: French (http://www.transifex.com/projects/p/youckan/language/"
-"fr/)\n"
-"Language: fr\n"
+"Language-Team: French (http://www.transifex.com/projects/p/youckan/language/fr/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Language: fr\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 
 #: auth/admin.py:70
@@ -49,61 +48,61 @@ msgstr "Validez votre compte"
 msgid "Validate your account {0}"
 msgstr "Validez votre compte {0}"
 
-#: auth/mail.py:36
+#: auth/mail.py:40
 msgid "Account creation confirmation"
 msgstr "Confirmation de création de compte"
 
-#: auth/mail.py:37
+#: auth/mail.py:41
 msgid "Your account has been created"
 msgstr "Votre compte a été créé"
 
-#: auth/models.py:43
+#: auth/models.py:46
 msgid "email"
 msgstr "email"
 
-#: auth/models.py:44
+#: auth/models.py:47
 msgid "first name"
 msgstr "prénom"
 
-#: auth/models.py:45
+#: auth/models.py:48
 msgid "last name"
 msgstr "nom"
 
-#: auth/models.py:46 auth/templates/widgets/avatar.html:10
+#: auth/models.py:49 auth/templates/widgets/avatar.html:10
 msgid "Avatar"
 msgstr "Avatar"
 
-#: auth/models.py:47
+#: auth/models.py:50
 msgid "staff status"
 msgstr "status staff"
 
-#: auth/models.py:48
+#: auth/models.py:51
 msgid "Designates whether the user can log into this admin site."
 msgstr ""
 
-#: auth/models.py:49
+#: auth/models.py:52
 msgid "active"
 msgstr ""
 
-#: auth/models.py:50
+#: auth/models.py:53
 msgid ""
 "Designates whether this user should be treated as active. Unselect this "
 "instead of deleting accounts."
 msgstr ""
 
-#: auth/models.py:52
+#: auth/models.py:55
 msgid "date joined"
 msgstr "date d'inscription"
 
-#: auth/models.py:61
+#: auth/models.py:64
 msgid "user"
 msgstr "utilisateur"
 
-#: auth/models.py:62
+#: auth/models.py:65
 msgid "users"
 msgstr "utilisateurs"
 
-#: auth/pipeline.py:45
+#: auth/pipeline.py:50
 #, python-brace-format
 msgid "This {0} account is already in use. Please login with your password"
 msgstr "Ce compte {0} est déjà utilisé. Connectez-vous avec votre mot de passe"
@@ -140,7 +139,7 @@ msgid "Sign in"
 msgstr "Se connecter"
 
 #: auth/templates/login.html:77 auth/templates/register.html:5
-#: auth/templates/register.html.py:15
+#: auth/templates/register.html.py:16
 msgid "Sign Up"
 msgstr "Inscription"
 
@@ -168,14 +167,30 @@ msgid "You have been signed out. Come back soon !"
 msgstr "Vous avez été déconnecté. Revenez vite !"
 
 #: auth/templates/logout.html:13 auth/templates/register-done.html:19
-#: data/templates/home.html:4
+#: ckan/templates/home.html:4
 msgid "Home"
 msgstr "Accueil"
+
+#: auth/templates/profile-edit.html:4 auth/templates/profile-edit.html.py:9
+msgid "Your profile"
+msgstr "Votre profil"
+
+#: auth/templates/profile-edit.html:22 auth/templates/widgets/avatar.html:53
+msgid "Save"
+msgstr "Enregistrer"
+
+#: auth/templates/profile-edit.html:23 auth/templates/widgets/avatar.html:52
+msgid "Cancel"
+msgstr "Annuler"
 
 #: auth/templates/profile.html:4
 #, python-format
 msgid "%(name)s profile"
 msgstr "Profil de %(name)s"
+
+#: auth/templates/profile.html:12
+msgid "Edit"
+msgstr "Editer"
 
 #: auth/templates/register-done.html:10
 msgid "Registeration complete"
@@ -185,14 +200,9 @@ msgstr "Inscription complète"
 msgid ""
 "\n"
 "        Your registeration is complete:\n"
-"        Your account has been activated and you can now use all user "
-"features.\n"
+"        Your account has been activated and you can now use all user features.\n"
 "        "
-msgstr ""
-"\n"
-"Votre inscription est complète:\n"
-"Votre compte a été activé et vous pouvez maintenant utiliser toutes les "
-"fonctionnalités utilisateur."
+msgstr "\nVotre inscription est complète:\nVotre compte a été activé et vous pouvez maintenant utiliser toutes les fonctionnalités utilisateur."
 
 #: auth/templates/register-done.html:23
 msgid "Continue your browsing"
@@ -202,16 +212,34 @@ msgstr "Reprendre votre navigation"
 msgid "Email validation"
 msgstr "Validation de l'email"
 
-#: auth/templates/register-mail.html:11
+#: auth/templates/register-mail.html:12
 #, python-format
-msgid "A email validation was sent to %(email)s."
-msgstr ""
+msgid "A validation mail has been sent to %(email)s."
+msgstr "Un email de validation a été envoyé à %(email)s."
 
-#: auth/templates/register.html:31
+#: auth/templates/register-mail.html:14
+msgid "Please check your mails to activate your account"
+msgstr "Consultez vos mails pour activer votre compte"
+
+#: auth/templates/register.html:33
+#, python-format
+msgid "Your avatar from %(backend)s"
+msgstr "Votre avatar de %(backend)s"
+
+#: auth/templates/register.html:36
+msgid "Use my avatar"
+msgstr "Utiliser mon avatar"
+
+#: auth/templates/register.html:38
+#, python-format
+msgid "Import and use my avatar from %(backend)s"
+msgstr "Importer et utiliser mon avatar depuis %(backend)s"
+
+#: auth/templates/register.html:51
 msgid "required fields"
 msgstr "champs requis"
 
-#: auth/templates/register.html:38
+#: auth/templates/register.html:59
 msgid "Sign up"
 msgstr "S'inscrire"
 
@@ -226,11 +254,8 @@ msgstr "Bonjour <strong>%(fullname)s</strong>."
 msgid ""
 "\n"
 "You account has been successfully created.\n"
-"You can visit your profil <a href=\"%(url)s\">here</a>.\n"
-msgstr ""
-"\n"
-"Votre compte a été créé avec succès.\n"
-"Vous pouvez maintenant visiter votre profile <a href=\"%(url)s\">ici</a>.\n"
+"You can visit your profile <a href=\"%(profile_url)s\">here</a>.\n"
+msgstr "\nVotre compte a été créé avec succès.\nVous pouvez maintenant visiter votre profil <a href=\"%(profile_url)s\">ici</a>.\n"
 
 #: auth/templates/mails/validation.html:9
 #, python-format
@@ -245,130 +270,119 @@ msgstr "Changer votre avatar"
 msgid "Preview"
 msgstr "Aperçu"
 
-#: auth/templates/widgets/avatar.html:52
-msgid "Cancel"
-msgstr "Annuler"
-
-#: auth/templates/widgets/avatar.html:53
-msgid "Save"
-msgstr "Enregistrer"
-
-#: data/models/activity.py:30
+#: ckan/models/activity.py:30
 msgid "Activity"
 msgstr "Activité"
 
-#: data/models/activity.py:31
+#: ckan/models/activity.py:31
 msgid "Activities"
 msgstr "Activités"
 
-#: data/models/dataset.py:49
+#: ckan/models/dataset.py:49
 msgid "Dataset"
 msgstr "Série de données"
 
-#: data/models/dataset.py:50
+#: ckan/models/dataset.py:50
 msgid "Datasets"
 msgstr "Séries de données"
 
-#: data/models/related.py:30
+#: ckan/models/related.py:30
 msgid "Related"
 msgstr ""
 
-#: data/models/related.py:31
+#: ckan/models/related.py:31
 msgid "Relateds"
 msgstr ""
 
-#: data/templates/dataset.html:21
+#: ckan/templates/dataset.html:21
 msgid "Published by"
 msgstr "Publié par"
 
-#: data/templates/dataset.html:33
+#: ckan/templates/dataset.html:33
 msgid "Provided by"
 msgstr "Fourni par"
 
-#: data/templates/dataset.html:55
+#: ckan/templates/dataset.html:55
 msgid "Nameless resource"
 msgstr "Resource sans nom"
 
-#: data/templates/dataset.html:68
+#: ckan/templates/dataset.html:68
 msgid "Community resources"
 msgstr "Resource de la communauté"
 
-#: data/templates/dataset.html:73
+#: ckan/templates/dataset.html:73
 msgid "Reuse"
 msgstr "Réutilisation"
 
-#: data/templates/dataset.html:104
+#: ckan/templates/dataset.html:104
 msgid "Publish a reuse case !"
 msgstr "Publiez une réutilisation"
 
-#: data/templates/dataset.html:120
+#: ckan/templates/dataset.html:120
 msgid "Certified public service"
 msgstr "Service public certifié"
 
-#: data/templates/dataset.html:121
+#: ckan/templates/dataset.html:121
 msgid "This organization and its datasets are certified by data.gouv.fr"
-msgstr ""
-"Cette organisation et ses séries de données sont certifiés par data.gouv.fr"
+msgstr "Cette organisation et ses séries de données sont certifiés par data.gouv.fr"
 
-#: data/templates/dataset.html:135
+#: ckan/templates/dataset.html:135
 msgid "more"
 msgstr "plus"
 
-#: data/templates/dataset.html:146
+#: ckan/templates/dataset.html:146
 msgid "Informations"
 msgstr "Informations"
 
-#: data/templates/dataset.html:155
+#: ckan/templates/dataset.html:155
 msgid "License"
 msgstr "License"
 
-#: data/templates/dataset.html:166
+#: ckan/templates/dataset.html:166
 msgid "Temporal coverage"
 msgstr "Couverture temporelle"
 
-#: data/templates/dataset.html:169
+#: ckan/templates/dataset.html:169
 #, python-format
 msgid ""
 "\n"
 "                            %(from)s to %(to)s\n"
 "                            "
-msgstr ""
-"\n"
-"%(from)s à %(to)s"
+msgstr "\n%(from)s à %(to)s"
 
-#: data/templates/dataset.html:179
+#: ckan/templates/dataset.html:179
 msgid "Periodicity"
 msgstr "Périodicité"
 
-#: data/templates/dataset.html:190
+#: ckan/templates/dataset.html:190
 msgid "Territorial coverage"
 msgstr "Couverture territoriale"
 
-#: data/templates/dataset.html:202
+#: ckan/templates/dataset.html:202
 msgid "Territorial coverage granularity"
 msgstr "Granularité de la couverture territoriale"
 
-#: data/templates/home.html:10
+#: ckan/templates/home.html:10
 msgid "Let's debate facts to make them undebatable"
 msgstr "Discutons les faits pour qu'ils deviennent indiscutables"
 
-#: data/templates/home.html:56
+#: ckan/templates/home.html:56
 msgid "Last"
 msgstr "Récents"
 
-#: data/templates/home.html:62
+#: ckan/templates/home.html:62
 msgid "Popular"
 msgstr "Populaires"
 
-#: data/templates/home.html:111
+#: ckan/templates/home.html:111
 msgid "Citizens"
 msgstr "Citoyens"
 
-#: data/templates/home.html:129
+#: ckan/templates/home.html:129
 msgid "Public services"
 msgstr "Services publics"
 
-#: data/templates/home.html:147
+#: ckan/templates/home.html:147
 msgid "Businesses"
 msgstr "Entreprises"
 

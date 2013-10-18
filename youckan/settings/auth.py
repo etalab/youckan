@@ -36,7 +36,7 @@ SOCIAL_AUTH_NEW_USER_REDIRECT_URL = reverse_lazy('register-done')
 # The user will be redirected to this URL when a social account is disconnected
 SOCIAL_AUTH_DISCONNECT_REDIRECT_URL = reverse_lazy('logout')
 # SOCIAL_AUTH_INACTIVE_USER_URL = '/inactive-user/'
-SOCIAL_AUTH_PROTECTED_USER_FIELDS = ['email',]
+SOCIAL_AUTH_PROTECTED_USER_FIELDS = ['email']
 
 SOCIAL_AUTH_GOOGLE_OAUTH2_KEY = conf['social:google']['key']
 SOCIAL_AUTH_GOOGLE_OAUTH2_SECRET = conf['social:google']['secret']

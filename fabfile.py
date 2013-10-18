@@ -15,28 +15,22 @@ ROOT = abspath(join(dirname(__file__)))
 #                                               Development tasks                                                     #
 #######################################################################################################################
 @task
-def mig(app='webnotes'):
-    '''
-    Generate a south migration for an application
-    '''
+def mig(app='youckan'):
+    '''Generate a south migration for an application'''
     with lcd(ROOT):
         local('python manage.py schemamigration "%s" --auto' % app)
 
 
 @task
 def datamig(app, name):
-    '''
-    Generate a south data migration for an application
-    '''
+    '''Generate a south data migration for an application'''
     with lcd(ROOT):
         local('python manage.py datamigration "%s" "%s"' % (app, name))
 
 
 @task
 def syncdb():
-    '''
-    Synchronize database and generate changesets
-    '''
+    '''Synchronize database and generate changesets'''
     with lcd(ROOT):
         local('python manage.py syncdb --noinput')
         local('python manage.py migrate --noinput')
@@ -44,9 +38,7 @@ def syncdb():
 
 @task
 def init():
-    '''
-    Initialize database and user.
-    '''
+    '''Initialize database and user.'''
     syncdb()
     with lcd(ROOT):
         local('python manage.py createsuperuser')
@@ -54,17 +46,19 @@ def init():
 
 @task
 def serve(port=8000):
-    '''
-    Run Development server.
-    '''
+    '''Run Development server.'''
     with lcd(ROOT):
         local('python manage.py runserver %s' % port)
 
 @task
+def work():
+    '''Run the development worker'''
+    with lcd(ROOT):
+        local('python manage.py celery worker')
+
+@task
 def debug(port=8000):
-    '''
-    Run Development server.
-    '''
+    '''Run Development server.'''
     with lcd(ROOT):
         local('ipython --pdb manage.py runserver %s' % port)
 
@@ -80,9 +74,7 @@ def get_apps(app=None, canonical=False):
 
 @task
 def test(app=None, verbose=False):
-    '''
-    Run only project tests (exclude those from Django and third-party applications).
-    '''
+    '''Run only project tests (exclude those from Django and third-party applications).'''
     apps = ' '.join(get_apps(app))
     verbosity = 2 if verbose else 1
     with settings(warn_only=True), hide('warnings'):
@@ -128,29 +120,21 @@ def test_all():
 
 @task
 def doc():
-    '''
-    Generate the documentation.
-    '''
+    '''Generate the documentation.'''
     with lcd(join(ROOT, 'doc')):
         local('make html')
 
 
 @task
-def update_dependencies():
-    '''
-    Update to last dependencies version.
-    '''
+def update_py():
+    '''Update python dependencies.'''
     with lcd(ROOT):
-        local('pip install -q -r requirements/tools.pip')
-        local('pip install -q -r requirements/install.pip')
-        local('pip install -q -r requirements/develop.pip')
+        local('pip install -q -r requirements/all.pip')
 
 
 @task
 def update_js():
-    '''
-    Update javascript dependencies
-    '''
+    '''Update javascript dependencies'''
     # local('npm install')
     with lcd(ROOT):
         local('bower install')
@@ -158,19 +142,15 @@ def update_js():
 
 @task
 def update():
-    '''
-    Update all dependencies and database
-    '''
-    update_dependencies()
+    '''Update all dependencies and database'''
+    update_py()
     update_js()
     syncdb()
 
 
 @task
-def make_messages(lang=None):
-    '''
-    Generate translation files (.mo)
-    '''
+def i18n(lang=None):
+    '''Generate translation files (.mo)'''
     lang = '-l %s' % lang if lang else '-a'
     with lcd(join(ROOT, 'youckan')):
         local('django-admin.py makemessages %s' % lang)
@@ -178,21 +158,17 @@ def make_messages(lang=None):
 
 
 @task
-def compile_messages():
-    '''
-    Compile translation files (.po)
-    '''
+def i18n_build():
+    '''Compile translation files (.po)'''
     with lcd(join(ROOT, 'youckan')):
         local('django-admin.py compilemessages')
 
 
 @task
 def dist(buildno=None):
-    '''
-    Build a source distribution
-    '''
+    '''Build a source distribution'''
     update_js()
-    compile_messages()
+    i18n_build()
     with lcd(ROOT):
         local('python setup.py clean')
         local('rm -rf *egg-info build dist')
@@ -200,3 +176,10 @@ def dist(buildno=None):
             local('python setup.py -q egg_info -b ".%s" sdist' % buildno)
         else:
             local('python setup.py -q sdist')
+
+@task
+def gdist():
+    '''Build a source distribution with git version'''
+    with lcd(ROOT):
+        sha1 = local('git rev-parse --short HEAD', capture=True)
+        dist(sha1)

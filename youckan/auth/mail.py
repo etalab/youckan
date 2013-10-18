@@ -10,7 +10,7 @@ from django.utils.translation import ugettext as _
 def send_validation(strategy, code):
     url = strategy.build_absolute_uri('?'.join([
         reverse('social:complete', args=[strategy.backend_name]),
-        'code={0}'.format(code.code)
+        'verification_code={0}'.format(code.code)
     ]))
     user = strategy.storage.user.get_users_by_email(code.email)[0]
 
@@ -30,8 +30,12 @@ def send_validation(strategy, code):
 
 
 def send_confirmation(user):
+    profile_url = strategy.build_absolute_uri(user.get_absolute_url())
     template = loader.get_template('mails/confirmation.html')
-    context = Context({'user': user})
+    context = Context({
+        'user': user,
+        'profile_url': profile_url,
+    })
 
     email = EmailMultiAlternatives(_('Account creation confirmation'),
         _('Your account has been created'),

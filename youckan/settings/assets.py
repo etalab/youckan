@@ -29,7 +29,6 @@ STATICFILES_DIRS = (
     # Don't forget to use absolute paths, not relative paths.
     ('fonts', join(PACKAGE_ROOT, 'static', 'bower', 'bootstrap', 'fonts')),
     ('fonts', join(PACKAGE_ROOT, 'static', 'bower', 'etalab-assets', 'fonts')),
-    ('images/flags', join(PACKAGE_ROOT, 'static', 'bower', 'flags', 'flags', 'flags-iso', 'shiny', '16')),
     ('images', join(PACKAGE_ROOT, 'static', 'bower', 'etalab-assets', 'img')),
 )
 
@@ -40,6 +39,8 @@ STATICFILES_FINDERS = (
     'django.contrib.staticfiles.finders.AppDirectoriesFinder',
     # 'django.contrib.staticfiles.finders.DefaultStorageFinder',
 )
+
+STATICFILES_STORAGE = 'pipeline.storage.PipelineCachedStorage'
 
 PIPELINE_COMPILERS = (
     'pipeline.compilers.less.LessCompiler',
@@ -101,7 +102,7 @@ PIPELINE_JS = {
     },
     'home': {
         'source_filenames': (
-            'js/home.js'
+            'js/home.js',
         ),
         'output_filename': 'js/home.min.js',
     },
