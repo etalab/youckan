@@ -46,7 +46,6 @@ def new_registeration_only(strategy, response, user=None, social=None, *args, **
     '''Don't let already registered user to log with their social account'''
     print 'new only'
     if user or hasattr(social, 'user'):
-        print 'new raise'
         msg = _('This {0} account is already in use. Please login with your password').format(strategy.backend.name)
         raise AuthAlreadyAssociated(strategy.backend, msg)
 
@@ -56,7 +55,6 @@ def get_avatar_url(request, backend, response, *args, **kwargs):
     from social.backends.google import GoogleOAuth2
     from social.backends.twitter import TwitterOAuth
     from social.backends.linkedin import LinkedinOAuth2
-    print 'avatar_url'
     avatar_url = None
     if isinstance(backend, TwitterOAuth):
         avatar_url = response.get('profile_image_url', '').replace('_normal', '')
@@ -86,5 +84,4 @@ def activate_user(strategy, user, *args, **kwargs):
         return
     user.is_active = True
     user.save()
-    send_confirmation(user)
-
+    send_confirmation(strategy, user)

@@ -29,7 +29,7 @@ def send_validation(strategy, code):
     email.send(fail_silently=False)
 
 
-def send_confirmation(user):
+def send_confirmation(strategy, user):
     profile_url = strategy.build_absolute_uri(user.get_absolute_url())
     template = loader.get_template('mails/confirmation.html')
     context = Context({
