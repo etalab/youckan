@@ -31,7 +31,8 @@ SOCIAL_AUTH_EMAIL_VALIDATION_URL = reverse_lazy('register-mail')
 
 # Used to redirect new registered users, will be used in place of SOCIAL_AUTH_LOGIN_REDIRECT_URL if defined.
 SOCIAL_AUTH_NEW_USER_REDIRECT_URL = reverse_lazy('register-done')
-# Like SOCIAL_AUTH_NEW_USER_REDIRECT_URL but for new associated accounts (user is already logged in). Used in place of SOCIAL_AUTH_LOGIN_REDIRECT_URL
+# Like SOCIAL_AUTH_NEW_USER_REDIRECT_URL but for new associated accounts (user is already logged in).
+# Used in place of SOCIAL_AUTH_LOGIN_REDIRECT_URL
 # SOCIAL_AUTH_NEW_ASSOCIATION_REDIRECT_URL = '/new-association-redirect-url/'
 # The user will be redirected to this URL when a social account is disconnected
 SOCIAL_AUTH_DISCONNECT_REDIRECT_URL = reverse_lazy('logout')

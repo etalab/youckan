@@ -5,6 +5,8 @@ from django.contrib.auth.views import login as default_login
 from django.core.urlresolvers import reverse_lazy, reverse
 from django.views.generic import TemplateView, DetailView, UpdateView, CreateView
 
+from braces.views import LoginRequiredMixin
+
 from youckan.auth.forms import LoginForm, RegisterForm, ProfileForm
 from youckan.auth.models import YouckanUser
 
@@ -22,7 +24,7 @@ class ProfileView(DetailView):
     context_object_name = 'user_profile'
 
 
-class ProfileEditView(UpdateView):
+class ProfileEditView(LoginRequiredMixin, UpdateView):
     template_name = 'profile-edit.html'
     model = YouckanUser
     form_class = ProfileForm

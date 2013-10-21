@@ -5,26 +5,19 @@
 
 {% block content %}
 <div class="container">
-    <div class="page-header">
-        {% if user == user_profile %}
-        <a href="{% url "profile-edit" pk=user.pk %}" class="btn btn-primary btn-sm pull-right">
-        <span class="glyphicon glyphicon-edit"></span>
-        {% trans "Edit" %}
-        </a>
-        {% endif %}
-        <h1>{{user_profile.full_name}}</h1>
-    </div>
     <div class="row">
         <div class="col-sm-3">
-            {% if user_profile.avatar  %}
-            <img src="{{ user_profile.avatar.url }}" />
+            {% avatar user_profile 128 %}
+            <h1>{{user_profile.full_name}}</h1>
+            {% if user == user_profile %}
+            <a href="{% url "profile-edit" pk=user.pk %}" class="btn btn-primary btn-sm">
+            <span class="glyphicon glyphicon-edit"></span>
+            {% trans "Edit" %}
+            </a>
             {% endif %}
         </div>
         <div class="col-sm-9">
-            <ul>
-                <li>{{ user_profile.first_name }}</li>
-                <li>{{ user_profile.last_name }}</li>
-            </ul>
+
         </div>
     </div>
 </div>

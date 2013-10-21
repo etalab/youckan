@@ -28,4 +28,3 @@ def sync_users(email):
 
 def sync_ckan_user(user):
     logger.info('Creating CKAN user %s', user.email)
-

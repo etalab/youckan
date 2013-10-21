@@ -9,12 +9,12 @@ from optparse import make_option
 from os.path import exists
 
 from django.core.management.base import BaseCommand, CommandError
+from django.utils.crypto import get_random_string
 from django.utils.encoding import force_str
 from django.utils.six.moves import input
-from django.utils.crypto import get_random_string
+
 
 SECRET_CHARS = 'abcdefghijklmnopqrstuvwxyz0123456789!@#$%^&*(-_=+)'
-
 
 OPTIONS = {
     'ini': {
@@ -54,7 +54,7 @@ OPTIONS = {
 
 QUESTIONS = OrderedDict({
     'hostname': ('Public hostname', 'www.youckan.com'),
-    'hostname': ('Domain', 'youckan.com'),
+    'domain': ('Domain', 'youckan.com'),
     'logs': ('Log directory', '/var/log/youckan'),
 })
 

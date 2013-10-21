@@ -108,14 +108,14 @@ def coverage(app=None):
 @task
 def pep8(app=None):
     '''Run the PEP8 report'''
-    local('pep8 --rcfile=pep8.rc')
+    local('pep8 --config=pep8.rc youckan')
     print('PEP8: OK')
 
 
 @task
 def pylint(app=None):
     '''Run the pylint report'''
-    local('pylint --rcfile=pylint.rc youckan')
+    local('pylint --rcfile=pylint.rc -f colorized --reports=no youckan')
 
 
 @task

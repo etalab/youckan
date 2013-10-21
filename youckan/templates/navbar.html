@@ -1,4 +1,4 @@
-{% load gravatar i18n youckan_helpers %}
+{% load gravatar i18n youckan_helpers avatar %}
 <nav class="navbar navbar-default navbar-static-top" role="navigation">
     <header class="navbar-header">
         <button type="button" class="navbar-toggle" data-toggle="collapse"
@@ -17,7 +17,7 @@
             {% if user.is_authenticated %}
                 <li class="dropdown">
                     <button class="btn btn-dark navbar-btn dropdown-toggle" data-toggle="dropdown">
-                        {% gravatar user.email 20 %} {{ user.full_name }}
+                        {% avatar user 20 %} {{ user.full_name }}
                         <b class="caret"></b>
                     </button>
                     <ul class="dropdown-menu">

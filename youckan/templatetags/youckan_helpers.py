@@ -13,9 +13,9 @@ from django.utils.text import Truncator
 register = template.Library()
 
 
-@register.filter
+@register.filter('format')
 @stringfilter
-def format(string, params):
+def string_format(string, params):
     if isinstance(params, dict):
         return string.format(**params)
     elif isinstance(params, (list, tuple)):
@@ -41,10 +41,10 @@ def flag_url(language_code):
 @stringfilter
 def markdown(source):
     '''Render Markdown to HTML'''
-    import markdown
+    import markdown as md
     if (source is None) or (source.strip() == ''):
         return ''
-    return mark_safe(markdown.markdown(force_unicode(source), safe_mode=True, enable_attributes=False))
+    return mark_safe(md.markdown(force_unicode(source), safe_mode=True, enable_attributes=False))
 
 
 @register.filter(is_safe=True)

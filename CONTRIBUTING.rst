@@ -77,7 +77,6 @@ and ensure the documentation is generating.
 
 .. code-block:: bash
 
-    $ pip install tox
     $ tox
 
 You also need to ensure your code is PEP8 compliant (following the project rules: see ``pep8.rc`` file):
