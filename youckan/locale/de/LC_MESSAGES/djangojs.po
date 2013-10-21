@@ -1,82 +1,84 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
-#, fuzzy
+# Translators:
+# schwefel, 2013
 msgid ""
 msgstr ""
-"Project-Id-Version: PACKAGE VERSION\n"
+"Project-Id-Version: youckan\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2013-10-19 22:08+0200\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
-"Language: \n"
+"PO-Revision-Date: 2013-10-18 17:29+0000\n"
+"Last-Translator: schwefel\n"
+"Language-Team: German (http://www.transifex.com/projects/p/youckan/language/"
+"de/)\n"
+"Language: de\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #: static/js/common.js:10
 msgid "This field is required."
-msgstr ""
+msgstr "Pflichtfeld"
 
 #: static/js/common.js:11
 msgid "Please fix this field."
-msgstr ""
+msgstr "Dieses Feld bitte verbessern."
 
 #: static/js/common.js:12
 msgid "Please enter a valid email address."
-msgstr ""
+msgstr "Bitte geben sie eine gültige Mailadresse an."
 
 #: static/js/common.js:13
 msgid "Please enter a valid URL."
-msgstr ""
+msgstr "Bitte geben sie eine gültige URL an."
 
 #: static/js/common.js:14
 msgid "Please enter a valid date."
-msgstr ""
+msgstr "Bitte geben sie ein gültiges Datum ein."
 
 #: static/js/common.js:15
 msgid "Please enter a valid date (ISO)."
-msgstr ""
+msgstr "Bitte geben sie ein gültiges Datum ein (ISO)."
 
 #: static/js/common.js:16
 msgid "Please enter a valid number."
-msgstr ""
+msgstr "Bitte geben sie eine gültige Nummer ein."
 
 #: static/js/common.js:17
 msgid "Please enter only digits."
-msgstr ""
+msgstr "Bitte geben sie nur Ziffern ein."
 
 #: static/js/common.js:18
 msgid "Please enter a valid credit card number."
-msgstr ""
+msgstr "Bitte geben sie ein gültige Kreditkartennummer ein."
 
 #: static/js/common.js:19
 msgid "Please enter the same value again."
-msgstr ""
+msgstr "Bitte geben sie den Wert noch einmal ein."
 
 #: static/js/common.js:20
 msgid "Please enter no more than {0} characters."
-msgstr ""
+msgstr "Bitte nicht mehr als {0} Zeichen eingeben."
 
 #: static/js/common.js:21
 msgid "Please enter at least {0} characters."
-msgstr ""
+msgstr "Bitte mindestens {0} Zeichen eingeben."
 
 #: static/js/common.js:22
 msgid "Please enter a value between {0} and {1} characters long."
-msgstr ""
+msgstr "Bitte einen Wert eingeben, der zwischen {0} und {1} Zeichen lang ist."
 
 #: static/js/common.js:23
 msgid "Please enter a value between {0} and {1}."
-msgstr ""
+msgstr "Bitte einen Wert zwischen {0} und {1}  eingeben."
 
 #: static/js/common.js:24
 msgid "Please enter a value less than or equal to {0}."
-msgstr ""
+msgstr "Bitte einen Wert kleiner oder gleich {0} eingeben."
 
 #: static/js/common.js:25
 msgid "Please enter a value greater than or equal to {0}."
-msgstr ""
+msgstr "Bitte einen Wert größer oder gleich {0} eingeben."

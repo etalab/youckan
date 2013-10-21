@@ -92,6 +92,7 @@ LANGUAGE_CODE = conf['site']['language']
 LANGUAGES = (
     ('fr', 'Français'),
     ('en', 'English'),
+    ('de', 'Deutsch'),
 )
 
 SITE_ID = 1

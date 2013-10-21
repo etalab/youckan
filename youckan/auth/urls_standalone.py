@@ -5,10 +5,13 @@ from django.conf import settings
 from django.conf.urls import patterns, include, url
 from django.conf.urls.static import static
 from django.contrib import admin
+from django.core.urlresolvers import reverse_lazy
+from django.views.generic import RedirectView
 
 admin.autodiscover()
 
 urlpatterns = patterns('',
+    url(r'^$', RedirectView.as_view(url=reverse_lazy('login'))),
     url('', include('youckan.auth.urls')),
     # url('', include('youckan.data.urls')),
 

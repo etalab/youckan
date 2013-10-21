@@ -2,11 +2,13 @@
 from __future__ import unicode_literals
 
 from django import template
+from django.conf import settings
+from django.contrib.staticfiles.storage import staticfiles_storage
 from django.template.defaultfilters import stringfilter
 from django.utils.encoding import force_unicode
+from django.utils.html import strip_tags
 from django.utils.safestring import mark_safe
 from django.utils.text import Truncator
-from django.utils.html import strip_tags
 
 register = template.Library()
 
@@ -24,18 +26,15 @@ def format(string, params):
 
 @register.filter
 def default_static(url, default):
-    from django.templatetags.static import static
-    return url or static(default)
+    return url or staticfiles_storage.url(default)
 
 
 @register.filter
 @stringfilter
 def flag_url(language_code):
-    from django.conf import settings
-    from django.templatetags.static import static
     code = (language_code or settings.LANGUAGE_CODE).split('-')[0]
     filename = 'images/flags/{0}.png'.format(code.lower())
-    return static(filename)
+    return staticfiles_storage.url(filename)
 
 
 @register.filter(is_safe=True)

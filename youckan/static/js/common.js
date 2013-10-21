@@ -78,6 +78,20 @@
             trigger: 'hover',
             html: true
         });
+
+        // Transforme some links into postable forms
+        $('a.postable').click(function() {
+            var $a = $(this);
+
+            console.log($a.attr('href'));
+
+            $('<form/>', {method: 'post', action: $a.attr('href')})
+                .append($('<input/>', {name: $a.data('field-name'), value: $a.data('field-value')}))
+                .append($('<input/>', {name: 'csrfmiddlewaretoken', value: $.cookie('csrftoken')}))
+                .submit();
+
+            return false;
+        });
     });
 
 }(window.jQuery, window.gettext, window.ETALAB_VALIDATION_RULES));

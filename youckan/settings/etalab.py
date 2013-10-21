@@ -20,3 +20,5 @@ MENU_TOPICS = (
     (u'Société', 'people', None),
     (u'Travail, économie, emploi', 'case', None),
 )
+
+CKAN_API_KEY = conf['etalab'].get('ckan_api_key')

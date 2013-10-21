@@ -3,6 +3,7 @@ import os
 from os.path import join, abspath, dirname
 
 from fabric.api import local, task, env, settings, hide, lcd
+from fabric.context_managers import shell_env
 from fabric.colors import green, red
 from fabric.utils import abort
 
@@ -49,6 +50,14 @@ def serve(port=8000):
     '''Run Development server.'''
     with lcd(ROOT):
         local('python manage.py runserver %s' % port)
+
+
+@task
+def sso(port=8000):
+    '''Run Development server.'''
+    with lcd(ROOT), shell_env(DJANGO_SETTINGS_MODULE='youckan.auth.settings'):
+        local('python manage.py runserver %s' % port)
+
 
 @task
 def work():

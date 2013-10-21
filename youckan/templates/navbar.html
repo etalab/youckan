@@ -45,7 +45,6 @@
                     </a>
                 </li>
             {% endif %}
-            {#%- set has_ckan = has_ckan|default(True) -%#}
             {% if user and has_ckan %}
             <li>
                 <a id="advanced-button" class="btn btn-dark navbar-btn" title="{% trans "Advanced mode" %}"
@@ -61,7 +60,8 @@
                 <ul class="dropdown-menu">
                     {% for code, name in LANGUAGES %}
                     <li>
-                        <a href="">
+                        <a class="postable" href="{% url "set_language" %}"
+                            data-field-name="language" data-field-value="{{code}}">
                             <img src="{{code|flag_url}}" alt="{{name}} flag" />
                             {{name}}
                         </a>

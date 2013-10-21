@@ -18,7 +18,7 @@ USER_FIELDS = ['username', 'email', 'first_name', 'last_name']
 
 
 @partial
-def register_form(strategy, backend, details, user, avatar_url, *args, **kwargs):
+def register_form(strategy, backend, details, user=None, avatar_url=None, *args, **kwargs):
     '''Display the registeration form'''
     if user:
         return

@@ -95,7 +95,7 @@ PIPELINE_JS = {
             'bower/typeahead.js/dist/typeahead.js',
             'bower/swig/index.js',
             'bower/etalab-assets/js/etalab-site.js',
-            # 'js/djangojs/django.js',
+            'js/djangojs/django.js',
             'js/common.js',
         ),
         'output_filename': 'js/youckan.min.js'

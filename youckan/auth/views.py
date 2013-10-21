@@ -26,7 +26,7 @@ class ProfileEditView(UpdateView):
     template_name = 'profile-edit.html'
     model = YouckanUser
     form_class = ProfileForm
-    context_object_name = 'user_profile'
+    # context_object_name = 'user_profile'
 
 
 class RegisterView(CreateView):

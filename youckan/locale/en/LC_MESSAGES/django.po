@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-10-18 16:54+0200\n"
+"POT-Creation-Date: 2013-10-19 22:08+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -100,7 +100,7 @@ msgstr ""
 msgid "users"
 msgstr ""
 
-#: auth/pipeline.py:50
+#: auth/pipeline.py:49
 #, python-brace-format
 msgid "This {0} account is already in use. Please login with your password"
 msgstr ""
@@ -252,7 +252,7 @@ msgstr ""
 #, python-format
 msgid ""
 "\n"
-"You account has been successfully created.\n"
+"Your account has been successfully created.\n"
 "You can visit your profile <a href=\"%(profile_url)s\">here</a>.\n"
 msgstr ""
 

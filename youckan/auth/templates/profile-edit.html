@@ -10,7 +10,7 @@
     </div>
 
     <form class="form-horizontal validate col-md-offset-2 col-md-8" role="form"
-        method="post" action="{% url 'profile-edit' pk=user.pk %}">
+        method="post" action="{% url 'profile-edit' pk=user.pk %}"  enctype="multipart/form-data">
         {% csrf_token %}
 
         {% for field in form %}
