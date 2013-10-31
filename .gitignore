@@ -23,6 +23,9 @@ staticroot
 *.sqlite
 bower
 /youckan.ini
+*.db
+*.log
+*.pid
 
 # Installer logs
 pip-log.txt

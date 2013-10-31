@@ -1,405 +1,505 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
-#
+# 
 # Translators:
+# schwefel, 2013
+# schwefel, 2013
+# schwefel, 2013
 # schwefel, 2013
 msgid ""
 msgstr ""
 "Project-Id-Version: youckan\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-10-19 22:08+0200\n"
-"PO-Revision-Date: 2013-10-18 17:36+0000\n"
-"Last-Translator: schwefel\n"
-"Language-Team: German (http://www.transifex.com/projects/p/youckan/language/"
-"de/)\n"
-"Language: de\n"
+"POT-Creation-Date: 2013-10-29 11:27+0100\n"
+"PO-Revision-Date: 2013-10-29 10:28+0000\n"
+"Last-Translator: noirbizarre\n"
+"Language-Team: German (http://www.transifex.com/projects/p/youckan/language/de/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Language: de\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: auth/admin.py:70
+#: admin.py:70
 msgid "Personal info"
 msgstr "Profil"
 
-#: auth/admin.py:71
+#: admin.py:71
 msgid "Permissions"
 msgstr "Rechte"
 
-#: auth/forms.py:22
-msgid "Password"
-msgstr "Passwort"
-
-#: auth/forms.py:24
-msgid "Confirm password"
-msgstr "Passwort bestätigen"
-
-#: auth/forms.py:38
-msgid "Passwords don't match"
-msgstr "Passwörter stimmen nicht überein"
-
-#: auth/mail.py:24
-msgid "Validate your account"
-msgstr "Bestätigen sie ihren Account"
-
-#: auth/mail.py:25
-#, python-brace-format
-msgid "Validate your account {0}"
-msgstr "Bestätigen sie ihren Account {0}"
-
-#: auth/mail.py:40
-msgid "Account creation confirmation"
-msgstr "Bestätigung des neuen Accounts"
-
-#: auth/mail.py:41
-msgid "Your account has been created"
-msgstr "Ihr Account wurde erstellt"
-
-#: auth/models.py:46
+#: models.py:50
 msgid "email"
 msgstr "Mailadresse"
 
-#: auth/models.py:47
+#: models.py:51
 msgid "first name"
 msgstr "Vorname"
 
-#: auth/models.py:48
+#: models.py:52
 msgid "last name"
 msgstr "Nachname"
 
-#: auth/models.py:49 auth/templates/widgets/avatar.html:10
-msgid "Avatar"
-msgstr "Profilbild"
-
-#: auth/models.py:50
+#: models.py:53
 msgid "staff status"
 msgstr "Status"
 
-#: auth/models.py:51
+#: models.py:54
 msgid "Designates whether the user can log into this admin site."
 msgstr "Legt fest, ob der Nutzer sich auf der Adminseite anmelden kann."
 
-#: auth/models.py:52
+#: models.py:55
 msgid "active"
 msgstr "Aktiv"
 
-#: auth/models.py:53
+#: models.py:56
 msgid ""
 "Designates whether this user should be treated as active. Unselect this "
 "instead of deleting accounts."
-msgstr ""
-"Legt fest, ob der Nutzeraccount aktiv ist. Deaktivieren sie hier statt den "
-"Account zu löschen."
+msgstr "Legt fest, ob der Nutzeraccount aktiv ist. Deaktivieren sie hier statt den Account zu löschen."
 
-#: auth/models.py:55
+#: models.py:58
 msgid "date joined"
 msgstr "Beigetreten"
 
-#: auth/models.py:64
+#: models.py:68
 msgid "user"
 msgstr "Nutzer"
 
-#: auth/models.py:65
+#: models.py:69
 msgid "users"
 msgstr "Nutzer"
 
-#: auth/pipeline.py:49
-#, python-brace-format
-msgid "This {0} account is already in use. Please login with your password"
-msgstr ""
-"Dieser {0} Account existiert bereits. Bitte melden sie sich mit ihrem "
-"Passwort an"
+#: models.py:87
+msgid "avatar"
+msgstr "Profilbild"
 
-#: auth/templates/login.html:5 auth/templates/login.html.py:44
-#: auth/templates/register-done.html:5
-msgid "Sign In"
-msgstr "Anmelden"
+#: models.py:88
+msgid "city"
+msgstr "Stadt"
 
-#: auth/templates/login.html:15 auth/templates/logout.html:4
-#: auth/templates/logout.html.py:10
-msgid "Sign Out"
-msgstr "Abmelden"
+#: models.py:89
+msgid "about"
+msgstr "über"
 
-#: auth/templates/login.html:18
-#, python-format
-msgid "You are already logged in as %(name)s."
-msgstr "Sie sind bereits als %(name)s angemeldet."
+#: models.py:90
+msgid "website"
+msgstr "Webseite"
 
-#: auth/templates/login.html:20
-msgid "Please logout if you want to sign in as a different user."
-msgstr "Bitte melden sie sich ab, um einen anderen Nutzer anzumelden."
+#: models.py:93
+msgid "user profile"
+msgstr "Nutzerprofil"
 
-#: auth/templates/login.html:24 auth/templates/login.html.py:26
-msgid "Sign out"
-msgstr "Abmelden"
+#: models.py:94
+msgid "user profiles"
+msgstr "Nutzerprofile"
 
-#: auth/templates/login.html:58
-msgid "Remember me"
-msgstr "Erinnern"
-
-#: auth/templates/login.html:66
-msgid "Sign in"
-msgstr "Anmelden"
-
-#: auth/templates/login.html:77 auth/templates/register.html:5
-#: auth/templates/register.html.py:16
-msgid "Sign Up"
-msgstr "Anmelden"
-
-#: auth/templates/login.html:81
-msgid "Sign up a with social account"
-msgstr "Mit einem Social Account anmelden"
-
-#: auth/templates/login.html:86 auth/templates/login.html.py:88
-#: auth/templates/login.html:92 auth/templates/login.html.py:94
-#: auth/templates/login.html:98 auth/templates/login.html.py:100
-#, python-format
-msgid "Sign up with %(name)s"
-msgstr "Mit %(name)s anmelden"
-
-#: auth/templates/login.html:107
-msgid "-- or --"
-msgstr "-- oder --"
-
-#: auth/templates/login.html:114
-msgid "Create an account"
-msgstr "Neuen Account erstellen"
-
-#: auth/templates/logout.html:11
-msgid "You have been signed out. Come back soon !"
-msgstr "Sie wurden erfolgreich abgemeldet. Bis bald!"
-
-#: auth/templates/logout.html:13 auth/templates/register-done.html:19
-#: ckan/templates/home.html:4
-msgid "Home"
-msgstr "Startseite"
-
-#: auth/templates/profile-edit.html:4 auth/templates/profile-edit.html.py:9
-msgid "Your profile"
-msgstr "Ihr Nutzerprofil"
-
-#: auth/templates/profile-edit.html:22 auth/templates/widgets/avatar.html:53
-msgid "Save"
-msgstr "Speichern"
-
-#: auth/templates/profile-edit.html:23 auth/templates/widgets/avatar.html:52
-msgid "Cancel"
-msgstr "Abbrechen"
-
-#: auth/templates/profile.html:4
+#: apps/accounts/templates/accounts/profile.html:4
 #, python-format
 msgid "%(name)s profile"
 msgstr "%(name)s Profil"
 
-#: auth/templates/profile.html:12
+#: apps/accounts/templates/accounts/profile.html:31
 msgid "Edit"
 msgstr "Bearbeiten"
 
-#: auth/templates/register-done.html:10
-msgid "Registeration complete"
-msgstr "Registrierung abgeschlossen"
+#: apps/accounts/templates/accounts/profile.html:39
+msgid "About"
+msgstr "Über"
 
-#: auth/templates/register-done.html:12
-msgid ""
-"\n"
-"        Your registeration is complete:\n"
-"        Your account has been activated and you can now use all user "
-"features.\n"
-"        "
-msgstr ""
-"\n"
-"Ihre Registrierung ist abgeschlossen:\n"
-"Ihr Nutzeraccount wurde aktiviert und sie können nun alle Funktionen nutzen."
-
-#: auth/templates/register-done.html:23
-msgid "Continue your browsing"
-msgstr "Weiter surfen"
-
-#: auth/templates/register-mail.html:5 auth/templates/register-mail.html:10
-msgid "Email validation"
-msgstr "Bestätigung ihrer Mailadresse"
-
-#: auth/templates/register-mail.html:12
-#, python-format
-msgid "A validation mail has been sent to %(email)s."
-msgstr "Eine Bestätigungsemail wurde an %(email)s versendet."
-
-#: auth/templates/register-mail.html:14
-msgid "Please check your mails to activate your account"
-msgstr "Bitte überprüfen sie ihr Postfach, um ihren Account zu bestätigen."
-
-#: auth/templates/register.html:33
-#, python-format
-msgid "Your avatar from %(backend)s"
-msgstr "Ihr Profilbild von %(backend)s"
-
-#: auth/templates/register.html:36
-msgid "Use my avatar"
-msgstr "Nutze mein Profilbild"
-
-#: auth/templates/register.html:38
-#, python-format
-msgid "Import and use my avatar from %(backend)s"
-msgstr "Profilbild von %(backend)s importieren und nutzen"
-
-#: auth/templates/register.html:51
-msgid "required fields"
-msgstr "Pflichtfelder"
-
-#: auth/templates/register.html:59
-msgid "Sign up"
-msgstr "Neuen Account anmelden"
-
-#: auth/templates/mails/confirmation.html:5
-#: auth/templates/mails/validation.html:5
-#, python-format
-msgid "Hello <strong>%(fullname)s</strong>."
-msgstr "Hallo <strong>%(fullname)s</strong>."
-
-#: auth/templates/mails/confirmation.html:9
-#, fuzzy, python-format
-msgid ""
-"\n"
-"Your account has been successfully created.\n"
-"You can visit your profile <a href=\"%(profile_url)s\">here</a>.\n"
-msgstr ""
-"\n"
-"Ihr Account wurde erfolgreich erstellt.\n"
-"Sie können ihr Profil <a href=\"%(profile_url)s\">hier</a> einsehen.\n"
-
-#: auth/templates/mails/validation.html:9
-#, python-format
-msgid "Please validate your account <a href=\"%(url)s\">here</a>."
-msgstr "Bitte bestätigen sie ihren Account <a href=\"%(url)s\">hier</a>."
-
-#: auth/templates/widgets/avatar.html:2
-msgid "Change your avatar"
-msgstr "Profilbild ändern"
-
-#: auth/templates/widgets/avatar.html:32
-msgid "Preview"
-msgstr "Vorschau"
-
-#: ckan/models/activity.py:30
-msgid "Activity"
-msgstr "Aktivität"
-
-#: ckan/models/activity.py:31
-msgid "Activities"
-msgstr "Aktivitäten"
-
-#: ckan/models/dataset.py:49
-msgid "Dataset"
-msgstr "Datensatz"
-
-#: ckan/models/dataset.py:50
+#: apps/accounts/templates/accounts/profile.html:48
+#: apps/ckan/models/dataset.py:50
 msgid "Datasets"
 msgstr "Datensätze"
 
-#: ckan/models/related.py:30
+#: apps/accounts/templates/accounts/profile.html:56
+msgid "Badges"
+msgstr "Kennzeichen"
+
+#: apps/accounts/templates/accounts/profile_edit.html:4
+#: apps/accounts/templates/accounts/profile_edit.html:9
+msgid "Your profile"
+msgstr "Ihr Nutzerprofil"
+
+#: apps/accounts/templates/accounts/profile_edit.html:31
+msgid "Save"
+msgstr "Speichern"
+
+#: apps/accounts/templates/accounts/profile_edit.html:32
+msgid "Cancel"
+msgstr "Abbrechen"
+
+#: apps/ckan/models/activity.py:30
+msgid "Activity"
+msgstr "Aktivität"
+
+#: apps/ckan/models/activity.py:31
+msgid "Activities"
+msgstr "Aktivitäten"
+
+#: apps/ckan/models/dataset.py:49
+msgid "Dataset"
+msgstr "Datensatz"
+
+#: apps/ckan/models/related.py:30
 msgid "Related"
 msgstr "Ähnlich"
 
-#: ckan/models/related.py:31
+#: apps/ckan/models/related.py:31
 msgid "Relateds"
 msgstr "Ähnliche"
 
-#: ckan/templates/dataset.html:21
+#: apps/ckan/templates/dataset.html:21
 msgid "Published by"
 msgstr "Veröffentlicht von"
 
-#: ckan/templates/dataset.html:33
+#: apps/ckan/templates/dataset.html:33
 msgid "Provided by"
 msgstr "Unterstützt von"
 
-#: ckan/templates/dataset.html:55
+#: apps/ckan/templates/dataset.html:55
 msgid "Nameless resource"
 msgstr "Namenlose Quelle"
 
-#: ckan/templates/dataset.html:68
+#: apps/ckan/templates/dataset.html:68
 msgid "Community resources"
 msgstr "Öffentliche Quellen"
 
-#: ckan/templates/dataset.html:73
+#: apps/ckan/templates/dataset.html:73
 msgid "Reuse"
 msgstr "Wiederverwendung"
 
-#: ckan/templates/dataset.html:104
+#: apps/ckan/templates/dataset.html:104
 msgid "Publish a reuse case !"
 msgstr "Wiederverwendung veröffentlichen!"
 
-#: ckan/templates/dataset.html:120
+#: apps/ckan/templates/dataset.html:120
 msgid "Certified public service"
 msgstr "Zertifiziertes öffentliches Angebot"
 
-#: ckan/templates/dataset.html:121
+#: apps/ckan/templates/dataset.html:121
 msgid "This organization and its datasets are certified by data.gouv.fr"
-msgstr ""
-"Diese Organisation und ihre Datensätze sind zertifiziert von data.gouv.fr"
+msgstr "Diese Organisation und ihre Datensätze sind zertifiziert von data.gouv.fr"
 
-#: ckan/templates/dataset.html:135
+#: apps/ckan/templates/dataset.html:135
 msgid "more"
 msgstr "mehr"
 
-#: ckan/templates/dataset.html:146
+#: apps/ckan/templates/dataset.html:146
 msgid "Informations"
 msgstr "Informationen"
 
-#: ckan/templates/dataset.html:155
+#: apps/ckan/templates/dataset.html:155
 msgid "License"
 msgstr "Lizenz"
 
-#: ckan/templates/dataset.html:166
+#: apps/ckan/templates/dataset.html:166
 msgid "Temporal coverage"
 msgstr "Zeitumfang"
 
-#: ckan/templates/dataset.html:169
+#: apps/ckan/templates/dataset.html:169
 #, python-format
 msgid ""
 "\n"
 "                            %(from)s to %(to)s\n"
 "                            "
-msgstr ""
-"\n"
-"%(from)s bis %(to)s\n"
-"                            "
+msgstr "\n%(from)s bis %(to)s\n                            "
 
-#: ckan/templates/dataset.html:179
+#: apps/ckan/templates/dataset.html:179
 msgid "Periodicity"
 msgstr "Häufigkeit"
 
-#: ckan/templates/dataset.html:190
+#: apps/ckan/templates/dataset.html:190
 msgid "Territorial coverage"
 msgstr "Regionale Abdeckung"
 
-#: ckan/templates/dataset.html:202
+#: apps/ckan/templates/dataset.html:202
 msgid "Territorial coverage granularity"
 msgstr "Detailgenauigkeit der regionalen Abdeckung"
 
-#: ckan/templates/home.html:10
+#: apps/ckan/templates/home.html:4 apps/sso/templates/sso/logout.html:12
+#: apps/sso/templates/sso/register_done.html:19
+msgid "Home"
+msgstr "Startseite"
+
+#: apps/ckan/templates/home.html:10
 msgid "Let's debate facts to make them undebatable"
 msgstr "Lasst uns über Fakten reden, um diese unanfechtbar zu machen"
 
-#: ckan/templates/home.html:56
+#: apps/ckan/templates/home.html:56
 msgid "Last"
 msgstr "Letzte"
 
-#: ckan/templates/home.html:62
+#: apps/ckan/templates/home.html:62
 msgid "Popular"
 msgstr "Beliebte"
 
-#: ckan/templates/home.html:111
+#: apps/ckan/templates/home.html:111
 msgid "Citizens"
 msgstr "Bürger"
 
-#: ckan/templates/home.html:129
+#: apps/ckan/templates/home.html:129
 msgid "Public services"
 msgstr "Öffentliche Angebote"
 
-#: ckan/templates/home.html:147
+#: apps/ckan/templates/home.html:147
 msgid "Businesses"
 msgstr "Unternehmen"
+
+#: apps/sso/forms.py:22
+msgid "Password"
+msgstr "Passwort"
+
+#: apps/sso/forms.py:24
+msgid "Confirm password"
+msgstr "Passwort bestätigen"
+
+#: apps/sso/forms.py:38
+msgid "Passwords don't match"
+msgstr "Passwörter stimmen nicht überein"
+
+#: apps/sso/mail.py:24
+msgid "Validate your account"
+msgstr "Bestätigen sie ihren Account"
+
+#: apps/sso/mail.py:25
+#, python-brace-format
+msgid "Validate your account {0}"
+msgstr "Bestätigen sie ihren Account {0}"
+
+#: apps/sso/mail.py:40
+msgid "Account creation confirmation"
+msgstr "Bestätigung des neuen Accounts"
+
+#: apps/sso/mail.py:41
+msgid "Your account has been created"
+msgstr "Ihr Account wurde erstellt"
+
+#: apps/sso/models.py:13
+msgid "Is an internal application"
+msgstr ""
+
+#: apps/sso/models.py:16
+msgid "OAuth2 Application"
+msgstr ""
+
+#: apps/sso/models.py:17
+msgid "OAuth2 Applications"
+msgstr ""
+
+#: apps/sso/pipeline.py:56
+#, python-brace-format
+msgid "This {0} account is already in use. Please login with your password"
+msgstr "Dieser {0} Account existiert bereits. Bitte melden sie sich mit ihrem Passwort an"
+
+#: apps/sso/templates/mails/confirmation.html:5
+#: apps/sso/templates/mails/validation.html:5
+#, python-format
+msgid "Hello <strong>%(fullname)s</strong>."
+msgstr "Hallo <strong>%(fullname)s</strong>."
+
+#: apps/sso/templates/mails/confirmation.html:9
+#, python-format
+msgid ""
+"\n"
+"Your account has been successfully created.\n"
+"You can visit your profile <a href=\"%(profile_url)s\">here</a>.\n"
+msgstr "\nIhr Account wurde erfolgreich erstellt.\nSie können ihr Profil <a href=\"%(profile_url)s\">hier</a> einsehen.\n"
+
+#: apps/sso/templates/mails/validation.html:9
+#, python-format
+msgid "Please validate your account <a href=\"%(url)s\">here</a>."
+msgstr "Bitte bestätigen sie ihren Account <a href=\"%(url)s\">hier</a>."
+
+#: apps/sso/templates/sso/login.html:5 apps/sso/templates/sso/login.html:44
+#: apps/sso/templates/sso/password_reset_complete.html:5
+#: apps/sso/templates/sso/password_reset_confirm.html:5
+#: apps/sso/templates/sso/password_reset_confirm.html:17
+#: apps/sso/templates/sso/password_reset_done.html:5
+#: apps/sso/templates/sso/register_done.html:5
+msgid "Sign In"
+msgstr "Anmelden"
+
+#: apps/sso/templates/sso/login.html:15 apps/sso/templates/sso/logout.html:4
+#: apps/sso/templates/sso/logout.html:9
+msgid "Sign Out"
+msgstr "Abmelden"
+
+#: apps/sso/templates/sso/login.html:18
+#, python-format
+msgid "You are already logged in as %(name)s."
+msgstr "Sie sind bereits als %(name)s angemeldet."
+
+#: apps/sso/templates/sso/login.html:20
+msgid "Please logout if you want to sign in as a different user."
+msgstr "Bitte melden sie sich ab, um einen anderen Nutzer anzumelden."
+
+#: apps/sso/templates/sso/login.html:24 apps/sso/templates/sso/login.html:26
+msgid "Sign out"
+msgstr "Abmelden"
+
+#: apps/sso/templates/sso/login.html:58
+#: apps/sso/templates/sso/password_reset_confirm.html:31
+msgid "Remember me"
+msgstr "Erinnern"
+
+#: apps/sso/templates/sso/login.html:66
+msgid "Sign in"
+msgstr "Anmelden"
+
+#: apps/sso/templates/sso/login.html:72
+msgid "Forgotton your password ?"
+msgstr ""
+
+#: apps/sso/templates/sso/login.html:73
+msgid "Recover your password"
+msgstr ""
+
+#: apps/sso/templates/sso/login.html:82 apps/sso/templates/sso/register.html:5
+#: apps/sso/templates/sso/register.html:16
+msgid "Sign Up"
+msgstr "Anmelden"
+
+#: apps/sso/templates/sso/login.html:86
+msgid "Sign up a with social account"
+msgstr "Mit einem Social Account anmelden"
+
+#: apps/sso/templates/sso/login.html:91 apps/sso/templates/sso/login.html:93
+#: apps/sso/templates/sso/login.html:97 apps/sso/templates/sso/login.html:99
+#: apps/sso/templates/sso/login.html:103 apps/sso/templates/sso/login.html:105
+#, python-format
+msgid "Sign up with %(name)s"
+msgstr "Mit %(name)s anmelden"
+
+#: apps/sso/templates/sso/login.html:112
+msgid "-- or --"
+msgstr "-- oder --"
+
+#: apps/sso/templates/sso/login.html:119
+msgid "Create an account"
+msgstr "Neuen Account erstellen"
+
+#: apps/sso/templates/sso/logout.html:10
+msgid "You have been signed out. Come back soon !"
+msgstr "Sie wurden erfolgreich abgemeldet. Bis bald!"
+
+#: apps/sso/templates/sso/password_reset_complete.html:11
+msgid "Your password has been set.  You may go ahead and log in now."
+msgstr ""
+
+#: apps/sso/templates/sso/password_reset_complete.html:12
+msgid "Log in"
+msgstr ""
+
+#: apps/sso/templates/sso/password_reset_confirm.html:12
+msgid ""
+"Please enter your new password twice so we can verify you typed it in "
+"correctly."
+msgstr ""
+
+#: apps/sso/templates/sso/password_reset_confirm.html:39
+msgid "Change my password"
+msgstr ""
+
+#: apps/sso/templates/sso/password_reset_confirm.html:47
+msgid ""
+"The password reset link was invalid, possibly because it has already been "
+"used.  Please request a new password reset."
+msgstr ""
+
+#: apps/sso/templates/sso/password_reset_done.html:10
+msgid ""
+"We've emailed you instructions for setting your password. You should be "
+"receiving them shortly."
+msgstr ""
+
+#: apps/sso/templates/sso/password_reset_done.html:12
+msgid ""
+"If you don't receive an email, please make sure you've entered the address "
+"you registered with, and check your spam folder."
+msgstr ""
+
+#: apps/sso/templates/sso/password_reset_form.html:5
+#: apps/sso/templates/sso/password_reset_form.html:18
+#: apps/sso/templates/sso/password_reset_form.html:44
+msgid "Reset Password"
+msgstr ""
+
+#: apps/sso/templates/sso/password_reset_form.html:20
+msgid ""
+"Forgotten your password? Enter your email address below, and we'll email "
+"instructions for setting a new one."
+msgstr ""
+
+#: apps/sso/templates/sso/password_reset_form.html:36
+#: apps/sso/templates/sso/register.html:51
+msgid "required fields"
+msgstr "Pflichtfelder"
+
+#: apps/sso/templates/sso/register.html:33
+#, python-format
+msgid "Your avatar from %(backend)s"
+msgstr "Ihr Profilbild von %(backend)s"
+
+#: apps/sso/templates/sso/register.html:36
+msgid "Use my avatar"
+msgstr "Nutze mein Profilbild"
+
+#: apps/sso/templates/sso/register.html:38
+#, python-format
+msgid "Import and use my avatar from %(backend)s"
+msgstr "Profilbild von %(backend)s importieren und nutzen"
+
+#: apps/sso/templates/sso/register.html:59
+msgid "Sign up"
+msgstr "Neuen Account anmelden"
+
+#: apps/sso/templates/sso/register_done.html:10
+msgid "Registeration complete"
+msgstr "Registrierung abgeschlossen"
+
+#: apps/sso/templates/sso/register_done.html:12
+msgid ""
+"\n"
+"        Your registeration is complete:\n"
+"        Your account has been activated and you can now use all user features.\n"
+"        "
+msgstr "\nIhre Registrierung ist abgeschlossen:\nIhr Nutzeraccount wurde aktiviert und sie können nun alle Funktionen nutzen."
+
+#: apps/sso/templates/sso/register_done.html:23
+msgid "Continue your browsing"
+msgstr "Weiter surfen"
+
+#: apps/sso/templates/sso/register_mail.html:5
+#: apps/sso/templates/sso/register_mail.html:10
+msgid "Email validation"
+msgstr "Bestätigung ihrer Mailadresse"
+
+#: apps/sso/templates/sso/register_mail.html:12
+#, python-format
+msgid "A validation mail has been sent to %(email)s."
+msgstr "Eine Bestätigungsemail wurde an %(email)s versendet."
+
+#: apps/sso/templates/sso/register_mail.html:14
+msgid "Please check your mails to activate your account"
+msgstr "Bitte überprüfen sie ihr Postfach, um ihren Account zu bestätigen."
+
+#: settings/common.py:210
+msgid "Authentication"
+msgstr ""
+
+#: settings/common.py:214
+msgid "OAuth2"
+msgstr ""
+
+#: settings/common.py:220
+msgid "Social"
+msgstr ""
+
+#: settings/common.py:225
+msgid "Tasks"
+msgstr ""
 
 #: templates/base.html:56
 msgid "Back to top"
@@ -429,7 +529,7 @@ msgstr "Abmelden"
 msgid "Sign In / Sign Up"
 msgstr "Anmelden/Neuen Account anlegen"
 
-#: templates/navbar.html:51
+#: templates/navbar.html:50
 msgid "Advanced mode"
 msgstr "Fortgeschrittenenmodus"
 
@@ -456,3 +556,7 @@ msgstr "Wie funktioniert das?"
 #: templates/sidebar.html:15
 msgid "Open license"
 msgstr "Freie Lizenz"
+
+#: templates/widgets/avatar.html:2
+msgid "Avatar"
+msgstr "Profilbild"

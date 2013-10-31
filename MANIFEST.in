@@ -25,7 +25,7 @@ include youckan/static/bower/jquery.validation/jquery.validate.js
 include youckan/static/bower/modernizr/modernizr.js
 include youckan/static/bower/moment/min/moment+lang.js
 include youckan/static/bower/respond/respond.src.js
-include youckan/static/bower/swig/swig.js
+include youckan/static/bower/swig/index.js
 include youckan/static/bower/typeahead.js/dist/typeahead.js
 
 global-exclude *~ *.egg *.pyc .DS_Store

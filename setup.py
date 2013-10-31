@@ -78,7 +78,7 @@ setup(
     entry_points={
         'console_scripts': [
             'youckan = youckan.commands:manage',
-            'youckan-auth = youckan.commands:manage_auth',
+            'youckan-sso = youckan.commands:manage_sso',
         ]
     },
     license='LGPL',

@@ -9,8 +9,10 @@ from django.contrib import admin
 admin.autodiscover()
 
 urlpatterns = patterns('',
-    url('', include('youckan.auth.urls')),
+    url('', include('youckan.apps.sso.urls')),
+    url('', include('youckan.apps.accounts.urls')),
     # url('', include('youckan.data.urls')),
+    url(r'^api/', include('youckan.api')),
 
     url(r'^js/', include('djangojs.urls')),
 
@@ -21,3 +23,8 @@ urlpatterns = patterns('',
 
 # For debug
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+
+if settings.DEBUG:
+    urlpatterns += patterns('',
+        url(r'^api-auth/', include('rest_framework.urls', namespace='rest_framework')),
+    )

@@ -61,6 +61,16 @@ def textarea(field, label=None, disabled=False, rows=None, sizes='md-4,lg-3'):
     }
 
 
+@register.inclusion_tag('bootstrap/avatar.html')
+def avatar_widget(field, label=None, disabled=False, sizes='md-4,lg-3'):
+    return {
+        'field': field,
+        'label': label or field.label,
+        'disabled': disabled,
+        'sizes': form_grid_specs(sizes),
+    }
+
+
 @register.inclusion_tag('bootstrap/field.html')
 def form_field(field, *args, **kwargs):
     data = {}
@@ -73,6 +83,9 @@ def form_field(field, *args, **kwargs):
     elif isinstance(field.field.widget, forms.TextInput):
         data['widget'] = 'input'
         data.update(input(field, *args, **kwargs))
+    elif isinstance(field.field.widget, AvatarWidget):
+        data['widget'] = 'avatar'
+        data.update(avatar_widget(field, *args, **kwargs))
     else:
         data['field'] = field
     return data

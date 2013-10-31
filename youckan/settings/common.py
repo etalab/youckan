@@ -15,6 +15,7 @@ from ConfigParser import RawConfigParser as ConfigParser
 
 from os.path import join, dirname, exists, abspath
 from django.conf import global_settings
+from django.utils.translation import ugettext_lazy as _
 
 
 PACKAGE_ROOT = abspath(join(dirname(__file__), '..'))
@@ -113,8 +114,8 @@ SECRET_KEY = conf['site']['secret']
 
 # List of callables that know how to import templates from various sources.
 TEMPLATE_LOADERS = (
-    'django.template.loaders.filesystem.Loader',
     'django.template.loaders.app_directories.Loader',
+    'django.template.loaders.filesystem.Loader',
 #     'django.template.loaders.eggs.Loader',
 )
 
@@ -142,6 +143,7 @@ MIDDLEWARE_CLASSES = (
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.locale.LocaleMiddleware',
     'social.apps.django_app.middleware.SocialAuthExceptionMiddleware',
+    'corsheaders.middleware.CorsMiddleware',
     # Uncomment the next line for simple clickjacking protection:
     # 'django.middleware.clickjacking.XFrameOptionsMiddleware',
 )
@@ -165,7 +167,8 @@ CELERY_RESULT_BACKEND = conf['celery']['backend']
 
 PROJECT_APPS = (
     'youckan',
-    'youckan.auth'
+    'youckan.apps.accounts',
+    'youckan.apps.sso',
 )
 
 THIRD_PARTY_APPS = (
@@ -180,6 +183,7 @@ THIRD_PARTY_APPS = (
     'oauth2_provider',
     'corsheaders',
     'djcelery',
+    'suit',
 )
 
 DJANGO_APPS = (
@@ -194,4 +198,36 @@ DJANGO_APPS = (
     # 'django.contrib.admindocs',
 )
 
-INSTALLED_APPS = DJANGO_APPS + THIRD_PARTY_APPS + PROJECT_APPS
+INSTALLED_APPS = PROJECT_APPS + THIRD_PARTY_APPS + DJANGO_APPS
+
+
+SUIT_CONFIG = {
+    # header
+    'ADMIN_NAME': 'YouCKAN',
+    # 'MENU_EXCLUDE': ('sites.site',),
+    'MENU': (
+        bytes('sites'),
+        {'label': _('Authentication'), 'icon': 'icon-lock', 'models': (
+            bytes('youckan.user'),
+            bytes('auth.group'),
+        )},
+        {'label': _('OAuth2'), 'icon': 'icon-certificate', 'models': (
+            bytes('sso.oauth2application'),
+            bytes('oauth2_provider.accesstoken'),
+            bytes('oauth2_provider.refreshtoken'),
+            bytes('oauth2_provider.grant'),
+        )},
+        {'label': _('Social'), 'icon': 'icon-globe', 'models': (
+            bytes('default.usersocialauth'),
+            bytes('default.association'),
+            bytes('default.nonce'),
+        )},
+        {'label': _('Tasks'), 'icon': 'icon-cog', 'models': (
+            bytes('djcelery.taskstate'),
+            bytes('djcelery.workerstate'),
+            bytes('djcelery.periodictask'),
+            bytes('djcelery.intervalschedule'),
+            bytes('djcelery.crontabsschedule'),
+        )},
+    ),
+}

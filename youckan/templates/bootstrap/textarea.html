@@ -5,17 +5,6 @@
         {% if field.help_text %}<span class="form-help" data-content="{{ field.help_text }}"></span>{% endif %}
     </label>
     <div {% if sizes %}class="{{ sizes.control }}"{% endif %}>
-        <input id="{{ field.id_for_label }}" class="form-control" autocomplete="off"
-            type="{{ type }}"
-            name="{{ field.html_name }}"
-            value="{{ value }}"
-            placeholder="{{ label }}"
-            {% for key, value in field.field.widget.attrs.items %}
-            {{ key }}="{{ value }}"
-            {% endfor %}
-            {% if field.field.required %}required {% endif %}
-            {% if disabled %}disabled{% endif %}
-            />
         <textarea id="{{ field.id_for_label }}" class="form-control" rows="{{ rows }}"
             name="{{ field.html_name }}"
             placeholder="{{ label }}"

@@ -1,0 +1,65 @@
+{% extends "base.html" %}
+{% load i18n avatar helpers %}
+
+{% block title %}{% blocktrans with name=user_profile.full_name %}{{ name }} profile{% endblocktrans %}{% endblock %}
+
+{% block content %}
+<div class="container">
+    <div class="row">
+        <div class="col-sm-3 card">
+            <p class="text-center">
+                {% avatar user_profile 128 %}
+            </p>
+            <h1>{{user_profile.full_name}}</h1>
+
+            {% if user_profile.profile.website %}
+            <p>
+                <a href="{{ user_profile.profile.website }}">
+                    {{ user_profile.profile.website }}
+                    <span class="glyphicon glyphicon-new-window"></span>
+                </a>
+            </p>
+            {% endif %}
+
+            {% if user_profile.profile.city %}
+            <p>{{ user_profile.profile.city }}</p>
+            {% endif %}
+
+            {% if user == user_profile %}
+            <a href="{% url "profile-edit" %}" class="btn btn-primary btn-sm">
+            <span class="glyphicon glyphicon-edit"></span>
+            {% trans "Edit" %}
+            </a>
+            {% endif %}
+        </div>
+        <div class="col-sm-9">
+            {% if user_profile.profile.about %}
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h3 class="panel-title">{{ _('About') }}</h3>
+                </div>
+                <div class="panel-body">
+                {{ user_profile.profile.about|markdown }}
+                </div>
+            </div>
+            {% endif %}
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h3 class="panel-title">{{ _('Datasets') }}</h3>
+                </div>
+                <div class="panel-body">
+                Datasets list
+                </div>
+            </div>
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h3 class="panel-title">{{ _('Badges') }}</h3>
+                </div>
+                <div class="panel-body">
+                Badges list
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

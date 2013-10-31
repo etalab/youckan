@@ -15,6 +15,14 @@ ROOT = abspath(join(dirname(__file__)))
 #######################################################################################################################
 #                                               Development tasks                                                     #
 #######################################################################################################################
+
+@task
+def clean():
+    '''Cleanup build artifacts'''
+    with lcd(ROOT):
+        # Cleanup *.pyc files'
+        local('find . -name "*.pyc" -delete')
+
 @task
 def mig(app='youckan'):
     '''Generate a south migration for an application'''
@@ -63,7 +71,13 @@ def sso(port=8000):
 def work():
     '''Run the development worker'''
     with lcd(ROOT):
-        local('python manage.py celery worker')
+        local('python manage.py celery worker --autoreload --events --beat')
+
+@task
+def watch():
+    '''Run Celery watcher'''
+    with lcd(ROOT):
+        local('python manage.py celerycam')
 
 @task
 def debug(port=8000):
@@ -155,6 +169,7 @@ def update():
     update_py()
     update_js()
     syncdb()
+    i18n_build()
 
 
 @task

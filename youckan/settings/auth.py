@@ -1,17 +1,17 @@
 # -*- coding: utf-8 -*-
 from django.core.urlresolvers import reverse_lazy
 
-from youckan.settings.common import conf
+from youckan.settings.common import conf, DEBUG
 from youckan.settings.etalab import HOME_URL
 
-AUTH_USER_MODEL = 'auth.YouckanUser'
+AUTH_USER_MODEL = 'youckan.User'
 
 AUTHENTICATION_BACKENDS = (
     'social.backends.open_id.OpenIdAuth',
     'social.backends.google.GoogleOAuth2',
     'social.backends.twitter.TwitterOAuth',
     'social.backends.linkedin.LinkedinOAuth2',
-    'youckan.auth.backends.NoSocialAuth',
+    'youckan.apps.sso.backends.NoSocialAuth',
     'django.contrib.auth.backends.ModelBackend',
 )
 
@@ -24,7 +24,7 @@ SOCIAL_AUTH_USERNAME_IS_FULL_EMAIL = True
 SOCIAL_AUTH_FORCE_EMAIL_VALIDATION = True
 SOCIAL_AUTH_SANITIZE_REDIRECTS = False
 
-SOCIAL_AUTH_EMAIL_VALIDATION_FUNCTION = 'youckan.auth.mail.send_validation'
+SOCIAL_AUTH_EMAIL_VALIDATION_FUNCTION = 'youckan.apps.sso.mail.send_validation'
 SOCIAL_AUTH_EMAIL_VALIDATION_URL = reverse_lazy('register-mail')
 
 # SOCIAL_AUTH_REDIRECT_IS_HTTPS = True
@@ -70,15 +70,36 @@ SOCIAL_AUTH_PIPELINE = (
     'social.pipeline.social_auth.social_uid',
     'social.pipeline.social_auth.auth_allowed',
     'social.pipeline.social_auth.social_user',
-    'youckan.auth.pipeline.new_registeration_only',
+    'youckan.apps.sso.pipeline.new_registeration_only',
     'social.pipeline.user.get_username',
     # 'social.pipeline.user.create_user',
     # 'social.pipeline.user.user_details'
-    'youckan.auth.pipeline.get_avatar_url',
-    'youckan.auth.pipeline.register_form',
+    'youckan.apps.sso.pipeline.get_avatar_url',
+    'youckan.apps.sso.pipeline.register_form',
+    'youckan.apps.sso.pipeline.fix_no_social_auth',
     'social.pipeline.mail.mail_validation',
     'social.pipeline.social_auth.associate_user',
     'social.pipeline.social_auth.load_extra_data',
-    'youckan.auth.pipeline.fetch_avatar',
-    'youckan.auth.pipeline.activate_user',
+    'youckan.apps.sso.pipeline.fetch_avatar',
+    'youckan.apps.sso.pipeline.activate_user',
 )
+
+OAUTH2_PROVIDER = {
+    'SCOPES': {
+        'profile': 'Read profile',
+    },
+    'APPLICATION_MODEL': 'sso.OAuth2Application',
+}
+
+REST_FRAMEWORK = {
+    'DEFAULT_AUTHENTICATION_CLASSES': (
+        'oauth2_provider.ext.rest_framework.OAuth2Authentication',
+    )
+}
+
+
+if DEBUG:
+    REST_FRAMEWORK['DEFAULT_AUTHENTICATION_CLASSES'] += (
+        'rest_framework.authentication.SessionAuthentication',
+        'rest_framework.authentication.BasicAuthentication',
+    )

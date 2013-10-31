@@ -16,7 +16,7 @@ Contents:
 
    configuration
    deployment
-   auth
+   sso
    api
    contributing
    changelog
