@@ -33,7 +33,7 @@ def default_static(url, default):
 @stringfilter
 def flag_url(language_code):
     code = (language_code or settings.LANGUAGE_CODE).split('-')[0]
-    filename = 'images/flags/{0}.png'.format(code.lower())
+    filename = 'img/flags/{0}.png'.format(code.lower())
     return staticfiles_storage.url(filename)
 
 

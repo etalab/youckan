@@ -29,7 +29,7 @@ STATICFILES_DIRS = (
     # Don't forget to use absolute paths, not relative paths.
     ('fonts', join(PACKAGE_ROOT, 'static', 'bower', 'bootstrap', 'fonts')),
     ('fonts', join(PACKAGE_ROOT, 'static', 'bower', 'etalab-assets', 'fonts')),
-    ('images', join(PACKAGE_ROOT, 'static', 'bower', 'etalab-assets', 'img')),
+    ('img', join(PACKAGE_ROOT, 'static', 'bower', 'etalab-assets', 'img')),
 )
 
 # List of finder classes that know how to find static files in

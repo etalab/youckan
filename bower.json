@@ -23,10 +23,9 @@
     "jquery": "~2.0.3"
   },
   "dependencies": {
-    "etalab-assets": "~0.1.0",
+    "etalab-assets": "~0.2.4",
     "django.js": "~0.8.1",
-    "moment": "~2.2.1",
-    "jquery.validation": "~1.11.1",
+    "moment": "~2.4.0",
     "jcrop": "~0.9.12"
   }
 }

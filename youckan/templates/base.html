@@ -40,6 +40,7 @@
 <body>
 
     {% include "navbar.html" %}
+    {% block subnav %}{% include "subnav-s.html" %}{% endblock %}
 
     {% for message in messages %}
     <div class="alert alert-dismissable {{ message|alert_class }}">
@@ -48,20 +49,20 @@
     </div>
     {% endfor %}
 
-    <div class="full-container">
-        {% block content %}{% endblock %}
+    {% block content %}{% endblock %}
 
-        <hr/>
-        <footer>
-            <p class="pull-right"><a href="#">{% trans "Back to top" %}</a></p>
-            <p>
-                &copy; 2013 ETALAB, Inc. &middot;
-                <a href="#">{% trans "Privacy" %}</a> &middot;
-                <a href="#">{% trans "Terms" %}</a>
-            </p>
-        </footer>
-
-    </div>
+    <section class="footer">
+        <div class="container">
+            <footer>
+                <p class="pull-right"><a href="#">{% trans "Back to top" %}</a></p>
+                <p>
+                    &copy; 2013 ETALAB, Inc. &middot;
+                    <a href="#">{% trans "Privacy" %}</a> &middot;
+                    <a href="#">{% trans "Terms" %}</a>
+                </p>
+            </footer>
+        </div>
+    </section>
 
 
     {# Load scripts after for faster page loading #}
