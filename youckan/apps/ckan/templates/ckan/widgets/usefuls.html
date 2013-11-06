@@ -1,0 +1,10 @@
+{% load i18n helpers %}
+<ul class="card-list">
+    {% for dataset in usefuls %}
+    <li class="col-md-6 col-sm-12">
+    {% include 'ckan/cards/dataset.html' %}
+    </li>
+    {% empty %}
+    <li>{{ _('No datasets marked as useful') }}</li>
+    {% endfor %}
+</ul>

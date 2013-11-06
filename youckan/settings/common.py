@@ -42,9 +42,9 @@ elif exists('youckan.ini'):
     _merge_config(conf, 'youckan.ini')
 
 
-DEBUG = conf['site']['debug'] == 'true'
-TEMPLATE_DEBUG = DEBUG
 TESTING = 'test' in sys.argv
+DEBUG = TESTING or conf['site']['debug'] == 'true'
+TEMPLATE_DEBUG = DEBUG
 
 if conf['site'].get('admins'):
     ADMINS = [row.split(',') for row in conf['site']['admins'].split('\n') if row]
@@ -55,7 +55,7 @@ MANAGERS = ADMINS
 
 DATABASES = {
     'default': dj_database_url.parse(conf['db']['default']),
-    'ckan': dj_database_url.parse(conf['db']['ckan']),
+    # 'ckan': dj_database_url.parse(conf['db']['ckan']),
 }
 
 
@@ -168,6 +168,7 @@ CELERY_RESULT_BACKEND = conf['celery']['backend']
 PROJECT_APPS = (
     'youckan',
     'youckan.apps.accounts',
+    'youckan.apps.ckan',
     'youckan.apps.sso',
 )
 
@@ -199,6 +200,15 @@ DJANGO_APPS = (
 )
 
 INSTALLED_APPS = PROJECT_APPS + THIRD_PARTY_APPS + DJANGO_APPS
+
+
+PROFILE_WIDGETS = (
+    'youckan.apps.ckan.profile.OrganizationsWidget',
+    'youckan.apps.ckan.profile.DatasetsWidget',
+    'youckan.apps.ckan.profile.ValorizationsWidget',
+    'youckan.apps.ckan.profile.UsefulsWidget',
+    # 'youckan.apps.accounts.widgets.BadgesWidget',
+)
 
 
 SUIT_CONFIG = {

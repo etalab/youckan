@@ -1,3 +1,4 @@
 factory-boy>=2.0.0
 tox
 mock
+httpretty

@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+{% load i18n avatar helpers %}
+
+{% block title %}{% trans "Users" %}{% endblock %}
+
+{% block content %}
+<div class="container">
+    <ul class="list-unstyled">
+    {% for user in users %}
+        <li>
+            <a href="{% url 'profile' slug=user.slug %}">
+                {% avatar user 20 %}
+                {{ user.full_name}}
+            </a>
+        </li>
+    {% endfor %}
+    </ul>
+</div>
+{% endblock %}

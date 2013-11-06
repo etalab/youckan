@@ -1,6 +1,8 @@
 # -*- coding: utf-8 -*-
 from __future__ import unicode_literals
 
+from django.utils.dateparse import parse_datetime
+
 from django import template
 from django.conf import settings
 from django.contrib.staticfiles.storage import staticfiles_storage
@@ -35,6 +37,15 @@ def flag_url(language_code):
     code = (language_code or settings.LANGUAGE_CODE).split('-')[0]
     filename = 'img/flags/{0}.png'.format(code.lower())
     return staticfiles_storage.url(filename)
+
+
+@register.filter
+@stringfilter
+def dtparse(string):
+    try:
+        return parse_datetime(string)
+    except:
+        return string
 
 
 @register.filter(is_safe=True)

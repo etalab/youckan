@@ -1,0 +1,12 @@
+language: python
+python:
+  - 2.6
+  - 2.7
+  - 3.3
+install:
+  - python setup.py -q install
+  - pip install -r requirements/travis.pip --use-mirrors
+script:
+  - fab coverage pep8
+after_success:
+  - coveralls -c coverage.rc

@@ -1,0 +1,70 @@
+{% load i18n helpers bootstrap %}
+<div class="card">
+    {% if dataset.organization %}
+    <a class="card-logo" href="{{ etalab.HOME_URL }}/{{LANGUAGE_CODE}}/dataset/{{dataset.name}}">
+        <img alt="{{ dataset.organization.title }}"
+            src="{{ dataset.organization.image_url }}">
+    </a>
+    {% endif %}
+    <div class="card-body">
+        <h4>
+            <a href="{{ etalab.HOME_URL }}/{{LANGUAGE_CODE}}/dataset/{{dataset.name}}" title="{{dataset.title}}">
+                {{ dataset.title }}
+            </a>
+        </h4>
+        {{ dataset.notes|truncate_markdown:180 }}
+
+        <ul class="card-footer">
+            {# Temporal coverage #}
+            {% if dataset.temporal_coverage.from and dataset.temporal_coverage.to %}
+            <li>
+                <a href class="btn btn-xs btn-default" rel="tooltip"
+                    data-placement="top" data-container="body"
+                    title="{{ _('Temporal coverage') }}">
+                    <span class="glyphicon glyphicon-calendar"></span>
+                </a>
+                {% blocktrans with from=dataset.temporal_coverage.from|dtparse|date:"SHORT_DATE_FORMAT"|default:dataset.temporal_coverage.from to=dataset.temporal_coverage.to|dtparse|date:"SHORT_DATE_FORMAT"|default:dataset.temporal_coverage.to %}
+                {{ from }} to {{ to }}
+                {% endblocktrans %}
+            </li>
+            {% endif %}
+
+            {# Periodicity #}
+            {% if dataset.periodicity %}
+            <li>
+                <a href class="btn btn-xs" rel="tooltip"
+                    data-placement="top" data-container="body"
+                    title="{{ _('Periodicity') }}">
+                    <span class="glyphicon glyphicon-time"></span>
+                </a>
+                {{ dataset.periodicity }}
+            </li>
+            {% endif %}
+
+            {# Territorial coverage #}
+            {% if dataset.territorial_coverage.name %}
+            <li>
+                <a href class="btn btn-xs btn-default" rel="tooltip"
+                    data-placement="top" data-container="body"
+                    title="{{ _('Territorial coverage') }}">
+                    <span class="glyphicon glyphicon-globe"></span>
+                </a>
+                {# {% set ellipsis = '<a href title="{0}">...</a>'.format(dataset.territorial_coverage.name) %} #}
+                {{ dataset.territorial_coverage.name|tooltip_ellipsis:15 }}
+            </li>
+            {% endif %}
+
+            {% if dataset.territorial_coverage.granularity %}
+            <li>
+                <a href class="btn btn-xs btn-default" rel="tooltip"
+                    data-placement="top" data-container="body"
+                    title="{{ _('Territorial coverage granularity') }}">
+                    <span class="glyphicon glyphicon-screenshot"></span>
+                </a>
+                {{ dataset.territorial_coverage.granularity }}
+            </li>
+            {% endif %}
+        </ul>
+        <div class="card-text-mask"></div>
+    </div>
+</div>

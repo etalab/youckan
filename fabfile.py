@@ -123,7 +123,7 @@ def coverage(app=None):
 def pep8(app=None):
     '''Run the PEP8 report'''
     local('pep8 --config=pep8.rc youckan')
-    print('PEP8: OK')
+    print(green('PEP8: OK'))
 
 
 @task

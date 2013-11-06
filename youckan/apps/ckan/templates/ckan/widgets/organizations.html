@@ -1,0 +1,10 @@
+{% load i18n %}
+<ul class="card-list">
+    {% for organization, nb_datasets in organizations %}
+    <li class="col-md-6 col-sm-12">
+    {% include 'ckan/cards/organization.html' %}
+    </li>
+    {% empty %}
+    <li>{{ _('No affiliation to any organization') }}</li>
+    {% endfor %}
+</ul>

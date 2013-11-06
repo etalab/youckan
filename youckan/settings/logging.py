@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 import sys
 
-from youckan.settings.common import conf
+from youckan.settings.common import conf, DEBUG
 
 # Different log files for web server and workers
 logname = 'django'
@@ -17,6 +17,7 @@ elif 'flower' in sys.argv:
     logname = 'flower'
 
 LOG_LEVEL = conf['log']['level'].upper()
+
 
 # Custom logging configuration
 LOGGING = {
@@ -66,7 +67,7 @@ LOGGING = {
     },
     'loggers': {
         '': {
-            'handlers': ['console', 'file'],
+            'handlers': ['console'] if DEBUG else ['file'],
             'level': 'WARNING',
         },
         'django': {

@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 from os.path import join, expanduser, expandvars
 
-from youckan.settings.common import PACKAGE_ROOT, conf
+from youckan.settings.common import DEBUG, PACKAGE_ROOT, conf
 
 # Absolute filesystem path to the directory that will hold user-uploaded files.
 # Example: "/var/www/example.com/media/"
@@ -40,7 +40,10 @@ STATICFILES_FINDERS = (
     # 'django.contrib.staticfiles.finders.DefaultStorageFinder',
 )
 
-STATICFILES_STORAGE = 'pipeline.storage.PipelineCachedStorage'
+if DEBUG:
+    STATICFILES_STORAGE = 'pipeline.storage.PipelineStorage'
+else:
+    STATICFILES_STORAGE = 'pipeline.storage.PipelineCachedStorage'
 
 PIPELINE_COMPILERS = (
     'pipeline.compilers.less.LessCompiler',

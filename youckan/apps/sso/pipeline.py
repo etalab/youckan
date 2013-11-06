@@ -7,7 +7,7 @@ from urlparse import urlparse
 
 from django.core.files.base import ContentFile
 from django.shortcuts import redirect
-from django.utils.translation import ugettext_lazy as _
+from django.utils.translation import ugettext as _
 
 from social.pipeline.partial import partial
 from social.exceptions import AuthAlreadyAssociated
@@ -51,7 +51,6 @@ def fix_no_social_auth(strategy, backend, details, user, response, *args, **kwar
 
 def new_registeration_only(strategy, response, user=None, social=None, *args, **kwargs):
     '''Don't let already registered user to log with their social account'''
-    print 'new only'
     if user or hasattr(social, 'user'):
         msg = _('This {0} account is already in use. Please login with your password').format(strategy.backend.name)
         raise AuthAlreadyAssociated(strategy.backend, msg)

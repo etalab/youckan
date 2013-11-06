@@ -1,0 +1,8 @@
+{% load i18n %}
+<ul class="search-results">
+    {% for badge in badges %}
+    <li>{{badge}}</li>
+    {% empty %}
+    <li>{{ _('No badges') }}</li>
+    {% endfor %}
+</ul>

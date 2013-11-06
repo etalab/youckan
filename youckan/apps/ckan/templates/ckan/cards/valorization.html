@@ -1,0 +1,31 @@
+{% load i18n helpers avatar %}
+<div class="card">
+    <a class="card-logo" href="{{ valorization.url }}" target="_blank">
+        <img src="{{ valorization.image_url }}" alt="{{ valorization.title }}">
+    </a>
+    <div class="card-body">
+        <h4>
+            <a href="{{ valorization.url }}" target="_blank">
+            {{ valorization.title }}
+            </a>
+        </h4>
+        {{ valorization.description|markdown }}
+        {% if valorization.owner %}
+        <div class="author">
+            {% avatar valorization.owner 25 %}
+            <span class="user">{{ valorization.owner.full_name }}</span>
+        </div>
+        {% endif %}
+        <ul class="card-footer">
+            <li>
+                <a href class="btn btn-xs btn-default" rel="tooltip"
+                    data-placement="top" data-container="body"
+                    title="{{ _('Creation date') }}">
+                    <span class="glyphicon glyphicon-calendar"></span>
+                </a>
+                {{ valorization.created|dtparse|date:"DATETIME_FORMAT" }}
+            </li>
+        </ul>
+        <div class="card-text-mask"></div>
+    </div>
+</div>

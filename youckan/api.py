@@ -46,5 +46,5 @@ class ProfileAPI(RetrieveAPIView):
 
 
 urlpatterns = patterns('',
-    url(r'^profile$', ProfileAPI.as_view(), name='api-profile'),
+    url(r'^me$', ProfileAPI.as_view(), name='api-my-profile'),
 )

@@ -1,5 +1,6 @@
 celery==3.0.24
 dj-database-url==0.2.2
+django-autoslug==1.7.1
 django-awesome-avatar==1.1.2
 django-braces==1.2.2
 django-celery==3.0.23

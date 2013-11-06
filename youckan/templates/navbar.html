@@ -15,7 +15,7 @@
 
         <ul class="nav navbar-nav links">
             <li><a href="{{ etalab.WIKI_URL }}/FAQ">{% trans "How it works ?" %}</a></li>
-            <li><a href="{{ etalab.HOME_URL }}/{{LANGUAGE_CODE}}/organizations">{% trans "Publishers" %}</a></li>
+            <li><a href="{{ etalab.HOME_URL }}/{{LANGUAGE_CODE}}/organization">{% trans "Publishers" %}</a></li>
             <li>
                 <a href="http://www.etalab.gouv.fr/pages/licence-ouverte-open-licence-5899923.html">
                     {% trans "Open license" %}
@@ -34,9 +34,15 @@
                         </button>
                         <ul class="dropdown-menu">
                             <li>
-                                <a href="{% url 'profile' pk=user.pk %}", title="{% trans "Profile" %}">
+                                <a href="{% url 'profile' slug=user.slug %}", title="{% trans "Profile" %}">
                                     <span class="glyphicon glyphicon-user"></span>
                                     {% trans "Profile" %}
+                                </a>
+                            </li>
+                            <li>
+                                <a href="{% url 'profile-edit' %}", title="{% trans "Settings" %}">
+                                    <span class="glyphicon glyphicon-cog"></span>
+                                    {% trans "Settings" %}
                                 </a>
                             </li>
                             <li class="divider"></li>

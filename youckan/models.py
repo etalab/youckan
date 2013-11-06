@@ -5,12 +5,12 @@ from django.conf import settings
 from django.contrib.auth.models import AbstractBaseUser, BaseUserManager, PermissionsMixin
 from django.core.urlresolvers import reverse
 from django.db import models
-from django.db.models.signals import post_save, pre_save
+from django.db.models.signals import post_save
 from django.dispatch import receiver
 from django.utils import timezone
-from django.utils.text import slugify
 from django.utils.translation import ugettext_lazy as _
 
+from autoslug.fields import AutoSlugField
 from awesome_avatar.fields import AvatarField
 from south.modelsinspector import add_introspection_rules
 
@@ -56,7 +56,8 @@ class User(AbstractBaseUser, PermissionsMixin):
         help_text=_('Designates whether this user should be treated as active. '
             'Unselect this instead of deleting accounts.'))
     date_joined = models.DateTimeField(_('date joined'), default=timezone.now)
-    slug = models.SlugField(editable=False, max_length=150)
+    slug = AutoSlugField(editable=False, max_length=150,
+            populate_from=lambda instance: instance.email.replace('@', '-at-').replace('.', '-dot-'))
 
     objects = UserManager()
 
@@ -79,7 +80,7 @@ class User(AbstractBaseUser, PermissionsMixin):
         return self.first_name
 
     def get_absolute_url(self):
-        return reverse('profile', kwargs={'pk': self.pk})
+        return reverse('profile', kwargs={'slug': self.slug})
 
 
 class UserProfile(models.Model):
@@ -109,15 +110,9 @@ def create_user_profile(sender, instance, created, **kwargs):
         UserProfile.objects.create(user=instance)
 
 
-@receiver(pre_save, sender=User, dispatch_uid="youckan.create_slug")
-def create_slug(sender, instance, **kwargs):
-    if not instance.slug:
-        instance.slug = slugify(instance.email.replace('@', '-at-').replace('.', '-'))
-
-
 add_introspection_rules([
     (
-        [AvatarField], # Class(es) these apply to
+        [AvatarField],  # Class(es) these apply to
         [],         # Positional arguments (not used)
         {           # Keyword argument
             "width": ["width", {}],

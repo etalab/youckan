@@ -1,7 +1,7 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
-# 
+#
 # Translators:
 # noirbizarre, 2013
 # noirbizarre, 2013
@@ -10,14 +10,15 @@ msgid ""
 msgstr ""
 "Project-Id-Version: youckan\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-10-29 11:27+0100\n"
-"PO-Revision-Date: 2013-10-29 10:37+0000\n"
+"POT-Creation-Date: 2013-11-04 17:13+0100\n"
+"PO-Revision-Date: 2013-11-04 11:55+0000\n"
 "Last-Translator: noirbizarre\n"
-"Language-Team: French (http://www.transifex.com/projects/p/youckan/language/fr/)\n"
+"Language-Team: French (http://www.transifex.com/projects/p/youckan/language/"
+"fr/)\n"
+"Language: fr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: fr\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 
 #: admin.py:70
@@ -56,65 +57,58 @@ msgstr "actif"
 msgid ""
 "Designates whether this user should be treated as active. Unselect this "
 "instead of deleting accounts."
-msgstr "Précise si cet utilisateur doit-être considéré comme actif. Désélectionnez cette option au lieu de supprimer des comptes."
+msgstr ""
+"Précise si cet utilisateur doit-être considéré comme actif. Désélectionnez "
+"cette option au lieu de supprimer des comptes."
 
 #: models.py:58
 msgid "date joined"
 msgstr "date d'inscription"
 
-#: models.py:68
+#: models.py:69
 msgid "user"
 msgstr "utilisateur"
 
-#: models.py:69
+#: models.py:70
 msgid "users"
 msgstr "utilisateurs"
 
-#: models.py:87
+#: models.py:88
 msgid "avatar"
 msgstr "avatar"
 
-#: models.py:88
+#: models.py:89
 msgid "city"
 msgstr "ville"
 
-#: models.py:89
+#: models.py:90
 msgid "about"
 msgstr "à propos"
 
-#: models.py:90
+#: models.py:91
 msgid "website"
 msgstr "site web"
 
-#: models.py:93
+#: models.py:94
 msgid "user profile"
 msgstr "profil utilisateur"
 
-#: models.py:94
+#: models.py:95
 msgid "user profiles"
 msgstr "profils utilisateurs"
+
+#: apps/accounts/widgets.py:25
+msgid "Badges"
+msgstr "Badges"
 
 #: apps/accounts/templates/accounts/profile.html:4
 #, python-format
 msgid "%(name)s profile"
 msgstr "Profil de %(name)s"
 
-#: apps/accounts/templates/accounts/profile.html:31
+#: apps/accounts/templates/accounts/profile.html:35
 msgid "Edit"
 msgstr "Editer"
-
-#: apps/accounts/templates/accounts/profile.html:39
-msgid "About"
-msgstr "Á propos"
-
-#: apps/accounts/templates/accounts/profile.html:48
-#: apps/ckan/models/dataset.py:50
-msgid "Datasets"
-msgstr "Séries de données"
-
-#: apps/accounts/templates/accounts/profile.html:56
-msgid "Badges"
-msgstr "Badges"
 
 #: apps/accounts/templates/accounts/profile_edit.html:4
 #: apps/accounts/templates/accounts/profile_edit.html:9
@@ -129,122 +123,91 @@ msgstr "Enregistrer"
 msgid "Cancel"
 msgstr "Annuler"
 
-#: apps/ckan/models/activity.py:30
-msgid "Activity"
-msgstr "Activité"
+#: apps/accounts/templates/accounts/profiles.html:4
+msgid "Users"
+msgstr "Utilisateurs"
 
-#: apps/ckan/models/activity.py:31
-msgid "Activities"
-msgstr "Activités"
+#: apps/accounts/templates/accounts/widgets/badges.html:6
+msgid "No badges"
+msgstr "Aucun badge"
 
-#: apps/ckan/models/dataset.py:49
-msgid "Dataset"
-msgstr "Série de données"
+#: apps/ckan/profile.py:11 apps/weckan/models/dataset.py:50
+msgid "Datasets"
+msgstr "Séries de données"
 
-#: apps/ckan/models/related.py:30
-msgid "Related"
-msgstr "Lien connexe"
+#: apps/ckan/profile.py:22
+msgid "Usefuls"
+msgstr "Utiles"
 
-#: apps/ckan/models/related.py:31
-msgid "Relateds"
-msgstr "Liens connexes"
+#: apps/ckan/profile.py:33
+msgid "Valorizations"
+msgstr "Valorisations"
 
-#: apps/ckan/templates/dataset.html:21
-msgid "Published by"
-msgstr "Publié par"
+#: apps/ckan/profile.py:45
+msgid "Organizations"
+msgstr "Organisations"
 
-#: apps/ckan/templates/dataset.html:33
-msgid "Provided by"
-msgstr "Fourni par"
-
-#: apps/ckan/templates/dataset.html:55
-msgid "Nameless resource"
-msgstr "Resource sans nom"
-
-#: apps/ckan/templates/dataset.html:68
-msgid "Community resources"
-msgstr "Resource de la communauté"
-
-#: apps/ckan/templates/dataset.html:73
-msgid "Reuse"
-msgstr "Réutilisation"
-
-#: apps/ckan/templates/dataset.html:104
-msgid "Publish a reuse case !"
-msgstr "Publiez une réutilisation"
-
-#: apps/ckan/templates/dataset.html:120
-msgid "Certified public service"
-msgstr "Service public certifié"
-
-#: apps/ckan/templates/dataset.html:121
-msgid "This organization and its datasets are certified by data.gouv.fr"
-msgstr "Cette organisation et ses séries de données sont certifiés par data.gouv.fr"
-
-#: apps/ckan/templates/dataset.html:135
-msgid "more"
-msgstr "plus"
-
-#: apps/ckan/templates/dataset.html:146
-msgid "Informations"
-msgstr "Informations"
-
-#: apps/ckan/templates/dataset.html:155
-msgid "License"
-msgstr "License"
-
-#: apps/ckan/templates/dataset.html:166
+#: apps/ckan/templates/ckan/cards/dataset.html:23
+#: apps/weckan/templates/dataset.html:166
 msgid "Temporal coverage"
 msgstr "Couverture temporelle"
 
-#: apps/ckan/templates/dataset.html:169
+#: apps/ckan/templates/ckan/cards/dataset.html:26
 #, python-format
 msgid ""
 "\n"
-"                            %(from)s to %(to)s\n"
-"                            "
-msgstr "\n%(from)s à %(to)s"
+"                %(from)s to %(to)s\n"
+"                "
+msgstr ""
+"\n"
+"%(from)s à %(to)s"
 
-#: apps/ckan/templates/dataset.html:179
+#: apps/ckan/templates/ckan/cards/dataset.html:37
+#: apps/weckan/templates/dataset.html:179
 msgid "Periodicity"
 msgstr "Périodicité"
 
-#: apps/ckan/templates/dataset.html:190
+#: apps/ckan/templates/ckan/cards/dataset.html:49
+#: apps/weckan/templates/dataset.html:190
 msgid "Territorial coverage"
 msgstr "Couverture territoriale"
 
-#: apps/ckan/templates/dataset.html:202
+#: apps/ckan/templates/ckan/cards/dataset.html:61
+#: apps/weckan/templates/dataset.html:202
 msgid "Territorial coverage granularity"
 msgstr "Granularité de la couverture territoriale"
 
-#: apps/ckan/templates/home.html:4 apps/sso/templates/sso/logout.html:12
-#: apps/sso/templates/sso/register_done.html:19
-msgid "Home"
-msgstr "Accueil"
+#: apps/ckan/templates/ckan/cards/organization.html:18
+msgid "Number of datasets"
+msgstr "Nombre de séries de données"
 
-#: apps/ckan/templates/home.html:10
-msgid "Let's debate facts to make them undebatable"
-msgstr "Discutons les faits pour qu'ils deviennent indiscutables"
+#: apps/ckan/templates/ckan/cards/organization.html:21
+#, python-format
+msgid "%(nb_datasets)s dataset"
+msgid_plural "%(nb_datasets)s datasets"
+msgstr[0] "%(nb_datasets)s série de données"
+msgstr[1] "%(nb_datasets)s séries de données"
 
-#: apps/ckan/templates/home.html:56
-msgid "Last"
-msgstr "Récents"
+#: apps/ckan/templates/ckan/cards/valorization.html:23
+#, fuzzy
+msgid "Creation date"
+msgstr "Créer un compte"
 
-#: apps/ckan/templates/home.html:62
-msgid "Popular"
-msgstr "Populaires"
+#: apps/ckan/templates/ckan/widgets/datasets.html:8
+msgid "No published datasets"
+msgstr "Aucune série de données publiée"
 
-#: apps/ckan/templates/home.html:111
-msgid "Citizens"
-msgstr "Citoyens"
+#: apps/ckan/templates/ckan/widgets/organizations.html:8
+msgid "No affiliation to any organization"
+msgstr "Aucune affiliation à une organisation"
 
-#: apps/ckan/templates/home.html:129
-msgid "Public services"
-msgstr "Services publics"
+#: apps/ckan/templates/ckan/widgets/usefuls.html:8
+msgid "No datasets marked as useful"
+msgstr "Aucune série de données marquée comme utile"
 
-#: apps/ckan/templates/home.html:147
-msgid "Businesses"
-msgstr "Entreprises"
+#: apps/ckan/templates/ckan/widgets/valorizations.html:8
+msgid "No published valorizations"
+msgstr "Aucune valorisation publiée"
 
 #: apps/sso/forms.py:22
 msgid "Password"
@@ -304,7 +267,11 @@ msgid ""
 "\n"
 "Your account has been successfully created.\n"
 "You can visit your profile <a href=\"%(profile_url)s\">here</a>.\n"
-msgstr "\nVotre compte a été créé avec succès.\nVous pouvez maintenant visiter votre profil <a href=\"%(profile_url)s\">ici</a>.\n"
+msgstr ""
+"\n"
+"Votre compte a été créé avec succès.\n"
+"Vous pouvez maintenant visiter votre profil <a href=\"%(profile_url)s\">ici</"
+"a>.\n"
 
 #: apps/sso/templates/mails/validation.html:9
 #, python-format
@@ -312,9 +279,6 @@ msgid "Please validate your account <a href=\"%(url)s\">here</a>."
 msgstr "Validez votre compte <a href=\"%(url)s\">ici</a>."
 
 #: apps/sso/templates/sso/login.html:5 apps/sso/templates/sso/login.html:44
-#: apps/sso/templates/sso/password_reset_complete.html:5
-#: apps/sso/templates/sso/password_reset_confirm.html:5
-#: apps/sso/templates/sso/password_reset_confirm.html:17
 #: apps/sso/templates/sso/password_reset_done.html:5
 #: apps/sso/templates/sso/register_done.html:5
 msgid "Sign In"
@@ -339,7 +303,6 @@ msgid "Sign out"
 msgstr "Se déconnecter"
 
 #: apps/sso/templates/sso/login.html:58
-#: apps/sso/templates/sso/password_reset_confirm.html:31
 msgid "Remember me"
 msgstr "Se souvenir de moi"
 
@@ -383,41 +346,63 @@ msgstr "Créer un compte"
 msgid "You have been signed out. Come back soon !"
 msgstr "Vous avez été déconnecté. Revenez vite !"
 
-#: apps/sso/templates/sso/password_reset_complete.html:11
-msgid "Your password has been set.  You may go ahead and log in now."
-msgstr "Votre mot de passe a été défini. Vous pouvez maintenant continuer et vous connecter."
+#: apps/sso/templates/sso/logout.html:12
+#: apps/sso/templates/sso/register_done.html:19
+#: apps/weckan/templates/home.html:4
+msgid "Home"
+msgstr "Accueil"
 
-#: apps/sso/templates/sso/password_reset_complete.html:12
+#: apps/sso/templates/sso/password_reset_complete.html:5
+#: apps/sso/templates/sso/password_reset_complete.html:11
+msgid "Password reset complete"
+msgstr "Réinitialisation du mot de passe complète"
+
+#: apps/sso/templates/sso/password_reset_complete.html:13
+msgid "Your password has been set.  You may go ahead and log in now."
+msgstr ""
+"Votre mot de passe a été défini. Vous pouvez maintenant continuer et vous "
+"connecter."
+
+#: apps/sso/templates/sso/password_reset_complete.html:15
 msgid "Log in"
 msgstr "Se connecter"
+
+#: apps/sso/templates/sso/password_reset_confirm.html:5
+#: apps/sso/templates/sso/password_reset_confirm.html:28
+msgid "Change my password"
+msgstr "Changer mon mot de passe"
 
 #: apps/sso/templates/sso/password_reset_confirm.html:12
 msgid ""
 "Please enter your new password twice so we can verify you typed it in "
 "correctly."
-msgstr "Entrez votre nouveau mot de passe deux fois afin de vérifier que vous l'avez tapé correctement."
+msgstr ""
+"Entrez votre nouveau mot de passe deux fois afin de vérifier que vous l'avez "
+"tapé correctement."
 
-#: apps/sso/templates/sso/password_reset_confirm.html:39
-msgid "Change my password"
-msgstr "Changer mon mot de passe"
-
-#: apps/sso/templates/sso/password_reset_confirm.html:47
+#: apps/sso/templates/sso/password_reset_confirm.html:35
 msgid ""
 "The password reset link was invalid, possibly because it has already been "
 "used.  Please request a new password reset."
-msgstr "Le lien de réinitialisation du mot de passe est invalide, probablement parce qu'il a déjà été utilisé. Demandez une nouvelle réinitialisation."
+msgstr ""
+"Le lien de réinitialisation du mot de passe est invalide, probablement parce "
+"qu'il a déjà été utilisé. Demandez une nouvelle réinitialisation."
 
 #: apps/sso/templates/sso/password_reset_done.html:10
 msgid ""
 "We've emailed you instructions for setting your password. You should be "
 "receiving them shortly."
-msgstr "Nous vous avons envoyé par mail les instructions pour définir votre mot de passe. Vous devriez le recevoir rapidement."
+msgstr ""
+"Nous vous avons envoyé par mail les instructions pour définir votre mot de "
+"passe. Vous devriez le recevoir rapidement."
 
 #: apps/sso/templates/sso/password_reset_done.html:12
 msgid ""
 "If you don't receive an email, please make sure you've entered the address "
 "you registered with, and check your spam folder."
-msgstr "Si vous ne recevez pas de mail, vérifiez que vous avez entré l'adresse avec laquelle vous vous êtes inscrit et vérifiez votre dossier de spam."
+msgstr ""
+"Si vous ne recevez pas de mail, vérifiez que vous avez entré l'adresse avec "
+"laquelle vous vous êtes inscrit et vérifiez votre dossier de spam."
 
 #: apps/sso/templates/sso/password_reset_form.html:5
 #: apps/sso/templates/sso/password_reset_form.html:18
@@ -429,7 +414,9 @@ msgstr "Réinitialisation du mot de passe"
 msgid ""
 "Forgotten your password? Enter your email address below, and we'll email "
 "instructions for setting a new one."
-msgstr "Vous avez oublié votre mot de passe ? Saisissez votre email ci-dessous et nous vous enverrons par mail les instructions pour en définir un nouveau."
+msgstr ""
+"Vous avez oublié votre mot de passe ? Saisissez votre email ci-dessous et "
+"nous vous enverrons par mail les instructions pour en définir un nouveau."
 
 #: apps/sso/templates/sso/password_reset_form.html:36
 #: apps/sso/templates/sso/register.html:51
@@ -462,9 +449,14 @@ msgstr "Inscription complète"
 msgid ""
 "\n"
 "        Your registeration is complete:\n"
-"        Your account has been activated and you can now use all user features.\n"
+"        Your account has been activated and you can now use all user "
+"features.\n"
 "        "
-msgstr "\nVotre inscription est complète:\nVotre compte a été activé et vous pouvez maintenant utiliser toutes les fonctionnalités utilisateur."
+msgstr ""
+"\n"
+"Votre inscription est complète:\n"
+"Votre compte a été activé et vous pouvez maintenant utiliser toutes les "
+"fonctionnalités utilisateur."
 
 #: apps/sso/templates/sso/register_done.html:23
 msgid "Continue your browsing"
@@ -484,77 +476,188 @@ msgstr "Un email de validation a été envoyé à %(email)s."
 msgid "Please check your mails to activate your account"
 msgstr "Consultez vos mails pour activer votre compte"
 
-#: settings/common.py:210
+#: apps/weckan/models/activity.py:30
+msgid "Activity"
+msgstr "Activité"
+
+#: apps/weckan/models/activity.py:31
+msgid "Activities"
+msgstr "Activités"
+
+#: apps/weckan/models/dataset.py:49
+msgid "Dataset"
+msgstr "Série de données"
+
+#: apps/weckan/models/related.py:30
+msgid "Related"
+msgstr "Lien connexe"
+
+#: apps/weckan/models/related.py:31
+msgid "Relateds"
+msgstr "Liens connexes"
+
+#: apps/weckan/templates/dataset.html:21
+msgid "Published by"
+msgstr "Publié par"
+
+#: apps/weckan/templates/dataset.html:33
+msgid "Provided by"
+msgstr "Fourni par"
+
+#: apps/weckan/templates/dataset.html:55
+msgid "Nameless resource"
+msgstr "Resource sans nom"
+
+#: apps/weckan/templates/dataset.html:68
+msgid "Community resources"
+msgstr "Resource de la communauté"
+
+#: apps/weckan/templates/dataset.html:73
+msgid "Reuse"
+msgstr "Réutilisation"
+
+#: apps/weckan/templates/dataset.html:104
+msgid "Publish a reuse case !"
+msgstr "Publiez une réutilisation"
+
+#: apps/weckan/templates/dataset.html:120
+msgid "Certified public service"
+msgstr "Service public certifié"
+
+#: apps/weckan/templates/dataset.html:121
+msgid "This organization and its datasets are certified by data.gouv.fr"
+msgstr ""
+"Cette organisation et ses séries de données sont certifiés par data.gouv.fr"
+
+#: apps/weckan/templates/dataset.html:135
+msgid "more"
+msgstr "plus"
+
+#: apps/weckan/templates/dataset.html:146
+msgid "Informations"
+msgstr "Informations"
+
+#: apps/weckan/templates/dataset.html:155
+msgid "License"
+msgstr "License"
+
+#: apps/weckan/templates/dataset.html:169
+#, python-format
+msgid ""
+"\n"
+"                            %(from)s to %(to)s\n"
+"                            "
+msgstr ""
+"\n"
+"%(from)s à %(to)s"
+
+#: apps/weckan/templates/home.html:10
+msgid "Let's debate facts to make them undebatable"
+msgstr "Discutons les faits pour qu'ils deviennent indiscutables"
+
+#: apps/weckan/templates/home.html:56
+msgid "Last"
+msgstr "Récents"
+
+#: apps/weckan/templates/home.html:62
+msgid "Popular"
+msgstr "Populaires"
+
+#: apps/weckan/templates/home.html:111
+msgid "Citizens"
+msgstr "Citoyens"
+
+#: apps/weckan/templates/home.html:129
+msgid "Public services"
+msgstr "Services publics"
+
+#: apps/weckan/templates/home.html:147
+msgid "Businesses"
+msgstr "Entreprises"
+
+#: settings/common.py:220
 msgid "Authentication"
 msgstr "Authentification"
 
-#: settings/common.py:214
+#: settings/common.py:224
 msgid "OAuth2"
 msgstr "OAuth2"
 
-#: settings/common.py:220
+#: settings/common.py:230
 msgid "Social"
 msgstr "Social"
 
-#: settings/common.py:225
+#: settings/common.py:235
 msgid "Tasks"
 msgstr "Tâches"
 
-#: templates/base.html:56
+#: templates/base.html:57
 msgid "Back to top"
 msgstr "Haut de page"
 
-#: templates/base.html:59
+#: templates/base.html:60
 msgid "Privacy"
 msgstr "Vie privée"
 
-#: templates/base.html:60
+#: templates/base.html:61
 msgid "Terms"
 msgstr "Conditions légales"
 
-#: templates/navbar.html:15
+#: templates/navbar.html:13
 msgid "Open platform for french public data"
 msgstr "Plate-forme ouverte des données publiques françaises"
 
-#: templates/navbar.html:25 templates/navbar.html.py:27
+#: templates/navbar.html:17 templates/sidebar.html:11
+msgid "How it works ?"
+msgstr "Comment ça marche ?"
+
+#: templates/navbar.html:18
+msgid "Publishers"
+msgstr "Producteurs"
+
+#: templates/navbar.html:21 templates/sidebar.html:15
+msgid "Open license"
+msgstr "License ouverte"
+
+#: templates/navbar.html:37 templates/navbar.html.py:39
 msgid "Profile"
 msgstr "Profil"
 
-#: templates/navbar.html:32 templates/navbar.html.py:34
+#: templates/navbar.html:43 templates/navbar.html.py:45
+msgid "Settings"
+msgstr "Réglages"
+
+#: templates/navbar.html:50 templates/navbar.html.py:52
 msgid "Log out"
 msgstr "Se déconnecter"
 
-#: templates/navbar.html:42 templates/navbar.html.py:44
+#: templates/navbar.html:60 templates/navbar.html.py:62
 msgid "Sign In / Sign Up"
 msgstr "Connexion / Inscription"
 
-#: templates/navbar.html:50
+#: templates/navbar.html:68
 msgid "Advanced mode"
 msgstr "Mode avancé"
-
-#: templates/navbar.html:79 templates/navbar.html.py:82
-msgid "Publish a dataset !"
-msgstr "Publiez une série de données"
-
-#: templates/navbar.html:92
-msgid "Search"
-msgstr "Recherche"
-
-#: templates/navbar.html:100
-msgid "Where"
-msgstr "Où"
 
 #: templates/sidebar.html:6
 msgid "Public data"
 msgstr "Données publiques"
 
-#: templates/sidebar.html:11
-msgid "How it works ?"
-msgstr "Comment ça marche ?"
+#: templates/subnav-s.html:15
+msgid "Search"
+msgstr "Recherche"
 
-#: templates/sidebar.html:15
-msgid "Open license"
-msgstr "License ouverte"
+#: templates/subnav-s.html:23
+msgid "Where"
+msgstr "Où"
+
+#: templates/subnav-s.html:31
+msgid "Topics"
+msgstr "Thématiques"
+
+#: templates/subnav-s.html:50 templates/subnav-s.html.py:53
+msgid "Publish a dataset !"
+msgstr "Publiez une série de données"
 
 #: templates/widgets/avatar.html:2
 msgid "Avatar"

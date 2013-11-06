@@ -40,7 +40,6 @@ def login(request, *args, **kwargs):
 class RegisterView(CreateView):
     template_name = 'sso/register.html'
     form_class = RegisterForm
-    success_url = reverse_lazy('register-done')
 
     def get_initial(self):
         initial = {}
@@ -102,4 +101,3 @@ class OAuthAuthorizationView(AuthorizationView):
 
         except OAuthToolkitError as error:
             return self.error_response(error)
-

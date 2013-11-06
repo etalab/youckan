@@ -29,7 +29,7 @@
         <div class="form-group">
             <div class="col-md-12 text-center">
                 <button type="submit" class="btn btn-primary">{% trans "Save" %}</button>
-                <a href="{% url 'profile' pk=user.pk %}" class="btn btn-warning">{% trans "Cancel" %}</a>
+                <a href="{% url 'profile' slug=user.slug %}" class="btn btn-warning">{% trans "Cancel" %}</a>
             </div>
         </div>
     </form>
