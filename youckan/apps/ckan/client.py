@@ -37,12 +37,6 @@ def action(name, data=None, method='post', timeout=TIMEOUT):
     return call_ckan(url, data, method, timeout)
 
 
-def weckan(name, data=None, method='get', timeout=TIMEOUT):
-    '''Call a WeCKAN API action'''
-    url = '{0}/api/weckan/{1}'.format(settings.HOME_URL, name)
-    return call_ckan(url, data, method, timeout)
-
-
 def connector(name, data=None, method='get', timeout=TIMEOUT):
     '''Call a WeCKAN API action'''
     url = '{0}/youckan/{1}'.format(settings.HOME_URL, name)
