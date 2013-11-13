@@ -1,0 +1,12 @@
+python-dev
+build-essential
+checkinstall
+libpq-dev
+libevent-dev
+libjpeg-dev
+zlib1g-dev
+libfreetype6-dev
+liblcms1-dev
+libxml2
+libxml2-dev
+libxslt1-dev

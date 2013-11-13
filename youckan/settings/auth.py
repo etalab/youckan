@@ -8,6 +8,9 @@ from youckan.settings.etalab import HOME_URL, DOMAIN
 SESSION_COOKIE_DOMAIN = '.{0}'.format(DOMAIN)
 SESSION_COOKIE_NAME = 'youckan.session'
 
+SESSION_ENGINE = 'redis_sessions.session'
+# TODO: tune redis config
+
 
 AUTH_USER_MODEL = 'youckan.User'
 

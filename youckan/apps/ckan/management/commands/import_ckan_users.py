@@ -54,7 +54,7 @@ class Command(BaseCommand):
         update_ckan_user = options['update']
         notify = options['notify']
 
-        response = client.action('user_list')
+        response = client.action('user_list', timeout=60)
         for userdata in response['result']:
             try:
                 user = self.create_user(userdata)

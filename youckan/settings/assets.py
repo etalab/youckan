@@ -40,10 +40,11 @@ STATICFILES_FINDERS = (
     # 'django.contrib.staticfiles.finders.DefaultStorageFinder',
 )
 
-if DEBUG:
-    STATICFILES_STORAGE = 'pipeline.storage.PipelineStorage'
-else:
-    STATICFILES_STORAGE = 'pipeline.storage.PipelineCachedStorage'
+STATICFILES_STORAGE = 'pipeline.storage.PipelineStorage'
+# if DEBUG:
+#     STATICFILES_STORAGE = 'pipeline.storage.PipelineStorage'
+# else:
+#     STATICFILES_STORAGE = 'pipeline.storage.PipelineCachedStorage'
 
 PIPELINE_COMPILERS = (
     'pipeline.compilers.less.LessCompiler',

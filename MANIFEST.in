@@ -16,6 +16,7 @@ include youckan/static/bower/bootstrap/dist/js/*.js
 include youckan/static/bower/etalab-assets/data/*.json
 include youckan/static/bower/etalab-assets/fonts/*
 include youckan/static/bower/etalab-assets/img/*
+include youckan/static/bower/etalab-assets/img/flags/*
 include youckan/static/bower/etalab-assets/js/*.js
 include youckan/static/bower/etalab-assets/less/*.less
 include youckan/static/bower/jquery/jquery.js

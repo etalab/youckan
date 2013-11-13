@@ -12,7 +12,7 @@ logger = logging.getLogger(__name__)
 TIMEOUT = 3
 
 
-def call_ckan(url, data=None, method='post'):
+def call_ckan(url, data=None, method='post', timeout=TIMEOUT):
     '''Call CKAN API url'''
     data = data or {}
     headers = {
@@ -23,7 +23,7 @@ def call_ckan(url, data=None, method='post'):
     func = getattr(requests, method.lower(), 'get')
 
     try:
-        response = func(url, data=json.dumps(data), headers=headers, timeout=TIMEOUT)
+        response = func(url, data=json.dumps(data), headers=headers, timeout=timeout)
         response.raise_for_status()
     except requests.RequestException:
         logger.exception('Unable to fetch URL "%s"', url)
@@ -31,19 +31,19 @@ def call_ckan(url, data=None, method='post'):
     return response.json()
 
 
-def action(name, data=None, method='post'):
+def action(name, data=None, method='post', timeout=TIMEOUT):
     '''Call a CKAN API v3 action'''
     url = '{0}/api/3/action/{1}'.format(settings.CKAN_URL, name)
-    return call_ckan(url, data, method)
+    return call_ckan(url, data, method, timeout)
 
 
-def weckan(name, data=None, method='get'):
+def weckan(name, data=None, method='get', timeout=TIMEOUT):
     '''Call a WeCKAN API action'''
     url = '{0}/api/weckan/{1}'.format(settings.HOME_URL, name)
-    return call_ckan(url, data, method)
+    return call_ckan(url, data, method, timeout)
 
 
-def connector(name, data=None, method='get'):
+def connector(name, data=None, method='get', timeout=TIMEOUT):
     '''Call a WeCKAN API action'''
     url = '{0}/youckan/{1}'.format(settings.HOME_URL, name)
-    return call_ckan(url, data, method)
+    return call_ckan(url, data, method, timeout)

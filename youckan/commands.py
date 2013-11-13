@@ -13,5 +13,5 @@ def manage():
 
 
 def manage_sso():
-    os.environ.setdefault("DJANGO_SETTINGS_MODULE", "youckan.sso.settings")
+    os.environ.setdefault("DJANGO_SETTINGS_MODULE", "youckan.apps.sso.settings")
     execute_from_command_line(sys.argv)
