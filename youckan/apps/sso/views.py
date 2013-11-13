@@ -4,6 +4,7 @@ from __future__ import unicode_literals
 import logging
 
 from django.contrib.auth.views import login as default_login
+from django.core.cache import cache
 from django.core.urlresolvers import reverse_lazy, reverse
 from django.http import HttpResponseRedirect
 from django.views.generic import TemplateView, CreateView
@@ -18,23 +19,40 @@ Application = get_application_model()
 
 log = logging.getLogger(__name__)
 
-NEXT_BLACKLIST = (
+NEXT_URL_BLACKLIST = (
     reverse_lazy('login'),
     reverse_lazy('logout'),
     reverse_lazy('register'),
 )
+BLACKLIST_CACHE_KEY = 'NEXT_URL_BLACKLIST'
+
+
+def get_next_blacklist():
+    blacklist = cache.get(BLACKLIST_CACHE_KEY)
+    if not blacklist:
+        blacklist = [bytes(url) for url in NEXT_URL_BLACKLIST]
+        cache.set(BLACKLIST_CACHE_KEY, blacklist)
+    return blacklist
 
 
 def login(request, *args, **kwargs):
+    redirect_field_name = 'next'
     if request.method == 'POST':
         if not request.POST.get('remember_me'):
             request.session.set_expiry(0)
     else:
         request.session.pop('partial_pipeline', None)
-        request.session['next'] = request.GET.get('next', '')
-        if request.session['next'] in NEXT_BLACKLIST:
-            request.session.pop('next')
-    return default_login(request, template_name='sso/login.html', authentication_form=LoginForm, *args, **kwargs)
+        redirect_field_name = 'none'
+        next_url = request.GET.get('next', '')
+
+        # Hackish way to implement a redirect blacklist
+        if next_url in get_next_blacklist():
+            redirect_field_name = 'none'
+        else:
+            request.session['next'] = next_url
+
+    return default_login(request, template_name='sso/login.html', authentication_form=LoginForm,
+        redirect_field_name=redirect_field_name, *args, **kwargs)
 
 
 class RegisterView(CreateView):
