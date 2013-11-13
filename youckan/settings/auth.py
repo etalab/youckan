@@ -8,6 +8,7 @@ from youckan.settings.etalab import HOME_URL, DOMAIN
 SESSION_COOKIE_DOMAIN = '.{0}'.format(DOMAIN)
 SESSION_COOKIE_NAME = 'youckan.session'
 
+SESSION_SERIALIZER = 'django.contrib.sessions.serializers.PickleSerializer'
 SESSION_ENGINE = 'redis_sessions.session'
 # TODO: tune redis config
 
