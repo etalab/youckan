@@ -5,14 +5,16 @@
 {% block title %}{% trans "Email validation" %}{% endblock %}
 
 {% block content %}
-<div class="container">
-    <div class="jumbotron">
-        <h1>{% trans "Email validation" %}</h1>
-        <p>
-            {% blocktrans %}A validation mail has been sent to {{ email }}.{% endblocktrans %}
-            <br/>
-            {% trans "Please check your mails to activate your account" %}
-        </p>
+<section class="default">
+    <div class="container">
+        <div class="jumbotron">
+            <h1>{% trans "Email validation" %}</h1>
+            <p>
+                {% blocktrans %}A validation mail has been sent to {{ email }}.{% endblocktrans %}
+                <br/>
+                {% trans "Please check your mails to activate your account" %}
+            </p>
+        </div>
     </div>
-</div>
+</section>
 {% endblock %}

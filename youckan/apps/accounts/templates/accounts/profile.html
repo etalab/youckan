@@ -4,64 +4,66 @@
 {% block title %}{% blocktrans with name=user_profile.full_name %}{{ name }} profile{% endblocktrans %}{% endblock %}
 
 {% block content %}
-<div class="container">
-    <div class="row">
-        <div class="col-sm-3 card">
-            <p class="text-center">
-                {% avatar user_profile 128 %}
-            </p>
-            <h1>{{user_profile.full_name}}</h1>
+<section class="default">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-3 card">
+                <p class="text-center">
+                    {% avatar user_profile 128 %}
+                </p>
+                <h1>{{user_profile.full_name}}</h1>
 
-            {% if user_profile.profile.website %}
-            <p>
-                <a href="{{ user_profile.profile.website }}">
-                    {{ user_profile.profile.website }}
-                    <span class="glyphicon glyphicon-new-window"></span>
+                {% if user_profile.profile.website %}
+                <p>
+                    <a href="{{ user_profile.profile.website }}">
+                        {{ user_profile.profile.website }}
+                        <span class="glyphicon glyphicon-new-window"></span>
+                    </a>
+                </p>
+                {% endif %}
+
+                {% if user_profile.profile.city %}
+                <p>{{ user_profile.profile.city }}</p>
+                {% endif %}
+
+                {% if user_profile.profile.about %}
+                <div>{{ user_profile.profile.about|markdown }}</div>
+                {% endif %}
+
+                {% if user == user_profile %}
+                <a href="{% url "profile-edit" %}" class="btn btn-primary btn-sm">
+                <span class="glyphicon glyphicon-edit"></span>
+                {% trans "Edit" %}
                 </a>
-            </p>
-            {% endif %}
-
-            {% if user_profile.profile.city %}
-            <p>{{ user_profile.profile.city }}</p>
-            {% endif %}
-
-            {% if user_profile.profile.about %}
-            <div>{{ user_profile.profile.about|markdown }}</div>
-            {% endif %}
-
-            {% if user == user_profile %}
-            <a href="{% url "profile-edit" %}" class="btn btn-primary btn-sm">
-            <span class="glyphicon glyphicon-edit"></span>
-            {% trans "Edit" %}
-            </a>
-            {% endif %}
-        </div>
-        <div class="col-sm-9">
-            {# Tabbar #}
-            <div class="row profile-section">
-                <div class="col-xs-12">
-                    <ul id="tabs" class="nav nav-pills" data-tabs="tabs">
-                        {% for widget in widgets %}
-                        <li {% if forloop.first %}class="active"{% endif %}>
-                            <a href="#profile-tab-{{ forloop.counter }}" data-toggle="tab">{{ widget.name }}</a>
-                        </li>
-                        {% endfor %}
-                    </ul>
-                </div>
+                {% endif %}
             </div>
-            {# end Tabbar #}
-
-            <div class="row profile-section">
-                <div class="tab-content">
-                    {% for widget in widgets %}
-                    <div id="profile-tab-{{ forloop.counter }}" class="tab-pane {% if forloop.first %}active{% endif %}">
-                        {% include widget.template_name %}
+            <div class="col-sm-9">
+                {# Tabbar #}
+                <div class="row profile-section">
+                    <div class="col-xs-12">
+                        <ul id="tabs" class="nav nav-pills" data-tabs="tabs">
+                            {% for widget in widgets %}
+                            <li {% if forloop.first %}class="active"{% endif %}>
+                                <a href="#profile-tab-{{ forloop.counter }}" data-toggle="tab">{{ widget.name }}</a>
+                            </li>
+                            {% endfor %}
+                        </ul>
                     </div>
-                    {% endfor %}
                 </div>
-            </div>
+                {# end Tabbar #}
 
+                <div class="row profile-section">
+                    <div class="tab-content">
+                        {% for widget in widgets %}
+                        <div id="profile-tab-{{ forloop.counter }}" class="tab-pane {% if forloop.first %}active{% endif %}">
+                            {% include widget.template_name %}
+                        </div>
+                        {% endfor %}
+                    </div>
+                </div>
+
+            </div>
         </div>
     </div>
-</div>
+</section>
 {% endblock %}

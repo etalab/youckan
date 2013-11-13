@@ -21,6 +21,7 @@ include youckan/static/bower/etalab-assets/less/*.less
 include youckan/static/bower/jquery/jquery.js
 include youckan/static/bower/jquery-legacy/index.js
 include youckan/static/bower/jquery.cookie/jquery.cookie.js
+include youckan/static/bower/jquery.dotdotdot/jquery.dotdotdot.js
 include youckan/static/bower/jquery.validation/jquery.validate.js
 include youckan/static/bower/modernizr/modernizr.js
 include youckan/static/bower/moment/min/moment+lang.js

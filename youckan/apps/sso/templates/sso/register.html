@@ -5,78 +5,80 @@
 {% block title %}{% trans "Sign Up" %}{% endblock %}
 
 {% block content %}
-<div class="container auth-container">
-    <form class="form-horizontal validate col-md-offset-2 col-md-8" role="form"
-        method="post" action="{% url 'register' %}">
-        {% csrf_token %}
+<section class="default">
+    <div class="container auth-container">
+        <form class="form-horizontal validate col-md-offset-2 col-md-8" role="form"
+            method="post" action="{% url 'register' %}">
+            {% csrf_token %}
 
 
-        <fieldset>
+            <fieldset>
 
-            <legend>{% trans "Sign Up" %}</legend>
+                <legend>{% trans "Sign Up" %}</legend>
 
-            {% for error in form.non_field_errors %}
-            <div class="alert alert-danger">
-            {{ error }}
-            </div>
-            {% endfor %}
-
-            {% for field in form %}
-            {% form_field field  %}
-            {% endfor %}
-
-            {% if request.session.avatar_url %}
-            {% with backend=request.session.backend %}
-            <div class="form-group">
-                <div class="col-sm-12 text-center">
-                    <img class="avatar" src="{{request.session.avatar_url}}"
-                        alt="{% blocktrans %}Your avatar from {{backend}}{% endblocktrans %}"/>
-                    <label>
-                        <input type="checkbox" name="use_avatar" checked="checked" />
-                        {% trans "Use my avatar" %}
-                        <span class="form-help"
-                            data-content="{% blocktrans %}Import and use my avatar from {{backend}}{% endblocktrans %}"></span>
-
-                    </label>
+                {% for error in form.non_field_errors %}
+                <div class="alert alert-danger">
+                {{ error }}
                 </div>
-            </div>
-            {% endwith %}
-            {% endif %}
+                {% endfor %}
 
-            <div class="form-group">
-                <div class="col-md-4 col-lg-3 text-right">
-                    <label class="required">
-                        <input type="checkbox" name="use_avatar" checked="checked" required/>
-                    </label>
+                {% for field in form %}
+                {% form_field field  %}
+                {% endfor %}
+
+                {% if request.session.avatar_url %}
+                {% with backend=request.session.backend %}
+                <div class="form-group">
+                    <div class="col-sm-12 text-center">
+                        <img class="avatar" src="{{request.session.avatar_url}}"
+                            alt="{% blocktrans %}Your avatar from {{backend}}{% endblocktrans %}"/>
+                        <label>
+                            <input type="checkbox" name="use_avatar" checked="checked" />
+                            {% trans "Use my avatar" %}
+                            <span class="form-help"
+                                data-content="{% blocktrans %}Import and use my avatar from {{backend}}{% endblocktrans %}"></span>
+
+                        </label>
+                    </div>
                 </div>
-                <div class="col-md-8 col-lg-9 text-left">
-                    <label>{% trans "I have read and accepted the terms and conditions of the service." %}</label>
-                    <br/>
-                    {% blocktrans %}I do understand that <a href="http://www.data.gouv.fr">data.gouv.fr</a>
-                    values more the production and enrichment of datasets than definitive or partisan interpretations.
-                    It is the responsibility of the community of members to oversee the content it produces.{% endblocktrans %}
+                {% endwith %}
+                {% endif %}
+
+                <div class="form-group">
+                    <div class="col-md-4 col-lg-3 text-right">
+                        <label class="required">
+                            <input type="checkbox" name="use_avatar" checked="checked" required/>
+                        </label>
+                    </div>
+                    <div class="col-md-8 col-lg-9 text-left">
+                        <label>{% trans "I have read and accepted the terms and conditions of the service." %}</label>
+                        <br/>
+                        {% blocktrans %}I do understand that <a href="http://www.data.gouv.fr">data.gouv.fr</a>
+                        values more the production and enrichment of datasets than definitive or partisan interpretations.
+                        It is the responsibility of the community of members to oversee the content it produces.{% endblocktrans %}
+                    </div>
                 </div>
-            </div>
 
 
-            <div class="form-group">
-                <div class="col-md-8 col-lg-9 col-md-offset-4 col-lg-offset-3">
-                    <p class="form-control-static">
-                        <span class="red">*</span>
-                        <i>{% trans "required fields" %}</i>
-                    </p>
+                <div class="form-group">
+                    <div class="col-md-8 col-lg-9 col-md-offset-4 col-lg-offset-3">
+                        <p class="form-control-static">
+                            <span class="red">*</span>
+                            <i>{% trans "required fields" %}</i>
+                        </p>
+                    </div>
                 </div>
-            </div>
 
 
-            <div class="form-group">
-                <div class="col-md-12">
-                    <button type="submit" class="btn btn-primary btn-block">{% trans "Sign up" %}</button>
+                <div class="form-group">
+                    <div class="col-md-12">
+                        <button type="submit" class="btn btn-primary btn-block">{% trans "Sign up" %}</button>
+                    </div>
                 </div>
-            </div>
 
 
-        </fieldset>
-    </form>
-</div>
+            </fieldset>
+        </form>
+    </div>
+</section>
 {% endblock %}
