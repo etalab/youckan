@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-11-04 17:13+0100\n"
+"POT-Creation-Date: 2013-11-07 17:25+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -241,7 +241,7 @@ msgstr ""
 msgid "OAuth2 Applications"
 msgstr ""
 
-#: apps/sso/pipeline.py:56
+#: apps/sso/pipeline.py:55
 #, python-brace-format
 msgid "This {0} account is already in use. Please login with your password"
 msgstr ""
@@ -394,7 +394,7 @@ msgid ""
 msgstr ""
 
 #: apps/sso/templates/sso/password_reset_form.html:36
-#: apps/sso/templates/sso/register.html:51
+#: apps/sso/templates/sso/register.html:64
 msgid "required fields"
 msgstr ""
 
@@ -412,7 +412,20 @@ msgstr ""
 msgid "Import and use my avatar from %(backend)s"
 msgstr ""
 
-#: apps/sso/templates/sso/register.html:59
+#: apps/sso/templates/sso/register.html:51
+msgid "I have read and accepted the terms and conditions of the service."
+msgstr ""
+
+#: apps/sso/templates/sso/register.html:53
+msgid ""
+"I do understand that <a href=\"http://www.data.gouv.fr\">data.gouv.fr</a>\n"
+"                    values more the production and enrichment of datasets "
+"than definitive or partisan interpretations.\n"
+"                    It is the responsibility of the community of members to "
+"oversee the content it produces."
+msgstr ""
+
+#: apps/sso/templates/sso/register.html:72
 msgid "Sign up"
 msgstr ""
 
@@ -579,7 +592,7 @@ msgstr ""
 msgid "How it works ?"
 msgstr ""
 
-#: templates/navbar.html:18
+#: templates/navbar.html:18 templates/sidebar.html:12
 msgid "Publishers"
 msgstr ""
 
@@ -615,11 +628,11 @@ msgstr ""
 msgid "Search"
 msgstr ""
 
-#: templates/subnav-s.html:23
+#: templates/subnav-s.html:24
 msgid "Where"
 msgstr ""
 
-#: templates/subnav-s.html:31
+#: templates/subnav-s.html:34
 msgid "Topics"
 msgstr ""
 

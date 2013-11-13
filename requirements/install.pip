@@ -8,11 +8,10 @@ django-cors-headers==0.12
 django-filter==0.7
 django-gravatar2==1.1.3
 django-oauth-toolkit==0.5.0
-django-password-reset==0.5
-django-pipeline==1.3.15
+django-pipeline==1.3.16
 django-suit==0.2.5
 django.js==0.8.1
-Django==1.5.5
+Django==1.6
 djangorestframework==2.3.8
 futures==2.1.4
 Markdown==2.3.1
@@ -20,9 +19,9 @@ oauth2==1.5.211
 Pillow
 psycopg2
 python-openid==2.2.5
-python-social-auth==0.1.14
+python-social-auth==0.1.16
 pytz==2013d
 redis==2.8.0
-requests==2.0.0
+requests==2.0.1
 six==1.3.0  # Fix conflict. TODO: find from where it comes from
 South==0.8.2

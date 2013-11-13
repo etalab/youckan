@@ -144,6 +144,7 @@ MIDDLEWARE_CLASSES = (
     'django.middleware.locale.LocaleMiddleware',
     'social.apps.django_app.middleware.SocialAuthExceptionMiddleware',
     'corsheaders.middleware.CorsMiddleware',
+    'youckan.apps.sso.middleware.YouckanAuthCookieMiddleware',
     # Uncomment the next line for simple clickjacking protection:
     # 'django.middleware.clickjacking.XFrameOptionsMiddleware',
 )

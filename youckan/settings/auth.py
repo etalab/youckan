@@ -2,7 +2,12 @@
 from django.core.urlresolvers import reverse_lazy
 
 from youckan.settings.common import conf, DEBUG
-from youckan.settings.etalab import HOME_URL
+from youckan.settings.etalab import HOME_URL, DOMAIN
+
+
+SESSION_COOKIE_DOMAIN = '.{0}'.format(DOMAIN)
+SESSION_COOKIE_NAME = 'youckan.session'
+
 
 AUTH_USER_MODEL = 'youckan.User'
 

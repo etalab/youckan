@@ -22,8 +22,6 @@ def etalab_config(request):
                     group='{0}/{1}/groups'.format(settings.HOME_URL, request.LANGUAGE_CODE),
                 )}
                 for topic in settings.MENU_TOPICS
-                # (title, icon, url.format(wiki=settings.WIKI_URL) if url else slugify(title))
-                # for title, icon, url in settings.MENU_TOPICS
             ],
         }
     }

@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-import datetime
+from south.utils import datetime_utils as datetime
 from south.db import db
 from south.v2 import SchemaMigration
 from django.db import models
@@ -24,7 +24,7 @@ class Migration(SchemaMigration):
             ('is_staff', self.gf('django.db.models.fields.BooleanField')(default=False)),
             ('is_active', self.gf('django.db.models.fields.BooleanField')(default=True)),
             ('date_joined', self.gf('django.db.models.fields.DateTimeField')(default=datetime.datetime.now)),
-            ('slug', self.gf('django.db.models.fields.SlugField')(max_length=150)),
+            ('slug', self.gf('autoslug.fields.AutoSlugField')(unique_with=(), max_length=150, populate_from=None)),
         ))
         db.send_create_signal(u'youckan', ['User'])
 
@@ -98,7 +98,7 @@ class Migration(SchemaMigration):
             'date_joined': ('django.db.models.fields.DateTimeField', [], {'default': 'datetime.datetime.now'}),
             'email': ('django.db.models.fields.EmailField', [], {'unique': 'True', 'max_length': '150', 'db_index': 'True'}),
             'first_name': ('django.db.models.fields.CharField', [], {'max_length': '64'}),
-            'groups': ('django.db.models.fields.related.ManyToManyField', [], {'to': u"orm['auth.Group']", 'symmetrical': 'False', 'blank': 'True'}),
+            'groups': ('django.db.models.fields.related.ManyToManyField', [], {'symmetrical': 'False', 'related_name': "u'user_set'", 'blank': 'True', 'to': u"orm['auth.Group']"}),
             u'id': ('django.db.models.fields.AutoField', [], {'primary_key': 'True'}),
             'is_active': ('django.db.models.fields.BooleanField', [], {'default': 'True'}),
             'is_staff': ('django.db.models.fields.BooleanField', [], {'default': 'False'}),
@@ -106,8 +106,8 @@ class Migration(SchemaMigration):
             'last_login': ('django.db.models.fields.DateTimeField', [], {'default': 'datetime.datetime.now'}),
             'last_name': ('django.db.models.fields.CharField', [], {'max_length': '64'}),
             'password': ('django.db.models.fields.CharField', [], {'max_length': '128'}),
-            'slug': ('django.db.models.fields.SlugField', [], {'max_length': '150'}),
-            'user_permissions': ('django.db.models.fields.related.ManyToManyField', [], {'to': u"orm['auth.Permission']", 'symmetrical': 'False', 'blank': 'True'})
+            'slug': ('autoslug.fields.AutoSlugField', [], {'unique_with': '()', 'max_length': '150', 'populate_from': 'None'}),
+            'user_permissions': ('django.db.models.fields.related.ManyToManyField', [], {'symmetrical': 'False', 'related_name': "u'user_set'", 'blank': 'True', 'to': u"orm['auth.Permission']"})
         },
         u'youckan.userprofile': {
             'Meta': {'object_name': 'UserProfile'},

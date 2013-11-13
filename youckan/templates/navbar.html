@@ -1,36 +1,40 @@
 {% load i18n helpers avatar %}
-<div class="container">
-    <nav class="navbar navbar-default navbar-static-top" role="navigation">
-        <header class="navbar-header">
-            <button type="button" class="navbar-toggle" data-toggle="collapse"
-                    data-target=".navbar-collapse, .subnav-collapse">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-            </button>
-            <a class="navbar-brand" href="{{ etalab.HOME_URL }}">Etalab2.fr</a>
-            <p class="navbar-text pull-right">{% trans "Open platform for french public data" %}</p>
-        </header>
+<section class="header">
+    <div class="container">
+        <nav class="navbar navbar-default navbar-static-top" role="navigation">
+            <header class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse"
+                        data-target=".navbar-collapse, .subnav-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="{{ etalab.HOME_URL }}">Etalab2.fr</a>
+                <p class="navbar-text pull-right">{% trans "Open platform for french public data" %}</p>
+            </header>
+        </nav>
+    </div>
+</section>
 
-        <ul class="nav navbar-nav links">
-            <li><a href="{{ etalab.WIKI_URL }}/FAQ">{% trans "How it works ?" %}</a></li>
-            <li><a href="{{ etalab.HOME_URL }}/{{LANGUAGE_CODE}}/organization">{% trans "Publishers" %}</a></li>
-            <li>
-                <a href="http://www.etalab.gouv.fr/pages/licence-ouverte-open-licence-5899923.html">
-                    {% trans "Open license" %}
-                </a>
-            </li>
-            <li><a href="http://www.etalab.gouv.fr/">ETALAB</a></li>
-        </ul>
-
-        <div class="collapse navbar-collapse">
+<section class="topmenu">
+    <div class="container">
+        <nav class="navbar navbar-default navbar-static-top collapse navbar-collapse" role="navigation">
+            <ul class="nav navbar-nav links">
+                <li><a href="{{ etalab.WIKI_URL }}/FAQ">{% trans "How it works ?" %}</a></li>
+                <li><a href="{{ etalab.HOME_URL }}/{{LANGUAGE_CODE}}/organization">{% trans "Publishers" %}</a></li>
+                <li>
+                    <a href="http://www.etalab.gouv.fr/pages/licence-ouverte-open-licence-5899923.html">
+                        {% trans "Open license" %}
+                    </a>
+                </li>
+                <li><a href="http://www.etalab.gouv.fr/">ETALAB</a></li>
+            </ul>
             <ul class="nav navbar-nav navbar-right">
                 {% if user.is_authenticated %}
                     <li class="dropdown user">
                         <button class="btn-link dropdown-toggle" data-toggle="dropdown">
-                            {% avatar user 20 %} {{ user.full_name }}
-                            <b class="caret"></b>
+                            {% avatar user 30 %} {{ user.full_name }}
                         </button>
                         <ul class="dropdown-menu">
                             <li>
@@ -88,6 +92,6 @@
                     </ul>
                 </li>
             </ul>
-        </div>
-    </nav>
-</div>
+        </nav>
+    </div>
+</section>

@@ -3,7 +3,7 @@
     {% if dataset.organization %}
     <a class="card-logo" href="{{ etalab.HOME_URL }}/{{LANGUAGE_CODE}}/dataset/{{dataset.name}}">
         <img alt="{{ dataset.organization.title }}"
-            src="{{ dataset.organization.image_url }}">
+            src="{{ dataset.organization.image_url|default_static:'img/placeholder_producer.png' }}">
     </a>
     {% endif %}
     <div class="card-body">

@@ -10,8 +10,10 @@ from django.views.generic import RedirectView
 
 admin.autodiscover()
 
+redirect_url = reverse_lazy('users') if settings.DEBUG else settings.ETALAB_HOME
+
 urlpatterns = patterns('',
-    url(r'^$', RedirectView.as_view(url=reverse_lazy('login'))),
+    url(r'^$', RedirectView.as_view(url=redirect_url)),
     url('', include('youckan.apps.accounts.urls')),
     url('', include('youckan.apps.sso.urls')),
     # url('', include('youckan.data.urls')),

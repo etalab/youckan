@@ -2,7 +2,7 @@
 <div class="card">
     <a class="card-logo" href="{{ organization.url }}">
         <img alt="{{ organization.title|default:organization.name }}"
-            src="{{ organization.image_url }}">
+            src="{{ organization.image_url|default_static:'img/placeholder_producer.png' }}">
     </a>
     <div class="card-body">
         <h4>

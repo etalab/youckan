@@ -33,20 +33,17 @@ def call_ckan(url, data=None, method='post'):
 
 def action(name, data=None, method='post'):
     '''Call a CKAN API v3 action'''
-    logger.info('CKAN API: %s %s', name, data)
     url = '{0}/api/3/action/{1}'.format(settings.CKAN_URL, name)
     return call_ckan(url, data, method)
 
 
 def weckan(name, data=None, method='get'):
     '''Call a WeCKAN API action'''
-    logger.info('WeCKAN API: %s %s', name, data)
     url = '{0}/api/weckan/{1}'.format(settings.HOME_URL, name)
     return call_ckan(url, data, method)
 
 
 def connector(name, data=None, method='get'):
     '''Call a WeCKAN API action'''
-    logger.info('YouCKAN Connector: %s %s', name, data)
     url = '{0}/youckan/{1}'.format(settings.HOME_URL, name)
     return call_ckan(url, data, method)

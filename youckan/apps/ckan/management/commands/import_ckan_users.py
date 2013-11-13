@@ -1,21 +1,58 @@
 # -*- coding: utf-8 -*-
 from __future__ import unicode_literals
 
+from optparse import make_option
+
 from django.core.management.base import BaseCommand
 from django.db.models.signals import post_save
 from django.utils.dateparse import parse_datetime
 
-
 from youckan.apps.ckan import client
-from youckan.models import User, sync_on_save
+from youckan.apps.ckan.models import sync_ckan_on_save
+from youckan.apps.sso import mail
+from youckan.models import User
 
 
 class Command(BaseCommand):
     help = 'Import CKAN users from CKAN API'
+    option_list = BaseCommand.option_list + (
+        make_option('-n', '--notify',
+            action='store_true',
+            dest='notify',
+            default=False,
+            help='Notify user for password change'
+        ),
+        make_option('-u', '--update',
+            action='store_true',
+            dest='update',
+            default=False,
+            help='Update CKAN users to match imported users'
+        ),
+        make_option('-s', '--https',
+            action='store_true',
+            dest='update',
+            default=False,
+            help='Update CKAN users to match imported users'
+        ),
+        make_option('-d', '--domain',
+            action='store',
+            dest='domain',
+            help='Domain name to use'
+        ),
+        make_option('--site',
+            action='store',
+            dest='site',
+            default='Etalab2.fr',
+            help='Site name to use'
+        ),
+    )
 
     def handle(self, *args, **options):
         # Prevent user to be automatically created
-        post_save.disconnect(sync_on_save, sender=User, dispatch_uid="youckan.sync_users")
+        post_save.disconnect(sync_ckan_on_save, sender=User, dispatch_uid="youckan.ckan.sync_user")
+
+        update_ckan_user = options['update']
+        notify = options['notify']
 
         response = client.action('user_list')
         for userdata in response['result']:
@@ -28,8 +65,15 @@ class Command(BaseCommand):
             if not user:
                 self.stdout.write('Skipping user {id}'.format(**userdata))
                 continue
-            self.update_ckan_user(user, ckan_id)
-            self.notify_user(user, ckan_id)
+            if update_ckan_user:
+                self.update_ckan_user(user, ckan_id)
+            if notify:
+                self.stdout.write('Sending reset password mail to {0}'.format(user.email))
+                mail.reset_password(user,
+                    use_https=options['https'],
+                    domain=options['domain'],
+                    site=options['site'],
+                )
 
     def create_user(self, userdata):
         fullname = userdata['fullname']
@@ -66,6 +110,3 @@ class Command(BaseCommand):
             'email': user.email,
         })
         return response['success']
-
-    def notify_user(self, user, ckan_id):
-        self.stdout.write('Sending email to {email}'.format(**user.__dict__))

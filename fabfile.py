@@ -63,7 +63,7 @@ def serve(port=8000):
 @task
 def sso(port=8000):
     '''Run Development server.'''
-    with lcd(ROOT), shell_env(DJANGO_SETTINGS_MODULE='youckan.auth.settings'):
+    with lcd(ROOT), shell_env(DJANGO_SETTINGS_MODULE='youckan.apps.sso.settings'):
         local('python manage.py runserver %s' % port)
 
 

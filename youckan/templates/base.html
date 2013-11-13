@@ -14,7 +14,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 
     <title>{% block title %}{% endblock %} - Etalab2.fr</title>
-    <link rel="shortcut icon" href="{% static 'images/favicon.png' %}">
+    <link rel="shortcut icon" href="{% static 'img/favicon.png' %}">
 
     {# Reference to other Etalab sites #}
     <meta name="domain" content="{{ etalab.DOMAIN }}" />
@@ -51,18 +51,7 @@
 
     {% block content %}{% endblock %}
 
-    <section class="footer">
-        <div class="container">
-            <footer>
-                <p class="pull-right"><a href="#">{% trans "Back to top" %}</a></p>
-                <p>
-                    &copy; 2013 Etalab &middot;
-                    <a href="#">{% trans "Privacy" %}</a> &middot;
-                    <a href="#">{% trans "Terms" %}</a>
-                </p>
-            </footer>
-        </div>
-    </section>
+    {% include "footer.html" %}
 
 
     {# Load scripts after for faster page loading #}

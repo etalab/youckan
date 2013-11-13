@@ -42,7 +42,7 @@ def pip(filename):
         match = RE_REQUIREMENT.match(line)
         if match:
             requirements.extend(pip(match.group('filename')))
-        else:
+        elif not line.startswith('-e'):
             requirements.append(line)
     return requirements
 

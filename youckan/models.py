@@ -98,12 +98,6 @@ class UserProfile(models.Model):
         return '{0} profile'.format(self.user)
 
 
-@receiver(post_save, sender=User, dispatch_uid="youckan.sync_users")
-def sync_on_save(sender, instance, created, **kwargs):
-    from youckan.tasks import sync_users
-    sync_users.delay(instance.email)
-
-
 @receiver(post_save, sender=User, dispatch_uid="youckan.create_profile")
 def create_user_profile(sender, instance, created, **kwargs):
     if created:
