@@ -14,7 +14,7 @@ from django.utils.translation import ugettext as _
 
 def send_validation(strategy, code):
     url = strategy.build_absolute_uri('?'.join([
-        reverse('social:complete', args=[strategy.backend_name]),
+        reverse('social:complete', args=[strategy.backend.name]),
         'verification_code={0}'.format(code.code)
     ]))
     user = strategy.storage.user.get_users_by_email(code.email)[0]
