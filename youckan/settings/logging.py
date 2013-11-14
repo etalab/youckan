@@ -5,12 +5,12 @@ from youckan.settings.common import conf, DEBUG
 
 # Different log files for web server and workers
 logname = 'django'
-if 'celeryd' in sys.argv:
+if 'worker' in sys.argv:
     if '-Q' in sys.argv:
         position = sys.argv.index('-Q') + 1
-        logname = 'celeryd.{}'.format(sys.argv[position])
+        logname = 'worker.{}'.format(sys.argv[position])
     else:
-        logname = 'celeryd'
+        logname = 'worker'
 elif 'celerycam' in sys.argv:
     logname = 'celerycam'
 elif 'flower' in sys.argv:
