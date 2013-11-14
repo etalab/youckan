@@ -42,14 +42,13 @@ def login(request, *args, **kwargs):
             request.session.set_expiry(0)
     else:
         request.session.pop('partial_pipeline', None)
-        redirect_field_name = 'none'
-        next_url = request.GET.get('next', '')
+        redirect_url = request.GET.get(redirect_field_name, '')
 
         # Hackish way to implement a redirect blacklist
-        if next_url in get_next_blacklist():
+        if redirect_url in get_next_blacklist():
             redirect_field_name = 'none'
         else:
-            request.session['next'] = next_url
+            request.session['next'] = redirect_url
 
     return default_login(request, template_name='sso/login.html', authentication_form=LoginForm,
         redirect_field_name=redirect_field_name, *args, **kwargs)
