@@ -10,8 +10,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: youckan\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-11-07 17:25+0100\n"
-"PO-Revision-Date: 2013-11-07 16:59+0000\n"
+"POT-Creation-Date: 2013-11-14 02:59+0100\n"
+"PO-Revision-Date: 2013-11-14 02:02+0000\n"
 "Last-Translator: noirbizarre\n"
 "Language-Team: French (http://www.transifex.com/projects/p/youckan/language/fr/)\n"
 "MIME-Version: 1.0\n"
@@ -103,20 +103,20 @@ msgstr "Badges"
 msgid "%(name)s profile"
 msgstr "Profil de %(name)s"
 
-#: apps/accounts/templates/accounts/profile.html:35
+#: apps/accounts/templates/accounts/profile.html:36
 msgid "Edit"
 msgstr "Editer"
 
 #: apps/accounts/templates/accounts/profile_edit.html:4
-#: apps/accounts/templates/accounts/profile_edit.html:9
+#: apps/accounts/templates/accounts/profile_edit.html:10
 msgid "Your profile"
 msgstr "Votre profil"
 
-#: apps/accounts/templates/accounts/profile_edit.html:31
+#: apps/accounts/templates/accounts/profile_edit.html:32
 msgid "Save"
 msgstr "Enregistrer"
 
-#: apps/accounts/templates/accounts/profile_edit.html:32
+#: apps/accounts/templates/accounts/profile_edit.html:33
 msgid "Cancel"
 msgstr "Annuler"
 
@@ -215,20 +215,20 @@ msgstr "Confirmation du mot de passe"
 msgid "Passwords don't match"
 msgstr "Les mots de passe ne correspondent pas"
 
-#: apps/sso/mail.py:24
+#: apps/sso/mail.py:29
 msgid "Validate your account"
 msgstr "Validez votre compte"
 
-#: apps/sso/mail.py:25
+#: apps/sso/mail.py:30
 #, python-brace-format
 msgid "Validate your account {0}"
 msgstr "Validez votre compte {0}"
 
-#: apps/sso/mail.py:40
+#: apps/sso/mail.py:45
 msgid "Account creation confirmation"
 msgstr "Confirmation de création de compte"
 
-#: apps/sso/mail.py:41
+#: apps/sso/mail.py:46
 msgid "Your account has been created"
 msgstr "Votre compte a été créé"
 
@@ -268,195 +268,195 @@ msgstr "\nVotre compte a été créé avec succès.\nVous pouvez maintenant visi
 msgid "Please validate your account <a href=\"%(url)s\">here</a>."
 msgstr "Validez votre compte <a href=\"%(url)s\">ici</a>."
 
-#: apps/sso/templates/sso/login.html:5 apps/sso/templates/sso/login.html:44
+#: apps/sso/templates/sso/login.html:5 apps/sso/templates/sso/login.html:45
 #: apps/sso/templates/sso/password_reset_done.html:5
 #: apps/sso/templates/sso/register_done.html:5
 msgid "Sign In"
 msgstr "Connexion"
 
-#: apps/sso/templates/sso/login.html:15 apps/sso/templates/sso/logout.html:4
-#: apps/sso/templates/sso/logout.html:9
+#: apps/sso/templates/sso/login.html:16 apps/sso/templates/sso/logout.html:4
+#: apps/sso/templates/sso/logout.html:10
 msgid "Sign Out"
 msgstr "Déconnexion"
 
-#: apps/sso/templates/sso/login.html:18
+#: apps/sso/templates/sso/login.html:19
 #, python-format
 msgid "You are already logged in as %(name)s."
 msgstr "Vous êtes déjà connecté en tant que %(name)s."
 
-#: apps/sso/templates/sso/login.html:20
+#: apps/sso/templates/sso/login.html:21
 msgid "Please logout if you want to sign in as a different user."
 msgstr "Déconnectez-vous et connectez-vous avec un autre utilisateur."
 
-#: apps/sso/templates/sso/login.html:24 apps/sso/templates/sso/login.html:26
+#: apps/sso/templates/sso/login.html:25 apps/sso/templates/sso/login.html:27
 msgid "Sign out"
 msgstr "Se déconnecter"
 
-#: apps/sso/templates/sso/login.html:58
+#: apps/sso/templates/sso/login.html:59
 msgid "Remember me"
 msgstr "Se souvenir de moi"
 
-#: apps/sso/templates/sso/login.html:66
+#: apps/sso/templates/sso/login.html:67
 msgid "Sign in"
 msgstr "Se connecter"
 
-#: apps/sso/templates/sso/login.html:72
+#: apps/sso/templates/sso/login.html:73
 msgid "Forgotton your password ?"
 msgstr "Mot de passe oublié ?"
 
-#: apps/sso/templates/sso/login.html:73
+#: apps/sso/templates/sso/login.html:74
 msgid "Recover your password"
 msgstr "Réinitialisez votre mot de passe"
 
-#: apps/sso/templates/sso/login.html:82 apps/sso/templates/sso/register.html:5
-#: apps/sso/templates/sso/register.html:16
+#: apps/sso/templates/sso/login.html:83 apps/sso/templates/sso/register.html:5
+#: apps/sso/templates/sso/register.html:17
 msgid "Sign Up"
 msgstr "Inscription"
 
-#: apps/sso/templates/sso/login.html:86
+#: apps/sso/templates/sso/login.html:87
 msgid "Sign up a with social account"
 msgstr "S'inscrire par un réseau social"
 
-#: apps/sso/templates/sso/login.html:91 apps/sso/templates/sso/login.html:93
-#: apps/sso/templates/sso/login.html:97 apps/sso/templates/sso/login.html:99
-#: apps/sso/templates/sso/login.html:103 apps/sso/templates/sso/login.html:105
+#: apps/sso/templates/sso/login.html:92 apps/sso/templates/sso/login.html:94
+#: apps/sso/templates/sso/login.html:98 apps/sso/templates/sso/login.html:100
+#: apps/sso/templates/sso/login.html:104 apps/sso/templates/sso/login.html:106
 #, python-format
 msgid "Sign up with %(name)s"
 msgstr "S'inscrire par %(name)s"
 
-#: apps/sso/templates/sso/login.html:112
+#: apps/sso/templates/sso/login.html:113
 msgid "-- or --"
 msgstr "-- ou --"
 
-#: apps/sso/templates/sso/login.html:119
+#: apps/sso/templates/sso/login.html:120
 msgid "Create an account"
 msgstr "Créer un compte"
 
-#: apps/sso/templates/sso/logout.html:10
+#: apps/sso/templates/sso/logout.html:11
 msgid "You have been signed out. Come back soon !"
 msgstr "Vous avez été déconnecté. Revenez vite !"
 
-#: apps/sso/templates/sso/logout.html:12
-#: apps/sso/templates/sso/register_done.html:19
+#: apps/sso/templates/sso/logout.html:13
+#: apps/sso/templates/sso/register_done.html:20
 #: apps/weckan/templates/home.html:4
 msgid "Home"
 msgstr "Accueil"
 
 #: apps/sso/templates/sso/password_reset_complete.html:5
-#: apps/sso/templates/sso/password_reset_complete.html:11
+#: apps/sso/templates/sso/password_reset_complete.html:12
 msgid "Password reset complete"
 msgstr "Réinitialisation du mot de passe complète"
 
-#: apps/sso/templates/sso/password_reset_complete.html:13
+#: apps/sso/templates/sso/password_reset_complete.html:14
 msgid "Your password has been set.  You may go ahead and log in now."
 msgstr "Votre mot de passe a été défini. Vous pouvez maintenant continuer et vous connecter."
 
-#: apps/sso/templates/sso/password_reset_complete.html:15
+#: apps/sso/templates/sso/password_reset_complete.html:16
 msgid "Log in"
 msgstr "Se connecter"
 
 #: apps/sso/templates/sso/password_reset_confirm.html:5
-#: apps/sso/templates/sso/password_reset_confirm.html:28
+#: apps/sso/templates/sso/password_reset_confirm.html:29
 msgid "Change my password"
 msgstr "Changer mon mot de passe"
 
-#: apps/sso/templates/sso/password_reset_confirm.html:12
+#: apps/sso/templates/sso/password_reset_confirm.html:13
 msgid ""
 "Please enter your new password twice so we can verify you typed it in "
 "correctly."
 msgstr "Entrez votre nouveau mot de passe deux fois afin de vérifier que vous l'avez tapé correctement."
 
-#: apps/sso/templates/sso/password_reset_confirm.html:35
+#: apps/sso/templates/sso/password_reset_confirm.html:36
 msgid ""
 "The password reset link was invalid, possibly because it has already been "
 "used.  Please request a new password reset."
 msgstr "Le lien de réinitialisation du mot de passe est invalide, probablement parce qu'il a déjà été utilisé. Demandez une nouvelle réinitialisation."
 
-#: apps/sso/templates/sso/password_reset_done.html:10
+#: apps/sso/templates/sso/password_reset_done.html:11
 msgid ""
 "We've emailed you instructions for setting your password. You should be "
 "receiving them shortly."
 msgstr "Nous vous avons envoyé par mail les instructions pour définir votre mot de passe. Vous devriez le recevoir rapidement."
 
-#: apps/sso/templates/sso/password_reset_done.html:12
+#: apps/sso/templates/sso/password_reset_done.html:13
 msgid ""
 "If you don't receive an email, please make sure you've entered the address "
 "you registered with, and check your spam folder."
 msgstr "Si vous ne recevez pas de mail, vérifiez que vous avez entré l'adresse avec laquelle vous vous êtes inscrit et vérifiez votre dossier de spam."
 
 #: apps/sso/templates/sso/password_reset_form.html:5
-#: apps/sso/templates/sso/password_reset_form.html:18
-#: apps/sso/templates/sso/password_reset_form.html:44
+#: apps/sso/templates/sso/password_reset_form.html:19
+#: apps/sso/templates/sso/password_reset_form.html:45
 msgid "Reset Password"
 msgstr "Réinitialisation du mot de passe"
 
-#: apps/sso/templates/sso/password_reset_form.html:20
+#: apps/sso/templates/sso/password_reset_form.html:21
 msgid ""
 "Forgotten your password? Enter your email address below, and we'll email "
 "instructions for setting a new one."
 msgstr "Vous avez oublié votre mot de passe ? Saisissez votre email ci-dessous et nous vous enverrons par mail les instructions pour en définir un nouveau."
 
-#: apps/sso/templates/sso/password_reset_form.html:36
-#: apps/sso/templates/sso/register.html:64
+#: apps/sso/templates/sso/password_reset_form.html:37
+#: apps/sso/templates/sso/register.html:67
 msgid "required fields"
 msgstr "champs requis"
 
-#: apps/sso/templates/sso/register.html:33
+#: apps/sso/templates/sso/register.html:34
 #, python-format
 msgid "Your avatar from %(backend)s"
 msgstr "Votre avatar de %(backend)s"
 
-#: apps/sso/templates/sso/register.html:36
+#: apps/sso/templates/sso/register.html:37
 msgid "Use my avatar"
 msgstr "Utiliser mon avatar"
 
-#: apps/sso/templates/sso/register.html:38
+#: apps/sso/templates/sso/register.html:39
 #, python-format
 msgid "Import and use my avatar from %(backend)s"
 msgstr "Importer et utiliser mon avatar depuis %(backend)s"
 
-#: apps/sso/templates/sso/register.html:51
+#: apps/sso/templates/sso/register.html:54
 msgid "I have read and accepted the terms and conditions of the service."
 msgstr "J'ai lu et j'adhère aux conditions générales du service."
 
-#: apps/sso/templates/sso/register.html:53
+#: apps/sso/templates/sso/register.html:56
 msgid ""
 "I do understand that <a href=\"http://www.data.gouv.fr\">data.gouv.fr</a>\n"
-"                    values more the production and enrichment of datasets than definitive or partisan interpretations.\n"
-"                    It is the responsibility of the community of members to oversee the content it produces."
+"                        values more the production and enrichment of datasets than definitive or partisan interpretations.\n"
+"                        It is the responsibility of the community of members to oversee the content it produces."
 msgstr "En particulier, je comprends que <a href=\"http://www.data.gouv.fr\">data.gouv.fr</a>\nvalorise plus la production et l'enrichissement de données que les interprétations définitives ou partisanes.\nIl appartient à la communauté des membres de veiller à la qualité du contenu qu'elle produit."
 
-#: apps/sso/templates/sso/register.html:72
+#: apps/sso/templates/sso/register.html:75
 msgid "Sign up"
 msgstr "S'inscrire"
 
-#: apps/sso/templates/sso/register_done.html:10
+#: apps/sso/templates/sso/register_done.html:11
 msgid "Registeration complete"
 msgstr "Inscription complète"
 
-#: apps/sso/templates/sso/register_done.html:12
+#: apps/sso/templates/sso/register_done.html:13
 msgid ""
 "\n"
-"        Your registeration is complete:\n"
-"        Your account has been activated and you can now use all user features.\n"
-"        "
-msgstr "\nVotre inscription est complète:\nVotre compte a été activé et vous pouvez maintenant utiliser toutes les fonctionnalités utilisateur."
+"            Your registeration is complete:\n"
+"            Your account has been activated and you can now use all user features.\n"
+"            "
+msgstr "\nVotre inscription est complète:\nVotre compte a été activé et vous pouvez maintenant utiliser toutes les fonctionnalités."
 
-#: apps/sso/templates/sso/register_done.html:23
+#: apps/sso/templates/sso/register_done.html:24
 msgid "Continue your browsing"
 msgstr "Reprendre votre navigation"
 
 #: apps/sso/templates/sso/register_mail.html:5
-#: apps/sso/templates/sso/register_mail.html:10
+#: apps/sso/templates/sso/register_mail.html:11
 msgid "Email validation"
 msgstr "Validation de l'email"
 
-#: apps/sso/templates/sso/register_mail.html:12
+#: apps/sso/templates/sso/register_mail.html:13
 #, python-format
 msgid "A validation mail has been sent to %(email)s."
 msgstr "Un email de validation a été envoyé à %(email)s."
 
-#: apps/sso/templates/sso/register_mail.html:14
+#: apps/sso/templates/sso/register_mail.html:15
 msgid "Please check your mails to activate your account"
 msgstr "Consultez vos mails pour activer votre compte"
 
@@ -556,67 +556,79 @@ msgstr "Services publics"
 msgid "Businesses"
 msgstr "Entreprises"
 
-#: settings/common.py:220
+#: settings/common.py:221
 msgid "Authentication"
 msgstr "Authentification"
 
-#: settings/common.py:224
+#: settings/common.py:225
 msgid "OAuth2"
 msgstr "OAuth2"
 
-#: settings/common.py:230
+#: settings/common.py:231
 msgid "Social"
 msgstr "Social"
 
-#: settings/common.py:235
+#: settings/common.py:236
 msgid "Tasks"
 msgstr "Tâches"
 
-#: templates/base.html:57
-msgid "Back to top"
-msgstr "Haut de page"
+#: templates/footer.html:7
+msgid "The Open Data"
+msgstr "L'Open Data"
 
-#: templates/base.html:60
-msgid "Privacy"
-msgstr "Vie privée"
-
-#: templates/base.html:61
-msgid "Terms"
-msgstr "Conditions légales"
-
-#: templates/navbar.html:13
-msgid "Open platform for french public data"
-msgstr "Plate-forme ouverte des données publiques françaises"
-
-#: templates/navbar.html:17 templates/sidebar.html:11
+#: templates/footer.html:9 templates/navbar.html:24 templates/sidebar.html:11
 msgid "How it works ?"
 msgstr "Comment ça marche ?"
 
-#: templates/navbar.html:18 templates/sidebar.html:12
+#: templates/footer.html:10 templates/navbar.html:25
 msgid "Publishers"
 msgstr "Producteurs"
 
-#: templates/navbar.html:21 templates/sidebar.html:15
+#: templates/footer.html:13 templates/navbar.html:28 templates/sidebar.html:15
 msgid "Open license"
 msgstr "Licence ouverte"
 
-#: templates/navbar.html:37 templates/navbar.html.py:39
+#: templates/footer.html:17
+msgid "Credits"
+msgstr "Crédits"
+
+#: templates/footer.html:21 templates/subnav-s.html:34
+msgid "Topics"
+msgstr "Thématiques"
+
+#: templates/footer.html:34
+msgid "Network"
+msgstr "Réseau"
+
+#: templates/footer.html:45
+msgid "Contact"
+msgstr "Contact"
+
+#: templates/footer.html:57
+msgid "Back to top"
+msgstr "Haut de page"
+
+#: templates/navbar.html:14
+msgid "Open platform for french public data"
+msgstr "Plate-forme ouverte des données publiques françaises"
+
+#: templates/navbar.html:41 templates/navbar.html.py:43
 msgid "Profile"
 msgstr "Profil"
 
-#: templates/navbar.html:43 templates/navbar.html.py:45
+#: templates/navbar.html:47 templates/navbar.html.py:49
 msgid "Settings"
 msgstr "Réglages"
 
-#: templates/navbar.html:50 templates/navbar.html.py:52
+#: templates/navbar.html:54 templates/navbar.html.py:56
 msgid "Log out"
 msgstr "Se déconnecter"
 
-#: templates/navbar.html:60 templates/navbar.html.py:62
+#: templates/navbar.html:64 templates/navbar.html.py:66
 msgid "Sign In / Sign Up"
 msgstr "Connexion / Inscription"
 
-#: templates/navbar.html:68
+#: templates/navbar.html:72
 msgid "Advanced mode"
 msgstr "Mode avancé"
 
@@ -631,10 +643,6 @@ msgstr "Recherche"
 #: templates/subnav-s.html:24
 msgid "Where"
 msgstr "Où"
-
-#: templates/subnav-s.html:34
-msgid "Topics"
-msgstr "Thématiques"
 
 #: templates/subnav-s.html:50 templates/subnav-s.html.py:53
 msgid "Publish a dataset !"
