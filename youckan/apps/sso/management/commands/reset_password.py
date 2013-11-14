@@ -43,7 +43,7 @@ class Command(BaseCommand):
         post_save.disconnect(sync_ckan_on_save, sender=User, dispatch_uid="youckan.ckan.sync_user")
 
         if options['all']:
-            for user in User.object.all():
+            for user in User.objects.all():
                 self.stdout.write('Sending reset password mail to {0}'.format(user.email))
                 mail.reset_password(user,
                     use_https=options['https'],
