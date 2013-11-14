@@ -25,9 +25,12 @@ def call_ckan(url, data=None, method='post', timeout=TIMEOUT):
     try:
         response = func(url, data=json.dumps(data), headers=headers, timeout=timeout)
         response.raise_for_status()
-    except requests.RequestException:
+    except requests.RequestException as request_exception:
         logger.exception('Unable to fetch URL "%s"', url)
-        raise
+        try:
+            return response.json()
+        except:
+            raise request_exception
     return response.json()
 
 

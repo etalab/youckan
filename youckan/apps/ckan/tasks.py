@@ -31,7 +31,7 @@ def sync_ckan_user(email):
         if response['success']:
             ckan_user_id = response['result']['id']
     except HTTPError as error:
-        if not error.response.status_code == 404:
+        if error.response.status_code != 404:
             raise
 
     if ckan_user_id:
