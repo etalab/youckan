@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-11-15 11:56+0100\n"
+"POT-Creation-Date: 2013-11-15 19:07+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -189,50 +189,62 @@ msgstr ""
 msgid "Valorizations"
 msgstr ""
 
-#: apps/ckan/profile.py:45
+#: apps/ckan/profile.py:44
 msgid "Organizations"
 msgstr ""
 
-#: apps/ckan/templates/ckan/cards/dataset.html:23
+#: apps/ckan/templates/ckan/cards/dataset.html:11
+#: apps/ckan/templates/ckan/cards/organization.html:10
+#: apps/weckan/templates/dataset.html:120
+msgid "Certified public service"
+msgstr ""
+
+#: apps/ckan/templates/ckan/cards/dataset.html:12
+#: apps/ckan/templates/ckan/cards/organization.html:11
+#: apps/weckan/templates/dataset.html:121
+msgid "This organization and its datasets are certified by data.gouv.fr"
+msgstr ""
+
+#: apps/ckan/templates/ckan/cards/dataset.html:30
 #: apps/weckan/templates/dataset.html:166
 msgid "Temporal coverage"
 msgstr ""
 
-#: apps/ckan/templates/ckan/cards/dataset.html:26
+#: apps/ckan/templates/ckan/cards/dataset.html:33
 #, python-format
 msgid ""
 "\n"
-"                %(from)s to %(to)s\n"
-"                "
+"            %(from)s to %(to)s\n"
+"            "
 msgstr ""
 
-#: apps/ckan/templates/ckan/cards/dataset.html:37
+#: apps/ckan/templates/ckan/cards/dataset.html:44
 #: apps/weckan/templates/dataset.html:179
 msgid "Periodicity"
 msgstr ""
 
-#: apps/ckan/templates/ckan/cards/dataset.html:49
+#: apps/ckan/templates/ckan/cards/dataset.html:56
 #: apps/weckan/templates/dataset.html:190
 msgid "Territorial coverage"
 msgstr ""
 
-#: apps/ckan/templates/ckan/cards/dataset.html:61
+#: apps/ckan/templates/ckan/cards/dataset.html:68
 #: apps/weckan/templates/dataset.html:202
 msgid "Territorial coverage granularity"
 msgstr ""
 
-#: apps/ckan/templates/ckan/cards/organization.html:18
+#: apps/ckan/templates/ckan/cards/organization.html:26
 msgid "Number of datasets"
 msgstr ""
 
-#: apps/ckan/templates/ckan/cards/organization.html:21
+#: apps/ckan/templates/ckan/cards/organization.html:29
 #, python-format
 msgid "%(nb_datasets)s dataset"
 msgid_plural "%(nb_datasets)s datasets"
 msgstr[0] ""
 msgstr[1] ""
 
-#: apps/ckan/templates/ckan/cards/valorization.html:23
+#: apps/ckan/templates/ckan/cards/valorization.html:24
 msgid "Creation date"
 msgstr ""
 
@@ -313,67 +325,67 @@ msgstr ""
 msgid "Please validate your account <a href=\"%(url)s\">here</a>."
 msgstr ""
 
-#: apps/sso/templates/sso/login.html:5 apps/sso/templates/sso/login.html:45
+#: apps/sso/templates/sso/login.html:5 apps/sso/templates/sso/login.html:52
 #: apps/sso/templates/sso/password_reset_done.html:5
 #: apps/sso/templates/sso/register_done.html:5
 msgid "Sign In"
 msgstr ""
 
-#: apps/sso/templates/sso/login.html:16 apps/sso/templates/sso/logout.html:4
+#: apps/sso/templates/sso/login.html:23 apps/sso/templates/sso/logout.html:4
 #: apps/sso/templates/sso/logout.html:10
 msgid "Sign Out"
 msgstr ""
 
-#: apps/sso/templates/sso/login.html:19
+#: apps/sso/templates/sso/login.html:26
 #, python-format
 msgid "You are already logged in as %(name)s."
 msgstr ""
 
-#: apps/sso/templates/sso/login.html:21
+#: apps/sso/templates/sso/login.html:28
 msgid "Please logout if you want to sign in as a different user."
 msgstr ""
 
-#: apps/sso/templates/sso/login.html:25 apps/sso/templates/sso/login.html:27
+#: apps/sso/templates/sso/login.html:32 apps/sso/templates/sso/login.html:34
 msgid "Sign out"
 msgstr ""
 
-#: apps/sso/templates/sso/login.html:59
+#: apps/sso/templates/sso/login.html:66
 msgid "Remember me"
 msgstr ""
 
-#: apps/sso/templates/sso/login.html:67
+#: apps/sso/templates/sso/login.html:74
 msgid "Sign in"
 msgstr ""
 
-#: apps/sso/templates/sso/login.html:73
+#: apps/sso/templates/sso/login.html:80
 msgid "Forgotton your password ?"
 msgstr ""
 
-#: apps/sso/templates/sso/login.html:74
+#: apps/sso/templates/sso/login.html:81
 msgid "Recover your password"
 msgstr ""
 
-#: apps/sso/templates/sso/login.html:83 apps/sso/templates/sso/register.html:5
+#: apps/sso/templates/sso/login.html:90 apps/sso/templates/sso/register.html:5
 #: apps/sso/templates/sso/register.html:17
 msgid "Sign Up"
 msgstr ""
 
-#: apps/sso/templates/sso/login.html:87
+#: apps/sso/templates/sso/login.html:94
 msgid "Sign up a with social account"
 msgstr ""
 
-#: apps/sso/templates/sso/login.html:92 apps/sso/templates/sso/login.html:94
-#: apps/sso/templates/sso/login.html:98 apps/sso/templates/sso/login.html:100
-#: apps/sso/templates/sso/login.html:104 apps/sso/templates/sso/login.html:106
+#: apps/sso/templates/sso/login.html:99 apps/sso/templates/sso/login.html:101
+#: apps/sso/templates/sso/login.html:105 apps/sso/templates/sso/login.html:107
+#: apps/sso/templates/sso/login.html:111 apps/sso/templates/sso/login.html:113
 #, python-format
 msgid "Sign up with %(name)s"
 msgstr ""
 
-#: apps/sso/templates/sso/login.html:113
+#: apps/sso/templates/sso/login.html:120
 msgid "-- or --"
 msgstr ""
 
-#: apps/sso/templates/sso/login.html:120
+#: apps/sso/templates/sso/login.html:127
 msgid "Create an account"
 msgstr ""
 
@@ -545,14 +557,6 @@ msgstr ""
 
 #: apps/weckan/templates/dataset.html:104
 msgid "Publish a reuse case !"
-msgstr ""
-
-#: apps/weckan/templates/dataset.html:120
-msgid "Certified public service"
-msgstr ""
-
-#: apps/weckan/templates/dataset.html:121
-msgid "This organization and its datasets are certified by data.gouv.fr"
 msgstr ""
 
 #: apps/weckan/templates/dataset.html:135
