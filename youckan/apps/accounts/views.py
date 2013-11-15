@@ -4,7 +4,8 @@ from __future__ import unicode_literals
 import futures
 
 from django.conf import settings
-from django.views.generic import DetailView, UpdateView, ListView
+from django.views.generic import DetailView, UpdateView, ListView, RedirectView
+from django.views.generic.detail import SingleObjectMixin
 
 from braces.views import LoginRequiredMixin
 
@@ -13,6 +14,8 @@ from youckan.models import User
 from youckan.views import FormsetsMixin
 
 from django.utils.module_loading import import_by_path
+
+from django_gravatar.helpers import get_gravatar_url
 
 
 class UserListView(ListView):
@@ -53,3 +56,14 @@ class ProfileEditView(LoginRequiredMixin, FormsetsMixin, UserViewMixin, UpdateVi
     formsets = {
         'profile': ProfileFormset,
     }
+
+
+class AvatarView(SingleObjectMixin, RedirectView):
+    model = User
+
+    def get_redirect_url(self, *args, **kwargs):
+        user = self.get_object()
+        if user.profile.avatar:
+            return user.profile.avatar.url
+        else:
+            return get_gravatar_url(user.email)
