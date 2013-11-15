@@ -9,11 +9,18 @@ from django.forms.models import inlineformset_factory
 from youckan.models import User, UserProfile
 
 
-class UserProfileForm(forms.ModelForm):
+class AvatarForm(forms.ModelForm):
     class Meta:
         model = UserProfile
         fields = (
             'avatar',
+        )
+
+
+class UserProfileForm(forms.ModelForm):
+    class Meta:
+        model = UserProfile
+        fields = (
             'city',
             'about',
             'website',

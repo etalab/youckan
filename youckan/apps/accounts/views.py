@@ -4,13 +4,14 @@ from __future__ import unicode_literals
 import futures
 
 from django.conf import settings
+from django.core.urlresolvers import reverse_lazy
 from django.views.generic import DetailView, UpdateView, ListView, RedirectView
 from django.views.generic.detail import SingleObjectMixin
 
 from braces.views import LoginRequiredMixin
 
-from youckan.apps.accounts.forms import UserForm, ProfileFormset
-from youckan.models import User
+from youckan.apps.accounts.forms import UserForm, ProfileFormset, AvatarForm
+from youckan.models import User, UserProfile
 from youckan.views import FormsetsMixin
 
 from django.utils.module_loading import import_by_path
@@ -18,7 +19,7 @@ from django.utils.module_loading import import_by_path
 from django_gravatar.helpers import get_gravatar_url
 
 
-class UserListView(ListView):
+class UserListView(LoginRequiredMixin, ListView):
     template_name = 'accounts/profiles.html'
     model = User
     context_object_name = 'users'
@@ -58,7 +59,17 @@ class ProfileEditView(LoginRequiredMixin, FormsetsMixin, UserViewMixin, UpdateVi
     }
 
 
-class AvatarView(SingleObjectMixin, RedirectView):
+class AvatarEditView(LoginRequiredMixin, UpdateView):
+    template_name = 'accounts/avatar_edit.html'
+    model = UserProfile
+    form_class = AvatarForm
+    success_url = reverse_lazy('avatar-edit')
+
+    def get_object(self):
+        return self.request.user.profile
+
+
+class AvatarView(LoginRequiredMixin, SingleObjectMixin, RedirectView):
     model = User
 
     def get_redirect_url(self, *args, **kwargs):

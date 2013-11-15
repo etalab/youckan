@@ -10,8 +10,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: youckan\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-11-14 02:59+0100\n"
-"PO-Revision-Date: 2013-11-14 02:02+0000\n"
+"POT-Creation-Date: 2013-11-15 11:56+0100\n"
+"PO-Revision-Date: 2013-11-15 10:58+0000\n"
 "Last-Translator: noirbizarre\n"
 "Language-Team: French (http://www.transifex.com/projects/p/youckan/language/fr/)\n"
 "MIME-Version: 1.0\n"
@@ -98,6 +98,63 @@ msgstr "profils utilisateurs"
 msgid "Badges"
 msgstr "Badges"
 
+#: apps/accounts/templates/accounts/account_base.html:13
+msgid "My account"
+msgstr "Mon compte"
+
+#: apps/accounts/templates/accounts/account_base.html:23
+#: templates/navbar.html:41 templates/navbar.html.py:43
+msgid "Profile"
+msgstr "Profil"
+
+#: apps/accounts/templates/accounts/account_base.html:25
+#: templates/widgets/avatar.html:2
+msgid "Avatar"
+msgstr "Avatar"
+
+#: apps/accounts/templates/accounts/account_base.html:27 apps/sso/forms.py:22
+msgid "Password"
+msgstr "Mot de passe"
+
+#: apps/accounts/templates/accounts/avatar_edit.html:4
+msgid "Your avatar"
+msgstr "Votre avatar"
+
+#: apps/accounts/templates/accounts/avatar_edit.html:9
+msgid "My avatar"
+msgstr "Mon avatar"
+
+#: apps/accounts/templates/accounts/avatar_edit.html:25
+#: apps/accounts/templates/accounts/password_change.html:29
+#: apps/accounts/templates/accounts/profile_edit.html:32
+msgid "Save"
+msgstr "Enregistrer"
+
+#: apps/accounts/templates/accounts/avatar_edit.html:26
+#: apps/accounts/templates/accounts/password_change.html:30
+#: apps/accounts/templates/accounts/profile_edit.html:33
+msgid "Cancel"
+msgstr "Annuler"
+
+#: apps/accounts/templates/accounts/password_change.html:4
+#: apps/accounts/templates/accounts/password_change_done.html:4
+msgid "Your password"
+msgstr "Votre mot de passe"
+
+#: apps/accounts/templates/accounts/password_change.html:9
+#: apps/sso/templates/sso/password_reset_confirm.html:5
+#: apps/sso/templates/sso/password_reset_confirm.html:29
+msgid "Change my password"
+msgstr "Changer mon mot de passe"
+
+#: apps/accounts/templates/accounts/password_change_done.html:10
+msgid "Success!"
+msgstr "Succès !"
+
+#: apps/accounts/templates/accounts/password_change_done.html:11
+msgid "Your password has been changed with success"
+msgstr "Votre mot de passe a été changé avec succès"
+
 #: apps/accounts/templates/accounts/profile.html:4
 #, python-format
 msgid "%(name)s profile"
@@ -108,17 +165,12 @@ msgid "Edit"
 msgstr "Editer"
 
 #: apps/accounts/templates/accounts/profile_edit.html:4
-#: apps/accounts/templates/accounts/profile_edit.html:10
 msgid "Your profile"
 msgstr "Votre profil"
 
-#: apps/accounts/templates/accounts/profile_edit.html:32
-msgid "Save"
-msgstr "Enregistrer"
-
-#: apps/accounts/templates/accounts/profile_edit.html:33
-msgid "Cancel"
-msgstr "Annuler"
+#: apps/accounts/templates/accounts/profile_edit.html:10
+msgid "My profile"
+msgstr "Mon profil"
 
 #: apps/accounts/templates/accounts/profiles.html:4
 msgid "Users"
@@ -202,10 +254,6 @@ msgstr "Aucune série de données marquée comme utile"
 #: apps/ckan/templates/ckan/widgets/valorizations.html:8
 msgid "No published valorizations"
 msgstr "Aucune valorisation publiée"
-
-#: apps/sso/forms.py:22
-msgid "Password"
-msgstr "Mot de passe"
 
 #: apps/sso/forms.py:24
 msgid "Confirm password"
@@ -354,11 +402,6 @@ msgstr "Votre mot de passe a été défini. Vous pouvez maintenant continuer et 
 #: apps/sso/templates/sso/password_reset_complete.html:16
 msgid "Log in"
 msgstr "Se connecter"
-
-#: apps/sso/templates/sso/password_reset_confirm.html:5
-#: apps/sso/templates/sso/password_reset_confirm.html:29
-msgid "Change my password"
-msgstr "Changer mon mot de passe"
 
 #: apps/sso/templates/sso/password_reset_confirm.html:13
 msgid ""
@@ -612,10 +655,6 @@ msgstr "Haut de page"
 msgid "Open platform for french public data"
 msgstr "Plate-forme ouverte des données publiques françaises"
 
-#: templates/navbar.html:41 templates/navbar.html.py:43
-msgid "Profile"
-msgstr "Profil"
-
 #: templates/navbar.html:47 templates/navbar.html.py:49
 msgid "Settings"
 msgstr "Réglages"
@@ -647,7 +686,3 @@ msgstr "Où"
 #: templates/subnav-s.html:50 templates/subnav-s.html.py:53
 msgid "Publish a dataset !"
 msgstr "Publiez une série de données"
-
-#: templates/widgets/avatar.html:2
-msgid "Avatar"
-msgstr "Avatar"

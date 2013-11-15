@@ -1,0 +1,40 @@
+{% extends "base.html" %}
+{% load i18n bootstrap avatar %}
+
+
+{% block content %}
+<section class="default">
+    <div class="container">
+
+        <div class="row">
+
+            <div class="col-sm-3 account-menu-container">
+                <div class="panel panel-default">
+                    <div class="panel-heading">{{ _('My account') }}</div>
+                    <div class="panel-body">
+                        <p class="text-center">
+                            {% avatar user 128 %}
+                        </p>
+                        <p class="text-center lead">{{ user.full_name }}</p>
+                    </div>
+
+                    <div class="list-group">
+                        <a class="list-group-item {% block profile-edit-menu %}{% endblock %}"
+                            href="{% url "profile-edit" %}">{{ _('Profile') }}</a>
+                        <a class="list-group-item {% block avatar-edit-menu %}{% endblock %}"
+                            href="{% url "avatar-edit" %}">{{ _('Avatar') }}</a>
+                        <a class="list-group-item {% block password-change-menu %}{% endblock %}"
+                            href="{% url "password-change" %}">{{ _('Password') }}</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-sm-9 account-container">
+                {% block profile-content %}{% endblock %}
+            </div>
+        </div>
+
+    </div>
+</section>
+{% endblock %}
+

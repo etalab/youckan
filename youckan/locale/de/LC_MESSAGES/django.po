@@ -1,7 +1,7 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
-#
+# 
 # Translators:
 # schwefel, 2013
 # schwefel, 2013
@@ -11,15 +11,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: youckan\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-11-14 02:59+0100\n"
-"PO-Revision-Date: 2013-11-07 16:46+0000\n"
+"POT-Creation-Date: 2013-11-15 11:56+0100\n"
+"PO-Revision-Date: 2013-11-15 10:57+0000\n"
 "Last-Translator: noirbizarre\n"
-"Language-Team: German (http://www.transifex.com/projects/p/youckan/language/"
-"de/)\n"
-"Language: de\n"
+"Language-Team: German (http://www.transifex.com/projects/p/youckan/language/de/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Language: de\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #: admin.py:70
@@ -58,9 +57,7 @@ msgstr "Aktiv"
 msgid ""
 "Designates whether this user should be treated as active. Unselect this "
 "instead of deleting accounts."
-msgstr ""
-"Legt fest, ob der Nutzeraccount aktiv ist. Deaktivieren sie hier statt den "
-"Account zu löschen."
+msgstr "Legt fest, ob der Nutzeraccount aktiv ist. Deaktivieren sie hier statt den Account zu löschen."
 
 #: models.py:58
 msgid "date joined"
@@ -102,6 +99,63 @@ msgstr "Nutzerprofile"
 msgid "Badges"
 msgstr "Kennzeichen"
 
+#: apps/accounts/templates/accounts/account_base.html:13
+msgid "My account"
+msgstr ""
+
+#: apps/accounts/templates/accounts/account_base.html:23
+#: templates/navbar.html:41 templates/navbar.html.py:43
+msgid "Profile"
+msgstr "Profil"
+
+#: apps/accounts/templates/accounts/account_base.html:25
+#: templates/widgets/avatar.html:2
+msgid "Avatar"
+msgstr "Profilbild"
+
+#: apps/accounts/templates/accounts/account_base.html:27 apps/sso/forms.py:22
+msgid "Password"
+msgstr "Passwort"
+
+#: apps/accounts/templates/accounts/avatar_edit.html:4
+msgid "Your avatar"
+msgstr ""
+
+#: apps/accounts/templates/accounts/avatar_edit.html:9
+msgid "My avatar"
+msgstr ""
+
+#: apps/accounts/templates/accounts/avatar_edit.html:25
+#: apps/accounts/templates/accounts/password_change.html:29
+#: apps/accounts/templates/accounts/profile_edit.html:32
+msgid "Save"
+msgstr "Speichern"
+
+#: apps/accounts/templates/accounts/avatar_edit.html:26
+#: apps/accounts/templates/accounts/password_change.html:30
+#: apps/accounts/templates/accounts/profile_edit.html:33
+msgid "Cancel"
+msgstr "Abbrechen"
+
+#: apps/accounts/templates/accounts/password_change.html:4
+#: apps/accounts/templates/accounts/password_change_done.html:4
+msgid "Your password"
+msgstr ""
+
+#: apps/accounts/templates/accounts/password_change.html:9
+#: apps/sso/templates/sso/password_reset_confirm.html:5
+#: apps/sso/templates/sso/password_reset_confirm.html:29
+msgid "Change my password"
+msgstr ""
+
+#: apps/accounts/templates/accounts/password_change_done.html:10
+msgid "Success!"
+msgstr ""
+
+#: apps/accounts/templates/accounts/password_change_done.html:11
+msgid "Your password has been changed with success"
+msgstr ""
+
 #: apps/accounts/templates/accounts/profile.html:4
 #, python-format
 msgid "%(name)s profile"
@@ -112,17 +166,12 @@ msgid "Edit"
 msgstr "Bearbeiten"
 
 #: apps/accounts/templates/accounts/profile_edit.html:4
-#: apps/accounts/templates/accounts/profile_edit.html:10
 msgid "Your profile"
 msgstr "Ihr Nutzerprofil"
 
-#: apps/accounts/templates/accounts/profile_edit.html:32
-msgid "Save"
-msgstr "Speichern"
-
-#: apps/accounts/templates/accounts/profile_edit.html:33
-msgid "Cancel"
-msgstr "Abbrechen"
+#: apps/accounts/templates/accounts/profile_edit.html:10
+msgid "My profile"
+msgstr ""
 
 #: apps/accounts/templates/accounts/profiles.html:4
 msgid "Users"
@@ -207,10 +256,6 @@ msgstr ""
 msgid "No published valorizations"
 msgstr ""
 
-#: apps/sso/forms.py:22
-msgid "Password"
-msgstr "Passwort"
-
 #: apps/sso/forms.py:24
 msgid "Confirm password"
 msgstr "Passwort bestätigen"
@@ -251,9 +296,7 @@ msgstr ""
 #: apps/sso/pipeline.py:55
 #, python-brace-format
 msgid "This {0} account is already in use. Please login with your password"
-msgstr ""
-"Dieser {0} Account existiert bereits. Bitte melden sie sich mit ihrem "
-"Passwort an"
+msgstr "Dieser {0} Account existiert bereits. Bitte melden sie sich mit ihrem Passwort an"
 
 #: apps/sso/templates/mails/confirmation.html:5
 #: apps/sso/templates/mails/validation.html:5
@@ -267,10 +310,7 @@ msgid ""
 "\n"
 "Your account has been successfully created.\n"
 "You can visit your profile <a href=\"%(profile_url)s\">here</a>.\n"
-msgstr ""
-"\n"
-"Ihr Account wurde erfolgreich erstellt.\n"
-"Sie können ihr Profil <a href=\"%(profile_url)s\">hier</a> einsehen.\n"
+msgstr "\nIhr Account wurde erfolgreich erstellt.\nSie können ihr Profil <a href=\"%(profile_url)s\">hier</a> einsehen.\n"
 
 #: apps/sso/templates/mails/validation.html:9
 #, python-format
@@ -364,11 +404,6 @@ msgstr ""
 msgid "Log in"
 msgstr ""
 
-#: apps/sso/templates/sso/password_reset_confirm.html:5
-#: apps/sso/templates/sso/password_reset_confirm.html:29
-msgid "Change my password"
-msgstr ""
-
 #: apps/sso/templates/sso/password_reset_confirm.html:13
 msgid ""
 "Please enter your new password twice so we can verify you typed it in "
@@ -431,10 +466,8 @@ msgstr ""
 #: apps/sso/templates/sso/register.html:56
 msgid ""
 "I do understand that <a href=\"http://www.data.gouv.fr\">data.gouv.fr</a>\n"
-"                        values more the production and enrichment of "
-"datasets than definitive or partisan interpretations.\n"
-"                        It is the responsibility of the community of members "
-"to oversee the content it produces."
+"                        values more the production and enrichment of datasets than definitive or partisan interpretations.\n"
+"                        It is the responsibility of the community of members to oversee the content it produces."
 msgstr ""
 
 #: apps/sso/templates/sso/register.html:75
@@ -446,17 +479,12 @@ msgid "Registeration complete"
 msgstr "Registrierung abgeschlossen"
 
 #: apps/sso/templates/sso/register_done.html:13
-#, fuzzy
 msgid ""
 "\n"
 "            Your registeration is complete:\n"
-"            Your account has been activated and you can now use all user "
-"features.\n"
+"            Your account has been activated and you can now use all user features.\n"
 "            "
 msgstr ""
-"\n"
-"Ihre Registrierung ist abgeschlossen:\n"
-"Ihr Nutzeraccount wurde aktiviert und sie können nun alle Funktionen nutzen."
 
 #: apps/sso/templates/sso/register_done.html:24
 msgid "Continue your browsing"
@@ -526,8 +554,7 @@ msgstr "Zertifiziertes öffentliches Angebot"
 
 #: apps/weckan/templates/dataset.html:121
 msgid "This organization and its datasets are certified by data.gouv.fr"
-msgstr ""
-"Diese Organisation und ihre Datensätze sind zertifiziert von data.gouv.fr"
+msgstr "Diese Organisation und ihre Datensätze sind zertifiziert von data.gouv.fr"
 
 #: apps/weckan/templates/dataset.html:135
 msgid "more"
@@ -547,10 +574,7 @@ msgid ""
 "\n"
 "                            %(from)s to %(to)s\n"
 "                            "
-msgstr ""
-"\n"
-"%(from)s bis %(to)s\n"
-"                            "
+msgstr "\n%(from)s bis %(to)s\n                            "
 
 #: apps/weckan/templates/home.html:10
 msgid "Let's debate facts to make them undebatable"
@@ -632,10 +656,6 @@ msgstr "Zurück nach oben"
 msgid "Open platform for french public data"
 msgstr "Offene Plattform für öffentliche Daten Frankreichs"
 
-#: templates/navbar.html:41 templates/navbar.html.py:43
-msgid "Profile"
-msgstr "Profil"
-
 #: templates/navbar.html:47 templates/navbar.html.py:49
 msgid "Settings"
 msgstr ""
@@ -667,13 +687,3 @@ msgstr "Wo"
 #: templates/subnav-s.html:50 templates/subnav-s.html.py:53
 msgid "Publish a dataset !"
 msgstr "Datensatz veröffentlichen!"
-
-#: templates/widgets/avatar.html:2
-msgid "Avatar"
-msgstr "Profilbild"
-
-#~ msgid "Privacy"
-#~ msgstr "Privatsphäre"
-
-#~ msgid "Terms"
-#~ msgstr "AGB"
