@@ -3,10 +3,17 @@ from __future__ import unicode_literals
 
 import logging
 
-from django.contrib.auth.views import login as default_login
+from django.conf import settings
+from django.contrib.auth import login as auth_login, REDIRECT_FIELD_NAME
+from django.contrib.sites.models import get_current_site
 from django.core.cache import cache
 from django.core.urlresolvers import reverse_lazy, reverse
 from django.http import HttpResponseRedirect
+from django.shortcuts import resolve_url
+from django.template.response import TemplateResponse
+from django.views.decorators.cache import never_cache
+from django.views.decorators.csrf import csrf_protect
+from django.views.decorators.debug import sensitive_post_parameters
 from django.views.generic import TemplateView, CreateView
 
 from oauth2_provider.exceptions import OAuthToolkitError
@@ -35,23 +42,47 @@ def get_next_blacklist():
     return blacklist
 
 
-def login(request, *args, **kwargs):
-    redirect_field_name = 'next'
-    if request.method == 'POST':
+@sensitive_post_parameters()
+@csrf_protect
+@never_cache
+def login(request, current_app=None, extra_context=None, *args, **kwargs):
+    redirect_to = request.REQUEST.get(REDIRECT_FIELD_NAME, '')
+    if redirect_to in get_next_blacklist():
+        redirect_to = ''
+
+    if request.method == "POST":
         if not request.POST.get('remember_me'):
             request.session.set_expiry(0)
+
+        form = LoginForm(request, data=request.POST)
+        if form.is_valid():
+
+            # Ensure the user-originating redirection url is safe.
+            if not redirect_to:
+                redirect_to = resolve_url(settings.LOGIN_REDIRECT_URL)
+
+            # Okay, security check complete. Log the user in.
+            auth_login(request, form.get_user())
+
+            return HttpResponseRedirect(redirect_to)
     else:
+        form = LoginForm(request)
         request.session.pop('partial_pipeline', None)
-        redirect_url = request.GET.get(redirect_field_name, '')
+        request.session[REDIRECT_FIELD_NAME] = redirect_to
 
-        # Hackish way to implement a redirect blacklist
-        if redirect_url in get_next_blacklist():
-            redirect_field_name = 'none'
-        else:
-            request.session['next'] = redirect_url
+    current_site = get_current_site(request)
 
-    return default_login(request, template_name='sso/login.html', authentication_form=LoginForm,
-        redirect_field_name=redirect_field_name, *args, **kwargs)
+    context = {
+        'form': form,
+        REDIRECT_FIELD_NAME: redirect_to,
+        'site': current_site,
+        'site_name': current_site.name,
+        'social_exception_message': request.GET.get('message')
+    }
+    if extra_context is not None:
+        context.update(extra_context)
+
+    return TemplateResponse(request, 'sso/login.html', context, current_app=current_app)
 
 
 class RegisterView(CreateView):
@@ -84,7 +115,7 @@ class RegisterDoneView(TemplateView):
 
     def get_context_data(self, **kwargs):
         context = super(RegisterDoneView, self).get_context_data(**kwargs)
-        context['next'] = self.request.session.get('next')
+        context['next'] = self.request.session.get(REDIRECT_FIELD_NAME)
         return context
 
 

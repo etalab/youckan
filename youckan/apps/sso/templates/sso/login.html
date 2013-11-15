@@ -5,6 +5,13 @@
 {% block title %}{% trans "Sign In" %}{% endblock %}
 
 {% block content %}
+{% if social_exception_message %}
+<div class="alert alert-dismissable alert-danger">
+    <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+    {{ social_exception_message }}
+</div>
+{% endif %}
+
 <section class="default">
     <div class="container auth-container">
         <div class="row">
