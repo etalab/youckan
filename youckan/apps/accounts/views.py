@@ -69,7 +69,7 @@ class AvatarEditView(LoginRequiredMixin, UpdateView):
         return self.request.user.profile
 
 
-class AvatarView(LoginRequiredMixin, SingleObjectMixin, RedirectView):
+class AvatarView(SingleObjectMixin, RedirectView):
     model = User
 
     def get_redirect_url(self, *args, **kwargs):
