@@ -1,6 +1,6 @@
 {% load i18n %}
 <ul class="card-list">
-    {% for organization, nb_datasets in organizations %}
+    {% for organization in organizations %}
     <li class="col-md-6 col-sm-12">
     {% include 'ckan/cards/organization.html' %}
     </li>

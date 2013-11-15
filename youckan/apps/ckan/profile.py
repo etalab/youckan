@@ -36,7 +36,6 @@ class ValorizationsWidget(ProfileWidget):
     def fill_context(self, context):
         try:
             context['valorizations'] = ckan.connector('/'.join(['profile', self.user.slug, 'valorizations']))
-            print context['valorizations']
         except:
             pass
 

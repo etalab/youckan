@@ -1,26 +1,32 @@
-{% load i18n helpers %}
+{% load i18n helpers staticfiles %}
 <div class="card">
     <a class="card-logo" href="{{ organization.url }}">
         <img alt="{{ organization.title|default:organization.name }}"
             src="{{ organization.image_url|default_static:'img/placeholder_producer.png' }}">
     </a>
-    <div class="card-body">
+    {% if organization.certified_public_service %}
+        <img src="{% static "img/certified-stamp.png" %}" alt="certified"
+            class="certified" rel="popover"
+            data-title="{{ _('Certified public service') }}"
+            data-content="{{ _('This organization and its datasets are certified by data.gouv.fr') }}"
+            data-container="body" data-placement="left" data-trigger="hover"/>
+    {% endif %}
+    <div class="card-body ellipsis-dot">
         <h4>
             <a href="{{ etalab.HOME_URL}}/{{LANGUAGE_CODE}}/organization/{{ organization.name }}" title="{{organization.title|default:organization.name}}">
             {{ organization.title|default:organization.name }}
             </a>
         </h4>
-        {{ organization.description|markdown }}
-        <ul class="card-footer">
-            <li>
-                <a href class="btn btn-xs btn-default" rel="tooltip"
-                    data-placement="top" data-container="body"
-                    title="{{ _('Number of datasets') }}">
-                    <span class="glyphicon glyphicon-stats"></span>
-                </a>
-                {% blocktrans count nb_dataset=nb_datasets %}{{ nb_datasets }} dataset{% plural %}{{ nb_datasets }} datasets{% endblocktrans %}
-            </li>
-        </ul>
-        <div class="card-text-mask"></div>
+        <div class="card-description">{{ organization.description|markdown }}</div>
     </div>
+    <ul class="card-footer">
+        <li>
+            <a href class="btn btn-xs btn-default" rel="tooltip"
+                data-placement="top" data-container="body"
+                title="{{ _('Number of datasets') }}">
+                <span class="glyphicon glyphicon-stats"></span>
+            </a>
+            {% blocktrans count nb_datasets=organization.nb_datasets %}{{ nb_datasets }} dataset{% plural %}{{ nb_datasets }} datasets{% endblocktrans %}
+        </li>
+    </ul>
 </div>
