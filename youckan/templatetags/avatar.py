@@ -4,7 +4,7 @@ from __future__ import unicode_literals
 from django import template
 from django.contrib.auth import get_user_model
 
-from django_gravatar.helpers import get_gravatar_url
+from youckan.avatar import get_avatar_url
 
 register = template.Library()
 
@@ -13,12 +13,9 @@ register = template.Library()
 def avatar(user, size=32):
     if not isinstance(user, get_user_model()):
         raise ValueError('Should have an user as parameter')
-    if user.profile.avatar:
-        avatar_url = user.profile.avatar.url
-    else:
-        avatar_url = get_gravatar_url(user.email)
+
     return {
-        'avatar_url': avatar_url,
+        'avatar_url': get_avatar_url(user),
         'size': size
     }
 

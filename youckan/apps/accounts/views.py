@@ -11,12 +11,11 @@ from django.views.generic.detail import SingleObjectMixin
 from braces.views import LoginRequiredMixin
 
 from youckan.apps.accounts.forms import UserForm, ProfileFormset, AvatarForm
+from youckan.avatar import get_avatar_url
 from youckan.models import User, UserProfile
 from youckan.views import FormsetsMixin
 
 from django.utils.module_loading import import_by_path
-
-from django_gravatar.helpers import get_gravatar_url
 
 
 class UserListView(LoginRequiredMixin, ListView):
@@ -74,7 +73,4 @@ class AvatarView(SingleObjectMixin, RedirectView):
 
     def get_redirect_url(self, *args, **kwargs):
         user = self.get_object()
-        if user.profile.avatar:
-            return user.profile.avatar.url
-        else:
-            return get_gravatar_url(user.email)
+        return get_avatar_url(user)
