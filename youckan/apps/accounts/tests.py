@@ -10,6 +10,9 @@ from youckan.apps.accounts.widgets import ProfileWidget
 
 
 class UserListTest(TestHelper, TestCase):
+    def setUp(self):
+        self.user = self.create_and_log_user('me@youckan.test')
+
     def test_render(self):
         for i in range(5):
             self.create_user('user-{0}@youckan.test'.format(i))

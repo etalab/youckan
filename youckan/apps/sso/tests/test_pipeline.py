@@ -41,7 +41,10 @@ class AuthPipelineTest(TestHelper, TestCase):
     def test_register_google(self):
         '''Should handle registeration from Google'''
         self.mock_google()
-        response = self.client.get(reverse('social:complete', args=['google-oauth2']), {'code': 'code'})
+        state = 'aaaaa'
+        self.session['google-oauth2_state'] = state
+        self.session.save()
+        response = self.client.get(reverse('social:complete', args=['google-oauth2']), {'code': 'code', 'state': state})
         self.assert_redirects_to(response, 'register')
         self.assertEqual(self.get_from_pipeline('avatar_url'), AVATAR_URL)
 

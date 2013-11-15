@@ -96,13 +96,14 @@ def get_apps(app=None, canonical=False):
 
 
 @task
-def test(app=None, verbose=False):
+def test(spec=None, verbose=False):
     '''Run only project tests (exclude those from Django and third-party applications).'''
-    apps = ' '.join(get_apps(app))
+    # apps = ' '.join(get_apps(app))
+    app = spec or 'youckan'
     verbosity = 2 if verbose else 1
     with settings(warn_only=True), hide('warnings'):
         with lcd(ROOT):
-            result = local('python manage.py test %s --verbosity=%s' % (apps, verbosity))
+            result = local('python manage.py test %s --verbosity=%s' % (app, verbosity))
         if result.failed:
             print(red('Some tests failed !!'))
             abort('Tests failed')

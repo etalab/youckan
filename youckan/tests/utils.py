@@ -3,11 +3,10 @@ from __future__ import unicode_literals
 
 from django.conf import settings
 from django.core.urlresolvers import reverse
-from django.db.models.signals import post_save
 from django.http import QueryDict
 from django.utils.importlib import import_module
 
-from youckan.models import User, sync_on_save
+from youckan.models import User
 
 
 try:
@@ -16,11 +15,17 @@ except ImportError:     # Python 2
     from urlparse import urlsplit, urlunsplit
 
 
+TEST_PASSWORD = 'password'
+
+
 class TestHelper(object):
     def create_user(self, email):
-        post_save.disconnect(sync_on_save, sender=User, dispatch_uid="youckan.sync_users")
-        user = User.objects.create_user(email, 'password')
-        post_save.connect(sync_on_save, sender=User, dispatch_uid="youckan.sync_users")
+        user = User.objects.create_user(email, TEST_PASSWORD)
+        return user
+
+    def create_and_log_user(self, email):
+        user = self.create_user(email)
+        self.client.login(email=email, password=TEST_PASSWORD)
         return user
 
     def prepare_session(self):
