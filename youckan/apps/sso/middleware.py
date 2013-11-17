@@ -1,8 +1,9 @@
 # -*- coding: utf-8 -*-
 from __future__ import unicode_literals
 
-import logging
 import hashlib
+import hmac
+import logging
 
 from django.conf import settings
 from django.contrib.auth import logout
@@ -60,4 +61,5 @@ class YouckanAuthCookieMiddleware(object):
         return domain
 
     def sign(self, message, salt):
-        return hashlib.sha256(settings.SECRET_KEY + salt + message).hexdigest()
+        secret = settings.SECRET_KEY + salt
+        return hmac.new(secret, message, digestmod=hashlib.sha256).digest()
