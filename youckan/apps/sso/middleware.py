@@ -5,6 +5,8 @@ import hashlib
 import hmac
 import logging
 
+from base64 import b64encode
+
 from django.conf import settings
 from django.contrib.auth import logout
 
@@ -23,7 +25,6 @@ class YouckanAuthCookieMiddleware(object):
             if not self.verify_cookie(cookie, user, session):
                 log.error('Bad cookie for user %s', user.email)
                 logout(request)
-
 
     def process_response(self, request, response):
         '''Set domain auth cookie if user is logged in else delete it if exists'''
@@ -62,4 +63,4 @@ class YouckanAuthCookieMiddleware(object):
 
     def sign(self, message, salt):
         secret = settings.SECRET_KEY + salt
-        return hmac.new(secret, message, digestmod=hashlib.sha256).digest()
+        return b64encode(hmac.new(secret, message, digestmod=hashlib.sha256).digest())
