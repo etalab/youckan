@@ -13,7 +13,6 @@ from django.test import TestCase
 from social.apps.django_app.default.models import UserSocialAuth
 from social.backends.google import GoogleOAuth2
 
-from youckan.models import User
 from youckan.tests.utils import TestHelper
 from youckan.apps.sso import pipeline
 
