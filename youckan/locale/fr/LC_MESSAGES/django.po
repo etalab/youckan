@@ -10,8 +10,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: youckan\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-11-15 19:07+0100\n"
-"PO-Revision-Date: 2013-11-15 18:08+0000\n"
+"POT-Creation-Date: 2013-11-20 15:41+0100\n"
+"PO-Revision-Date: 2013-11-20 14:43+0000\n"
 "Last-Translator: noirbizarre\n"
 "Language-Team: French (http://www.transifex.com/projects/p/youckan/language/fr/)\n"
 "MIME-Version: 1.0\n"
@@ -182,7 +182,7 @@ msgstr "Aucun badge"
 
 #: apps/ckan/profile.py:11 apps/weckan/models/dataset.py:50
 msgid "Datasets"
-msgstr "Séries de données"
+msgstr "Jeux de données"
 
 #: apps/ckan/profile.py:22
 msgid "Usefuls"
@@ -206,7 +206,7 @@ msgstr "Service public certifié"
 #: apps/ckan/templates/ckan/cards/organization.html:11
 #: apps/weckan/templates/dataset.html:121
 msgid "This organization and its datasets are certified by data.gouv.fr"
-msgstr "Cette organisation et ses séries de données sont certifiés par data.gouv.fr"
+msgstr "Cette organisation et ses jeux de données sont certifiés par data.gouv.fr"
 
 #: apps/ckan/templates/ckan/cards/dataset.html:30
 #: apps/weckan/templates/dataset.html:166
@@ -238,14 +238,25 @@ msgstr "Granularité de la couverture territoriale"
 
 #: apps/ckan/templates/ckan/cards/organization.html:26
 msgid "Number of datasets"
-msgstr "Nombre de séries de données"
+msgstr "Nombre de jeux de données"
 
 #: apps/ckan/templates/ckan/cards/organization.html:29
 #, python-format
-msgid "%(nb_datasets)s dataset"
-msgid_plural "%(nb_datasets)s datasets"
-msgstr[0] "%(nb_datasets)s série de données"
-msgstr[1] "%(nb_datasets)s séries de données"
+msgid "%(nb)s dataset"
+msgid_plural "%(nb)s datasets"
+msgstr[0] "%(nb)s jeu de données"
+msgstr[1] "%(nb)s jeux de données"
+
+#: apps/ckan/templates/ckan/cards/organization.html:34
+msgid "Number of members"
+msgstr "Nombre de membres"
+
+#: apps/ckan/templates/ckan/cards/organization.html:37
+#, python-format
+msgid "%(nb)s member"
+msgid_plural "%(nb)s members"
+msgstr[0] "%(nb)s membre"
+msgstr[1] "%(nb)s membres"
 
 #: apps/ckan/templates/ckan/cards/valorization.html:24
 msgid "Creation date"
@@ -253,7 +264,7 @@ msgstr "Date de création"
 
 #: apps/ckan/templates/ckan/widgets/datasets.html:8
 msgid "No published datasets"
-msgstr "Aucune série de données publiée"
+msgstr "Aucun jeu de données publiée"
 
 #: apps/ckan/templates/ckan/widgets/organizations.html:8
 msgid "No affiliation to any organization"
@@ -261,7 +272,7 @@ msgstr "Aucune affiliation à une organisation"
 
 #: apps/ckan/templates/ckan/widgets/usefuls.html:8
 msgid "No datasets marked as useful"
-msgstr "Aucune série de données marquée comme utile"
+msgstr "Aucun jeu de données marqué comme utile"
 
 #: apps/ckan/templates/ckan/widgets/valorizations.html:8
 msgid "No published valorizations"
@@ -525,7 +536,7 @@ msgstr "Activités"
 
 #: apps/weckan/models/dataset.py:49
 msgid "Dataset"
-msgstr "Série de données"
+msgstr "Jeu de données"
 
 #: apps/weckan/models/related.py:30
 msgid "Related"
@@ -689,4 +700,4 @@ msgstr "Où"
 
 #: templates/subnav-s.html:50 templates/subnav-s.html.py:53
 msgid "Publish a dataset !"
-msgstr "Publiez une série de données"
+msgstr "Publiez un jeu de données"

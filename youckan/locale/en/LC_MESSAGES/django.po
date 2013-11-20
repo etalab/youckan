@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-11-15 19:07+0100\n"
+"POT-Creation-Date: 2013-11-20 15:41+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -239,8 +239,19 @@ msgstr ""
 
 #: apps/ckan/templates/ckan/cards/organization.html:29
 #, python-format
-msgid "%(nb_datasets)s dataset"
-msgid_plural "%(nb_datasets)s datasets"
+msgid "%(nb)s dataset"
+msgid_plural "%(nb)s datasets"
+msgstr[0] ""
+msgstr[1] ""
+
+#: apps/ckan/templates/ckan/cards/organization.html:34
+msgid "Number of members"
+msgstr ""
+
+#: apps/ckan/templates/ckan/cards/organization.html:37
+#, python-format
+msgid "%(nb)s member"
+msgid_plural "%(nb)s members"
 msgstr[0] ""
 msgstr[1] ""
 
