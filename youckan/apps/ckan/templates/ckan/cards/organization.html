@@ -26,7 +26,15 @@
                 title="{{ _('Number of datasets') }}">
                 <span class="glyphicon glyphicon-stats"></span>
             </a>
-            {% blocktrans count nb_datasets=organization.nb_datasets %}{{ nb_datasets }} dataset{% plural %}{{ nb_datasets }} datasets{% endblocktrans %}
+            {% blocktrans count nb=organization.nb_datasets %}{{nb}} dataset{% plural %}{{nb}} datasets{% endblocktrans %}
+        </li>
+        <li>
+            <a href class="btn btn-xs btn-default" rel="tooltip"
+                data-placement="top" data-container="body"
+                title="{{ _('Number of members') }}">
+                <span class="glyphicon glyphicon-user"></span>
+            </a>
+            {% blocktrans count nb=organization.nb_members %}{{nb}} member{% plural %}{{nb}} members{% endblocktrans %}
         </li>
     </ul>
 </div>
