@@ -1,10 +1,12 @@
+# -*- coding: utf-8 -*-
+from __future__ import unicode_literals
+
+from django.conf import settings
 from django.conf.urls import patterns, include, url
 
 from youckan.apps.accounts.views import UserListView, ProfileView, ProfileEditView, AvatarView, AvatarEditView
 
 urlpatterns = patterns('',
-
-    url(r'^users/$', UserListView.as_view(), name='users'),
     url(r'^u/(?P<slug>[\d\w_-]+)/$', ProfileView.as_view(), name='profile'),
     url(r'^u/(?P<slug>[\d\w_-]+)/avatar$', AvatarView.as_view(), name='avatar'),
 
@@ -17,3 +19,8 @@ urlpatterns = patterns('',
         {'template_name': 'accounts/password_change_done.html', 'post_change_redirect': 'password-change-done'},
         name='password-change-done'),
 )
+
+if settings.DEBUG:
+    urlpatterns += patterns('',
+        url(r'^users/$', UserListView.as_view(), name='users'),
+    )
