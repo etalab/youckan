@@ -1,10 +1,15 @@
 {% load i18n %}
+{% if datasets %}
 <ul class="card-list">
     {% for dataset in datasets %}
     <li class="col-md-6 col-sm-12">
     {% include 'ckan/cards/dataset.html' %}
     </li>
-    {% empty %}
-    <li>{{ _('No published datasets') }}</li>
     {% endfor %}
 </ul>
+{% else %}
+<p class="text-center">
+    <br/><br/>
+    <strong>{{ _('No published datasets') }}</strong>
+</p>
+{% endif %}

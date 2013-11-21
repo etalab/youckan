@@ -33,7 +33,7 @@ class ProfileView(DetailView):
         context = super(ProfileView, self).get_context_data(**kwargs)
 
         widgets = [import_by_path(classname)(self.object) for classname in settings.PROFILE_WIDGETS]
-        context['widgets'] = widgets
+        context['widgets'] = [widget for widget in widgets if widget.can_display(self.request.user)]
 
         # Parallelize queries
         with futures.ThreadPoolExecutor(max_workers=4) as executor:

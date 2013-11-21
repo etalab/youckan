@@ -11,8 +11,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: youckan\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-11-20 15:41+0100\n"
-"PO-Revision-Date: 2013-11-20 14:42+0000\n"
+"POT-Creation-Date: 2013-11-21 13:25+0100\n"
+"PO-Revision-Date: 2013-11-21 12:27+0000\n"
 "Last-Translator: noirbizarre\n"
 "Language-Team: German (http://www.transifex.com/projects/p/youckan/language/de/)\n"
 "MIME-Version: 1.0\n"
@@ -95,7 +95,7 @@ msgstr "Nutzerprofil"
 msgid "user profiles"
 msgstr "Nutzerprofile"
 
-#: apps/accounts/widgets.py:25
+#: apps/accounts/widgets.py:29
 msgid "Badges"
 msgstr "Kennzeichen"
 
@@ -197,6 +197,10 @@ msgstr ""
 msgid "Organizations"
 msgstr ""
 
+#: apps/ckan/profile.py:55
+msgid "Privates"
+msgstr ""
+
 #: apps/ckan/templates/ckan/cards/dataset.html:11
 #: apps/ckan/templates/ckan/cards/organization.html:10
 #: apps/weckan/templates/dataset.html:120
@@ -263,19 +267,23 @@ msgstr[1] ""
 msgid "Creation date"
 msgstr ""
 
-#: apps/ckan/templates/ckan/widgets/datasets.html:8
+#: apps/ckan/templates/ckan/widgets/datasets.html:13
 msgid "No published datasets"
 msgstr ""
 
-#: apps/ckan/templates/ckan/widgets/organizations.html:8
+#: apps/ckan/templates/ckan/widgets/organizations.html:13
 msgid "No affiliation to any organization"
 msgstr ""
 
-#: apps/ckan/templates/ckan/widgets/usefuls.html:8
+#: apps/ckan/templates/ckan/widgets/privates.html:13
+msgid "No private datasets"
+msgstr ""
+
+#: apps/ckan/templates/ckan/widgets/usefuls.html:13
 msgid "No datasets marked as useful"
 msgstr ""
 
-#: apps/ckan/templates/ckan/widgets/valorizations.html:8
+#: apps/ckan/templates/ckan/widgets/valorizations.html:13
 msgid "No published valorizations"
 msgstr ""
 
@@ -615,19 +623,19 @@ msgstr "Öffentliche Angebote"
 msgid "Businesses"
 msgstr "Unternehmen"
 
-#: settings/common.py:221
+#: settings/common.py:222
 msgid "Authentication"
 msgstr ""
 
-#: settings/common.py:225
+#: settings/common.py:226
 msgid "OAuth2"
 msgstr ""
 
-#: settings/common.py:231
+#: settings/common.py:232
 msgid "Social"
 msgstr ""
 
-#: settings/common.py:236
+#: settings/common.py:237
 msgid "Tasks"
 msgstr ""
 

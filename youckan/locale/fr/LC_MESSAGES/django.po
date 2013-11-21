@@ -10,8 +10,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: youckan\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-11-20 15:41+0100\n"
-"PO-Revision-Date: 2013-11-20 14:43+0000\n"
+"POT-Creation-Date: 2013-11-21 13:25+0100\n"
+"PO-Revision-Date: 2013-11-21 12:29+0000\n"
 "Last-Translator: noirbizarre\n"
 "Language-Team: French (http://www.transifex.com/projects/p/youckan/language/fr/)\n"
 "MIME-Version: 1.0\n"
@@ -94,7 +94,7 @@ msgstr "profil utilisateur"
 msgid "user profiles"
 msgstr "profils utilisateurs"
 
-#: apps/accounts/widgets.py:25
+#: apps/accounts/widgets.py:29
 msgid "Badges"
 msgstr "Badges"
 
@@ -196,6 +196,10 @@ msgstr "Valorisations"
 msgid "Organizations"
 msgstr "Organisations"
 
+#: apps/ckan/profile.py:55
+msgid "Privates"
+msgstr "Privés"
+
 #: apps/ckan/templates/ckan/cards/dataset.html:11
 #: apps/ckan/templates/ckan/cards/organization.html:10
 #: apps/weckan/templates/dataset.html:120
@@ -262,19 +266,23 @@ msgstr[1] "%(nb)s membres"
 msgid "Creation date"
 msgstr "Date de création"
 
-#: apps/ckan/templates/ckan/widgets/datasets.html:8
+#: apps/ckan/templates/ckan/widgets/datasets.html:13
 msgid "No published datasets"
-msgstr "Aucun jeu de données publiée"
+msgstr "Aucun jeu de données publié"
 
-#: apps/ckan/templates/ckan/widgets/organizations.html:8
+#: apps/ckan/templates/ckan/widgets/organizations.html:13
 msgid "No affiliation to any organization"
 msgstr "Aucune affiliation à une organisation"
 
-#: apps/ckan/templates/ckan/widgets/usefuls.html:8
+#: apps/ckan/templates/ckan/widgets/privates.html:13
+msgid "No private datasets"
+msgstr "Aucun jeu de données privé"
+
+#: apps/ckan/templates/ckan/widgets/usefuls.html:13
 msgid "No datasets marked as useful"
 msgstr "Aucun jeu de données marqué comme utile"
 
-#: apps/ckan/templates/ckan/widgets/valorizations.html:8
+#: apps/ckan/templates/ckan/widgets/valorizations.html:13
 msgid "No published valorizations"
 msgstr "Aucune valorisation publiée"
 
@@ -614,19 +622,19 @@ msgstr "Services publics"
 msgid "Businesses"
 msgstr "Entreprises"
 
-#: settings/common.py:221
+#: settings/common.py:222
 msgid "Authentication"
 msgstr "Authentification"
 
-#: settings/common.py:225
+#: settings/common.py:226
 msgid "OAuth2"
 msgstr "OAuth2"
 
-#: settings/common.py:231
+#: settings/common.py:232
 msgid "Social"
 msgstr "Social"
 
-#: settings/common.py:236
+#: settings/common.py:237
 msgid "Tasks"
 msgstr "Tâches"
 

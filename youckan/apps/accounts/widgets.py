@@ -20,6 +20,10 @@ class ProfileWidget(object):
     def fill_context(self, context):
         pass
 
+    def can_display(self, user):
+        '''Conditionnal inclusion'''
+        return True
+
 
 class BadgesWidget(ProfileWidget):
     name = _('Badges')

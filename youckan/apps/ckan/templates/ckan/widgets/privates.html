@@ -1,7 +1,7 @@
-{% load i18n helpers %}
-{% if usefuls %}
+{% load i18n %}
+{% if datasets %}
 <ul class="card-list">
-    {% for dataset in usefuls %}
+    {% for dataset in datasets %}
     <li class="col-md-6 col-sm-12">
     {% include 'ckan/cards/dataset.html' %}
     </li>
@@ -10,6 +10,6 @@
 {% else %}
 <p class="text-center">
     <br/><br/>
-    <strong>{{ _('No datasets marked as useful') }}</strong>
+    <strong>{{ _('No private datasets') }}</strong>
 </p>
 {% endif %}

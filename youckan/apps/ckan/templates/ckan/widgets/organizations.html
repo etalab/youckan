@@ -1,10 +1,15 @@
 {% load i18n %}
+{% if organizations %}
 <ul class="card-list">
     {% for organization in organizations %}
     <li class="col-md-6 col-sm-12">
     {% include 'ckan/cards/organization.html' %}
     </li>
-    {% empty %}
-    <li>{{ _('No affiliation to any organization') }}</li>
     {% endfor %}
 </ul>
+{% else %}
+<p class="text-center">
+    <br/><br/>
+    <strong>{{ _('No affiliation to any organization') }}</strong>
+</p>
+{% endif %}

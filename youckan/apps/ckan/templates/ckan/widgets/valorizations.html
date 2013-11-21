@@ -1,10 +1,15 @@
 {% load i18n %}
+{% if valorizations %}
 <ul class="card-list">
     {% for valorization in valorizations %}
     <li class="col-md-6">
     {% include 'ckan/cards/valorization.html' %}
     </li>
-    {% empty %}
-    <li>{{ _('No published valorizations') }}</li>
     {% endfor %}
 </ul>
+{% else %}
+<p class="text-center">
+    <br/><br/>
+    <strong>{{ _('No published valorizations') }}</strong>
+</p>
+{% endif %}

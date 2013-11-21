@@ -208,6 +208,7 @@ PROFILE_WIDGETS = (
     'youckan.apps.ckan.profile.DatasetsWidget',
     'youckan.apps.ckan.profile.ValorizationsWidget',
     'youckan.apps.ckan.profile.UsefulsWidget',
+    'youckan.apps.ckan.profile.PrivateDatasetsWidget',
     # 'youckan.apps.accounts.widgets.BadgesWidget',
 )
 

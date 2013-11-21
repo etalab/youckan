@@ -49,3 +49,17 @@ class OrganizationsWidget(ProfileWidget):
             context['organizations'] = ckan.connector('/'.join(['profile', self.user.slug, 'organizations']))
         except:
             pass
+
+
+class PrivateDatasetsWidget(ProfileWidget):
+    name = _('Privates')
+    template_name = 'ckan/widgets/privates.html'
+
+    def fill_context(self, context):
+        try:
+            context['datasets'] = ckan.connector('/'.join(['profile', self.user.slug, 'privates']))
+        except:
+            pass
+
+    def can_display(self, user):
+        return user.is_superuser or user is self.user
