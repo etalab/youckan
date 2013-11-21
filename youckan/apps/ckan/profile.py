@@ -1,10 +1,14 @@
 # -*- coding: utf-8 -*-
 from __future__ import unicode_literals
 
+import logging
+
 from django.utils.translation import ugettext_lazy as _
 
 from youckan.apps.accounts.widgets import ProfileWidget
 from youckan.apps.ckan import client as ckan
+
+log = logging.getLogger(__name__)
 
 
 class DatasetsWidget(ProfileWidget):
@@ -15,6 +19,7 @@ class DatasetsWidget(ProfileWidget):
         try:
             context['datasets'] = ckan.connector('/'.join(['profile', self.user.slug, 'datasets']))
         except:
+            log.exception('Unable to fetch datasets for %s', slef.user.slug)
             pass
 
 
@@ -26,6 +31,7 @@ class UsefulsWidget(ProfileWidget):
         try:
             context['usefuls'] = ckan.connector('/'.join(['profile', self.user.slug, 'usefuls']))
         except:
+            log.exception('Unable to fetch usefuls for %s', slef.user.slug)
             pass
 
 
@@ -37,6 +43,7 @@ class ValorizationsWidget(ProfileWidget):
         try:
             context['valorizations'] = ckan.connector('/'.join(['profile', self.user.slug, 'valorizations']))
         except:
+            log.exception('Unable to fetch valorizations for %s', slef.user.slug)
             pass
 
 
@@ -48,6 +55,7 @@ class OrganizationsWidget(ProfileWidget):
         try:
             context['organizations'] = ckan.connector('/'.join(['profile', self.user.slug, 'organizations']))
         except:
+            log.exception('Unable to fetch orgnizations for %s', slef.user.slug)
             pass
 
 
@@ -57,8 +65,9 @@ class PrivateDatasetsWidget(ProfileWidget):
 
     def fill_context(self, context):
         try:
-            context['datasets'] = ckan.connector('/'.join(['profile', self.user.slug, 'privates']))
+            context['privates'] = ckan.connector('/'.join(['profile', self.user.slug, 'privates']))
         except:
+            log.exception('Unable to fetch private datasets for %s', slef.user.slug)
             pass
 
     def can_display(self, user):

@@ -1,7 +1,7 @@
 {% load i18n %}
-{% if datasets %}
+{% if privates %}
 <ul class="card-list">
-    {% for dataset in datasets %}
+    {% for dataset in privates %}
     <li class="col-md-6 col-sm-12">
     {% include 'ckan/cards/dataset.html' %}
     </li>
