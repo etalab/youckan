@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+
+{% load i18n staticfiles bootstrap %}
+
+{% block title %}{% trans "Not found" %}{% endblock %}
+
+{% block content %}
+<section class="default">
+    <div class="container">
+        <div class="jumbotron card">
+            <h1>{% trans "Not found (404)" %}</h1>
+
+            <p>
+            {% blocktrans %}The requested URL {{ request_path }} was not found on this server.{% endblocktrans %}
+            </p>
+
+            <p>
+                <a class="btn btn-primary btn-lg" role="button" href="{{ etalab.HOME_URL }}">
+                {% trans "Home" %}
+                </a>
+            </p>
+
+        </div>
+    </div>
+</section>
+{% endblock %}

@@ -1,7 +1,12 @@
 # -*- coding: utf-8 -*-
 from __future__ import unicode_literals
 
-from django.http import HttpResponseRedirect
+import json
+
+from django.http import HttpResponseRedirect, HttpResponseServerError
+from django.template import RequestContext, loader
+
+JSON_CONTENT_TYPE = 'application/json'
 
 
 class FormsetsMixin(object):
@@ -40,3 +45,30 @@ class FormsetsMixin(object):
             formset_save(formset)
 
         return HttpResponseRedirect(self.get_success_url())
+
+
+def expect_json(request):
+    '''Return True if the request expect JSON as response'''
+    if request.is_ajax():
+        return True
+    elif request.META.get('CONTENT_TYPE') == JSON_CONTENT_TYPE:
+        return True
+    elif 'HTTP_ACCEPT' not in request.META:
+        return False
+    accepted = [accept.split(';')[0] for accept in request.META['HTTP_ACCEPT'].split(',')]
+    return JSON_CONTENT_TYPE in accepted and (
+        'text/html' not in accepted or accepted.index(JSON_CONTENT_TYPE) < accepted.index('text/html')
+    )
+
+
+def server_error(request, template_name='500.html'):
+    '''A 500 server error handler with RequestContext.'''
+    if expect_json(request):
+        content = json.dumps({
+            'error': 'server error (500)',
+        })
+        return HttpResponseServerError(content, content_type=JSON_CONTENT_TYPE)
+    else:
+        template = loader.get_template(template_name)
+        context = RequestContext(request, {})
+        return HttpResponseServerError(template.render(context))

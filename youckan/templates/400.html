@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+
+{% load i18n staticfiles bootstrap %}
+
+{% block title %}{% trans "Bad request" %}{% endblock %}
+
+{% block content %}
+<section class="default">
+    <div class="container">
+        <div class="jumbotron card">
+            <h1>{% trans "Bad request (400)" %}</h1>
+
+            <p>{% trans "You're browser sent a request that this server could not understand" %}</p>
+
+            <p>
+                <a class="btn btn-primary btn-lg" role="button" href="{{ etalab.HOME_URL }}">
+                {% trans "Home" %}
+                </a>
+            </p>
+
+        </div>
+    </div>
+</section>
+{% endblock %}
