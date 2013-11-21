@@ -1,4 +1,4 @@
-{% load i18n helpers bootstrap staticfiles %}
+{% load i18n helpers bootstrap staticfiles markup %}
 <div class="card">
     {% if dataset.organization %}
         <a class="card-logo" href="{{ etalab.HOME_URL }}/{{LANGUAGE_CODE}}/dataset/{{dataset.name}}">
@@ -19,7 +19,7 @@
                 {{ dataset.title }}
             </a>
         </h4>
-        <div class="card-description">{{ dataset.notes|truncate_markdown:250 }}</div>
+        <div class="card-description">{{ dataset.notes|strip_markdown:250 }}</div>
     </div>
     <ul class="card-footer">
         {# Temporal coverage #}

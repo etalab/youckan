@@ -9,7 +9,7 @@ from django.conf import settings
 
 logger = logging.getLogger(__name__)
 
-TIMEOUT = 3
+TIMEOUT = 6
 
 
 def call_ckan(url, data=None, method='post', timeout=TIMEOUT):

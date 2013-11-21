@@ -1,4 +1,4 @@
-{% load i18n helpers avatar %}
+{% load i18n helpers avatar markup %}
 <div class="card">
     <a class="card-logo" href="{{ valorization.url }}" target="_blank">
         <img src="{{ valorization.image_url }}" alt="{{ valorization.title }}">
@@ -9,7 +9,7 @@
             {{ valorization.title }}
             </a>
         </h4>
-        <div class="card-description">{{ valorization.description|markdown }}</div>
+        <div class="card-description">{{ valorization.description|strip_markdown:250 }}</div>
         {% if valorization.owner %}
         <div class="author">
             {% avatar valorization.owner 25 %}
