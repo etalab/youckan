@@ -11,8 +11,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: youckan\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-11-21 13:25+0100\n"
-"PO-Revision-Date: 2013-11-21 12:27+0000\n"
+"POT-Creation-Date: 2013-11-21 19:37+0100\n"
+"PO-Revision-Date: 2013-11-21 18:38+0000\n"
 "Last-Translator: noirbizarre\n"
 "Language-Team: German (http://www.transifex.com/projects/p/youckan/language/de/)\n"
 "MIME-Version: 1.0\n"
@@ -181,23 +181,23 @@ msgstr ""
 msgid "No badges"
 msgstr ""
 
-#: apps/ckan/profile.py:11 apps/weckan/models/dataset.py:50
+#: apps/ckan/profile.py:15 apps/weckan/models/dataset.py:50
 msgid "Datasets"
 msgstr "Datensätze"
 
-#: apps/ckan/profile.py:22
+#: apps/ckan/profile.py:27
 msgid "Usefuls"
 msgstr ""
 
-#: apps/ckan/profile.py:33
+#: apps/ckan/profile.py:39
 msgid "Valorizations"
 msgstr ""
 
-#: apps/ckan/profile.py:44
+#: apps/ckan/profile.py:51
 msgid "Organizations"
 msgstr ""
 
-#: apps/ckan/profile.py:55
+#: apps/ckan/profile.py:63
 msgid "Privates"
 msgstr ""
 
@@ -418,7 +418,8 @@ msgstr "Sie wurden erfolgreich abgemeldet. Bis bald!"
 
 #: apps/sso/templates/sso/logout.html:13
 #: apps/sso/templates/sso/register_done.html:20
-#: apps/weckan/templates/home.html:4
+#: apps/weckan/templates/home.html:4 templates/400.html:17
+#: templates/403.html:17 templates/404.html:19 templates/500.html:18
 msgid "Home"
 msgstr "Startseite"
 
@@ -637,6 +638,59 @@ msgstr ""
 
 #: settings/common.py:237
 msgid "Tasks"
+msgstr ""
+
+#: templates/400.html:5
+msgid "Bad request"
+msgstr ""
+
+#: templates/400.html:11
+msgid "Bad request (400)"
+msgstr ""
+
+#: templates/400.html:13
+msgid "You're browser sent a request that this server could not understand"
+msgstr ""
+
+#: templates/403.html:5
+msgid "Forbidden"
+msgstr ""
+
+#: templates/403.html:11
+msgid "Forbidden (403)"
+msgstr ""
+
+#: templates/403.html:13
+msgid "You are not allowed to see this page"
+msgstr ""
+
+#: templates/404.html:5
+msgid "Not found"
+msgstr ""
+
+#: templates/404.html:11
+msgid "Not found (404)"
+msgstr ""
+
+#: templates/404.html:14
+#, python-format
+msgid "The requested URL %(request_path)s was not found on this server."
+msgstr ""
+
+#: templates/500.html:5
+msgid "Server error"
+msgstr ""
+
+#: templates/500.html:11
+msgid "Server error (500)"
+msgstr ""
+
+#: templates/500.html:13
+msgid "An error occured while processing this request."
+msgstr ""
+
+#: templates/500.html:14
+msgid "The administrator have been notified"
 msgstr ""
 
 #: templates/footer.html:7

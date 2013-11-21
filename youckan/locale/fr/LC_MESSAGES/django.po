@@ -10,8 +10,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: youckan\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-11-21 13:25+0100\n"
-"PO-Revision-Date: 2013-11-21 12:29+0000\n"
+"POT-Creation-Date: 2013-11-21 19:37+0100\n"
+"PO-Revision-Date: 2013-11-21 18:42+0000\n"
 "Last-Translator: noirbizarre\n"
 "Language-Team: French (http://www.transifex.com/projects/p/youckan/language/fr/)\n"
 "MIME-Version: 1.0\n"
@@ -180,23 +180,23 @@ msgstr "Utilisateurs"
 msgid "No badges"
 msgstr "Aucun badge"
 
-#: apps/ckan/profile.py:11 apps/weckan/models/dataset.py:50
+#: apps/ckan/profile.py:15 apps/weckan/models/dataset.py:50
 msgid "Datasets"
 msgstr "Jeux de données"
 
-#: apps/ckan/profile.py:22
+#: apps/ckan/profile.py:27
 msgid "Usefuls"
 msgstr "Utiles"
 
-#: apps/ckan/profile.py:33
+#: apps/ckan/profile.py:39
 msgid "Valorizations"
 msgstr "Valorisations"
 
-#: apps/ckan/profile.py:44
+#: apps/ckan/profile.py:51
 msgid "Organizations"
 msgstr "Organisations"
 
-#: apps/ckan/profile.py:55
+#: apps/ckan/profile.py:63
 msgid "Privates"
 msgstr "Privés"
 
@@ -417,7 +417,8 @@ msgstr "Vous avez été déconnecté. Revenez vite !"
 
 #: apps/sso/templates/sso/logout.html:13
 #: apps/sso/templates/sso/register_done.html:20
-#: apps/weckan/templates/home.html:4
+#: apps/weckan/templates/home.html:4 templates/400.html:17
+#: templates/403.html:17 templates/404.html:19 templates/500.html:18
 msgid "Home"
 msgstr "Accueil"
 
@@ -637,6 +638,59 @@ msgstr "Social"
 #: settings/common.py:237
 msgid "Tasks"
 msgstr "Tâches"
+
+#: templates/400.html:5
+msgid "Bad request"
+msgstr "Mauvaise requête"
+
+#: templates/400.html:11
+msgid "Bad request (400)"
+msgstr "Mauvaise requête (400)"
+
+#: templates/400.html:13
+msgid "You're browser sent a request that this server could not understand"
+msgstr "Votre navigateur a envoyé une requête que ce serveur ne comprend pas"
+
+#: templates/403.html:5
+msgid "Forbidden"
+msgstr "Accès interdit"
+
+#: templates/403.html:11
+msgid "Forbidden (403)"
+msgstr "Accès interdit (403)"
+
+#: templates/403.html:13
+msgid "You are not allowed to see this page"
+msgstr "Vous n'êtes pas autorisé à voir cette page"
+
+#: templates/404.html:5
+msgid "Not found"
+msgstr "Non trouvé"
+
+#: templates/404.html:11
+msgid "Not found (404)"
+msgstr "Non trouvé (404)"
+
+#: templates/404.html:14
+#, python-format
+msgid "The requested URL %(request_path)s was not found on this server."
+msgstr "L'URL %(request_path)s que vous avez demandé n'a pas été trouvée sur ce serveur."
+
+#: templates/500.html:5
+msgid "Server error"
+msgstr "Erreur du serveur"
+
+#: templates/500.html:11
+msgid "Server error (500)"
+msgstr "Erreur du serveur (500)"
+
+#: templates/500.html:13
+msgid "An error occured while processing this request."
+msgstr "Une erreur est survenue pendant le traitement de cette requête."
+
+#: templates/500.html:14
+msgid "The administrator have been notified"
+msgstr "Les administrateurs ont été avertis"
 
 #: templates/footer.html:7
 msgid "The Open Data"
