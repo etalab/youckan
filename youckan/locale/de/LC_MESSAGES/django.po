@@ -1,7 +1,7 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
-# 
+#
 # Translators:
 # schwefel, 2013
 # schwefel, 2013
@@ -11,23 +11,28 @@ msgid ""
 msgstr ""
 "Project-Id-Version: youckan\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-11-21 19:37+0100\n"
+"POT-Creation-Date: 2013-11-22 12:02+0100\n"
 "PO-Revision-Date: 2013-11-21 18:38+0000\n"
 "Last-Translator: noirbizarre\n"
-"Language-Team: German (http://www.transifex.com/projects/p/youckan/language/de/)\n"
+"Language-Team: German (http://www.transifex.com/projects/p/youckan/language/"
+"de/)\n"
+"Language: de\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: de\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: admin.py:70
+#: admin.py:75
 msgid "Personal info"
 msgstr "Profil"
 
-#: admin.py:71
+#: admin.py:76
 msgid "Permissions"
 msgstr "Rechte"
+
+#: admin.py:100
+msgid "A reset password mail has been sent."
+msgstr ""
 
 #: models.py:50
 msgid "email"
@@ -57,7 +62,9 @@ msgstr "Aktiv"
 msgid ""
 "Designates whether this user should be treated as active. Unselect this "
 "instead of deleting accounts."
-msgstr "Legt fest, ob der Nutzeraccount aktiv ist. Deaktivieren sie hier statt den Account zu löschen."
+msgstr ""
+"Legt fest, ob der Nutzeraccount aktiv ist. Deaktivieren sie hier statt den "
+"Account zu löschen."
 
 #: models.py:58
 msgid "date joined"
@@ -211,7 +218,8 @@ msgstr "Zertifiziertes öffentliches Angebot"
 #: apps/ckan/templates/ckan/cards/organization.html:11
 #: apps/weckan/templates/dataset.html:121
 msgid "This organization and its datasets are certified by data.gouv.fr"
-msgstr "Diese Organisation und ihre Datensätze sind zertifiziert von data.gouv.fr"
+msgstr ""
+"Diese Organisation und ihre Datensätze sind zertifiziert von data.gouv.fr"
 
 #: apps/ckan/templates/ckan/cards/dataset.html:30
 #: apps/weckan/templates/dataset.html:166
@@ -327,7 +335,9 @@ msgstr ""
 #: apps/sso/pipeline.py:55
 #, python-brace-format
 msgid "This {0} account is already in use. Please login with your password"
-msgstr "Dieser {0} Account existiert bereits. Bitte melden sie sich mit ihrem Passwort an"
+msgstr ""
+"Dieser {0} Account existiert bereits. Bitte melden sie sich mit ihrem "
+"Passwort an"
 
 #: apps/sso/templates/mails/confirmation.html:5
 #: apps/sso/templates/mails/validation.html:5
@@ -341,7 +351,10 @@ msgid ""
 "\n"
 "Your account has been successfully created.\n"
 "You can visit your profile <a href=\"%(profile_url)s\">here</a>.\n"
-msgstr "\nIhr Account wurde erfolgreich erstellt.\nSie können ihr Profil <a href=\"%(profile_url)s\">hier</a> einsehen.\n"
+msgstr ""
+"\n"
+"Ihr Account wurde erfolgreich erstellt.\n"
+"Sie können ihr Profil <a href=\"%(profile_url)s\">hier</a> einsehen.\n"
 
 #: apps/sso/templates/mails/validation.html:9
 #, python-format
@@ -498,8 +511,10 @@ msgstr ""
 #: apps/sso/templates/sso/register.html:56
 msgid ""
 "I do understand that <a href=\"http://www.data.gouv.fr\">data.gouv.fr</a>\n"
-"                        values more the production and enrichment of datasets than definitive or partisan interpretations.\n"
-"                        It is the responsibility of the community of members to oversee the content it produces."
+"                        values more the production and enrichment of "
+"datasets than definitive or partisan interpretations.\n"
+"                        It is the responsibility of the community of members "
+"to oversee the content it produces."
 msgstr ""
 
 #: apps/sso/templates/sso/register.html:75
@@ -514,7 +529,8 @@ msgstr "Registrierung abgeschlossen"
 msgid ""
 "\n"
 "            Your registeration is complete:\n"
-"            Your account has been activated and you can now use all user features.\n"
+"            Your account has been activated and you can now use all user "
+"features.\n"
 "            "
 msgstr ""
 
@@ -598,7 +614,10 @@ msgid ""
 "\n"
 "                            %(from)s to %(to)s\n"
 "                            "
-msgstr "\n%(from)s bis %(to)s\n                            "
+msgstr ""
+"\n"
+"%(from)s bis %(to)s\n"
+"                            "
 
 #: apps/weckan/templates/home.html:10
 msgid "Let's debate facts to make them undebatable"
@@ -764,3 +783,13 @@ msgstr "Wo"
 #: templates/subnav-s.html:50 templates/subnav-s.html.py:53
 msgid "Publish a dataset !"
 msgstr "Datensatz veröffentlichen!"
+
+#: templates/admin/youckan/user/change_form.html:9
+#, fuzzy
+msgid "Change user password"
+msgstr "Passwort bestätigen"
+
+#: templates/admin/youckan/user/change_form.html:15
+#, fuzzy
+msgid "Reset password"
+msgstr "Passwort"

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-11-21 19:37+0100\n"
+"POT-Creation-Date: 2013-11-22 12:02+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,12 +17,16 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: admin.py:70
+#: admin.py:75
 msgid "Personal info"
 msgstr ""
 
-#: admin.py:71
+#: admin.py:76
 msgid "Permissions"
+msgstr ""
+
+#: admin.py:100
+msgid "A reset password mail has been sent."
 msgstr ""
 
 #: models.py:50
@@ -762,4 +766,12 @@ msgstr ""
 
 #: templates/subnav-s.html:50 templates/subnav-s.html.py:53
 msgid "Publish a dataset !"
+msgstr ""
+
+#: templates/admin/youckan/user/change_form.html:9
+msgid "Change user password"
+msgstr ""
+
+#: templates/admin/youckan/user/change_form.html:15
+msgid "Reset password"
 msgstr ""

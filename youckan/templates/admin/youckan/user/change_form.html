@@ -1,0 +1,16 @@
+{% extends "admin/change_form.html" %}
+{% load i18n %}
+{% block object-tools-items %}
+    {{ block.super }}
+    {# You can also give a name to that pattern and refer to it below using 'url' #}
+    <li>
+        <a href="password/" class="historylink">
+            <i class="icon-retweet icon-alpha75"></i>{% trans "Change user password" %}
+        </a>
+    </li>
+    <li>
+        <a href="{% url 'admin:reset-user-password' object_id %}" class="historylink">
+            <i class="icon-refresh icon-alpha75"></i>{% trans "Reset password" %}
+        </a>
+    </li>
+{% endblock %}

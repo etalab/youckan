@@ -2,10 +2,15 @@
 from __future__ import unicode_literals
 
 from django import forms
+from django.conf.urls import patterns, url
+from django.core.exceptions import PermissionDenied
 from django.contrib import admin
+from django.contrib import messages
 from django.contrib.auth.admin import UserAdmin as DjangoUserAdmin
-from django.contrib.auth.forms import ReadOnlyPasswordHashField
+from django.contrib.auth.forms import ReadOnlyPasswordHashField, PasswordResetForm
+from django.http import HttpResponseRedirect
 from django.utils.translation import ugettext_lazy as _
+from django.shortcuts import get_object_or_404
 
 from youckan.models import User
 
@@ -81,5 +86,30 @@ class UserAdmin(DjangoUserAdmin):
     search_fields = ('email', 'first_name', 'last_name')
     ordering = ('email',)
     filter_horizontal = ()
+
+    def reset_password(self, request, user_id):
+        if not self.has_change_permission(request):
+            raise PermissionDenied
+        user = get_object_or_404(self.model, pk=user_id)
+
+        form = PasswordResetForm(data={'email': user.email})
+        if form.is_valid():
+            form.save()
+            change_message = self.construct_change_message(request, form, None)
+            self.log_change(request, request.user, change_message)
+            msg = _('A reset password mail has been sent.')
+            messages.success(request, msg)
+        return HttpResponseRedirect('..')
+
+    def get_urls(self):
+        urls = super(UserAdmin, self).get_urls()
+
+        my_urls = patterns('',
+            url(r'^(\d+)/reset-password/$',
+                self.admin_site.admin_view(self.reset_password),
+                name='reset-user-password'
+            ),
+        )
+        return my_urls + urls
 
 admin.site.register(User, UserAdmin)
