@@ -1,7 +1,7 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
-# 
+#
 # Translators:
 # noirbizarre, 2013
 # noirbizarre, 2013
@@ -10,14 +10,15 @@ msgid ""
 msgstr ""
 "Project-Id-Version: youckan\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-11-25 11:09+0100\n"
+"POT-Creation-Date: 2013-11-25 12:00+0100\n"
 "PO-Revision-Date: 2013-11-25 10:27+0000\n"
 "Last-Translator: noirbizarre\n"
-"Language-Team: French (http://www.transifex.com/projects/p/youckan/language/fr/)\n"
+"Language-Team: French (http://www.transifex.com/projects/p/youckan/language/"
+"fr/)\n"
+"Language: fr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: fr\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 
 #: admin.py:75
@@ -60,7 +61,9 @@ msgstr "actif"
 msgid ""
 "Designates whether this user should be treated as active. Unselect this "
 "instead of deleting accounts."
-msgstr "Précise si cet utilisateur doit-être considéré comme actif. Désélectionnez cette option au lieu de supprimer des comptes."
+msgstr ""
+"Précise si cet utilisateur doit-être considéré comme actif. Désélectionnez "
+"cette option au lieu de supprimer des comptes."
 
 #: models.py:58
 msgid "date joined"
@@ -214,7 +217,8 @@ msgstr "Service public certifié"
 #: apps/ckan/templates/ckan/cards/organization.html:11
 #: apps/weckan/templates/dataset.html:121
 msgid "This organization and its datasets are certified by data.gouv.fr"
-msgstr "Cette organisation et ses jeux de données sont certifiés par data.gouv.fr"
+msgstr ""
+"Cette organisation et ses jeux de données sont certifiés par data.gouv.fr"
 
 #: apps/ckan/templates/ckan/cards/dataset.html:30
 #: apps/weckan/templates/dataset.html:166
@@ -227,7 +231,9 @@ msgid ""
 "\n"
 "            %(from)s to %(to)s\n"
 "            "
-msgstr "\n%(from)s à %(to)s"
+msgstr ""
+"\n"
+"%(from)s à %(to)s"
 
 #: apps/ckan/templates/ckan/cards/dataset.html:44
 #: apps/weckan/templates/dataset.html:179
@@ -344,7 +350,11 @@ msgid ""
 "\n"
 "Your account has been successfully created.\n"
 "You can visit your profile <a href=\"%(profile_url)s\">here</a>.\n"
-msgstr "\nVotre compte a été créé avec succès.\nVous pouvez maintenant visiter votre profil <a href=\"%(profile_url)s\">ici</a>.\n"
+msgstr ""
+"\n"
+"Votre compte a été créé avec succès.\n"
+"Vous pouvez maintenant visiter votre profil <a href=\"%(profile_url)s\">ici</"
+"a>.\n"
 
 #: apps/sso/templates/mails/validation.html:9
 #, python-format
@@ -433,7 +443,9 @@ msgstr "Réinitialisation du mot de passe complète"
 
 #: apps/sso/templates/sso/password_reset_complete.html:14
 msgid "Your password has been set.  You may go ahead and log in now."
-msgstr "Votre mot de passe a été défini. Vous pouvez maintenant continuer et vous connecter."
+msgstr ""
+"Votre mot de passe a été défini. Vous pouvez maintenant continuer et vous "
+"connecter."
 
 #: apps/sso/templates/sso/password_reset_complete.html:16
 msgid "Log in"
@@ -443,25 +455,33 @@ msgstr "Se connecter"
 msgid ""
 "Please enter your new password twice so we can verify you typed it in "
 "correctly."
-msgstr "Entrez votre nouveau mot de passe deux fois afin de vérifier que vous l'avez tapé correctement."
+msgstr ""
+"Entrez votre nouveau mot de passe deux fois afin de vérifier que vous l'avez "
+"tapé correctement."
 
 #: apps/sso/templates/sso/password_reset_confirm.html:36
 msgid ""
 "The password reset link was invalid, possibly because it has already been "
 "used.  Please request a new password reset."
-msgstr "Le lien de réinitialisation du mot de passe est invalide, probablement parce qu'il a déjà été utilisé. Demandez une nouvelle réinitialisation."
+msgstr ""
+"Le lien de réinitialisation du mot de passe est invalide, probablement parce "
+"qu'il a déjà été utilisé. Demandez une nouvelle réinitialisation."
 
 #: apps/sso/templates/sso/password_reset_done.html:11
 msgid ""
 "We've emailed you instructions for setting your password. You should be "
 "receiving them shortly."
-msgstr "Nous vous avons envoyé par mail les instructions pour définir votre mot de passe. Vous devriez le recevoir rapidement."
+msgstr ""
+"Nous vous avons envoyé par mail les instructions pour définir votre mot de "
+"passe. Vous devriez le recevoir rapidement."
 
 #: apps/sso/templates/sso/password_reset_done.html:13
 msgid ""
 "If you don't receive an email, please make sure you've entered the address "
 "you registered with, and check your spam folder."
-msgstr "Si vous ne recevez pas de mail, vérifiez que vous avez entré l'adresse avec laquelle vous vous êtes inscrit et vérifiez votre dossier de spam."
+msgstr ""
+"Si vous ne recevez pas de mail, vérifiez que vous avez entré l'adresse avec "
+"laquelle vous vous êtes inscrit et vérifiez votre dossier de spam."
 
 #: apps/sso/templates/sso/password_reset_form.html:5
 #: apps/sso/templates/sso/password_reset_form.html:19
@@ -473,7 +493,9 @@ msgstr "Réinitialisation du mot de passe"
 msgid ""
 "Forgotten your password? Enter your email address below, and we'll email "
 "instructions for setting a new one."
-msgstr "Vous avez oublié votre mot de passe ? Saisissez votre email ci-dessous et nous vous enverrons par mail les instructions pour en définir un nouveau."
+msgstr ""
+"Vous avez oublié votre mot de passe ? Saisissez votre email ci-dessous et "
+"nous vous enverrons par mail les instructions pour en définir un nouveau."
 
 #: apps/sso/templates/sso/password_reset_form.html:37
 #: apps/sso/templates/sso/register.html:67
@@ -501,9 +523,17 @@ msgstr "J'ai lu et j'adhère aux conditions générales du service."
 #: apps/sso/templates/sso/register.html:56
 msgid ""
 "I do understand that <a href=\"http://www.data.gouv.fr\">data.gouv.fr</a>\n"
-"                        values more the production and enrichment of datasets than definitive or partisan interpretations.\n"
-"                        It is the responsibility of the community of members to oversee the content it produces."
-msgstr "En particulier, je comprends que <a href=\"http://www.data.gouv.fr\">data.gouv.fr</a>\nvalorise plus la production et l'enrichissement de données que les interprétations définitives ou partisanes.\nIl appartient à la communauté des membres de veiller à la qualité du contenu qu'elle produit."
+"                        values more the production and enrichment of "
+"datasets than definitive or partisan interpretations.\n"
+"                        It is the responsibility of the community of members "
+"to oversee the content it produces."
+msgstr ""
+"En particulier, je comprends que <a href=\"http://www.data.gouv.fr\">data."
+"gouv.fr</a>\n"
+"valorise plus la production et l'enrichissement de données que les "
+"interprétations définitives ou partisanes.\n"
+"Il appartient à la communauté des membres de veiller à la qualité du contenu "
+"qu'elle produit."
 
 #: apps/sso/templates/sso/register.html:75
 msgid "Sign up"
@@ -517,9 +547,14 @@ msgstr "Inscription complète"
 msgid ""
 "\n"
 "            Your registeration is complete:\n"
-"            Your account has been activated and you can now use all user features.\n"
+"            Your account has been activated and you can now use all user "
+"features.\n"
 "            "
-msgstr "\nVotre inscription est complète:\nVotre compte a été activé et vous pouvez maintenant utiliser toutes les fonctionnalités."
+msgstr ""
+"\n"
+"Votre inscription est complète:\n"
+"Votre compte a été activé et vous pouvez maintenant utiliser toutes les "
+"fonctionnalités."
 
 #: apps/sso/templates/sso/register_done.html:24
 msgid "Continue your browsing"
@@ -601,7 +636,9 @@ msgid ""
 "\n"
 "                            %(from)s to %(to)s\n"
 "                            "
-msgstr "\n%(from)s à %(to)s"
+msgstr ""
+"\n"
+"%(from)s à %(to)s"
 
 #: apps/weckan/templates/home.html:10
 msgid "Let's debate facts to make them undebatable"
@@ -678,7 +715,9 @@ msgstr "Non trouvé (404)"
 #: templates/404.html:14
 #, python-format
 msgid "The requested URL %(request_path)s was not found on this server."
-msgstr "L'URL %(request_path)s que vous avez demandé n'a pas été trouvée sur ce serveur."
+msgstr ""
+"L'URL %(request_path)s que vous avez demandé n'a pas été trouvée sur ce "
+"serveur."
 
 #: templates/500.html:5
 msgid "Server error"
