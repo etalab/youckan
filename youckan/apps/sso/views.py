@@ -89,6 +89,11 @@ class RegisterView(CreateView):
     template_name = 'sso/register.html'
     form_class = RegisterForm
 
+    def get(self, request, *args, **kwargs):
+        if not 'partial_pipeline' in request.session:
+            return HttpResponseRedirect(reverse('login'))
+        return super(RegisterView, self).get(request, *args, **kwargs)
+
     def get_initial(self):
         initial = {}
         if 'userfields' in self.request.session:
