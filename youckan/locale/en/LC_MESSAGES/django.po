@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-11-22 12:02+0100\n"
+"POT-Creation-Date: 2013-11-25 11:09+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -190,7 +190,7 @@ msgid "Usefuls"
 msgstr ""
 
 #: apps/ckan/profile.py:39
-msgid "Valorizations"
+msgid "Reuses"
 msgstr ""
 
 #: apps/ckan/profile.py:51
@@ -263,7 +263,7 @@ msgid_plural "%(nb)s members"
 msgstr[0] ""
 msgstr[1] ""
 
-#: apps/ckan/templates/ckan/cards/valorization.html:24
+#: apps/ckan/templates/ckan/cards/reuse.html:24
 msgid "Creation date"
 msgstr ""
 
@@ -279,12 +279,12 @@ msgstr ""
 msgid "No private datasets"
 msgstr ""
 
-#: apps/ckan/templates/ckan/widgets/usefuls.html:13
-msgid "No datasets marked as useful"
+#: apps/ckan/templates/ckan/widgets/reuses.html:13
+msgid "No published reuses"
 msgstr ""
 
-#: apps/ckan/templates/ckan/widgets/valorizations.html:13
-msgid "No published valorizations"
+#: apps/ckan/templates/ckan/widgets/usefuls.html:13
+msgid "No datasets marked as useful"
 msgstr ""
 
 #: apps/sso/forms.py:24
@@ -768,10 +768,10 @@ msgstr ""
 msgid "Publish a dataset !"
 msgstr ""
 
-#: templates/admin/youckan/user/change_form.html:9
+#: templates/admin/youckan/user/change_form.html:8
 msgid "Change user password"
 msgstr ""
 
-#: templates/admin/youckan/user/change_form.html:15
+#: templates/admin/youckan/user/change_form.html:13
 msgid "Reset password"
 msgstr ""

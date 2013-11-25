@@ -1,0 +1,15 @@
+{% load i18n %}
+{% if reuses %}
+<ul class="card-list">
+    {% for reuse in reuses %}
+    <li class="col-md-6">
+    {% include 'ckan/cards/reuse.html' %}
+    </li>
+    {% endfor %}
+</ul>
+{% else %}
+<p class="text-center">
+    <br/><br/>
+    <strong>{{ _('No published reuses') }}</strong>
+</p>
+{% endif %}

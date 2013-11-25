@@ -19,7 +19,7 @@ class DatasetsWidget(ProfileWidget):
         try:
             context['datasets'] = ckan.connector('/'.join(['profile', self.user.slug, 'datasets']))
         except:
-            log.exception('Unable to fetch datasets for %s', slef.user.slug)
+            log.exception('Unable to fetch datasets for %s', self.user.slug)
             pass
 
 
@@ -31,19 +31,19 @@ class UsefulsWidget(ProfileWidget):
         try:
             context['usefuls'] = ckan.connector('/'.join(['profile', self.user.slug, 'usefuls']))
         except:
-            log.exception('Unable to fetch usefuls for %s', slef.user.slug)
+            log.exception('Unable to fetch usefuls for %s', self.user.slug)
             pass
 
 
-class ValorizationsWidget(ProfileWidget):
-    name = _('Valorizations')
-    template_name = 'ckan/widgets/valorizations.html'
+class ReusesWidget(ProfileWidget):
+    name = _('Reuses')
+    template_name = 'ckan/widgets/reuses.html'
 
     def fill_context(self, context):
         try:
-            context['valorizations'] = ckan.connector('/'.join(['profile', self.user.slug, 'valorizations']))
+            context['reuses'] = ckan.connector('/'.join(['profile', self.user.slug, 'reuses']))
         except:
-            log.exception('Unable to fetch valorizations for %s', slef.user.slug)
+            log.exception('Unable to fetch reuses for %s', self.user.slug)
             pass
 
 
@@ -55,7 +55,7 @@ class OrganizationsWidget(ProfileWidget):
         try:
             context['organizations'] = ckan.connector('/'.join(['profile', self.user.slug, 'organizations']))
         except:
-            log.exception('Unable to fetch orgnizations for %s', slef.user.slug)
+            log.exception('Unable to fetch orgnizations for %s', self.user.slug)
             pass
 
 
@@ -67,7 +67,7 @@ class PrivateDatasetsWidget(ProfileWidget):
         try:
             context['privates'] = ckan.connector('/'.join(['profile', self.user.slug, 'privates']))
         except:
-            log.exception('Unable to fetch private datasets for %s', slef.user.slug)
+            log.exception('Unable to fetch private datasets for %s', self.user.slug)
             pass
 
     def can_display(self, user):

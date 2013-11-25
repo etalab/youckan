@@ -206,7 +206,7 @@ INSTALLED_APPS = PROJECT_APPS + THIRD_PARTY_APPS + DJANGO_APPS
 PROFILE_WIDGETS = (
     'youckan.apps.ckan.profile.OrganizationsWidget',
     'youckan.apps.ckan.profile.DatasetsWidget',
-    'youckan.apps.ckan.profile.ValorizationsWidget',
+    'youckan.apps.ckan.profile.ReusesWidget',
     'youckan.apps.ckan.profile.UsefulsWidget',
     'youckan.apps.ckan.profile.PrivateDatasetsWidget',
     # 'youckan.apps.accounts.widgets.BadgesWidget',

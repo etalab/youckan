@@ -10,8 +10,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: youckan\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-11-22 12:02+0100\n"
-"PO-Revision-Date: 2013-11-22 11:03+0000\n"
+"POT-Creation-Date: 2013-11-25 11:09+0100\n"
+"PO-Revision-Date: 2013-11-25 10:27+0000\n"
 "Last-Translator: noirbizarre\n"
 "Language-Team: French (http://www.transifex.com/projects/p/youckan/language/fr/)\n"
 "MIME-Version: 1.0\n"
@@ -193,8 +193,8 @@ msgid "Usefuls"
 msgstr "Utiles"
 
 #: apps/ckan/profile.py:39
-msgid "Valorizations"
-msgstr "Valorisations"
+msgid "Reuses"
+msgstr "Réutilisations"
 
 #: apps/ckan/profile.py:51
 msgid "Organizations"
@@ -266,7 +266,7 @@ msgid_plural "%(nb)s members"
 msgstr[0] "%(nb)s membre"
 msgstr[1] "%(nb)s membres"
 
-#: apps/ckan/templates/ckan/cards/valorization.html:24
+#: apps/ckan/templates/ckan/cards/reuse.html:24
 msgid "Creation date"
 msgstr "Date de création"
 
@@ -282,13 +282,13 @@ msgstr "Aucune affiliation à une organisation"
 msgid "No private datasets"
 msgstr "Aucun jeu de données privé"
 
+#: apps/ckan/templates/ckan/widgets/reuses.html:13
+msgid "No published reuses"
+msgstr "Aucune réutilisation publiée"
+
 #: apps/ckan/templates/ckan/widgets/usefuls.html:13
 msgid "No datasets marked as useful"
 msgstr "Aucun jeu de données marqué comme utile"
-
-#: apps/ckan/templates/ckan/widgets/valorizations.html:13
-msgid "No published valorizations"
-msgstr "Aucune valorisation publiée"
 
 #: apps/sso/forms.py:24
 msgid "Confirm password"
@@ -768,10 +768,10 @@ msgstr "Où"
 msgid "Publish a dataset !"
 msgstr "Publiez un jeu de données"
 
-#: templates/admin/youckan/user/change_form.html:9
+#: templates/admin/youckan/user/change_form.html:8
 msgid "Change user password"
 msgstr "Changer le mot de passe"
 
-#: templates/admin/youckan/user/change_form.html:15
+#: templates/admin/youckan/user/change_form.html:13
 msgid "Reset password"
 msgstr "Réinitialiser le mot de passe"

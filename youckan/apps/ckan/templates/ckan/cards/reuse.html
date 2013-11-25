@@ -1,0 +1,30 @@
+{% load i18n helpers avatar markup %}
+<div class="card">
+    <a class="card-logo" href="{{ reuse.url }}" target="_blank">
+        <img src="{{ reuse.image_url }}" alt="{{ reuse.title }}">
+    </a>
+    <div class="card-body ellipsis-dot">
+        <h4>
+            <a href="{{ reuse.url }}" target="_blank">
+            {{ reuse.title }}
+            </a>
+        </h4>
+        <div class="card-description">{{ reuse.description|strip_markdown:250 }}</div>
+        {% if reuse.owner %}
+        <div class="author">
+            {% avatar reuse.owner 25 %}
+            <span class="user">{{ reuse.owner.full_name }}</span>
+        </div>
+        {% endif %}
+    </div>
+    <ul class="card-footer">
+        <li>
+            <a href class="btn btn-xs btn-default" rel="tooltip"
+                data-placement="top" data-container="body"
+                title="{{ _('Creation date') }}">
+                <span class="glyphicon glyphicon-calendar"></span>
+            </a>
+            {{ reuse.created|dtparse|date:"DATETIME_FORMAT" }}
+        </li>
+    </ul>
+</div>
