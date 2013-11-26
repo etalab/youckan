@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-11-25 12:00+0100\n"
+"POT-Creation-Date: 2013-11-26 11:02+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -393,22 +393,33 @@ msgstr ""
 msgid "Sign Up"
 msgstr ""
 
-#: apps/sso/templates/sso/login.html:94
+#: apps/sso/templates/sso/login.html:95
 msgid "Sign up a with social account"
 msgstr ""
 
-#: apps/sso/templates/sso/login.html:99 apps/sso/templates/sso/login.html:101
-#: apps/sso/templates/sso/login.html:105 apps/sso/templates/sso/login.html:107
-#: apps/sso/templates/sso/login.html:111 apps/sso/templates/sso/login.html:113
+#: apps/sso/templates/sso/login.html:98
+msgid "Privacy"
+msgstr ""
+
+#: apps/sso/templates/sso/login.html:99
+msgid ""
+"No information will be sent to the social network.\n"
+"                                            It will only be used to prefill "
+"the register form and import your avatar."
+msgstr ""
+
+#: apps/sso/templates/sso/login.html:107 apps/sso/templates/sso/login.html:109
+#: apps/sso/templates/sso/login.html:113 apps/sso/templates/sso/login.html:115
+#: apps/sso/templates/sso/login.html:119 apps/sso/templates/sso/login.html:121
 #, python-format
 msgid "Sign up with %(name)s"
 msgstr ""
 
-#: apps/sso/templates/sso/login.html:120
+#: apps/sso/templates/sso/login.html:128
 msgid "-- or --"
 msgstr ""
 
-#: apps/sso/templates/sso/login.html:127
+#: apps/sso/templates/sso/login.html:135
 msgid "Create an account"
 msgstr ""
 
