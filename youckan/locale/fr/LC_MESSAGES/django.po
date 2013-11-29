@@ -10,8 +10,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: youckan\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-11-29 12:52+0100\n"
-"PO-Revision-Date: 2013-11-29 11:55+0000\n"
+"POT-Creation-Date: 2013-11-29 14:42+0100\n"
+"PO-Revision-Date: 2013-11-29 14:07+0000\n"
 "Last-Translator: noirbizarre\n"
 "Language-Team: French (http://www.transifex.com/projects/p/youckan/language/fr/)\n"
 "MIME-Version: 1.0\n"
@@ -216,12 +216,16 @@ msgstr "Service public certifié"
 msgid "This organization and its datasets are certified by data.gouv.fr"
 msgstr "Cette organisation et ses jeux de données sont certifiés par data.gouv.fr"
 
-#: apps/ckan/templates/ckan/cards/dataset.html:30
+#: apps/ckan/templates/ckan/cards/dataset.html:17
+msgid "No organization"
+msgstr "Aucune organisation"
+
+#: apps/ckan/templates/ckan/cards/dataset.html:34
 #: apps/weckan/templates/dataset.html:166
 msgid "Temporal coverage"
 msgstr "Couverture temporelle"
 
-#: apps/ckan/templates/ckan/cards/dataset.html:33
+#: apps/ckan/templates/ckan/cards/dataset.html:37
 #, python-format
 msgid ""
 "\n"
@@ -229,17 +233,17 @@ msgid ""
 "            "
 msgstr "\n%(from)s à %(to)s"
 
-#: apps/ckan/templates/ckan/cards/dataset.html:44
+#: apps/ckan/templates/ckan/cards/dataset.html:48
 #: apps/weckan/templates/dataset.html:179
 msgid "Periodicity"
 msgstr "Périodicité"
 
-#: apps/ckan/templates/ckan/cards/dataset.html:56
+#: apps/ckan/templates/ckan/cards/dataset.html:60
 #: apps/weckan/templates/dataset.html:190
 msgid "Territorial coverage"
 msgstr "Couverture territoriale"
 
-#: apps/ckan/templates/ckan/cards/dataset.html:68
+#: apps/ckan/templates/ckan/cards/dataset.html:72
 #: apps/weckan/templates/dataset.html:202
 msgid "Territorial coverage granularity"
 msgstr "Granularité de la couverture territoriale"

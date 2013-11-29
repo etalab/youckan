@@ -12,6 +12,10 @@
                 data-content="{{ _('This organization and its datasets are certified by data.gouv.fr') }}"
                 data-container="body" data-placement="left" data-trigger="hover"/>
         {% endif %}
+    {% else %}
+    <div class="card-logo">
+        <img alt="{% trans "No organization" %}" src="{% static 'img/placeholder_producer.png' %}">
+    </div>
     {% endif %}
     <div class="card-body ellipsis-dot">
         <h4>
