@@ -11,8 +11,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: youckan\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-11-26 11:02+0100\n"
-"PO-Revision-Date: 2013-11-26 10:03+0000\n"
+"POT-Creation-Date: 2013-11-29 12:52+0100\n"
+"PO-Revision-Date: 2013-11-29 11:53+0000\n"
 "Last-Translator: noirbizarre\n"
 "Language-Team: German (http://www.transifex.com/projects/p/youckan/language/de/)\n"
 "MIME-Version: 1.0\n"
@@ -108,7 +108,7 @@ msgid "My account"
 msgstr ""
 
 #: apps/accounts/templates/accounts/account_base.html:23
-#: templates/navbar.html:41 templates/navbar.html.py:43
+#: templates/navbar.html:43 templates/navbar.html.py:45
 msgid "Profile"
 msgstr "Profil"
 
@@ -747,19 +747,23 @@ msgstr "Zurück nach oben"
 msgid "Open platform for french public data"
 msgstr "Offene Plattform für öffentliche Daten Frankreichs"
 
-#: templates/navbar.html:47 templates/navbar.html.py:49
+#: templates/navbar.html:31
+msgid "Metrics"
+msgstr ""
+
+#: templates/navbar.html:49 templates/navbar.html.py:51
 msgid "Settings"
 msgstr ""
 
-#: templates/navbar.html:54 templates/navbar.html.py:56
+#: templates/navbar.html:56 templates/navbar.html.py:58
 msgid "Log out"
 msgstr "Abmelden"
 
-#: templates/navbar.html:64 templates/navbar.html.py:66
+#: templates/navbar.html:66 templates/navbar.html.py:68
 msgid "Sign In / Sign Up"
 msgstr "Anmelden/Neuen Account anlegen"
 
-#: templates/navbar.html:72
+#: templates/navbar.html:74
 msgid "Advanced mode"
 msgstr "Fortgeschrittenenmodus"
 
