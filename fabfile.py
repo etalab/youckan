@@ -73,11 +73,13 @@ def work():
     with lcd(ROOT):
         local('python manage.py celery worker --autoreload --events --beat')
 
+
 @task
 def watch():
     '''Run Celery watcher'''
     with lcd(ROOT):
         local('python manage.py celerycam')
+
 
 @task
 def debug(port=8000):
@@ -201,6 +203,7 @@ def dist(buildno=None):
             local('python setup.py -q egg_info -b ".%s" sdist' % buildno)
         else:
             local('python setup.py -q sdist')
+
 
 @task
 def gdist():
