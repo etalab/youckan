@@ -22,7 +22,7 @@ class YouckanAuthCookieMiddleware(object):
             cookie = request.COOKIES[self.cookie_name]
             user = request.user
             session = request.session
-            if not self.verify_cookie(cookie, user, session):
+            if user.is_authenticated() and not self.verify_cookie(cookie, user, session):
                 if hasattr(user, 'email'):
                     log.error('Bad cookie for user %s', user.email)
                 else:

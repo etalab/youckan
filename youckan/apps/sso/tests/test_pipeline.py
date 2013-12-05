@@ -39,10 +39,8 @@ class AuthPipelineTest(TestHelper, TestCase):
     @httpretty.activate
     def test_register_google(self):
         '''Should handle registeration from Google'''
-        self.mock_google()
-        state = 'aaaaa'
-        self.session['google-oauth2_state'] = state
-        self.session.save()
+        state = self.mock_google()
+
         response = self.client.get(reverse('social:complete', args=['google-oauth2']), {'code': 'code', 'state': state})
         self.assert_redirects_to(response, 'register')
         self.assertEqual(self.get_from_pipeline('avatar_url'), AVATAR_URL)
@@ -59,8 +57,9 @@ class AuthPipelineTest(TestHelper, TestCase):
         user = self.create_user('coucou@c-encore-moi.fr')
         SocialUserFactory(uid=MAIL, provider=GoogleOAuth2.name, user=user)
 
-        self.mock_google()
-        response = self.client.get(reverse('social:complete', args=['google-oauth2']), {'code': 'code'})
+        state = self.mock_google()
+
+        response = self.client.get(reverse('social:complete', args=['google-oauth2']), {'code': 'code', 'state': state})
         self.assert_redirects_to(response, 'login')
 
     def test_register_discard_avatar(self):
@@ -162,3 +161,8 @@ class AuthPipelineTest(TestHelper, TestCase):
             body=json.dumps(userinfos),
             content_type='application/json'
         )
+
+        state = 'state'
+        self.session['google-oauth2_state'] = state
+        self.session.save()
+        return state

@@ -37,7 +37,8 @@ class TestHelper(object):
             store.save()
             self.client.cookies[settings.SESSION_COOKIE_NAME] = store.session_key
         else:
-            store = engine.SessionStore(self.client.cookies[settings.SESSION_COOKIE_NAME])
+            cookie = self.client.cookies[settings.SESSION_COOKIE_NAME]
+            store = engine.SessionStore(cookie.value)
         self.session = store
 
     def assert_redirects_to(self, response, url_name, status_code=302,
