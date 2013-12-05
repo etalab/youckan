@@ -1,3 +1,4 @@
+fabric
 -r test.pip
 -r reporting.pip
 python-coveralls
