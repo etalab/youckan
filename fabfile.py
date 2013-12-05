@@ -116,9 +116,8 @@ def test(spec=None, verbose=False):
 @task
 def coverage(app=None):
     '''Run the test suite with coverage'''
-    apps = ' '.join(get_apps(app))
     local('coverage erase')
-    local('coverage run --rcfile=coverage.rc manage.py test {}'.format(apps))
+    local('coverage run --rcfile=coverage.rc manage.py test youckan')
     local('coverage report --rcfile=coverage.rc')
 
 
