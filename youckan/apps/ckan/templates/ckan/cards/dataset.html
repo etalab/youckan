@@ -75,5 +75,16 @@
             {{ dataset.territorial_coverage.granularity }}
         </li>
         {% endif %}
+
+        {% if dataset.nb_reuses %}
+        <li>
+            <a href class="btn btn-xs btn-default" rel="tooltip"
+                data-placement="top" data-container="body"
+                title="{{ _('Reuse number') }}">
+                <span class="glyphicon glyphicon-random"></span>
+            </a>
+            {{ dataset.nb_reuses }}
+        </li>
+        {% endif %}
     </ul>
 </div>
