@@ -2,6 +2,12 @@
 YouCKAN
 =======
 
+.. image:: https://secure.travis-ci.org/etalab/youckan.png
+    :target: http://travis-ci.org/etalab/youckan
+.. image:: https://coveralls.io/repos/etalab/youckan/badge.png?branch=master
+    :target: https://coveralls.io/r/etalab/youckan
+
+
 A social frontend to CKAN
 
 Compatibility
