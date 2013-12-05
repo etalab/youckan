@@ -1,5 +1,5 @@
 =======
-YouCJAN
+YouCKAN
 =======
 
 A social frontend to CKAN
