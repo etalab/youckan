@@ -5,6 +5,8 @@ python:
 install:
   - python setup.py -q install
   - pip install -r requirements/travis.pip --use-mirrors
+  - npm install -g bower
+  - fab update_js
 script:
   - fab coverage pep8
 after_success:
