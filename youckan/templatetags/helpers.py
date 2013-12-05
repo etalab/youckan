@@ -43,6 +43,7 @@ def dtparse(string):
     except:
         return string
 
+
 @register.filter(is_safe=True)
 def alert_class(message):
     if 'error' in message.tags:
