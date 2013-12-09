@@ -71,6 +71,6 @@ class AvatarEditView(LoginRequiredMixin, UpdateView):
 class AvatarView(SingleObjectMixin, RedirectView):
     model = User
 
-    def get_redirect_url(self, *args, **kwargs):
+    def get_redirect_url(self, size=None, *args, **kwargs):
         user = self.get_object()
-        return get_avatar_url(user)
+        return get_avatar_url(user, size)

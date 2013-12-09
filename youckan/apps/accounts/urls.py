@@ -8,7 +8,8 @@ from youckan.apps.accounts.views import UserListView, ProfileView, ProfileEditVi
 
 urlpatterns = patterns('',
     url(r'^u/(?P<slug>[\d\w_-]+)/$', ProfileView.as_view(), name='profile'),
-    url(r'^u/(?P<slug>[\d\w_-]+)/avatar$', AvatarView.as_view(), name='avatar'),
+    url(r'^u/(?P<slug>[\d\w_-]+)/avatar/$', AvatarView.as_view(), name='avatar'),
+    url(r'^u/(?P<slug>[\d\w_-]+)/avatar/(?P<size>\d+)/$', AvatarView.as_view(), name='avatar-with-size'),
 
     url(r'^my/profile/$', ProfileEditView.as_view(), name='profile-edit'),
     url(r'^my/avatar/$', AvatarEditView.as_view(), name='avatar-edit'),
