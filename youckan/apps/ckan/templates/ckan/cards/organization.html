@@ -19,22 +19,24 @@
         </h4>
         <div class="card-description">{{ organization.description|strip_markdown:250 }}</div>
     </div>
-    <ul class="card-footer">
-        <li>
-            <a href class="btn btn-xs btn-default" rel="tooltip"
-                data-placement="top" data-container="body"
-                title="{{ _('Number of datasets') }}">
-                <span class="glyphicon glyphicon-stats"></span>
-            </a>
-            {% blocktrans count nb=organization.nb_datasets %}{{nb}} dataset{% plural %}{{nb}} datasets{% endblocktrans %}
-        </li>
-        <li>
-            <a href class="btn btn-xs btn-default" rel="tooltip"
-                data-placement="top" data-container="body"
-                title="{{ _('Number of members') }}">
-                <span class="glyphicon glyphicon-user"></span>
-            </a>
-            {% blocktrans count nb=organization.nb_members %}{{nb}} member{% plural %}{{nb}} members{% endblocktrans %}
-        </li>
-    </ul>
+    <footer>
+        <ul>
+            <li>
+                <a href class="btn btn-xs btn-default" rel="tooltip"
+                    data-placement="top" data-container="body"
+                    title="{{ _('Number of datasets') }}">
+                    <span class="glyphicon glyphicon-stats"></span>
+                </a>
+                {% blocktrans count nb=organization.nb_datasets %}{{nb}} dataset{% plural %}{{nb}} datasets{% endblocktrans %}
+            </li>
+            <li>
+                <a href class="btn btn-xs btn-default" rel="tooltip"
+                    data-placement="top" data-container="body"
+                    title="{{ _('Number of members') }}">
+                    <span class="glyphicon glyphicon-user"></span>
+                </a>
+                {% blocktrans count nb=organization.nb_members %}{{nb}} member{% plural %}{{nb}} members{% endblocktrans %}
+            </li>
+        </ul>
+    </footer>
 </div>

@@ -17,14 +17,16 @@
         </div>
         {% endif %}
     </div>
-    <ul class="card-footer">
-        <li>
-            <a href class="btn btn-xs btn-default" rel="tooltip"
-                data-placement="top" data-container="body"
-                title="{{ _('Creation date') }}">
-                <span class="glyphicon glyphicon-calendar"></span>
-            </a>
-            {{ reuse.created|dtparse|date:"DATETIME_FORMAT" }}
-        </li>
-    </ul>
+    <footer>
+        <ul>
+            <li>
+                <a href class="btn btn-xs btn-default" rel="tooltip"
+                    data-placement="top" data-container="body"
+                    title="{{ _('Creation date') }}">
+                    <span class="glyphicon glyphicon-calendar"></span>
+                </a>
+                {{ reuse.created|dtparse|date:"DATETIME_FORMAT" }}
+            </li>
+        </ul>
+    </footer>
 </div>

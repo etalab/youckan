@@ -27,7 +27,7 @@ STATICFILES_DIRS = (
     # Put strings here, like "/home/html/static" or "C:/www/django/static".
     # Always use forward slashes, even on Windows.
     # Don't forget to use absolute paths, not relative paths.
-    ('fonts', join(PACKAGE_ROOT, 'static', 'bower', 'bootstrap', 'fonts')),
+    ('fonts', join(PACKAGE_ROOT, 'static', 'bower', 'bootstrap', 'dist', 'fonts')),
     ('fonts', join(PACKAGE_ROOT, 'static', 'bower', 'etalab-assets', 'fonts')),
     ('img', join(PACKAGE_ROOT, 'static', 'bower', 'etalab-assets', 'img')),
 )
@@ -75,7 +75,7 @@ PIPELINE_JS = {
     'modernizr': {
         'source_filenames': (
             'bower/modernizr/modernizr.js',
-            'bower/respond/respond.src.js',
+            'bower/respond/dest/respond.src.js',
         ),
         'output_filename': 'js/modernizr.min.js',
     },
