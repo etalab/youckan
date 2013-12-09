@@ -11,7 +11,7 @@ recursive-exclude youckan/static/js *.min.js
 prune youckan/static/bower
 
 include youckan/static/bower/bootstrap/less/*.less
-include youckan/static/bower/bootstrap/fonts/*
+include youckan/static/bower/bootstrap/dist/fonts/*
 include youckan/static/bower/bootstrap/dist/js/*.js
 include youckan/static/bower/etalab-assets/data/*.json
 include youckan/static/bower/etalab-assets/fonts/*
@@ -26,7 +26,7 @@ include youckan/static/bower/jquery.dotdotdot/jquery.dotdotdot.js
 include youckan/static/bower/jquery.validation/jquery.validate.js
 include youckan/static/bower/modernizr/modernizr.js
 include youckan/static/bower/moment/min/moment+lang.js
-include youckan/static/bower/respond/respond.src.js
+include youckan/static/bower/respond/dest/respond.src.js
 include youckan/static/bower/swig/index.js
 include youckan/static/bower/typeahead.js/dist/typeahead.js
 
