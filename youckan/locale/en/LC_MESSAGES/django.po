@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-12-05 18:33+0100\n"
+"POT-Creation-Date: 2013-12-10 15:25+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -104,7 +104,7 @@ msgid "My account"
 msgstr ""
 
 #: apps/accounts/templates/accounts/account_base.html:23
-#: templates/navbar.html:43 templates/navbar.html.py:45
+#: templates/navbar.html:44 templates/navbar.html.py:46
 msgid "Profile"
 msgstr ""
 
@@ -217,61 +217,61 @@ msgstr ""
 msgid "No organization"
 msgstr ""
 
-#: apps/ckan/templates/ckan/cards/dataset.html:34
+#: apps/ckan/templates/ckan/cards/dataset.html:35
 #: apps/weckan/templates/dataset.html:166
 msgid "Temporal coverage"
 msgstr ""
 
-#: apps/ckan/templates/ckan/cards/dataset.html:37
+#: apps/ckan/templates/ckan/cards/dataset.html:38
 #, python-format
 msgid ""
 "\n"
-"            %(from)s to %(to)s\n"
-"            "
+"                %(from)s to %(to)s\n"
+"                "
 msgstr ""
 
-#: apps/ckan/templates/ckan/cards/dataset.html:48
+#: apps/ckan/templates/ckan/cards/dataset.html:49
 #: apps/weckan/templates/dataset.html:179
 msgid "Periodicity"
 msgstr ""
 
-#: apps/ckan/templates/ckan/cards/dataset.html:60
+#: apps/ckan/templates/ckan/cards/dataset.html:61
 #: apps/weckan/templates/dataset.html:190
 msgid "Territorial coverage"
 msgstr ""
 
-#: apps/ckan/templates/ckan/cards/dataset.html:72
+#: apps/ckan/templates/ckan/cards/dataset.html:73
 #: apps/weckan/templates/dataset.html:202
 msgid "Territorial coverage granularity"
 msgstr ""
 
-#: apps/ckan/templates/ckan/cards/dataset.html:83
+#: apps/ckan/templates/ckan/cards/dataset.html:84
 msgid "Reuse number"
 msgstr ""
 
-#: apps/ckan/templates/ckan/cards/organization.html:26
+#: apps/ckan/templates/ckan/cards/organization.html:27
 msgid "Number of datasets"
 msgstr ""
 
-#: apps/ckan/templates/ckan/cards/organization.html:29
+#: apps/ckan/templates/ckan/cards/organization.html:30
 #, python-format
 msgid "%(nb)s dataset"
 msgid_plural "%(nb)s datasets"
 msgstr[0] ""
 msgstr[1] ""
 
-#: apps/ckan/templates/ckan/cards/organization.html:34
+#: apps/ckan/templates/ckan/cards/organization.html:35
 msgid "Number of members"
 msgstr ""
 
-#: apps/ckan/templates/ckan/cards/organization.html:37
+#: apps/ckan/templates/ckan/cards/organization.html:38
 #, python-format
 msgid "%(nb)s member"
 msgid_plural "%(nb)s members"
 msgstr[0] ""
 msgstr[1] ""
 
-#: apps/ckan/templates/ckan/cards/reuse.html:24
+#: apps/ckan/templates/ckan/cards/reuse.html:25
 msgid "Creation date"
 msgstr ""
 
@@ -439,6 +439,7 @@ msgstr ""
 #: apps/sso/templates/sso/register_done.html:20
 #: apps/weckan/templates/home.html:4 templates/400.html:17
 #: templates/403.html:17 templates/404.html:19 templates/500.html:18
+#: templates/navbar.html:24
 msgid "Home"
 msgstr ""
 
@@ -719,15 +720,15 @@ msgstr ""
 msgid "The Open Data"
 msgstr ""
 
-#: templates/footer.html:9 templates/navbar.html:24 templates/sidebar.html:11
+#: templates/footer.html:9 templates/navbar.html:25 templates/sidebar.html:11
 msgid "How it works ?"
 msgstr ""
 
-#: templates/footer.html:10 templates/navbar.html:25
+#: templates/footer.html:10 templates/navbar.html:26
 msgid "Publishers"
 msgstr ""
 
-#: templates/footer.html:13 templates/navbar.html:28 templates/sidebar.html:15
+#: templates/footer.html:13 templates/navbar.html:29 templates/sidebar.html:15
 msgid "Open license"
 msgstr ""
 
@@ -735,19 +736,19 @@ msgstr ""
 msgid "Credits"
 msgstr ""
 
-#: templates/footer.html:21 templates/subnav-s.html:34
+#: templates/footer.html:22 templates/subnav-s.html:35
 msgid "Topics"
 msgstr ""
 
-#: templates/footer.html:34
+#: templates/footer.html:35
 msgid "Network"
 msgstr ""
 
-#: templates/footer.html:45
+#: templates/footer.html:46
 msgid "Contact"
 msgstr ""
 
-#: templates/footer.html:57
+#: templates/footer.html:58
 msgid "Back to top"
 msgstr ""
 
@@ -755,23 +756,23 @@ msgstr ""
 msgid "Open platform for french public data"
 msgstr ""
 
-#: templates/navbar.html:31
+#: templates/navbar.html:32
 msgid "Metrics"
 msgstr ""
 
-#: templates/navbar.html:49 templates/navbar.html.py:51
+#: templates/navbar.html:50 templates/navbar.html.py:52
 msgid "Settings"
 msgstr ""
 
-#: templates/navbar.html:56 templates/navbar.html.py:58
+#: templates/navbar.html:57 templates/navbar.html.py:59
 msgid "Log out"
 msgstr ""
 
-#: templates/navbar.html:66 templates/navbar.html.py:68
+#: templates/navbar.html:67 templates/navbar.html.py:69
 msgid "Sign In / Sign Up"
 msgstr ""
 
-#: templates/navbar.html:74
+#: templates/navbar.html:75
 msgid "Advanced mode"
 msgstr ""
 
@@ -779,16 +780,21 @@ msgstr ""
 msgid "Public data"
 msgstr ""
 
-#: templates/subnav-s.html:15
+#: templates/subnav-s.html:17
 msgid "Search"
 msgstr ""
 
-#: templates/subnav-s.html:24
+#: templates/subnav-s.html:27
 msgid "Where"
 msgstr ""
 
-#: templates/subnav-s.html:50 templates/subnav-s.html.py:53
+#: templates/subnav-s.html:51 templates/subnav-s.html.py:54
+#: templates/subnav-s.html:57
 msgid "Publish a dataset !"
+msgstr ""
+
+#: templates/subnav-s.html:60
+msgid "Publish !"
 msgstr ""
 
 #: templates/admin/youckan/user/change_form.html:8
