@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-12-10 15:25+0100\n"
+"POT-Creation-Date: 2013-12-11 12:17+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -104,7 +104,7 @@ msgid "My account"
 msgstr ""
 
 #: apps/accounts/templates/accounts/account_base.html:23
-#: templates/navbar.html:44 templates/navbar.html.py:46
+#: templates/navbar.html:45 templates/navbar.html.py:47
 msgid "Profile"
 msgstr ""
 
@@ -736,19 +736,23 @@ msgstr ""
 msgid "Credits"
 msgstr ""
 
-#: templates/footer.html:22 templates/subnav-s.html:35
+#: templates/footer.html:18
+msgid "Terms of use"
+msgstr ""
+
+#: templates/footer.html:23 templates/subnav-s.html:35
 msgid "Topics"
 msgstr ""
 
-#: templates/footer.html:35
+#: templates/footer.html:36
 msgid "Network"
 msgstr ""
 
-#: templates/footer.html:46
+#: templates/footer.html:47
 msgid "Contact"
 msgstr ""
 
-#: templates/footer.html:58
+#: templates/footer.html:60
 msgid "Back to top"
 msgstr ""
 
@@ -760,19 +764,19 @@ msgstr ""
 msgid "Metrics"
 msgstr ""
 
-#: templates/navbar.html:50 templates/navbar.html.py:52
+#: templates/navbar.html:51 templates/navbar.html.py:53
 msgid "Settings"
 msgstr ""
 
-#: templates/navbar.html:57 templates/navbar.html.py:59
+#: templates/navbar.html:58 templates/navbar.html.py:60
 msgid "Log out"
 msgstr ""
 
-#: templates/navbar.html:67 templates/navbar.html.py:69
+#: templates/navbar.html:68 templates/navbar.html.py:70
 msgid "Sign In / Sign Up"
 msgstr ""
 
-#: templates/navbar.html:75
+#: templates/navbar.html:76
 msgid "Advanced mode"
 msgstr ""
 

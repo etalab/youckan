@@ -95,7 +95,7 @@ PIPELINE_JS = {
         'source_filenames': (
             'bower/bootstrap/dist/js/bootstrap.js',
             'bower/jquery.cookie/jquery.cookie.js',
-            'bower/jquery.dotdotdot/jquery.dotdotdot.js',
+            'bower/jquery.dotdotdot/src/js/jquery.dotdotdot.js',
             'bower/jquery.validation/jquery.validate.js',
             'bower/typeahead.js/dist/typeahead.js',
             'bower/swig/index.js',

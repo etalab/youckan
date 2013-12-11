@@ -37,7 +37,8 @@
                 {% if user.is_authenticated %}
                     <li class="dropdown user">
                         <button class="btn-link dropdown-toggle" data-toggle="dropdown">
-                            {% avatar user 30 %} {{ user.full_name }}
+                            {% avatar user 30 %}
+                            <span class="username">{{ user.full_name }}</span>
                         </button>
                         <ul class="dropdown-menu">
                             <li>
