@@ -10,8 +10,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: youckan\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-12-11 12:17+0100\n"
-"PO-Revision-Date: 2013-12-11 11:18+0000\n"
+"POT-Creation-Date: 2013-12-11 18:48+0100\n"
+"PO-Revision-Date: 2013-12-11 17:49+0000\n"
 "Last-Translator: noirbizarre\n"
 "Language-Team: French (http://www.transifex.com/projects/p/youckan/language/fr/)\n"
 "MIME-Version: 1.0\n"
@@ -727,41 +727,41 @@ msgstr "Comment ça marche ?"
 msgid "Publishers"
 msgstr "Producteurs"
 
-#: templates/footer.html:13 templates/navbar.html:29 templates/sidebar.html:15
-msgid "Open license"
-msgstr "Licence ouverte"
+#: templates/footer.html:13 templates/navbar.html:29
+msgid "Open Licence"
+msgstr "Licence Ouverte"
 
-#: templates/footer.html:17
+#: templates/footer.html:16 templates/navbar.html:32
+msgid "Metrics"
+msgstr "Métriques"
+
+#: templates/footer.html:19
 msgid "Credits"
 msgstr "Crédits"
 
-#: templates/footer.html:18
+#: templates/footer.html:20
 msgid "Terms of use"
 msgstr "Conditions générales d'utilisation"
 
-#: templates/footer.html:23 templates/subnav-s.html:35
+#: templates/footer.html:25 templates/subnav-s.html:35
 msgid "Topics"
 msgstr "Thématiques"
 
-#: templates/footer.html:36
+#: templates/footer.html:38
 msgid "Network"
 msgstr "Réseau"
 
-#: templates/footer.html:47
+#: templates/footer.html:49
 msgid "Contact"
 msgstr "Contact"
 
-#: templates/footer.html:60
+#: templates/footer.html:62
 msgid "Back to top"
 msgstr "Haut de page"
 
 #: templates/navbar.html:14
 msgid "Open platform for french public data"
 msgstr "Plate-forme ouverte des données publiques françaises"
-
-#: templates/navbar.html:32
-msgid "Metrics"
-msgstr "Métriques"
 
 #: templates/navbar.html:51 templates/navbar.html.py:53
 msgid "Settings"
@@ -782,6 +782,10 @@ msgstr "Mode avancé"
 #: templates/sidebar.html:6
 msgid "Public data"
 msgstr "Données publiques"
+
+#: templates/sidebar.html:15
+msgid "Open license"
+msgstr "Licence ouverte"
 
 #: templates/subnav-s.html:17
 msgid "Search"

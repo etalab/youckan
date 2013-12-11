@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-12-11 12:17+0100\n"
+"POT-Creation-Date: 2013-12-11 18:48+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -728,40 +728,40 @@ msgstr ""
 msgid "Publishers"
 msgstr ""
 
-#: templates/footer.html:13 templates/navbar.html:29 templates/sidebar.html:15
-msgid "Open license"
+#: templates/footer.html:13 templates/navbar.html:29
+msgid "Open Licence"
 msgstr ""
 
-#: templates/footer.html:17
+#: templates/footer.html:16 templates/navbar.html:32
+msgid "Metrics"
+msgstr ""
+
+#: templates/footer.html:19
 msgid "Credits"
 msgstr ""
 
-#: templates/footer.html:18
+#: templates/footer.html:20
 msgid "Terms of use"
 msgstr ""
 
-#: templates/footer.html:23 templates/subnav-s.html:35
+#: templates/footer.html:25 templates/subnav-s.html:35
 msgid "Topics"
 msgstr ""
 
-#: templates/footer.html:36
+#: templates/footer.html:38
 msgid "Network"
 msgstr ""
 
-#: templates/footer.html:47
+#: templates/footer.html:49
 msgid "Contact"
 msgstr ""
 
-#: templates/footer.html:60
+#: templates/footer.html:62
 msgid "Back to top"
 msgstr ""
 
 #: templates/navbar.html:14
 msgid "Open platform for french public data"
-msgstr ""
-
-#: templates/navbar.html:32
-msgid "Metrics"
 msgstr ""
 
 #: templates/navbar.html:51 templates/navbar.html.py:53
@@ -782,6 +782,10 @@ msgstr ""
 
 #: templates/sidebar.html:6
 msgid "Public data"
+msgstr ""
+
+#: templates/sidebar.html:15
+msgid "Open license"
 msgstr ""
 
 #: templates/subnav-s.html:17
