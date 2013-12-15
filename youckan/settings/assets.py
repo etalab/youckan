@@ -105,6 +105,14 @@ PIPELINE_JS = {
         ),
         'output_filename': 'js/youckan.min.js'
     },
+    'animation': {
+        'source_filenames': (
+            'bower/jquery.easing/js/jquery.easing.js',
+            'bower/etalab-assets/js/animation/edge.1.0.0.min.js',
+            'bower/etalab-assets/js/animation/animation.preload.js',
+        ),
+        'output_filename': 'js/youckan.min.js'
+    },
     'home': {
         'source_filenames': (
             'js/home.js',

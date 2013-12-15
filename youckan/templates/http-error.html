@@ -1,17 +1,24 @@
 {% extends "site.html" %}
+{% load compressed %}
 
 {% block title %}{{title}}{% endblock %}
 
 {% block content %}
-
-<div class="container">
-    <div class="row">
-        <h2>{{title}}</h2>
-        <p>{{explanation}}</p>
-        {% if comment %}<p>{{comment}}</p>{% endif %}
-        {% if message %}<p>{{message}}</p>{% endif %}
-        {% if dump %}<pre class="pre-scrollable">{{dump}}</pre>{% endif %}
+<section class="error">
+    <div class="animation"></div>
+    <div class="container">
+        <div class="jumbotron">
+            <h2>{{title}}</h2>
+            <p>{{explanation}}</p>
+            {% if comment %}<p>{{comment}}</p>{% endif %}
+            {% if message %}<p>{{message}}</p>{% endif %}
+            {% if dump %}<pre class="pre-scrollable">{{dump}}</pre>{% endif %}
+        </div>
     </div>
-</div>
+</section>
 
+{% endblock %}
+
+{% block javascript %}
+{% compressed_js "animation" %}
 {% endblock %}

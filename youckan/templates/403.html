@@ -1,13 +1,14 @@
 {% extends "base.html" %}
 
-{% load i18n staticfiles bootstrap %}
+{% load i18n staticfiles bootstrap compressed %}
 
 {% block title %}{% trans "Forbidden" %}{% endblock %}
 
 {% block content %}
-<section class="default">
+<section class="error">
+    <div class="animation"></div>
     <div class="container">
-        <div class="jumbotron card">
+        <div class="jumbotron">
             <h1>{% trans "Forbidden (403)" %}</h1>
 
             <p>{% trans "You are not allowed to see this page" %}</p>
@@ -21,4 +22,8 @@
         </div>
     </div>
 </section>
+{% endblock %}
+
+{% block javascript %}
+{% compressed_js "animation" %}
 {% endblock %}
