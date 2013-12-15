@@ -111,7 +111,7 @@ PIPELINE_JS = {
             'bower/etalab-assets/js/animation/edge.1.0.0.min.js',
             'bower/etalab-assets/js/animation/animation.preload.js',
         ),
-        'output_filename': 'js/youckan.min.js'
+        'output_filename': 'js/animation.min.js'
     },
     'home': {
         'source_filenames': (
