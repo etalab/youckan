@@ -10,8 +10,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: youckan\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-12-11 18:48+0100\n"
-"PO-Revision-Date: 2013-12-11 17:49+0000\n"
+"POT-Creation-Date: 2013-12-15 16:10+0100\n"
+"PO-Revision-Date: 2013-12-15 15:17+0000\n"
 "Last-Translator: noirbizarre\n"
 "Language-Team: French (http://www.transifex.com/projects/p/youckan/language/fr/)\n"
 "MIME-Version: 1.0\n"
@@ -107,7 +107,7 @@ msgid "My account"
 msgstr "Mon compte"
 
 #: apps/accounts/templates/accounts/account_base.html:23
-#: templates/navbar.html:45 templates/navbar.html.py:47
+#: templates/navbar.html:61 templates/navbar.html.py:63
 msgid "Profile"
 msgstr "Profil"
 
@@ -212,9 +212,8 @@ msgstr "Service public certifié"
 
 #: apps/ckan/templates/ckan/cards/dataset.html:12
 #: apps/ckan/templates/ckan/cards/organization.html:11
-#: apps/weckan/templates/dataset.html:121
-msgid "This organization and its datasets are certified by data.gouv.fr"
-msgstr "Cette organisation et ses jeux de données sont certifiés par data.gouv.fr"
+msgid "The identity of this public service public is certified by Etalab"
+msgstr "L'identité de ce service public est certifiée par Etalab"
 
 #: apps/ckan/templates/ckan/cards/dataset.html:17
 msgid "No organization"
@@ -439,8 +438,8 @@ msgstr "Vous avez été déconnecté. Revenez vite !"
 
 #: apps/sso/templates/sso/logout.html:13
 #: apps/sso/templates/sso/register_done.html:20
-#: apps/weckan/templates/home.html:4 templates/400.html:17
-#: templates/403.html:17 templates/404.html:19 templates/500.html:18
+#: apps/weckan/templates/home.html:4 templates/400.html:18
+#: templates/403.html:18 templates/404.html:20 templates/500.html:19
 #: templates/navbar.html:24
 msgid "Home"
 msgstr "Accueil"
@@ -602,6 +601,10 @@ msgstr "Réutilisation"
 msgid "Publish a reuse case !"
 msgstr "Publiez une réutilisation"
 
+#: apps/weckan/templates/dataset.html:121
+msgid "This organization and its datasets are certified by data.gouv.fr"
+msgstr "Cette organisation et ses jeux de données sont certifiés par data.gouv.fr"
+
 #: apps/weckan/templates/dataset.html:135
 msgid "more"
 msgstr "plus"
@@ -666,11 +669,11 @@ msgstr "Tâches"
 msgid "Bad request"
 msgstr "Mauvaise requête"
 
-#: templates/400.html:11
+#: templates/400.html:12
 msgid "Bad request (400)"
 msgstr "Mauvaise requête (400)"
 
-#: templates/400.html:13
+#: templates/400.html:14
 msgid "You're browser sent a request that this server could not understand"
 msgstr "Votre navigateur a envoyé une requête que ce serveur ne comprend pas"
 
@@ -678,11 +681,11 @@ msgstr "Votre navigateur a envoyé une requête que ce serveur ne comprend pas"
 msgid "Forbidden"
 msgstr "Accès interdit"
 
-#: templates/403.html:11
+#: templates/403.html:12
 msgid "Forbidden (403)"
 msgstr "Accès interdit (403)"
 
-#: templates/403.html:13
+#: templates/403.html:14
 msgid "You are not allowed to see this page"
 msgstr "Vous n'êtes pas autorisé à voir cette page"
 
@@ -690,11 +693,11 @@ msgstr "Vous n'êtes pas autorisé à voir cette page"
 msgid "Not found"
 msgstr "Non trouvé"
 
-#: templates/404.html:11
+#: templates/404.html:12
 msgid "Not found (404)"
 msgstr "Non trouvé (404)"
 
-#: templates/404.html:14
+#: templates/404.html:15
 #, python-format
 msgid "The requested URL %(request_path)s was not found on this server."
 msgstr "L'URL %(request_path)s que vous avez demandé n'a pas été trouvée sur ce serveur."
@@ -703,15 +706,15 @@ msgstr "L'URL %(request_path)s que vous avez demandé n'a pas été trouvée sur
 msgid "Server error"
 msgstr "Erreur du serveur"
 
-#: templates/500.html:11
+#: templates/500.html:12
 msgid "Server error (500)"
 msgstr "Erreur du serveur (500)"
 
-#: templates/500.html:13
+#: templates/500.html:14
 msgid "An error occured while processing this request."
 msgstr "Une erreur est survenue pendant le traitement de cette requête."
 
-#: templates/500.html:14
+#: templates/500.html:15
 msgid "The administrator have been notified"
 msgstr "Les administrateurs ont été avertis"
 
@@ -719,7 +722,7 @@ msgstr "Les administrateurs ont été avertis"
 msgid "The Open Data"
 msgstr "L'Open Data"
 
-#: templates/footer.html:9 templates/navbar.html:25 templates/sidebar.html:11
+#: templates/footer.html:9 templates/navbar.html:25
 msgid "How it works ?"
 msgstr "Comment ça marche ?"
 
@@ -761,31 +764,19 @@ msgstr "Haut de page"
 
 #: templates/navbar.html:14
 msgid "Open platform for french public data"
-msgstr "Plate-forme ouverte des données publiques françaises"
+msgstr "Plateforme ouverte des données publiques françaises"
 
-#: templates/navbar.html:51 templates/navbar.html.py:53
+#: templates/navbar.html:67 templates/navbar.html.py:69
 msgid "Settings"
 msgstr "Réglages"
 
-#: templates/navbar.html:58 templates/navbar.html.py:60
+#: templates/navbar.html:74 templates/navbar.html.py:76
 msgid "Log out"
 msgstr "Se déconnecter"
 
-#: templates/navbar.html:68 templates/navbar.html.py:70
+#: templates/navbar.html:84 templates/navbar.html.py:86
 msgid "Sign In / Sign Up"
 msgstr "Connexion / Inscription"
-
-#: templates/navbar.html:76
-msgid "Advanced mode"
-msgstr "Mode avancé"
-
-#: templates/sidebar.html:6
-msgid "Public data"
-msgstr "Données publiques"
-
-#: templates/sidebar.html:15
-msgid "Open license"
-msgstr "Licence ouverte"
 
 #: templates/subnav-s.html:17
 msgid "Search"

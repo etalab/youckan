@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-12-11 18:48+0100\n"
+"POT-Creation-Date: 2013-12-15 16:10+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -104,7 +104,7 @@ msgid "My account"
 msgstr ""
 
 #: apps/accounts/templates/accounts/account_base.html:23
-#: templates/navbar.html:45 templates/navbar.html.py:47
+#: templates/navbar.html:61 templates/navbar.html.py:63
 msgid "Profile"
 msgstr ""
 
@@ -209,8 +209,7 @@ msgstr ""
 
 #: apps/ckan/templates/ckan/cards/dataset.html:12
 #: apps/ckan/templates/ckan/cards/organization.html:11
-#: apps/weckan/templates/dataset.html:121
-msgid "This organization and its datasets are certified by data.gouv.fr"
+msgid "The identity of this public service public is certified by Etalab"
 msgstr ""
 
 #: apps/ckan/templates/ckan/cards/dataset.html:17
@@ -437,8 +436,8 @@ msgstr ""
 
 #: apps/sso/templates/sso/logout.html:13
 #: apps/sso/templates/sso/register_done.html:20
-#: apps/weckan/templates/home.html:4 templates/400.html:17
-#: templates/403.html:17 templates/404.html:19 templates/500.html:18
+#: apps/weckan/templates/home.html:4 templates/400.html:18
+#: templates/403.html:18 templates/404.html:20 templates/500.html:19
 #: templates/navbar.html:24
 msgid "Home"
 msgstr ""
@@ -603,6 +602,10 @@ msgstr ""
 msgid "Publish a reuse case !"
 msgstr ""
 
+#: apps/weckan/templates/dataset.html:121
+msgid "This organization and its datasets are certified by data.gouv.fr"
+msgstr ""
+
 #: apps/weckan/templates/dataset.html:135
 msgid "more"
 msgstr ""
@@ -667,11 +670,11 @@ msgstr ""
 msgid "Bad request"
 msgstr ""
 
-#: templates/400.html:11
+#: templates/400.html:12
 msgid "Bad request (400)"
 msgstr ""
 
-#: templates/400.html:13
+#: templates/400.html:14
 msgid "You're browser sent a request that this server could not understand"
 msgstr ""
 
@@ -679,11 +682,11 @@ msgstr ""
 msgid "Forbidden"
 msgstr ""
 
-#: templates/403.html:11
+#: templates/403.html:12
 msgid "Forbidden (403)"
 msgstr ""
 
-#: templates/403.html:13
+#: templates/403.html:14
 msgid "You are not allowed to see this page"
 msgstr ""
 
@@ -691,11 +694,11 @@ msgstr ""
 msgid "Not found"
 msgstr ""
 
-#: templates/404.html:11
+#: templates/404.html:12
 msgid "Not found (404)"
 msgstr ""
 
-#: templates/404.html:14
+#: templates/404.html:15
 #, python-format
 msgid "The requested URL %(request_path)s was not found on this server."
 msgstr ""
@@ -704,15 +707,15 @@ msgstr ""
 msgid "Server error"
 msgstr ""
 
-#: templates/500.html:11
+#: templates/500.html:12
 msgid "Server error (500)"
 msgstr ""
 
-#: templates/500.html:13
+#: templates/500.html:14
 msgid "An error occured while processing this request."
 msgstr ""
 
-#: templates/500.html:14
+#: templates/500.html:15
 msgid "The administrator have been notified"
 msgstr ""
 
@@ -720,7 +723,7 @@ msgstr ""
 msgid "The Open Data"
 msgstr ""
 
-#: templates/footer.html:9 templates/navbar.html:25 templates/sidebar.html:11
+#: templates/footer.html:9 templates/navbar.html:25
 msgid "How it works ?"
 msgstr ""
 
@@ -764,28 +767,16 @@ msgstr ""
 msgid "Open platform for french public data"
 msgstr ""
 
-#: templates/navbar.html:51 templates/navbar.html.py:53
+#: templates/navbar.html:67 templates/navbar.html.py:69
 msgid "Settings"
 msgstr ""
 
-#: templates/navbar.html:58 templates/navbar.html.py:60
+#: templates/navbar.html:74 templates/navbar.html.py:76
 msgid "Log out"
 msgstr ""
 
-#: templates/navbar.html:68 templates/navbar.html.py:70
+#: templates/navbar.html:84 templates/navbar.html.py:86
 msgid "Sign In / Sign Up"
-msgstr ""
-
-#: templates/navbar.html:76
-msgid "Advanced mode"
-msgstr ""
-
-#: templates/sidebar.html:6
-msgid "Public data"
-msgstr ""
-
-#: templates/sidebar.html:15
-msgid "Open license"
 msgstr ""
 
 #: templates/subnav-s.html:17
