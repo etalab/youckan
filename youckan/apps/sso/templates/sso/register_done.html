@@ -1,20 +1,39 @@
 {% extends "base.html" %}
 
-{% load i18n %}
+{% load i18n compressed %}
 
 {% block title %}{% trans "Sign In" %}{% endblock %}
 
 {% block content %}
-<section class="default">
+<section class="message">
+    <div class="animation"></div>
     <div class="container">
         <div class="jumbotron">
             <h1>{% trans "Registeration complete" %}</h1>
-            <p>
-            {% blocktrans %}
+
+            <p>{% blocktrans %}
             Your registeration is complete:
             Your account has been activated and you can now use all user features.
-            {% endblocktrans %}
-            </p>
+            {% endblocktrans %}</p>
+
+            <p>{% blocktrans %}
+            You can start by joining your organization:
+            {% endblocktrans %}</p>
+
+            <form role="search" action="{{etalab.HOME_URL}}/{{LANGUAGE_CODE}}/organizations/">
+                <div class="form-group input-group input-group-lg">
+                    <span class="input-group-addon">
+                        <span class="glyphicon glyphicon-search"></span>
+                    </span>
+                    <input id="org-search" name="q" type="search" class="form-control" autocomplete="off"
+                        placeholder="{% trans "Search your organization" %}">
+                </div>
+            </form>
+
+            <p>{% blocktrans %}
+            You can find all the organizations later by using the "Publishers" top menu.
+            {% endblocktrans %}</p>
+
             <p>
                 <a class="btn btn-primary btn-lg" href="{{ etalab.HOME_URL }}">
                 {% trans "Home" %}
@@ -28,4 +47,9 @@
         </div>
     </div>
 </section>
+{% endblock %}
+
+{% block javascript %}
+{% compressed_js "register-done" %}
+{% compressed_js "animation" %}
 {% endblock %}

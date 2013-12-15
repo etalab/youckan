@@ -1,11 +1,12 @@
 {% extends "base.html" %}
 
-{% load i18n staticfiles bootstrap %}
+{% load i18n staticfiles bootstrap compressed %}
 
 {% block title %}{% trans "Sign In" %}{% endblock %}
 
 {% block content %}
-<section class="default">
+<section class="form">
+    <div class="animation"></div>
     <div class="container auth-container">
         {% if social_exception_message %}
         <div class="alert alert-dismissable alert-danger">
@@ -121,7 +122,7 @@
                                         alt="{% blocktrans with name="Linkedin" %}Sign up with {{name}}{% endblocktrans %}"
                                     >
                                 </a>
-                            </ul>
+                            </div>
 
                             <div class="form-group">
                                 <div class="col-md-12">
@@ -142,5 +143,9 @@
             {% endif %}
         </div>
     </div>
-</fieldset>
+</section>
+{% endblock %}
+
+{% block javascript %}
+{% compressed_js "animation" %}
 {% endblock %}

@@ -119,5 +119,11 @@ PIPELINE_JS = {
         ),
         'output_filename': 'js/home.min.js',
     },
+    'register-done': {
+        'source_filenames': (
+            'js/register-done.js',
+        ),
+        'output_filename': 'js/register-done.min.js',
+    },
 
 }

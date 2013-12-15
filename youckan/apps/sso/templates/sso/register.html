@@ -1,11 +1,12 @@
 {% extends "base.html" %}
 
-{% load i18n staticfiles bootstrap avatar %}
+{% load i18n staticfiles bootstrap avatar compressed %}
 
 {% block title %}{% trans "Sign Up" %}{% endblock %}
 
 {% block content %}
-<section class="default">
+<section class="form">
+    <div class="animation"></div>
     <div class="container auth-container">
         <form class="form-horizontal validate col-md-offset-2 col-md-8" role="form"
             method="post" action="{% url 'register' %}">
@@ -82,3 +83,9 @@
     </div>
 </section>
 {% endblock %}
+
+
+{% block javascript %}
+{% compressed_js "animation" %}
+{% endblock %}
+

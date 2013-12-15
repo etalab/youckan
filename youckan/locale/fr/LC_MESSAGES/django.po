@@ -10,8 +10,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: youckan\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-12-15 16:10+0100\n"
-"PO-Revision-Date: 2013-12-15 15:17+0000\n"
+"POT-Creation-Date: 2013-12-15 16:40+0100\n"
+"PO-Revision-Date: 2013-12-15 15:42+0000\n"
 "Last-Translator: noirbizarre\n"
 "Language-Team: French (http://www.transifex.com/projects/p/youckan/language/fr/)\n"
 "MIME-Version: 1.0\n"
@@ -358,86 +358,86 @@ msgstr "\nVotre compte a été créé avec succès.\nVous pouvez maintenant visi
 msgid "Please validate your account <a href=\"%(url)s\">here</a>."
 msgstr "Validez votre compte <a href=\"%(url)s\">ici</a>."
 
-#: apps/sso/templates/sso/login.html:5 apps/sso/templates/sso/login.html:52
+#: apps/sso/templates/sso/login.html:5 apps/sso/templates/sso/login.html:53
 #: apps/sso/templates/sso/password_reset_done.html:5
 #: apps/sso/templates/sso/register_done.html:5
 msgid "Sign In"
 msgstr "Connexion"
 
-#: apps/sso/templates/sso/login.html:23 apps/sso/templates/sso/logout.html:4
-#: apps/sso/templates/sso/logout.html:10
+#: apps/sso/templates/sso/login.html:24 apps/sso/templates/sso/logout.html:4
+#: apps/sso/templates/sso/logout.html:11
 msgid "Sign Out"
 msgstr "Déconnexion"
 
-#: apps/sso/templates/sso/login.html:26
+#: apps/sso/templates/sso/login.html:27
 #, python-format
 msgid "You are already logged in as %(name)s."
 msgstr "Vous êtes déjà connecté en tant que %(name)s."
 
-#: apps/sso/templates/sso/login.html:28
+#: apps/sso/templates/sso/login.html:29
 msgid "Please logout if you want to sign in as a different user."
 msgstr "Déconnectez-vous et connectez-vous avec un autre utilisateur."
 
-#: apps/sso/templates/sso/login.html:32 apps/sso/templates/sso/login.html:34
+#: apps/sso/templates/sso/login.html:33 apps/sso/templates/sso/login.html:35
 msgid "Sign out"
 msgstr "Se déconnecter"
 
-#: apps/sso/templates/sso/login.html:66
+#: apps/sso/templates/sso/login.html:67
 msgid "Remember me"
 msgstr "Se souvenir de moi"
 
-#: apps/sso/templates/sso/login.html:74
+#: apps/sso/templates/sso/login.html:75
 msgid "Sign in"
 msgstr "Se connecter"
 
-#: apps/sso/templates/sso/login.html:80
+#: apps/sso/templates/sso/login.html:81
 msgid "Forgotton your password ?"
 msgstr "Mot de passe oublié ?"
 
-#: apps/sso/templates/sso/login.html:81
+#: apps/sso/templates/sso/login.html:82
 msgid "Recover your password"
 msgstr "Réinitialisez votre mot de passe"
 
-#: apps/sso/templates/sso/login.html:90 apps/sso/templates/sso/register.html:5
-#: apps/sso/templates/sso/register.html:17
+#: apps/sso/templates/sso/login.html:91 apps/sso/templates/sso/register.html:5
+#: apps/sso/templates/sso/register.html:18
 msgid "Sign Up"
 msgstr "Inscription"
 
-#: apps/sso/templates/sso/login.html:95
+#: apps/sso/templates/sso/login.html:96
 msgid "Sign up a with social account"
 msgstr "S'inscrire par un réseau social"
 
-#: apps/sso/templates/sso/login.html:98
+#: apps/sso/templates/sso/login.html:99
 msgid "Privacy"
 msgstr "Vie privée"
 
-#: apps/sso/templates/sso/login.html:99
+#: apps/sso/templates/sso/login.html:100
 msgid ""
 "No information will be sent to the social network.\n"
 "                                            It will only be used to prefill the register form and import your avatar."
 msgstr "Aucune information ne sera transmise au réseau social.\nCela ne servira qu'à préremplir le formulaire d'enregistrement et importer votre avatar."
 
-#: apps/sso/templates/sso/login.html:107 apps/sso/templates/sso/login.html:109
-#: apps/sso/templates/sso/login.html:113 apps/sso/templates/sso/login.html:115
-#: apps/sso/templates/sso/login.html:119 apps/sso/templates/sso/login.html:121
+#: apps/sso/templates/sso/login.html:108 apps/sso/templates/sso/login.html:110
+#: apps/sso/templates/sso/login.html:114 apps/sso/templates/sso/login.html:116
+#: apps/sso/templates/sso/login.html:120 apps/sso/templates/sso/login.html:122
 #, python-format
 msgid "Sign up with %(name)s"
 msgstr "S'inscrire par %(name)s"
 
-#: apps/sso/templates/sso/login.html:128
+#: apps/sso/templates/sso/login.html:129
 msgid "-- or --"
 msgstr "-- ou --"
 
-#: apps/sso/templates/sso/login.html:135
+#: apps/sso/templates/sso/login.html:136
 msgid "Create an account"
 msgstr "Créer un compte"
 
-#: apps/sso/templates/sso/logout.html:11
+#: apps/sso/templates/sso/logout.html:12
 msgid "You have been signed out. Come back soon !"
 msgstr "Vous avez été déconnecté. Revenez vite !"
 
-#: apps/sso/templates/sso/logout.html:13
-#: apps/sso/templates/sso/register_done.html:20
+#: apps/sso/templates/sso/logout.html:14
+#: apps/sso/templates/sso/register_done.html:39
 #: apps/weckan/templates/home.html:4 templates/400.html:18
 #: templates/403.html:18 templates/404.html:20 templates/500.html:19
 #: templates/navbar.html:24
@@ -494,44 +494,44 @@ msgid ""
 msgstr "Vous avez oublié votre mot de passe ? Saisissez votre email ci-dessous et nous vous enverrons par mail les instructions pour en définir un nouveau."
 
 #: apps/sso/templates/sso/password_reset_form.html:37
-#: apps/sso/templates/sso/register.html:67
+#: apps/sso/templates/sso/register.html:68
 msgid "required fields"
 msgstr "champs requis"
 
-#: apps/sso/templates/sso/register.html:34
+#: apps/sso/templates/sso/register.html:35
 #, python-format
 msgid "Your avatar from %(backend)s"
 msgstr "Votre avatar de %(backend)s"
 
-#: apps/sso/templates/sso/register.html:37
+#: apps/sso/templates/sso/register.html:38
 msgid "Use my avatar"
 msgstr "Utiliser mon avatar"
 
-#: apps/sso/templates/sso/register.html:39
+#: apps/sso/templates/sso/register.html:40
 #, python-format
 msgid "Import and use my avatar from %(backend)s"
 msgstr "Importer et utiliser mon avatar depuis %(backend)s"
 
-#: apps/sso/templates/sso/register.html:54
+#: apps/sso/templates/sso/register.html:55
 msgid "I have read and accepted the terms and conditions of the service."
 msgstr "J'ai lu et j'adhère aux conditions générales du service."
 
-#: apps/sso/templates/sso/register.html:56
+#: apps/sso/templates/sso/register.html:57
 msgid ""
 "I do understand that <a href=\"http://www.data.gouv.fr\">data.gouv.fr</a>\n"
 "                        values more the production and enrichment of datasets than definitive or partisan interpretations.\n"
 "                        It is the responsibility of the community of members to oversee the content it produces."
 msgstr "En particulier, je comprends que <a href=\"http://www.data.gouv.fr\">data.gouv.fr</a>\nvalorise plus la production et l'enrichissement de données que les interprétations définitives ou partisanes.\nIl appartient à la communauté des membres de veiller à la qualité du contenu qu'elle produit."
 
-#: apps/sso/templates/sso/register.html:75
+#: apps/sso/templates/sso/register.html:76
 msgid "Sign up"
 msgstr "S'inscrire"
 
-#: apps/sso/templates/sso/register_done.html:11
+#: apps/sso/templates/sso/register_done.html:12
 msgid "Registeration complete"
 msgstr "Inscription complète"
 
-#: apps/sso/templates/sso/register_done.html:13
+#: apps/sso/templates/sso/register_done.html:14
 msgid ""
 "\n"
 "            Your registeration is complete:\n"
@@ -539,21 +539,39 @@ msgid ""
 "            "
 msgstr "\nVotre inscription est complète:\nVotre compte a été activé et vous pouvez maintenant utiliser toutes les fonctionnalités."
 
-#: apps/sso/templates/sso/register_done.html:24
+#: apps/sso/templates/sso/register_done.html:19
+msgid ""
+"\n"
+"            You can start by joining your organization:\n"
+"            "
+msgstr "\nVous pouvez commencer par rejoindre votre organisation:"
+
+#: apps/sso/templates/sso/register_done.html:29
+msgid "Search your organization"
+msgstr "Cherchez votre organisation"
+
+#: apps/sso/templates/sso/register_done.html:33
+msgid ""
+"\n"
+"            You can find all the organizations later by using the \"Publishers\" top menu.\n"
+"            "
+msgstr "\nVous pourrez retrouver toutes les organisations plus tard en utilisant le menu \"Producteurs\" de la barre de menu."
+
+#: apps/sso/templates/sso/register_done.html:43
 msgid "Continue your browsing"
 msgstr "Reprendre votre navigation"
 
 #: apps/sso/templates/sso/register_mail.html:5
-#: apps/sso/templates/sso/register_mail.html:11
+#: apps/sso/templates/sso/register_mail.html:12
 msgid "Email validation"
 msgstr "Validation de l'email"
 
-#: apps/sso/templates/sso/register_mail.html:13
+#: apps/sso/templates/sso/register_mail.html:14
 #, python-format
 msgid "A validation mail has been sent to %(email)s."
 msgstr "Un email de validation a été envoyé à %(email)s."
 
-#: apps/sso/templates/sso/register_mail.html:15
+#: apps/sso/templates/sso/register_mail.html:16
 msgid "Please check your mails to activate your account"
 msgstr "Consultez vos mails pour activer votre compte"
 
