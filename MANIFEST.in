@@ -27,7 +27,7 @@ include youckan/static/bower/jquery/jquery.js
 include youckan/static/bower/jquery-legacy/index.js
 include youckan/static/bower/jquery.cookie/jquery.cookie.js
 include youckan/static/bower/jquery.easing/js/jquery.easing.js
-include youckan/static/bower/jquery.dotdotdot/jquery.dotdotdot.js
+include youckan/static/bower/jquery.dotdotdot/src/jquery.dotdotdot.js
 include youckan/static/bower/jquery.validation/jquery.validate.js
 include youckan/static/bower/markdown/lib/markdown.js
 include youckan/static/bower/modernizr/modernizr.js
