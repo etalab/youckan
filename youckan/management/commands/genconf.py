@@ -111,7 +111,7 @@ class Command(BaseCommand):
 
         params = {
             'home': options['home'],
-            'secret_key': get_random_string(50, SECRET_CHARS),
+            'secret': get_random_string(50, SECRET_CHARS),
         }
         params.update(self.ask_questions(names))
 
