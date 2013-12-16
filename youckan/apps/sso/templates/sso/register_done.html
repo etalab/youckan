@@ -13,25 +13,27 @@
 
             <p>{% blocktrans %}
             Your registration is complete:
-            Your account has been activated and you can now use all user features.
+            Your account has been activated and you can now contribute by voting or publishing.
             {% endblocktrans %}</p>
 
             <p>{% blocktrans %}
-            You can start by joining your organization:
+            You can start by joining an existing organization or create a new one:
             {% endblocktrans %}</p>
 
             <form role="search" action="{{etalab.HOME_URL}}/{{LANGUAGE_CODE}}/organizations/">
                 <div class="form-group input-group input-group-lg">
-                    <span class="input-group-addon">
-                        <span class="glyphicon glyphicon-search"></span>
+                    <span class="input-group-btn">
+                        <button class="btn" type="submit">
+                            <span class="glyphicon glyphicon-search"></span>
+                        </button>
                     </span>
                     <input id="org-search" name="q" type="search" class="form-control" autocomplete="off"
-                        placeholder="{% trans "Search your organization" %}">
+                        placeholder="{% trans "Search an organization" %}">
                 </div>
             </form>
 
             <p>{% blocktrans %}
-            You can find all the organizations later by using the "Publishers" top menu.
+            You may find your organization later by navigating into the "Publishers" top menu.
             {% endblocktrans %}</p>
 
             <p>

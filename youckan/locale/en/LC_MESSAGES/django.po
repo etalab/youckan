@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-12-15 17:08+0100\n"
+"POT-Creation-Date: 2013-12-16 11:22+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -435,7 +435,7 @@ msgid "You have been signed out. Come back soon !"
 msgstr ""
 
 #: apps/sso/templates/sso/logout.html:14
-#: apps/sso/templates/sso/register_done.html:39
+#: apps/sso/templates/sso/register_done.html:41
 #: apps/weckan/templates/home.html:4 templates/400.html:18
 #: templates/403.html:18 templates/404.html:20 templates/500.html:19
 #: templates/navbar.html:24
@@ -535,31 +535,32 @@ msgstr ""
 msgid ""
 "\n"
 "            Your registration is complete:\n"
-"            Your account has been activated and you can now use all user "
-"features.\n"
+"            Your account has been activated and you can now contribute by "
+"voting or publishing.\n"
 "            "
 msgstr ""
 
 #: apps/sso/templates/sso/register_done.html:19
 msgid ""
 "\n"
-"            You can start by joining your organization:\n"
+"            You can start by joining an existing organization or create a "
+"new one:\n"
 "            "
 msgstr ""
 
-#: apps/sso/templates/sso/register_done.html:29
-msgid "Search your organization"
+#: apps/sso/templates/sso/register_done.html:31
+msgid "Search an organization"
 msgstr ""
 
-#: apps/sso/templates/sso/register_done.html:33
+#: apps/sso/templates/sso/register_done.html:35
 msgid ""
 "\n"
-"            You can find all the organizations later by using the "
+"            You may find your organization later by navigating into the "
 "\"Publishers\" top menu.\n"
 "            "
 msgstr ""
 
-#: apps/sso/templates/sso/register_done.html:43
+#: apps/sso/templates/sso/register_done.html:45
 msgid "Continue your browsing"
 msgstr ""
 

@@ -1,7 +1,7 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
-#
+# 
 # Translators:
 # schwefel, 2013
 # schwefel, 2013
@@ -11,15 +11,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: youckan\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-12-15 17:08+0100\n"
-"PO-Revision-Date: 2013-12-05 17:34+0000\n"
+"POT-Creation-Date: 2013-12-16 11:22+0100\n"
+"PO-Revision-Date: 2013-12-16 10:23+0000\n"
 "Last-Translator: noirbizarre\n"
-"Language-Team: German (http://www.transifex.com/projects/p/youckan/language/"
-"de/)\n"
-"Language: de\n"
+"Language-Team: German (http://www.transifex.com/projects/p/youckan/language/de/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Language: de\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #: admin.py:75
@@ -62,9 +61,7 @@ msgstr "Aktiv"
 msgid ""
 "Designates whether this user should be treated as active. Unselect this "
 "instead of deleting accounts."
-msgstr ""
-"Legt fest, ob der Nutzeraccount aktiv ist. Deaktivieren sie hier statt den "
-"Account zu löschen."
+msgstr "Legt fest, ob der Nutzeraccount aktiv ist. Deaktivieren sie hier statt den Account zu löschen."
 
 #: models.py:58
 msgid "date joined"
@@ -229,15 +226,12 @@ msgid "Temporal coverage"
 msgstr "Zeitumfang"
 
 #: apps/ckan/templates/ckan/cards/dataset.html:38
-#, fuzzy, python-format
+#, python-format
 msgid ""
 "\n"
 "                %(from)s to %(to)s\n"
 "                "
 msgstr ""
-"\n"
-"%(from)s bis %(to)s\n"
-"                            "
 
 #: apps/ckan/templates/ckan/cards/dataset.html:49
 #: apps/weckan/templates/dataset.html:179
@@ -344,9 +338,7 @@ msgstr ""
 #: apps/sso/pipeline.py:55
 #, python-brace-format
 msgid "This {0} account is already in use. Please login with your password"
-msgstr ""
-"Dieser {0} Account existiert bereits. Bitte melden sie sich mit ihrem "
-"Passwort an"
+msgstr "Dieser {0} Account existiert bereits. Bitte melden sie sich mit ihrem Passwort an"
 
 #: apps/sso/templates/mails/confirmation.html:5
 #: apps/sso/templates/mails/validation.html:5
@@ -360,10 +352,7 @@ msgid ""
 "\n"
 "Your account has been successfully created.\n"
 "You can visit your profile <a href=\"%(profile_url)s\">here</a>.\n"
-msgstr ""
-"\n"
-"Ihr Account wurde erfolgreich erstellt.\n"
-"Sie können ihr Profil <a href=\"%(profile_url)s\">hier</a> einsehen.\n"
+msgstr "\nIhr Account wurde erfolgreich erstellt.\nSie können ihr Profil <a href=\"%(profile_url)s\">hier</a> einsehen.\n"
 
 #: apps/sso/templates/mails/validation.html:9
 #, python-format
@@ -426,8 +415,7 @@ msgstr ""
 #: apps/sso/templates/sso/login.html:100
 msgid ""
 "No information will be sent to the social network.\n"
-"                                            It will only be used to prefill "
-"the register form and import your avatar."
+"                                            It will only be used to prefill the register form and import your avatar."
 msgstr ""
 
 #: apps/sso/templates/sso/login.html:108 apps/sso/templates/sso/login.html:110
@@ -450,7 +438,7 @@ msgid "You have been signed out. Come back soon !"
 msgstr "Sie wurden erfolgreich abgemeldet. Bis bald!"
 
 #: apps/sso/templates/sso/logout.html:14
-#: apps/sso/templates/sso/register_done.html:39
+#: apps/sso/templates/sso/register_done.html:41
 #: apps/weckan/templates/home.html:4 templates/400.html:18
 #: templates/403.html:18 templates/404.html:20 templates/500.html:19
 #: templates/navbar.html:24
@@ -532,10 +520,8 @@ msgstr ""
 #: apps/sso/templates/sso/register.html:57
 msgid ""
 "I do understand that <a href=\"http://www.data.gouv.fr\">data.gouv.fr</a>\n"
-"                        values more the production and enrichment of "
-"datasets than definitive or partisan interpretations.\n"
-"                        It is the responsibility of the community of members "
-"to oversee the content it produces."
+"                        values more the production and enrichment of datasets than definitive or partisan interpretations.\n"
+"                        It is the responsibility of the community of members to oversee the content it produces."
 msgstr ""
 
 #: apps/sso/templates/sso/register.html:76
@@ -543,39 +529,36 @@ msgid "Sign up"
 msgstr "Neuen Account anmelden"
 
 #: apps/sso/templates/sso/register_done.html:12
-#, fuzzy
 msgid "Registration complete"
-msgstr "Registrierung abgeschlossen"
+msgstr ""
 
 #: apps/sso/templates/sso/register_done.html:14
 msgid ""
 "\n"
 "            Your registration is complete:\n"
-"            Your account has been activated and you can now use all user "
-"features.\n"
+"            Your account has been activated and you can now contribute by voting or publishing.\n"
 "            "
 msgstr ""
 
 #: apps/sso/templates/sso/register_done.html:19
 msgid ""
 "\n"
-"            You can start by joining your organization:\n"
+"            You can start by joining an existing organization or create a new one:\n"
 "            "
 msgstr ""
 
-#: apps/sso/templates/sso/register_done.html:29
-msgid "Search your organization"
+#: apps/sso/templates/sso/register_done.html:31
+msgid "Search an organization"
 msgstr ""
 
-#: apps/sso/templates/sso/register_done.html:33
+#: apps/sso/templates/sso/register_done.html:35
 msgid ""
 "\n"
-"            You can find all the organizations later by using the "
-"\"Publishers\" top menu.\n"
+"            You may find your organization later by navigating into the \"Publishers\" top menu.\n"
 "            "
 msgstr ""
 
-#: apps/sso/templates/sso/register_done.html:43
+#: apps/sso/templates/sso/register_done.html:45
 msgid "Continue your browsing"
 msgstr "Weiter surfen"
 
@@ -639,8 +622,7 @@ msgstr "Wiederverwendung veröffentlichen!"
 
 #: apps/weckan/templates/dataset.html:121
 msgid "This organization and its datasets are certified by data.gouv.fr"
-msgstr ""
-"Diese Organisation und ihre Datensätze sind zertifiziert von data.gouv.fr"
+msgstr "Diese Organisation und ihre Datensätze sind zertifiziert von data.gouv.fr"
 
 #: apps/weckan/templates/dataset.html:135
 msgid "more"
@@ -660,10 +642,7 @@ msgid ""
 "\n"
 "                            %(from)s to %(to)s\n"
 "                            "
-msgstr ""
-"\n"
-"%(from)s bis %(to)s\n"
-"                            "
+msgstr "\n%(from)s bis %(to)s\n                            "
 
 #: apps/weckan/templates/home.html:10
 msgid "Let's debate facts to make them undebatable"
@@ -771,9 +750,8 @@ msgid "Publishers"
 msgstr ""
 
 #: templates/footer.html:13 templates/navbar.html:29
-#, fuzzy
 msgid "Open Licence"
-msgstr "Freie Lizenz"
+msgstr ""
 
 #: templates/footer.html:16 templates/navbar.html:32
 msgid "Metrics"
@@ -833,9 +811,8 @@ msgid "Publish a dataset !"
 msgstr "Datensatz veröffentlichen!"
 
 #: templates/subnav-s.html:60
-#, fuzzy
 msgid "Publish !"
-msgstr "Veröffentlicht von"
+msgstr ""
 
 #: templates/admin/youckan/user/change_form.html:8
 msgid "Change user password"
@@ -844,12 +821,3 @@ msgstr ""
 #: templates/admin/youckan/user/change_form.html:13
 msgid "Reset password"
 msgstr ""
-
-#~ msgid "Advanced mode"
-#~ msgstr "Fortgeschrittenenmodus"
-
-#~ msgid "Public data"
-#~ msgstr "Öffentliche Daten"
-
-#~ msgid "Open license"
-#~ msgstr "Freie Lizenz"
