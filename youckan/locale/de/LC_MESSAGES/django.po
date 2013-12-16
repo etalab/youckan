@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: youckan\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-12-15 16:40+0100\n"
+"POT-Creation-Date: 2013-12-15 17:08+0100\n"
 "PO-Revision-Date: 2013-12-05 17:34+0000\n"
 "Last-Translator: noirbizarre\n"
 "Language-Team: German (http://www.transifex.com/projects/p/youckan/language/"
@@ -543,13 +543,14 @@ msgid "Sign up"
 msgstr "Neuen Account anmelden"
 
 #: apps/sso/templates/sso/register_done.html:12
-msgid "Registeration complete"
+#, fuzzy
+msgid "Registration complete"
 msgstr "Registrierung abgeschlossen"
 
 #: apps/sso/templates/sso/register_done.html:14
 msgid ""
 "\n"
-"            Your registeration is complete:\n"
+"            Your registration is complete:\n"
 "            Your account has been activated and you can now use all user "
 "features.\n"
 "            "
