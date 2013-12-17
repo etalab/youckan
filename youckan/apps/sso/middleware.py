@@ -39,7 +39,7 @@ class YouckanAuthCookieMiddleware(object):
                 response.set_cookie(self.logged_cookie_name, '', domain=self.domain, secure=False)
         elif not hasattr(request, 'user') or not request.user.is_authenticated():
             response.delete_cookie(self.cookie_name, domain=self.domain)
-            if settings.HTTPS:
+            if self.logged_cookie_name in request.COOKIES:
                 response.delete_cookie(self.logged_cookie_name, domain=self.domain)
         return response
 
