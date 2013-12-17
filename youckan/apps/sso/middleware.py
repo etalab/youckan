@@ -32,15 +32,24 @@ class YouckanAuthCookieMiddleware(object):
     def process_response(self, request, response):
         '''Set domain auth cookie if user is logged in else delete it if exists'''
         if hasattr(request, 'user') and request.user.is_authenticated():
-            content = signing.dumps(request.user.slug, salt=request.session.session_key)
+            session_key = request.session.session_key
+            content = signing.dumps(request.user.slug, salt=session_key)
             response.set_cookie(self.cookie_name, content, domain=self.domain, secure=settings.HTTPS)
+            if settings.HTTPS:
+                response.set_cookie(self.logged_cookie_name, '', domain=self.domain)
         elif not hasattr(request, 'user') or not request.user.is_authenticated():
             response.delete_cookie(self.cookie_name, domain=self.domain)
+            if settings.HTTPS:
+                response.delete_cookie(self.logged_cookie_name, domain=self.domain)
         return response
 
     @property
     def cookie_name(self):
         return getattr(settings, 'YOUCKAN_AUTH_COOKIE', 'youckan.auth')
+
+    @property
+    def logged_cookie_name(self):
+        return '{0}.logged'.format(self.cookie_name)
 
     @property
     def domain(self):
