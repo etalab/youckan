@@ -1,17 +1,20 @@
 # -*- coding: utf-8 -*-
 from django.core.urlresolvers import reverse_lazy
 
-from youckan.settings.common import conf, DEBUG
+from youckan.settings.common import conf, DEBUG, HTTPS
 from youckan.settings.etalab import HOME_URL, DOMAIN
-
 
 SESSION_COOKIE_DOMAIN = '.{0}'.format(DOMAIN)
 SESSION_COOKIE_NAME = 'youckan.session'
 
+# SESSION_SERIALIZER = 'redis_sessions_fork.serializers.UjsonSerializer',
 SESSION_SERIALIZER = 'django.contrib.sessions.serializers.PickleSerializer'
-SESSION_ENGINE = 'redis_sessions.session'
+SESSION_ENGINE = 'redis_sessions_fork.session'
+SESSION_REDIS_PREFIX = 'session'
 # TODO: tune redis config
 
+
+CSRF_COOKIE_SECURE = HTTPS
 
 AUTH_USER_MODEL = 'youckan.User'
 

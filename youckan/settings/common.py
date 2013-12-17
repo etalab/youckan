@@ -46,6 +46,8 @@ TESTING = 'test' in sys.argv
 DEBUG = TESTING or conf['site']['debug'] == 'true'
 TEMPLATE_DEBUG = DEBUG
 
+HTTPS = conf['site']['https'] == 'true'
+
 if conf['site'].get('admins'):
     ADMINS = [row.split(',') for row in conf['site']['admins'].split('\n') if row]
 else:
