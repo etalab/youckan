@@ -36,7 +36,7 @@ class YouckanAuthCookieMiddleware(object):
             content = signing.dumps(request.user.slug, salt=session_key)
             response.set_cookie(self.cookie_name, content, domain=self.domain, secure=settings.HTTPS)
             if settings.HTTPS:
-                response.set_cookie(self.logged_cookie_name, '', domain=self.domain)
+                response.set_cookie(self.logged_cookie_name, '', domain=self.domain, secure=False)
         elif not hasattr(request, 'user') or not request.user.is_authenticated():
             response.delete_cookie(self.cookie_name, domain=self.domain)
             if settings.HTTPS:
