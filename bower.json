@@ -20,8 +20,7 @@
     "tests"
   ],
   "resolutions": {
-    "jquery": "~2.0.3",
-    "bootstrap-select": "~1.4.1"
+    "jquery": "~2.0.3"
   },
   "dependencies": {
     "etalab-assets": "~0.2.52",
