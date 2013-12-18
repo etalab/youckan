@@ -103,6 +103,21 @@
                                     </p>
                                 </div>
                             </div>
+
+                            <div class="form-group">
+                                <div class="col-md-12">
+                                    <a href="{% url "social:complete" "no-social" %}" class="btn btn-primary btn-block btn-lg">
+                                        {% trans "Create an account" %}
+                                    </a>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <div class="col-md-12">
+                                  <p class="form-control-static text-center">{% trans "-- or --" %}</p>
+                                </div>
+                            </div>
+
                             <div class="social-providers-list text-center">
                                 <a rel="nofollow" href="{% url "social:begin" "google-oauth2" %}"
                                     alt="{% blocktrans with name="Google" %}Sign up with {{name}}{% endblocktrans %}">
@@ -122,20 +137,6 @@
                                         alt="{% blocktrans with name="Linkedin" %}Sign up with {{name}}{% endblocktrans %}"
                                     >
                                 </a>
-                            </div>
-
-                            <div class="form-group">
-                                <div class="col-md-12">
-                                  <p class="form-control-static text-center">{% trans "-- or --" %}</p>
-                                </div>
-                            </div>
-
-                            <div class="form-group">
-                                <div class="col-md-12">
-                                    <a href="{% url "social:complete" "no-social" %}" class="btn btn-primary btn-block">
-                                        {% trans "Create an account" %}
-                                    </a>
-                                </div>
                             </div>
                         </fieldset>
                     </form>
