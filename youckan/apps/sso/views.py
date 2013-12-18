@@ -66,6 +66,8 @@ def login(request, current_app=None, extra_context=None, *args, **kwargs):
 
             return HttpResponseRedirect(redirect_to)
     else:
+        if request.user.is_authenticated() and redirect_to:
+            return HttpResponseRedirect(redirect_to)
         form = LoginForm(request)
         request.session.pop('partial_pipeline', None)
         request.session[REDIRECT_FIELD_NAME] = redirect_to
