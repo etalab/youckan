@@ -92,20 +92,6 @@
                             {# {% if backends.backends %} #}
                             <div class="form-group">
                                 <div class="col-md-12">
-                                    <p class="form-control-static text-center">
-                                        {% trans "Sign up a with social account" %}
-                                        <span class="glyphicon glyphicon-question-sign"
-                                            rel="popover" data-trigger="hover" data-placement="top"
-                                            data-title="{{ _('Privacy') }}"
-                                            data-content="{% blocktrans %}No information will be sent to the social network.
-                                            It will only be used to prefill the register form and import your avatar.{% endblocktrans %}"
-                                            ></span>
-                                    </p>
-                                </div>
-                            </div>
-
-                            <div class="form-group">
-                                <div class="col-md-12">
                                     <a href="{% url "social:complete" "no-social" %}" class="btn btn-primary btn-block btn-lg">
                                         {% trans "Create an account" %}
                                     </a>
@@ -115,6 +101,20 @@
                             <div class="form-group">
                                 <div class="col-md-12">
                                   <p class="form-control-static text-center">{% trans "-- or --" %}</p>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <div class="col-md-12">
+                                    <p class="form-control-static text-center">
+                                        {% trans "Sign up a with social account" %}
+                                        <span class="glyphicon glyphicon-question-sign"
+                                            rel="popover" data-trigger="hover" data-placement="top"
+                                            data-title="{{ _('Privacy') }}"
+                                            data-content="{% blocktrans %}No information will be sent to the social network.
+                                            It will only be used to prefill the register form and import your avatar.{% endblocktrans %}"
+                                            ></span>
+                                    </p>
                                 </div>
                             </div>
 
