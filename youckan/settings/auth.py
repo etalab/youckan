@@ -33,16 +33,17 @@ LOGIN_ERROR_URL = reverse_lazy('login')
 LOGIN_URL = reverse_lazy('login')
 
 SOCIAL_AUTH_USERNAME_IS_FULL_EMAIL = True
-SOCIAL_AUTH_FORCE_EMAIL_VALIDATION = True
+# SOCIAL_AUTH_FORCE_EMAIL_VALIDATION = True
 SOCIAL_AUTH_SANITIZE_REDIRECTS = False
 
-SOCIAL_AUTH_EMAIL_VALIDATION_FUNCTION = 'youckan.apps.sso.mail.send_validation'
-SOCIAL_AUTH_EMAIL_VALIDATION_URL = reverse_lazy('register-mail')
+# SOCIAL_AUTH_EMAIL_VALIDATION_FUNCTION = 'youckan.apps.sso.mail.send_validation'
+# SOCIAL_AUTH_EMAIL_VALIDATION_URL = reverse_lazy('register-mail')
 
 # SOCIAL_AUTH_REDIRECT_IS_HTTPS = True
 
 # Used to redirect new registered users, will be used in place of SOCIAL_AUTH_LOGIN_REDIRECT_URL if defined.
-SOCIAL_AUTH_NEW_USER_REDIRECT_URL = reverse_lazy('register-done')
+# SOCIAL_AUTH_NEW_USER_REDIRECT_URL = reverse_lazy('register-mail')
+SOCIAL_AUTH_INACTIVE_USER_URL = reverse_lazy('register-mail')
 # Like SOCIAL_AUTH_NEW_USER_REDIRECT_URL but for new associated accounts (user is already logged in).
 # Used in place of SOCIAL_AUTH_LOGIN_REDIRECT_URL
 # SOCIAL_AUTH_NEW_ASSOCIATION_REDIRECT_URL = '/new-association-redirect-url/'
@@ -84,16 +85,13 @@ SOCIAL_AUTH_PIPELINE = (
     'social.pipeline.social_auth.social_user',
     'youckan.apps.sso.pipeline.new_registeration_only',
     'social.pipeline.user.get_username',
-    # 'social.pipeline.user.create_user',
-    # 'social.pipeline.user.user_details'
     'youckan.apps.sso.pipeline.get_avatar_url',
     'youckan.apps.sso.pipeline.register_form',
     'youckan.apps.sso.pipeline.fix_no_social_auth',
-    'social.pipeline.mail.mail_validation',
     'social.pipeline.social_auth.associate_user',
     'social.pipeline.social_auth.load_extra_data',
     'youckan.apps.sso.pipeline.fetch_avatar',
-    'youckan.apps.sso.pipeline.activate_user',
+    'youckan.apps.sso.pipeline.prepare_mail_validation',
 )
 
 OAUTH2_PROVIDER = {

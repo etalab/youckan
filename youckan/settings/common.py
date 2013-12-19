@@ -183,6 +183,7 @@ THIRD_PARTY_APPS = (
     'django_gravatar',
     'awesome_avatar',
     # 'avatar',
+    'simple_email_confirmation',
     'social.apps.django_app.default',
     'oauth2_provider',
     'corsheaders',

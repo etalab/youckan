@@ -12,7 +12,11 @@ from django.utils.translation import ugettext_lazy as _
 
 from autoslug.fields import AutoSlugField
 from awesome_avatar.fields import AvatarField
+from simple_email_confirmation.models import SimpleEmailConfirmationUserMixin
+from simple_email_confirmation.signals import email_confirmed, unconfirmed_email_created
 from south.modelsinspector import add_introspection_rules
+
+from youckan.apps.sso import mail
 
 
 def avatar_file_name(user, filename):
@@ -46,7 +50,7 @@ class UserManager(BaseUserManager):
         return user
 
 
-class User(AbstractBaseUser, PermissionsMixin):
+class User(SimpleEmailConfirmationUserMixin, PermissionsMixin, AbstractBaseUser):
     email = models.EmailField(_('email'), max_length=150, unique=True, db_index=True)
     first_name = models.CharField(_('first name'), max_length=64)
     last_name = models.CharField(_('last name'), max_length=64)
@@ -102,6 +106,19 @@ class UserProfile(models.Model):
 def create_user_profile(sender, instance, created, **kwargs):
     if created:
         UserProfile.objects.create(user=instance)
+
+
+@receiver(unconfirmed_email_created)
+def send_validation_mail(sender, email, **kwargs):
+    mail.send_validation(sender)
+
+
+@receiver(email_confirmed)
+def send_confirmation_mail(sender, email, **kwargs):
+    if sender.email == email and not sender.is_active:
+        sender.is_active = True
+        sender.save()
+        mail.send_confirmation(sender)
 
 
 add_introspection_rules([

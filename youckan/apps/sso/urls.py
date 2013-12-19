@@ -1,6 +1,7 @@
 from django.conf.urls import patterns, include, url
 
-from youckan.apps.sso.views import RegisterView, RegisterMailView, RegisterDoneView, login, OAuthAuthorizationView
+from youckan.apps.sso.views import RegisterView, RegisterMailView, RegisterDoneView, RegisterConfirmView
+from youckan.apps.sso.views import login, OAuthAuthorizationView
 from oauth2_provider.views import TokenView
 
 urlpatterns = patterns('',
@@ -9,6 +10,7 @@ urlpatterns = patterns('',
 
     url(r'^register/$', RegisterView.as_view(), name='register'),
     url(r'^register/mail/$', RegisterMailView.as_view(), name='register-mail'),
+    url(r'^register/mail/(?P<key>[\w\d_-]+)/$', RegisterConfirmView.as_view(), name='register-confirm'),
     url(r'^register/done/$', RegisterDoneView.as_view(), name='register-done'),
 
     url(r'^oauth2/authorize/$', OAuthAuthorizationView.as_view(), name="authorize"),

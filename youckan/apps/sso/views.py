@@ -14,11 +14,13 @@ from django.template.response import TemplateResponse
 from django.views.decorators.cache import never_cache
 from django.views.decorators.csrf import csrf_protect
 from django.views.decorators.debug import sensitive_post_parameters
-from django.views.generic import TemplateView, CreateView
+from django.views.generic import TemplateView, CreateView, RedirectView
 
 from oauth2_provider.exceptions import OAuthToolkitError
 from oauth2_provider.models import get_application_model
 from oauth2_provider.views import AuthorizationView
+
+from simple_email_confirmation.models import EmailAddress
 
 from youckan.apps.sso.forms import LoginForm, RegisterForm
 
@@ -133,6 +135,14 @@ class RegisterMailView(TemplateView):
         context = super(RegisterMailView, self).get_context_data(**kwargs)
         context['email'] = self.request.session.get('email_validation_address')
         return context
+
+
+class RegisterConfirmView(RedirectView):
+    pattern_name = 'register-done'
+
+    def get(self, request, key, *args, **kwargs):
+        EmailAddress.objects.confirm(key)
+        return super(RegisterConfirmView, self).get(request, *args, **kwargs)
 
 
 class OAuthAuthorizationView(AuthorizationView):

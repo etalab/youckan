@@ -3,6 +3,7 @@ from __future__ import unicode_literals
 
 from django.conf import settings
 from django.contrib.auth.tokens import default_token_generator
+from django.contrib.sites.models import Site
 from django.core.mail import EmailMultiAlternatives
 from django.core.mail import send_mail
 from django.core.urlresolvers import reverse
@@ -12,30 +13,33 @@ from django.utils.http import urlsafe_base64_encode
 from django.utils.translation import ugettext as _
 
 
-def send_validation(strategy, code):
-    url = strategy.build_absolute_uri('?'.join([
-        reverse('social:complete', args=[strategy.backend.name]),
-        'verification_code={0}'.format(code.code)
-    ]))
-    user = strategy.storage.user.get_users_by_email(code.email)[0]
+def absolute_url(name, *args, **kwargs):
+    return "{protocol}://{domain}{path}".format(
+        protocol='https' if settings.HTTPS else 'http',
+        domain=Site.objects.get_current().domain,
+        path=reverse(name, args=args, kwargs=kwargs)
+    )
+
+
+def send_validation(user):
+    url = absolute_url('register-confirm', key=user.confirmation_key)
 
     template = loader.get_template('mails/validation.html')
     context = Context({
         'url': url,
-        'code': code,
         'user': user,
     })
 
     email = EmailMultiAlternatives(_('Validate your account'),
         _('Validate your account {0}').format(url),
-        to=[code.email]
+        to=[user.email]
     )
     email.attach_alternative(template.render(context), 'text/html')
     email.send(fail_silently=False)
 
 
-def send_confirmation(strategy, user):
-    profile_url = strategy.build_absolute_uri(user.get_absolute_url())
+def send_confirmation(user):
+    profile_url = absolute_url('profile', slug=user.slug)
     template = loader.get_template('mails/confirmation.html')
     context = Context({
         'user': user,

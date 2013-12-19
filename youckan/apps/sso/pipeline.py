@@ -84,6 +84,10 @@ def fetch_avatar(request, backend, user, avatar_url=None, *args, **kwargs):
     user.profile.avatar.save(filename, content, save=True)
 
 
+def prepare_mail_validation(strategy, user, *args, **kwargs):
+    strategy.session_set('email_validation_address', user.email)
+
+
 def activate_user(strategy, user, *args, **kwargs):
     '''Activate the user and send a confirmation email'''
     if not user:
