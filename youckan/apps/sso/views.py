@@ -141,7 +141,10 @@ class RegisterConfirmView(RedirectView):
     pattern_name = 'register-done'
 
     def get(self, request, key, *args, **kwargs):
-        EmailAddress.objects.confirm(key)
+        address = EmailAddress.objects.confirm(key)
+        user = address.user
+        user.backend = 'django.contrib.auth.backends.ModelBackend'
+        auth_login(request, user)
         return super(RegisterConfirmView, self).get(request, *args, **kwargs)
 
 
