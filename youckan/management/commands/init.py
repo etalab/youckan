@@ -17,4 +17,4 @@ class Command(NoArgsCommand):
     def handle(self, *args, **options):
         call_command('syncdb', **options)
         call_command('migrate', **options)
-        call_command('collectstatic', **options)
+        call_command('collectstatic', clear=True, **options)
