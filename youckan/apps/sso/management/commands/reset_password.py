@@ -20,22 +20,6 @@ class Command(BaseCommand):
             default=False,
             help='Update CKAN users to match imported users'
         ),
-        make_option('-s', '--https',
-            action='store_true',
-            dest='https',
-            help='Use HTTPS'
-        ),
-        make_option('-d', '--domain',
-            action='store',
-            dest='domain',
-            help='Domain name to use'
-        ),
-        make_option('--site',
-            action='store',
-            dest='site',
-            default='Etalab2.fr',
-            help='Site name to use'
-        ),
     )
 
     def handle(self, *args, **options):
@@ -45,17 +29,9 @@ class Command(BaseCommand):
         if options['all']:
             for user in User.objects.all():
                 self.stdout.write('Sending reset password mail to {0}'.format(user.email))
-                mail.reset_password(user,
-                    use_https=options['https'],
-                    domain=options['domain'],
-                    site=options['site'],
-                )
+                mail.reset_password(user)
         else:
             email = args[0]
             user = User.objects.get(email=email)
             self.stdout.write('Sending reset password mail to {0}'.format(user.email))
-            mail.reset_password(user,
-                use_https=options['https'],
-                domain=options['domain'],
-                site=options['site'],
-            )
+            mail.reset_password(user)

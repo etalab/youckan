@@ -28,23 +28,6 @@ class Command(BaseCommand):
             default=False,
             help='Update CKAN users to match imported users'
         ),
-        make_option('-s', '--https',
-            action='store_true',
-            dest='update',
-            default=False,
-            help='Update CKAN users to match imported users'
-        ),
-        make_option('-d', '--domain',
-            action='store',
-            dest='domain',
-            help='Domain name to use'
-        ),
-        make_option('--site',
-            action='store',
-            dest='site',
-            default='Etalab2.fr',
-            help='Site name to use'
-        ),
     )
 
     def handle(self, *args, **options):
@@ -69,11 +52,7 @@ class Command(BaseCommand):
                 self.update_ckan_user(user, ckan_id)
             if notify:
                 self.stdout.write('Sending reset password mail to {0}'.format(user.email))
-                mail.reset_password(user,
-                    use_https=options['https'],
-                    domain=options['domain'],
-                    site=options['site'],
-                )
+                mail.reset_password(user)
 
     def create_user(self, userdata):
         fullname = userdata['fullname']

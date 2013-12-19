@@ -54,20 +54,19 @@ def send_confirmation(user):
     email.send(fail_silently=False)
 
 
-def reset_password(user, use_https=False, domain='youckan.org', site='YouCKAN',
-    subject_template_name='registration/password_reset_subject.txt',
-    email_template_name='registration/password_reset_email.html'):
+def reset_password(user):
+    site = Site.objects.get_current()
     context = {
         'email': user.email,
-        'domain': domain,
-        'site_name': site,
+        'domain': site.domain,
+        'site_name': site.name,
         'uid': urlsafe_base64_encode(force_bytes(user.pk)),
         'user': user,
         'token': default_token_generator.make_token(user),
-        'protocol': 'https' if use_https else 'http',
+        'protocol': 'https' if settings.HTTPS else 'http',
     }
-    subject = loader.render_to_string(subject_template_name, context)
+    subject = loader.render_to_string('registration/password_reset_subject.txt', context)
     # Email subject *must not* contain newlines
     subject = ''.join(subject.splitlines())
-    email = loader.render_to_string(email_template_name, context)
+    email = loader.render_to_string('registration/password_reset_email.html', context)
     send_mail(subject, email, settings.DEFAULT_FROM_EMAIL, [user.email])
