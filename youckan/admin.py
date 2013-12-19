@@ -68,7 +68,7 @@ class UserAdmin(DjangoUserAdmin):
     # The fields to be used in displaying the User model.
     # These override the definitions on the base UserAdmin
     # that reference specific fields on auth.User.
-    list_display = ('email', 'first_name', 'last_name', 'is_superuser', 'is_staff', 'is_active')
+    list_display = ('email', 'first_name', 'last_name', 'is_superuser', 'is_staff', 'is_active', 'email_confirmed')
     list_filter = ('is_superuser', 'is_staff', 'is_active')
     fieldsets = (
         (None, {'fields': ('email', 'password')}),
@@ -86,6 +86,11 @@ class UserAdmin(DjangoUserAdmin):
     search_fields = ('email', 'first_name', 'last_name')
     ordering = ('email',)
     filter_horizontal = ()
+
+    def email_confirmed(self, user):
+        return user.is_confirmed
+    email_confirmed.boolean = True
+    email_confirmed.short_description = _('Email confirmed')
 
     def reset_password(self, request, user_id):
         if not self.has_change_permission(request):
