@@ -13,6 +13,8 @@ log = logging.getLogger(__name__)
 class YouckanAuthCookieMiddleware(object):
     def process_request(self, request):
         '''Verify cookie signature and logout if it doesn't match'''
+        if not hasattr(request, 'session'):
+            return  # A redirect occured and request.user is not set
         if self.cookie_name not in request.COOKIES:
             return
         cookie = request.COOKIES[self.cookie_name]
@@ -31,6 +33,8 @@ class YouckanAuthCookieMiddleware(object):
 
     def process_response(self, request, response):
         '''Set domain auth cookie if user is logged in else delete it if exists'''
+        if not hasattr(request, 'session'):
+            return response  # A redirect occured and request.user is not set
         if hasattr(request, 'user') and request.user.is_authenticated():
             session_key = request.session.session_key
             content = signing.dumps(request.user.slug, salt=session_key)
