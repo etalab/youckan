@@ -74,6 +74,7 @@ setup(
     tests_require=tests_require,
     extras_require={
         'test': tests_require,
+        'sentry': ['raven'],
     },
     entry_points={
         'console_scripts': [

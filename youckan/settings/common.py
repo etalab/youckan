@@ -191,6 +191,15 @@ THIRD_PARTY_APPS = (
     'suit',
 )
 
+# Sentry configuration
+if 'sentry' in conf:
+    THIRD_PARTY_APPS = THIRD_PARTY_APPS + (
+        'raven.contrib.django.raven_compat',
+    )
+    RAVEN_CONFIG = {
+        'dsn': conf['sentry']['dsn'],
+    }
+
 DJANGO_APPS = (
     'django.contrib.auth',
     'django.contrib.contenttypes',
