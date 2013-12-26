@@ -10,8 +10,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: youckan\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-12-16 11:22+0100\n"
-"PO-Revision-Date: 2013-12-16 10:25+0000\n"
+"POT-Creation-Date: 2013-12-26 02:40+0100\n"
+"PO-Revision-Date: 2013-12-26 01:44+0000\n"
 "Last-Translator: noirbizarre\n"
 "Language-Team: French (http://www.transifex.com/projects/p/youckan/language/fr/)\n"
 "MIME-Version: 1.0\n"
@@ -28,73 +28,77 @@ msgstr "Informations personnelles"
 msgid "Permissions"
 msgstr "Permissions"
 
-#: admin.py:100
+#: admin.py:93
+msgid "Email confirmed"
+msgstr "Adresse email confirmée"
+
+#: admin.py:105
 msgid "A reset password mail has been sent."
 msgstr "Un mail de réinitialisation du mot de passe a été envoyé."
 
-#: models.py:50
+#: models.py:52
 msgid "email"
 msgstr "email"
 
-#: models.py:51
+#: models.py:53
 msgid "first name"
 msgstr "prénom"
 
-#: models.py:52
+#: models.py:54
 msgid "last name"
 msgstr "nom"
 
-#: models.py:53
+#: models.py:55
 msgid "staff status"
 msgstr "status staff"
 
-#: models.py:54
+#: models.py:56
 msgid "Designates whether the user can log into this admin site."
 msgstr "Précise si l'utilisateur peut se connecter à ce site d'administration."
 
-#: models.py:55
+#: models.py:57
 msgid "active"
 msgstr "actif"
 
-#: models.py:56
+#: models.py:58
 msgid ""
 "Designates whether this user should be treated as active. Unselect this "
 "instead of deleting accounts."
 msgstr "Précise si cet utilisateur doit-être considéré comme actif. Désélectionnez cette option au lieu de supprimer des comptes."
 
-#: models.py:58
+#: models.py:60
 msgid "date joined"
 msgstr "date d'inscription"
 
-#: models.py:69
+#: models.py:71
 msgid "user"
 msgstr "utilisateur"
 
-#: models.py:70
+#: models.py:72
 msgid "users"
 msgstr "utilisateurs"
 
-#: models.py:88
+#: models.py:90
 msgid "avatar"
 msgstr "avatar"
 
-#: models.py:89
+#: models.py:91
 msgid "city"
 msgstr "ville"
 
-#: models.py:90
+#: models.py:92
 msgid "about"
 msgstr "à propos"
 
-#: models.py:91
+#: models.py:93
 msgid "website"
 msgstr "site web"
 
-#: models.py:94
+#: models.py:96
 msgid "user profile"
 msgstr "profil utilisateur"
 
-#: models.py:95
+#: models.py:97
 msgid "user profiles"
 msgstr "profils utilisateurs"
 
@@ -305,32 +309,32 @@ msgstr "Confirmation du mot de passe"
 msgid "Passwords don't match"
 msgstr "Les mots de passe ne correspondent pas"
 
-#: apps/sso/mail.py:29
+#: apps/sso/mail.py:33
 msgid "Validate your account"
 msgstr "Validez votre compte"
 
-#: apps/sso/mail.py:30
+#: apps/sso/mail.py:34
 #, python-brace-format
 msgid "Validate your account {0}"
 msgstr "Validez votre compte {0}"
 
-#: apps/sso/mail.py:45
+#: apps/sso/mail.py:49
 msgid "Account creation confirmation"
 msgstr "Confirmation de création de compte"
 
-#: apps/sso/mail.py:46
+#: apps/sso/mail.py:50
 msgid "Your account has been created"
 msgstr "Votre compte a été créé"
 
-#: apps/sso/models.py:13
+#: apps/sso/models.py:18
 msgid "Is an internal application"
 msgstr "Est une application interne"
 
-#: apps/sso/models.py:16
+#: apps/sso/models.py:21
 msgid "OAuth2 Application"
 msgstr "Application OAuth2"
 
-#: apps/sso/models.py:17
+#: apps/sso/models.py:22
 msgid "OAuth2 Applications"
 msgstr "Applications OAuth2"
 
@@ -404,33 +408,33 @@ msgid "Sign Up"
 msgstr "Inscription"
 
 #: apps/sso/templates/sso/login.html:96
+msgid "Create an account"
+msgstr "Créer un compte"
+
+#: apps/sso/templates/sso/login.html:103
+msgid "-- or --"
+msgstr "-- ou --"
+
+#: apps/sso/templates/sso/login.html:110
 msgid "Sign up a with social account"
 msgstr "S'inscrire par un réseau social"
 
-#: apps/sso/templates/sso/login.html:99
+#: apps/sso/templates/sso/login.html:113
 msgid "Privacy"
 msgstr "Vie privée"
 
-#: apps/sso/templates/sso/login.html:100
+#: apps/sso/templates/sso/login.html:114
 msgid ""
 "No information will be sent to the social network.\n"
 "                                            It will only be used to prefill the register form and import your avatar."
 msgstr "Aucune information ne sera transmise au réseau social.\nCela ne servira qu'à préremplir le formulaire d'enregistrement et importer votre avatar."
 
-#: apps/sso/templates/sso/login.html:108 apps/sso/templates/sso/login.html:110
-#: apps/sso/templates/sso/login.html:114 apps/sso/templates/sso/login.html:116
-#: apps/sso/templates/sso/login.html:120 apps/sso/templates/sso/login.html:122
+#: apps/sso/templates/sso/login.html:123 apps/sso/templates/sso/login.html:125
+#: apps/sso/templates/sso/login.html:129 apps/sso/templates/sso/login.html:131
+#: apps/sso/templates/sso/login.html:135 apps/sso/templates/sso/login.html:137
 #, python-format
 msgid "Sign up with %(name)s"
 msgstr "S'inscrire par %(name)s"
-
-#: apps/sso/templates/sso/login.html:129
-msgid "-- or --"
-msgstr "-- ou --"
-
-#: apps/sso/templates/sso/login.html:136
-msgid "Create an account"
-msgstr "Créer un compte"
 
 #: apps/sso/templates/sso/logout.html:12
 msgid "You have been signed out. Come back soon !"
@@ -439,7 +443,7 @@ msgstr "Vous avez été déconnecté. Revenez vite !"
 #: apps/sso/templates/sso/logout.html:14
 #: apps/sso/templates/sso/register_done.html:41
 #: apps/weckan/templates/home.html:4 templates/400.html:18
-#: templates/403.html:18 templates/404.html:20 templates/500.html:19
+#: templates/403.html:18 templates/404.html:20 templates/500.html:26
 #: templates/navbar.html:24
 msgid "Home"
 msgstr "Accueil"
@@ -667,19 +671,19 @@ msgstr "Services publics"
 msgid "Businesses"
 msgstr "Entreprises"
 
-#: settings/common.py:222
+#: settings/common.py:234
 msgid "Authentication"
 msgstr "Authentification"
 
-#: settings/common.py:226
+#: settings/common.py:238
 msgid "OAuth2"
 msgstr "OAuth2"
 
-#: settings/common.py:232
+#: settings/common.py:244
 msgid "Social"
 msgstr "Social"
 
-#: settings/common.py:237
+#: settings/common.py:249
 msgid "Tasks"
 msgstr "Tâches"
 
@@ -735,6 +739,14 @@ msgstr "Une erreur est survenue pendant le traitement de cette requête."
 #: templates/500.html:15
 msgid "The administrator have been notified"
 msgstr "Les administrateurs ont été avertis"
+
+#: templates/500.html:18
+#, python-format
+msgid ""
+"If you need assistance,\n"
+"                you may reference this error as <strong>%(sentry_id)s</strong>.\n"
+"                "
+msgstr "Si vous avez besoin d'assistance,\nvous pouvez faire référence à cette erreur par <strong>%(sentry_id)s</strong>."
 
 #: templates/footer.html:7
 msgid "The Open Data"

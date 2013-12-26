@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-12-16 11:22+0100\n"
+"POT-Creation-Date: 2013-12-26 02:40+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -25,73 +25,77 @@ msgstr ""
 msgid "Permissions"
 msgstr ""
 
-#: admin.py:100
+#: admin.py:93
+msgid "Email confirmed"
+msgstr ""
+
+#: admin.py:105
 msgid "A reset password mail has been sent."
 msgstr ""
 
-#: models.py:50
+#: models.py:52
 msgid "email"
 msgstr ""
 
-#: models.py:51
+#: models.py:53
 msgid "first name"
 msgstr ""
 
-#: models.py:52
+#: models.py:54
 msgid "last name"
 msgstr ""
 
-#: models.py:53
+#: models.py:55
 msgid "staff status"
 msgstr ""
 
-#: models.py:54
+#: models.py:56
 msgid "Designates whether the user can log into this admin site."
 msgstr ""
 
-#: models.py:55
+#: models.py:57
 msgid "active"
 msgstr ""
 
-#: models.py:56
+#: models.py:58
 msgid ""
 "Designates whether this user should be treated as active. Unselect this "
 "instead of deleting accounts."
 msgstr ""
 
-#: models.py:58
+#: models.py:60
 msgid "date joined"
 msgstr ""
 
-#: models.py:69
+#: models.py:71
 msgid "user"
 msgstr ""
 
-#: models.py:70
+#: models.py:72
 msgid "users"
 msgstr ""
 
-#: models.py:88
+#: models.py:90
 msgid "avatar"
 msgstr ""
 
-#: models.py:89
+#: models.py:91
 msgid "city"
 msgstr ""
 
-#: models.py:90
+#: models.py:92
 msgid "about"
 msgstr ""
 
-#: models.py:91
+#: models.py:93
 msgid "website"
 msgstr ""
 
-#: models.py:94
+#: models.py:96
 msgid "user profile"
 msgstr ""
 
-#: models.py:95
+#: models.py:97
 msgid "user profiles"
 msgstr ""
 
@@ -302,32 +306,32 @@ msgstr ""
 msgid "Passwords don't match"
 msgstr ""
 
-#: apps/sso/mail.py:29
+#: apps/sso/mail.py:33
 msgid "Validate your account"
 msgstr ""
 
-#: apps/sso/mail.py:30
+#: apps/sso/mail.py:34
 #, python-brace-format
 msgid "Validate your account {0}"
 msgstr ""
 
-#: apps/sso/mail.py:45
+#: apps/sso/mail.py:49
 msgid "Account creation confirmation"
 msgstr ""
 
-#: apps/sso/mail.py:46
+#: apps/sso/mail.py:50
 msgid "Your account has been created"
 msgstr ""
 
-#: apps/sso/models.py:13
+#: apps/sso/models.py:18
 msgid "Is an internal application"
 msgstr ""
 
-#: apps/sso/models.py:16
+#: apps/sso/models.py:21
 msgid "OAuth2 Application"
 msgstr ""
 
-#: apps/sso/models.py:17
+#: apps/sso/models.py:22
 msgid "OAuth2 Applications"
 msgstr ""
 
@@ -401,33 +405,33 @@ msgid "Sign Up"
 msgstr ""
 
 #: apps/sso/templates/sso/login.html:96
+msgid "Create an account"
+msgstr ""
+
+#: apps/sso/templates/sso/login.html:103
+msgid "-- or --"
+msgstr ""
+
+#: apps/sso/templates/sso/login.html:110
 msgid "Sign up a with social account"
 msgstr ""
 
-#: apps/sso/templates/sso/login.html:99
+#: apps/sso/templates/sso/login.html:113
 msgid "Privacy"
 msgstr ""
 
-#: apps/sso/templates/sso/login.html:100
+#: apps/sso/templates/sso/login.html:114
 msgid ""
 "No information will be sent to the social network.\n"
 "                                            It will only be used to prefill "
 "the register form and import your avatar."
 msgstr ""
 
-#: apps/sso/templates/sso/login.html:108 apps/sso/templates/sso/login.html:110
-#: apps/sso/templates/sso/login.html:114 apps/sso/templates/sso/login.html:116
-#: apps/sso/templates/sso/login.html:120 apps/sso/templates/sso/login.html:122
+#: apps/sso/templates/sso/login.html:123 apps/sso/templates/sso/login.html:125
+#: apps/sso/templates/sso/login.html:129 apps/sso/templates/sso/login.html:131
+#: apps/sso/templates/sso/login.html:135 apps/sso/templates/sso/login.html:137
 #, python-format
 msgid "Sign up with %(name)s"
-msgstr ""
-
-#: apps/sso/templates/sso/login.html:129
-msgid "-- or --"
-msgstr ""
-
-#: apps/sso/templates/sso/login.html:136
-msgid "Create an account"
 msgstr ""
 
 #: apps/sso/templates/sso/logout.html:12
@@ -437,7 +441,7 @@ msgstr ""
 #: apps/sso/templates/sso/logout.html:14
 #: apps/sso/templates/sso/register_done.html:41
 #: apps/weckan/templates/home.html:4 templates/400.html:18
-#: templates/403.html:18 templates/404.html:20 templates/500.html:19
+#: templates/403.html:18 templates/404.html:20 templates/500.html:26
 #: templates/navbar.html:24
 msgid "Home"
 msgstr ""
@@ -670,19 +674,19 @@ msgstr ""
 msgid "Businesses"
 msgstr ""
 
-#: settings/common.py:222
+#: settings/common.py:234
 msgid "Authentication"
 msgstr ""
 
-#: settings/common.py:226
+#: settings/common.py:238
 msgid "OAuth2"
 msgstr ""
 
-#: settings/common.py:232
+#: settings/common.py:244
 msgid "Social"
 msgstr ""
 
-#: settings/common.py:237
+#: settings/common.py:249
 msgid "Tasks"
 msgstr ""
 
@@ -737,6 +741,15 @@ msgstr ""
 
 #: templates/500.html:15
 msgid "The administrator have been notified"
+msgstr ""
+
+#: templates/500.html:18
+#, python-format
+msgid ""
+"If you need assistance,\n"
+"                you may reference this error as <strong>%(sentry_id)s</"
+"strong>.\n"
+"                "
 msgstr ""
 
 #: templates/footer.html:7

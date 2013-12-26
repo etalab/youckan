@@ -11,8 +11,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: youckan\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-12-16 11:22+0100\n"
-"PO-Revision-Date: 2013-12-16 10:23+0000\n"
+"POT-Creation-Date: 2013-12-26 02:40+0100\n"
+"PO-Revision-Date: 2013-12-26 01:41+0000\n"
 "Last-Translator: noirbizarre\n"
 "Language-Team: German (http://www.transifex.com/projects/p/youckan/language/de/)\n"
 "MIME-Version: 1.0\n"
@@ -29,73 +29,77 @@ msgstr "Profil"
 msgid "Permissions"
 msgstr "Rechte"
 
-#: admin.py:100
+#: admin.py:93
+msgid "Email confirmed"
+msgstr ""
+
+#: admin.py:105
 msgid "A reset password mail has been sent."
 msgstr ""
 
-#: models.py:50
+#: models.py:52
 msgid "email"
 msgstr "Mailadresse"
 
-#: models.py:51
+#: models.py:53
 msgid "first name"
 msgstr "Vorname"
 
-#: models.py:52
+#: models.py:54
 msgid "last name"
 msgstr "Nachname"
 
-#: models.py:53
+#: models.py:55
 msgid "staff status"
 msgstr "Status"
 
-#: models.py:54
+#: models.py:56
 msgid "Designates whether the user can log into this admin site."
 msgstr "Legt fest, ob der Nutzer sich auf der Adminseite anmelden kann."
 
-#: models.py:55
+#: models.py:57
 msgid "active"
 msgstr "Aktiv"
 
-#: models.py:56
+#: models.py:58
 msgid ""
 "Designates whether this user should be treated as active. Unselect this "
 "instead of deleting accounts."
 msgstr "Legt fest, ob der Nutzeraccount aktiv ist. Deaktivieren sie hier statt den Account zu löschen."
 
-#: models.py:58
+#: models.py:60
 msgid "date joined"
 msgstr "Beigetreten"
 
-#: models.py:69
+#: models.py:71
 msgid "user"
 msgstr "Nutzer"
 
-#: models.py:70
+#: models.py:72
 msgid "users"
 msgstr "Nutzer"
 
-#: models.py:88
+#: models.py:90
 msgid "avatar"
 msgstr "Profilbild"
 
-#: models.py:89
+#: models.py:91
 msgid "city"
 msgstr "Stadt"
 
-#: models.py:90
+#: models.py:92
 msgid "about"
 msgstr "über"
 
-#: models.py:91
+#: models.py:93
 msgid "website"
 msgstr "Webseite"
 
-#: models.py:94
+#: models.py:96
 msgid "user profile"
 msgstr "Nutzerprofil"
 
-#: models.py:95
+#: models.py:97
 msgid "user profiles"
 msgstr "Nutzerprofile"
 
@@ -306,32 +310,32 @@ msgstr "Passwort bestätigen"
 msgid "Passwords don't match"
 msgstr "Passwörter stimmen nicht überein"
 
-#: apps/sso/mail.py:29
+#: apps/sso/mail.py:33
 msgid "Validate your account"
 msgstr "Bestätigen sie ihren Account"
 
-#: apps/sso/mail.py:30
+#: apps/sso/mail.py:34
 #, python-brace-format
 msgid "Validate your account {0}"
 msgstr "Bestätigen sie ihren Account {0}"
 
-#: apps/sso/mail.py:45
+#: apps/sso/mail.py:49
 msgid "Account creation confirmation"
 msgstr "Bestätigung des neuen Accounts"
 
-#: apps/sso/mail.py:46
+#: apps/sso/mail.py:50
 msgid "Your account has been created"
 msgstr "Ihr Account wurde erstellt"
 
-#: apps/sso/models.py:13
+#: apps/sso/models.py:18
 msgid "Is an internal application"
 msgstr ""
 
-#: apps/sso/models.py:16
+#: apps/sso/models.py:21
 msgid "OAuth2 Application"
 msgstr ""
 
-#: apps/sso/models.py:17
+#: apps/sso/models.py:22
 msgid "OAuth2 Applications"
 msgstr ""
 
@@ -405,33 +409,33 @@ msgid "Sign Up"
 msgstr "Anmelden"
 
 #: apps/sso/templates/sso/login.html:96
+msgid "Create an account"
+msgstr "Neuen Account erstellen"
+
+#: apps/sso/templates/sso/login.html:103
+msgid "-- or --"
+msgstr "-- oder --"
+
+#: apps/sso/templates/sso/login.html:110
 msgid "Sign up a with social account"
 msgstr "Mit einem Social Account anmelden"
 
-#: apps/sso/templates/sso/login.html:99
+#: apps/sso/templates/sso/login.html:113
 msgid "Privacy"
 msgstr ""
 
-#: apps/sso/templates/sso/login.html:100
+#: apps/sso/templates/sso/login.html:114
 msgid ""
 "No information will be sent to the social network.\n"
 "                                            It will only be used to prefill the register form and import your avatar."
 msgstr ""
 
-#: apps/sso/templates/sso/login.html:108 apps/sso/templates/sso/login.html:110
-#: apps/sso/templates/sso/login.html:114 apps/sso/templates/sso/login.html:116
-#: apps/sso/templates/sso/login.html:120 apps/sso/templates/sso/login.html:122
+#: apps/sso/templates/sso/login.html:123 apps/sso/templates/sso/login.html:125
+#: apps/sso/templates/sso/login.html:129 apps/sso/templates/sso/login.html:131
+#: apps/sso/templates/sso/login.html:135 apps/sso/templates/sso/login.html:137
 #, python-format
 msgid "Sign up with %(name)s"
 msgstr "Mit %(name)s anmelden"
-
-#: apps/sso/templates/sso/login.html:129
-msgid "-- or --"
-msgstr "-- oder --"
-
-#: apps/sso/templates/sso/login.html:136
-msgid "Create an account"
-msgstr "Neuen Account erstellen"
 
 #: apps/sso/templates/sso/logout.html:12
 msgid "You have been signed out. Come back soon !"
@@ -440,7 +444,7 @@ msgstr "Sie wurden erfolgreich abgemeldet. Bis bald!"
 #: apps/sso/templates/sso/logout.html:14
 #: apps/sso/templates/sso/register_done.html:41
 #: apps/weckan/templates/home.html:4 templates/400.html:18
-#: templates/403.html:18 templates/404.html:20 templates/500.html:19
+#: templates/403.html:18 templates/404.html:20 templates/500.html:26
 #: templates/navbar.html:24
 msgid "Home"
 msgstr "Startseite"
@@ -668,19 +672,19 @@ msgstr "Öffentliche Angebote"
 msgid "Businesses"
 msgstr "Unternehmen"
 
-#: settings/common.py:222
+#: settings/common.py:234
 msgid "Authentication"
 msgstr ""
 
-#: settings/common.py:226
+#: settings/common.py:238
 msgid "OAuth2"
 msgstr ""
 
-#: settings/common.py:232
+#: settings/common.py:244
 msgid "Social"
 msgstr ""
 
-#: settings/common.py:237
+#: settings/common.py:249
 msgid "Tasks"
 msgstr ""
 
@@ -735,6 +739,14 @@ msgstr ""
 
 #: templates/500.html:15
 msgid "The administrator have been notified"
+msgstr ""
+
+#: templates/500.html:18
+#, python-format
+msgid ""
+"If you need assistance,\n"
+"                you may reference this error as <strong>%(sentry_id)s</strong>.\n"
+"                "
 msgstr ""
 
 #: templates/footer.html:7
