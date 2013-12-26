@@ -38,6 +38,9 @@ class RegisterForm(forms.ModelForm):
             raise forms.ValidationError(_("Passwords don't match"))
         return password_confirm
 
+    def clean_email(self):
+        return self.cleaned_data['email'].lower()
+
     def save(self, commit=True):
         # Save the provided password in hashed format
         user = super(RegisterForm, self).save(commit=False)
