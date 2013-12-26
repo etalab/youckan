@@ -13,6 +13,13 @@
 
             <p>{% trans "An error occured while processing this request." %}</p>
             <p>{% trans "The administrator have been notified" %}</p>
+            {% if request.sentry.id %}
+            <p>
+                {% blocktrans with sentry_id=request.sentry.id %}If you need assistance,
+                you may reference this error as <strong>{{ sentry_id }}</strong>.
+                {% endblocktrans %}
+            </p>
+            {% endif %}
 
             <p>
                 <a class="btn btn-primary btn-lg" role="button" href="{{ etalab.HOME_URL }}">
