@@ -16,12 +16,14 @@ ROOT = abspath(join(dirname(__file__)))
 #                                               Development tasks                                                     #
 #######################################################################################################################
 
+
 @task
 def clean():
     '''Cleanup build artifacts'''
     with lcd(ROOT):
         # Cleanup *.pyc files'
         local('find . -name "*.pyc" -delete')
+
 
 @task
 def mig(app='youckan'):
