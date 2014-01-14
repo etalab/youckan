@@ -58,8 +58,7 @@ class User(SimpleEmailConfirmationUserMixin, PermissionsMixin, AbstractBaseUser)
         help_text=_('Designates whether this user should be treated as active. '
             'Unselect this instead of deleting accounts.'))
     date_joined = models.DateTimeField(_('date joined'), default=timezone.now)
-    slug = AutoSlugField(editable=False, max_length=150, unique=True,
-            populate_from=lambda instance: instance.email.replace('@', '-at-').replace('.', '-dot-'))
+    slug = AutoSlugField(editable=False, max_length=150, unique=True, populate_from='full_name')
 
     objects = UserManager()
 
