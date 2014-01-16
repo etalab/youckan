@@ -1,4 +1,4 @@
-{% load staticfiles js compressed i18n helpers %}
+{% load staticfiles js compressed i18n helpers piwik %}
 <!DOCTYPE html>
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="{{LANGUAGE_CODE}}"> <![endif]-->
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8" lang="{{LANGUAGE_CODE}}"> <![endif]-->
@@ -59,23 +59,6 @@
     {% compressed_js "youckan-common" %}
     {% block javascript %}{% endblock %}
 
-    <!-- Piwik -->
-    <script type="text/javascript">
-      var _paq = _paq || [];
-      _paq.push(["trackPageView"]);
-      _paq.push(["enableLinkTracking"]);
-
-      (function() {
-        var u=(("https:" == document.location.protocol) ? "https" : "http")
-    + "://webstats.easter-eggs.com/";
-        _paq.push(["setTrackerUrl", u+"piwik.php"]);
-        _paq.push(["setSiteId", "30"]);
-        var d=document, g=d.createElement("script"),
-    s=d.getElementsByTagName("script")[0]; g.type="text/javascript";
-        g.defer=true; g.async=true; g.src=u+"piwik.js";
-    s.parentNode.insertBefore(g,s);
-      })();
-    </script>
-    <!-- End Piwik Code -->
+    {% piwik_tracking %}
 </body>
 </html>

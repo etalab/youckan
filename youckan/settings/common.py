@@ -200,6 +200,14 @@ if 'sentry' in conf:
         'dsn': conf['sentry']['dsn'],
     }
 
+
+# Piwik configuration
+if 'piwik' in conf:
+    PIWIK_SITE_ID = conf['piwik']['site_id']
+    PIWIK_URL = conf['piwik']['url']
+    PIWIK_DOMAIN = conf['piwik'].get('domain')
+    PIWIK_IN_DEBUG = conf['piwik'].get('in_debug', '').lower() == 'true'
+
 DJANGO_APPS = (
     'django.contrib.auth',
     'django.contrib.contenttypes',
