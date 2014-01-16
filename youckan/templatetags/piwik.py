@@ -12,9 +12,9 @@ register = template.Library()
 def piwik_tracking():
     if settings.DEBUG and not (hasattr(settings, 'PIWIK_IN_DEBUG') and settings.PIWIK_IN_DEBUG):
         return {
-            'error': 'Piwik is disable in DEBUG mode unless PIWIK_IN_DEBUG is set',
+            'error': 'Piwik is disabled in DEBUG mode unless PIWIK_IN_DEBUG is set',
         }
-    elif not hasattr(settings, 'PIWIK_URL') and hasattr(settings, 'PIWIK_SITE_ID'):
+    elif not hasattr(settings, 'PIWIK_URL') or not hasattr(settings, 'PIWIK_SITE_ID'):
         return {
             'error': 'Piwik is missing configuration',
         }
