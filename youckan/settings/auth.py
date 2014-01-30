@@ -104,6 +104,7 @@ OAUTH2_PROVIDER = {
 REST_FRAMEWORK = {
     'DEFAULT_AUTHENTICATION_CLASSES': (
         'oauth2_provider.ext.rest_framework.OAuth2Authentication',
+        'rest_framework.authentication.SessionAuthentication',
     )
 }
 
@@ -115,14 +116,11 @@ CORS_ORIGIN_REGEX_WHITELIST = (
     r'^https?://(\w+\.)?{0}$'.format(DOMAIN.replace('.', '\.')),
 )
 
-print 'cors', CORS_ORIGIN_REGEX_WHITELIST
-
 CORS_ALLOW_CREDENTIALS = True
 CORS_URLS_REGEX = r'^/api/.*$'
 
 
 if DEBUG:
     REST_FRAMEWORK['DEFAULT_AUTHENTICATION_CLASSES'] += (
-        'rest_framework.authentication.SessionAuthentication',
         'rest_framework.authentication.BasicAuthentication',
     )
