@@ -107,13 +107,15 @@ REST_FRAMEWORK = {
     )
 }
 
-CORS_ORIGIN_WHITELIST = (
-    DOMAIN,
-)
+# CORS_ORIGIN_WHITELIST = (
+#     DOMAIN,
+# )
 
 CORS_ORIGIN_REGEX_WHITELIST = (
-    r'(\w+\.)?{0}$'.format(DOMAIN.replace('.', '\.')),
+    r'^https?://(\w+\.)?{0}$'.format(DOMAIN.replace('.', '\.')),
 )
+
+print 'cors', CORS_ORIGIN_REGEX_WHITELIST
 
 CORS_ALLOW_CREDENTIALS = True
 CORS_URLS_REGEX = r'^/api/.*$'
