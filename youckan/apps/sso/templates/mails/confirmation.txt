@@ -4,4 +4,6 @@
 Your account has been successfully created.
 You can visit your profile here: {{profile_url}}.
 {% endblocktrans %}
+
+{% blocktrans %}The {{ site_name }} team.{% endblocktrans %}
 {% endautoescape %}

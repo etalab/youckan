@@ -19,7 +19,7 @@ def absolute_url(name, *args, **kwargs):
     )
 
 
-def get_mail_context(**kwargs):
+def get_context(**kwargs):
     '''Prefill the a mail context with common data'''
     site = Site.objects.get_current()
     context = {
@@ -32,8 +32,12 @@ def get_mail_context(**kwargs):
 
 
 def render_to_string(basename, ext, context):
+    try:
+        language = translation.get_language().split('-')[0]
+    except:
+        language = settings.LANGUAGE_CODE.split('-')[0]
     templates = (
-        '{0}_{1}.{2}'.format(basename, translation.get_language(), ext),
+        '{0}_{1}.{2}'.format(basename, language, ext),
         '{0}.{1}'.format(basename, ext),
     )
     template = select_template(templates)
@@ -41,7 +45,7 @@ def render_to_string(basename, ext, context):
 
 
 def send(recipients, subject, template_base, **kwargs):
-    context = get_mail_context(**kwargs)
+    context = get_context(**kwargs)
 
     if isinstance(recipients, get_user_model()):
         recipients = [recipients]

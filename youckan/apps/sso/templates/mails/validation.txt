@@ -1,4 +1,12 @@
-{% load i18n %}
+{% load i18n %}{% autoescape off %}
 {% blocktrans with fullname=user.full_name %}Hello {{fullname}}.{% endblocktrans %}
 
-{% blocktrans %}Please validate your account here: {{url}}.{% endblocktrans %}
+{% blocktrans %}You received this mail because of your registeration on {{ site_name }}.
+We need to ensure your email address exists.
+{% endblocktrans %}
+
+{% blocktrans %}In order to complete your registeration, please validate your account here:{% endblocktrans %}
+{{url}}
+
+{% blocktrans %}The {{ site_name }} team.{% endblocktrans %}
+{% endautoescape %}

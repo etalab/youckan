@@ -10,8 +10,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: youckan\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-01-13 19:17+0100\n"
-"PO-Revision-Date: 2014-01-13 18:24+0000\n"
+"POT-Creation-Date: 2014-02-05 11:26+0100\n"
+"PO-Revision-Date: 2014-02-05 10:26+0000\n"
 "Last-Translator: noirbizarre\n"
 "Language-Team: French (http://www.transifex.com/projects/p/youckan/language/fr/)\n"
 "MIME-Version: 1.0\n"
@@ -70,35 +70,35 @@ msgstr "Précise si cet utilisateur doit-être considéré comme actif. Déséle
 msgid "date joined"
 msgstr "date d'inscription"
 
-#: models.py:71
+#: models.py:70
 msgid "user"
 msgstr "utilisateur"
 
-#: models.py:72
+#: models.py:71
 msgid "users"
 msgstr "utilisateurs"
 
-#: models.py:90
+#: models.py:89
 msgid "avatar"
 msgstr "avatar"
 
-#: models.py:91
+#: models.py:90
 msgid "city"
 msgstr "ville"
 
-#: models.py:92
+#: models.py:91
 msgid "about"
 msgstr "à propos"
 
-#: models.py:93
+#: models.py:92
 msgid "website"
 msgstr "site web"
 
-#: models.py:96
+#: models.py:95
 msgid "user profile"
 msgstr "profil utilisateur"
 
-#: models.py:97
+#: models.py:96
 msgid "user profiles"
 msgstr "profils utilisateurs"
 
@@ -309,22 +309,13 @@ msgstr "Confirmation du mot de passe"
 msgid "Passwords don't match"
 msgstr "Les mots de passe ne correspondent pas"
 
-#: apps/sso/mail.py:33
+#: apps/sso/mail.py:16
 msgid "Validate your account"
 msgstr "Validez votre compte"
 
-#: apps/sso/mail.py:34
-#, python-brace-format
-msgid "Validate your account {0}"
-msgstr "Validez votre compte {0}"
-
-#: apps/sso/mail.py:49
+#: apps/sso/mail.py:23
 msgid "Account creation confirmation"
 msgstr "Confirmation de création de compte"
-
-#: apps/sso/mail.py:50
-msgid "Your account has been created"
-msgstr "Votre compte a été créé"
 
 #: apps/sso/models.py:18
 msgid "Is an internal application"
@@ -357,10 +348,47 @@ msgid ""
 "You can visit your profile <a href=\"%(profile_url)s\">here</a>.\n"
 msgstr "\nVotre compte a été créé avec succès.\nVous pouvez maintenant visiter votre profil <a href=\"%(profile_url)s\">ici</a>.\n"
 
-#: apps/sso/templates/mails/validation.html:9
+#: apps/sso/templates/mails/confirmation.html:15
+#: apps/sso/templates/mails/confirmation.txt:8
+#: apps/sso/templates/mails/validation.html:18
+#: apps/sso/templates/mails/validation.txt:11
 #, python-format
-msgid "Please validate your account <a href=\"%(url)s\">here</a>."
-msgstr "Validez votre compte <a href=\"%(url)s\">ici</a>."
+msgid "The %(site_name)s team."
+msgstr "L'équipe de %(site_name)s."
+
+#: apps/sso/templates/mails/confirmation.txt:2
+#: apps/sso/templates/mails/validation.txt:2
+#, python-format
+msgid "Hello %(fullname)s."
+msgstr "Bonjour %(fullname)s."
+
+#: apps/sso/templates/mails/confirmation.txt:3
+#, python-format
+msgid ""
+"\n"
+"Your account has been successfully created.\n"
+"You can visit your profile here: %(profile_url)s.\n"
+msgstr "\nVotre compte a été créé avec succès.\nVous pouvez maintenant visiter votre profil ici: %(profile_url)s.\n"
+
+#: apps/sso/templates/mails/validation.html:9
+#: apps/sso/templates/mails/validation.txt:4
+#, python-format
+msgid ""
+"You received this mail because of your registeration on %(site_name)s.\n"
+"We need to ensure your email address exists.\n"
+msgstr "Vous avez reçu ce mail dans le cadre de votre inscription sur %(site_name)s.\nNous devons vérifier que votre adresse email existe.\n"
+
+#: apps/sso/templates/mails/validation.html:15
+#, python-format
+msgid ""
+"In order to complete your registeration, please validate your account <a "
+"href=\"%(url)s\">here</a>."
+msgstr "Afin de compléter votre inscription, veuillez valider votre compte <a href=\"%(url)s\">ici</a>."
+
+#: apps/sso/templates/mails/validation.txt:8
+msgid ""
+"In order to complete your registeration, please validate your account here:"
+msgstr "Afin de compléter votre inscription, veuillez valider votre compte ici:"
 
 #: apps/sso/templates/sso/login.html:5 apps/sso/templates/sso/login.html:53
 #: apps/sso/templates/sso/password_reset_done.html:5
@@ -671,19 +699,19 @@ msgstr "Services publics"
 msgid "Businesses"
 msgstr "Entreprises"
 
-#: settings/common.py:234
+#: settings/common.py:243
 msgid "Authentication"
 msgstr "Authentification"
 
-#: settings/common.py:238
+#: settings/common.py:247
 msgid "OAuth2"
 msgstr "OAuth2"
 
-#: settings/common.py:244
+#: settings/common.py:253
 msgid "Social"
 msgstr "Social"
 
-#: settings/common.py:249
+#: settings/common.py:258
 msgid "Tasks"
 msgstr "Tâches"
 

@@ -6,8 +6,16 @@
 </p>
 
 <p>
-{% blocktrans %}Please validate your account <a href="{{url}}">here</a>.{% endblocktrans %}
+{% blocktrans %}You received this mail because of your registeration on {{ site_name }}.
+We need to ensure your email address exists.
+{% endblocktrans %}
 </p>
+
+<p>
+{% blocktrans %}In order to complete your registeration, please validate your account <a href="{{url}}">here</a>.{% endblocktrans %}
+</p>
+
+<p>{% blocktrans %}The {{ site_name }} team.{% endblocktrans %}</p>
 
 </body>
 </html>
