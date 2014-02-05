@@ -1,0 +1,4 @@
+{% load i18n %}
+{% blocktrans with fullname=user.full_name %}Hello {{fullname}}.{% endblocktrans %}
+
+{% blocktrans %}Please validate your account here: {{url}}.{% endblocktrans %}

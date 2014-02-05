@@ -1,0 +1,7 @@
+{% load i18n %}{% autoescape off %}
+{% blocktrans with fullname=user.full_name %}Hello {{fullname}}.{% endblocktrans %}
+{% blocktrans %}
+Your account has been successfully created.
+You can visit your profile here: {{profile_url}}.
+{% endblocktrans %}
+{% endautoescape %}
