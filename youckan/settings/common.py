@@ -116,8 +116,8 @@ SECRET_KEY = conf['site']['secret']
 
 # List of callables that know how to import templates from various sources.
 TEMPLATE_LOADERS = (
-    'django.template.loaders.app_directories.Loader',
     'django.template.loaders.filesystem.Loader',
+    'django.template.loaders.app_directories.Loader',
 #     'django.template.loaders.eggs.Loader',
 )
 
@@ -158,6 +158,7 @@ ROOT_URLCONF = 'youckan.urls'
 WSGI_APPLICATION = 'youckan.wsgi.application'
 
 TEMPLATE_DIRS = (
+    join(os.getcwd(), 'templates'),  # Easy template override
     # Put strings here, like "/home/html/django_templates" or "C:/www/django/templates".
     # Always use forward slashes, even on Windows.
     # Don't forget to use absolute paths, not relative paths.
