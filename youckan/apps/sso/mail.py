@@ -3,11 +3,12 @@ from __future__ import unicode_literals
 
 from django.conf import settings
 from django.contrib.auth.tokens import default_token_generator
+from django.contrib.sites.models import Site
 from django.core.mail import send_mail
 from django.template import loader
 from django.utils.encoding import force_bytes
 from django.utils.http import urlsafe_base64_encode
-from django.utils.translation import ugettext as _
+from django.utils.translation import ugettext_lazy as _
 
 from youckan import mail
 
@@ -20,7 +21,8 @@ def send_validation(user):
 
 
 def send_confirmation(user):
-    mail.send(user, _('Account creation confirmation'), 'mails/confirmation',
+    site = Site.objects.get_current()
+    mail.send(user, _('Welcome on {site}').format(site=site.name), 'mails/confirmation',
         user=user, profile_url=mail.absolute_url('profile', slug=user.slug))
 
 

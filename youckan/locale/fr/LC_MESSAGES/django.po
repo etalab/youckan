@@ -10,8 +10,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: youckan\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-02-05 11:26+0100\n"
-"PO-Revision-Date: 2014-02-05 10:26+0000\n"
+"POT-Creation-Date: 2014-02-05 14:02+0100\n"
+"PO-Revision-Date: 2014-02-05 13:03+0000\n"
 "Last-Translator: noirbizarre\n"
 "Language-Team: French (http://www.transifex.com/projects/p/youckan/language/fr/)\n"
 "MIME-Version: 1.0\n"
@@ -309,13 +309,14 @@ msgstr "Confirmation du mot de passe"
 msgid "Passwords don't match"
 msgstr "Les mots de passe ne correspondent pas"
 
-#: apps/sso/mail.py:16
+#: apps/sso/mail.py:17
 msgid "Validate your account"
 msgstr "Validez votre compte"
 
-#: apps/sso/mail.py:23
-msgid "Account creation confirmation"
-msgstr "Confirmation de création de compte"
+#: apps/sso/mail.py:25
+#, python-brace-format
+msgid "Welcome on {site}"
+msgstr "Bienvenue sur {site}"
 
 #: apps/sso/models.py:18
 msgid "Is an internal application"
