@@ -72,12 +72,12 @@ PIPELINE_CSS = {
 # PIPELINE_JS_COMPRESSOR = 'pipeline.compressors.slimit.SlimItCompressor'
 
 PIPELINE_JS = {
-    'modernizr': {
+    'iecompat': {
         'source_filenames': (
-            'bower/modernizr/modernizr.js',
+            'bower/html5shiv/dist/html5shiv.js',
             'bower/respond/dest/respond.src.js',
         ),
-        'output_filename': 'js/modernizr.min.js',
+        'output_filename': 'js/iecompat.min.js',
     },
     'jquery': {
         'source_filenames': {
