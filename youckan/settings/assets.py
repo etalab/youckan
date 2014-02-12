@@ -70,6 +70,7 @@ PIPELINE_CSS = {
 }
 
 # PIPELINE_JS_COMPRESSOR = 'pipeline.compressors.slimit.SlimItCompressor'
+PIPELINE_JS_COMPRESSOR = 'pipeline.compressors.uglifyjs.UglifyJSCompressor'
 
 PIPELINE_JS = {
     'iecompat': {
