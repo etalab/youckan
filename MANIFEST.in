@@ -30,7 +30,7 @@ include youckan/static/bower/jquery.easing/js/jquery.easing.js
 include youckan/static/bower/jquery.dotdotdot/src/js/jquery.dotdotdot.js
 include youckan/static/bower/jquery.validation/jquery.validate.js
 include youckan/static/bower/markdown/lib/markdown.js
-include youckan/static/bower/modernizr/modernizr.js
+include youckan/static/bower/html5shiv/dist/html5shiv.js
 include youckan/static/bower/moment/min/moment+lang.js
 include youckan/static/bower/respond/dest/respond.src.js
 include youckan/static/bower/swig/index.js
