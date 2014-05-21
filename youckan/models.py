@@ -23,7 +23,7 @@ def avatar_file_name(user, filename):
 
 class UserManager(BaseUserManager):
 
-    def create_user(self, email, password=None, **extra_fields):
+    def create_user(self, email, password=None, save=True, **extra_fields):
         '''
         Creates and saves a User with the given email and password.
         '''
@@ -36,11 +36,12 @@ class UserManager(BaseUserManager):
                           last_login=now, date_joined=now, **extra_fields)
 
         user.set_password(password)
-        user.save(using=self._db)
+        if save:
+            user.save(using=self._db)
         return user
 
     def create_superuser(self, email, password, **extra_fields):
-        user = self.create_user(email, password, **extra_fields)
+        user = self.create_user(email, password, save=False, **extra_fields)
         user.is_staff = True
         user.is_active = True
         user.is_superuser = True
@@ -72,7 +73,7 @@ class User(SimpleEmailConfirmationUserMixin, PermissionsMixin, AbstractBaseUser)
 
     @property
     def full_name(self):
-        return '{first_name} {last_name}'.format(**self.__dict__)
+        return '{first_name} {last_name}'.format(**self.__dict__).strip() or _('Nameless')
 
     def get_full_name(self):
         return self.full_name
