@@ -82,7 +82,7 @@ PIPELINE_JS = {
     },
     'jquery': {
         'source_filenames': {
-            'bower/jquery/jquery.js',
+            'bower/jquery/dist/jquery.js',
         },
         'output_filename': 'js/jquery.min.js',
     },
