@@ -51,7 +51,17 @@ class UserSerializer(ModelSerializer):
 
     class Meta:
         model = User
-        fields = ('fullname', 'first_name', 'last_name', 'is_superuser', 'is_active', 'date_joined', 'slug', 'profile')
+        fields = (
+            'email',
+            'fullname',
+            'first_name',
+            'last_name',
+            'is_superuser',
+            'is_active',
+            'date_joined',
+            'slug',
+            'profile'
+        )
 
 
 class ProfileAPI(RetrieveAPIView):
