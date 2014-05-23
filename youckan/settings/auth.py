@@ -98,8 +98,9 @@ OAUTH2_PROVIDER = {
     'SCOPES': {
         'profile': 'Read profile',
     },
-    'APPLICATION_MODEL': 'sso.OAuth2Application',
 }
+
+OAUTH2_PROVIDER_APPLICATION_MODEL = 'sso.OAuth2Application'
 
 REST_FRAMEWORK = {
     'DEFAULT_AUTHENTICATION_CLASSES': (
