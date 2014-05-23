@@ -193,7 +193,7 @@ THIRD_PARTY_APPS = (
 )
 
 # Sentry configuration
-if 'sentry' in conf:
+if 'sentry' in conf and not TESTING:
     THIRD_PARTY_APPS = THIRD_PARTY_APPS + (
         'raven.contrib.django.raven_compat',
     )
